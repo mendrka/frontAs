@@ -1,0 +1,115 @@
+{
+  "id": "b1-003",
+  "niveau": "B1",
+  "module": "B1.1",
+  "titre": "Échanger sur le travail ou les études",
+  "objectifs": {
+    "communicatif": "Comparer le système éducatif/professionnel, discuter des avantages et inconvénients d'un poste ou d'une filière",
+    "linguistique": "Utiliser les conjonctions 'obwohl', 'dass' et les comparatifs/superlatifs",
+    "culturel": "Le système de formation en alternance (Duales Studium) en Allemagne",
+    "cognitif": "Structurer une opinion contrastée"
+  },
+  "metadonnees": {
+    "duree_estimee_minutes": 55,
+    "difficulte_cognitive": 3,
+    "prerequis": ["b1-001", "b1-002"],
+    "competences_visees": ["interaction orale", "compréhension de texte"],
+    "themes_croises": ["carrière", "comparaison culturelle", "éducation"]
+  },
+  "situation": {
+    "contexte": "Un étudiant malgache discute avec un conseiller d'orientation allemand des différences entre l'université et la formation en alternance.",
+    "lieu": "Bureau d'orientation (Berufsinformationszentrum), Berlin",
+    "type": "Entretien de conseil",
+    "registre": "standard / formel"
+  },
+  "dialogue": [
+    {
+      "id": 1,
+      "de": "Ich finde das duale Studium besser als ein normales Studium, obwohl es anstrengender ist.",
+      "fr": "Je trouve que les études en alternance sont meilleures que des études normales, bien que ce soit plus fatigant.",
+      "phonetique": "ɪç ˈfɪndə das duˈaːlə ˈʃtuːdiʊm ˈbɛsɐ als aɪn nɔʁˈmaːləs ˈʃtuːdiʊm | ɔpˈvoːl ɛs ˈanˌʃtʁɛŋəndɐ ɪst",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "duale Studium",
+          "note_culturelle": "Système typiquement allemand où l'on alterne entre cours théoriques à l'école et pratique en entreprise, avec un salaire à la clé."
+        },
+        {
+          "mot": "besser als",
+          "regle_grammaticale": "Comparatif de supériorité. 'gut' devient 'besser'. On utilise 'als' pour la comparaison (que)."
+        },
+        {
+          "mot": "obwohl",
+          "classe_grammaticale": "conjonction de subordination (bien que / quoique)",
+          "effet_syntaxique": "Comme 'weil', 'obwohl' rejette le verbe à la fin de la proposition."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "de": "Das stimmt. In Deutschland haben Fachkräfte oft die besten Karrierechancen.",
+      "fr": "C'est vrai. En Allemagne, les travailleurs qualifiés ont souvent les meilleures opportunités de carrière.",
+      "phonetique": "das ʃtɪmt | ɪn ˈdɔɪtʃlant ˈhaːbən ˈfaxˌkʁɛftə ɔft diː ˈbɛstən kaˈʁjeːʁəˌʃãːsən",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Fachkräfte",
+          "traduction": "Main-d'œuvre qualifiée",
+          "contexte": "Terme essentiel en Allemagne qui manque de 'Fachkräfte' dans la tech et l'artisanat."
+        },
+        {
+          "mot": "die besten",
+          "grammaire": "Superlatif. 'gut' -> 'besser' -> 'am besten / die besten'."
+        }
+      ]
+    }
+  ],
+  "grammaire": [
+    {
+      "titre": "La subordination avec 'dass' et 'obwohl'",
+      "explication": "Le verbe conjugué se place toujours à la fin.",
+      "exemples": [
+        { "de": "Ich glaube, dass Technik die Zukunft ist.", "fr": "Je crois que la technologie est l'avenir." },
+        { "de": "Er lernt Deutsch, obwohl er wenig Zeit hat.", "fr": "Il apprend l'allemand, bien qu'il ait peu de temps." }
+      ]
+    },
+    {
+      "titre": "Comparatif et Superlatif",
+      "tableau": [
+        { "Adjectif": "gut (bon)", "Comparatif": "besser (mieux/meilleur)", "Superlatif": "am besten (le meilleur)" },
+        { "Adjectif": "viel (beaucoup)", "Comparatif": "mehr (plus)", "Superlatif": "am meisten (le plus)" },
+        { "Adjectif": "gern (volontiers)", "Comparatif": "lieber (plutôt/préfère)", "Superlatif": "am liebsten (le mieux/préféré)" }
+      ]
+    }
+  ],
+  "vocabulaire_cles": [
+    { "de": "der Vorteil / der Nachteil", "fr": "l'avantage / l'inconvénient" },
+    { "de": "die Verantwortung", "fr": "la responsabilité" },
+    { "de": "das Gehalt", "fr": "le salaire" },
+    { "de": "sich bewerben", "fr": "postuler" },
+    { "de": "die Übernahme", "fr": "l'embauche (après un stage/alternance)" }
+  ],
+  "exercices": [
+    {
+      "id": "ex-b1-003-1",
+      "type": "syntaxe",
+      "question": "Reliez les deux phrases avec 'obwohl' : 'Ich bin müde. Ich arbeite an meinem Projekt.'",
+      "reponse_attendue": "Obwohl ich müde bin, arbeite ich an meinem Projekt. (ou : Ich arbeite an meinem Projekt, obwohl ich müde bin.)",
+      "explication": "N'oubliez pas que le verbe 'bin' doit aller à la fin de la partie avec 'obwohl'."
+    },
+    {
+      "id": "ex-b1-003-2",
+      "type": "comparaison",
+      "question": "Complétez : 'Ein Ingenieur verdient meistens ____ (viel) als ein Kellner.'",
+      "reponse_attendue": "mehr",
+      "explication": "On utilise le comparatif de 'viel' pour comparer deux salaires."
+    }
+  ],
+  "culture": {
+    "titre": "Le prestige de l'artisanat",
+    "explication": "Contrairement à d'autres pays, les métiers techniques et manuels sont très valorisés en Allemagne. Un 'Meister' (maître artisan) a un statut social élevé, équivalent à un diplôme universitaire dans certains cas."
+  },
+  "progression": {
+    "xp": 150,
+    "prochain_id": "b1-004",
+    "apercu_suivant": "Leçon B1.4 : Exprimer des opinions simples et argumenter."
+  }
+}

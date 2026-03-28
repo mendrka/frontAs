@@ -1,0 +1,206 @@
+{
+  "id": "a1-019",
+  "niveau": "A1",
+  "module": "A1.4",
+  "titre": "Décrire sa maison ou son appartement",
+  "objectifs": {
+    "communicatif": "Décrire son logement, dire où se trouvent les pièces, parler de sa maison/appartement (taille, nombre de pièces, ce qu’il y a dedans)",
+    "linguistique": "Maîtriser le vocabulaire des pièces et meubles, les prépositions de lieu (in, auf, neben, unter…), les adjectifs descriptifs (groß, klein, schön, modern…), la structure 'Es gibt…' et 'Im … ist …'",
+    "culturel": "Connaître les types de logements typiques en Allemagne/Autriche (Wohnung vs Haus, Altbau vs Neubau) et les expressions courantes",
+    "cognitif": "Utiliser les prépositions de lieu et décrire avec précision"
+  },
+  "metadonnees": {
+    "duree_estimee_minutes": 40,
+    "difficulte_cognitive": 2,
+    "prerequis": ["a1-018"],
+    "competences_visees": ["description", "expression orale"],
+    "themes_croises": ["vie quotidienne", "logement"]
+  },
+
+  "situation": {
+    "contexte": "Après les courses, un ami demande à voir l’appartement ou on parle de son logement",
+    "lieu": "Appartement à Vienne (Wien), Autriche",
+    "type": "conversation informelle",
+    "registre": "informel"
+  },
+
+  "dialogue": [
+    {
+      "id": 1,
+      "de": "Wie ist deine Wohnung? Sie ist klein, aber sehr gemütlich.",
+      "fr": "Comment est ton appartement ? Il est petit, mais très cosy.",
+      "audio": "/audio/a1-019-1.mp3",
+      "phonetique": "viː ɪst ˈdaɪnə ˈvoːnʊŋ | ziː ɪst klaɪn ˈaːbɐ zeːɐ̯ ɡəˈmyːtlɪç",
+      "intonation": "montante sur la question",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Wie ist deine Wohnung?",
+          "lemme": "wie",
+          "classe_grammaticale": "question descriptive",
+          "traduction_directe": "Comment est ton appartement ?",
+          "phonetique": "viː ɪst"
+        },
+        {
+          "mot": "gemütlich",
+          "lemme": "gemütlich",
+          "classe_grammaticale": "adjectif typiquement allemand",
+          "traduction_directe": "cosy / confortable",
+          "phonetique": "ɡəˈmyːtlɪç",
+          "note": "Mot très important en allemand pour décrire un intérieur agréable"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "de": "Wie viele Zimmer hast du? Ich habe drei Zimmer: ein Wohnzimmer, ein Schlafzimmer und eine Küche.",
+      "fr": "Combien de pièces as-tu ? J’ai trois pièces : un salon, une chambre et une cuisine.",
+      "audio": "/audio/a1-019-2.mp3",
+      "phonetique": "viː ˈfiːlə ˈtsɪmɐ hast duː | ɪç ˈhaːbə dʁaɪ ˈtsɪmɐ | aɪn ˈvoːnˌtsɪmɐ aɪn ˈʃlaːfˌtsɪmɐ ʊnt ˈaɪnə ˈkyːçə",
+      "intonation": "informative",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Zimmer",
+          "lemme": "das Zimmer",
+          "classe_grammaticale": "nom neutre",
+          "traduction_directe": "pièce",
+          "phonetique": "ˈtsɪmɐ",
+          "note": "Das Zimmer = pièce / chambre"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "de": "Im Wohnzimmer steht ein Sofa und ein großer Tisch.",
+      "fr": "Dans le salon il y a un canapé et une grande table.",
+      "audio": "/audio/a1-019-3.mp3",
+      "phonetique": "ɪm ˈvoːnˌtsɪmɐ ʃteːt aɪn ˈzoːfa ʊnt aɪn ˈɡʁoːsɐ tɪʃ",
+      "intonation": "descriptive",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Im Wohnzimmer",
+          "lemme": "im",
+          "classe_grammaticale": "préposition + datif",
+          "traduction_directe": "dans le salon",
+          "phonetique": "ɪm ˈvoːnˌtsɪmɐ"
+        },
+        {
+          "mot": "steht",
+          "lemme": "stehen",
+          "classe_grammaticale": "verbe de position",
+          "traduction_directe": "se trouve / est",
+          "phonetique": "ʃteːt",
+          "note": "Pour les objets : stehen (debout), liegen (allongé), sitzen (assis)"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "de": "Es gibt auch einen Balkon. Der Balkon ist klein, aber schön.",
+      "fr": "Il y a aussi un balcon. Le balcon est petit, mais joli.",
+      "audio": "/audio/a1-019-4.mp3",
+      "phonetique": "ɛs ɡɪpt aʊx ˈaɪnən balˈkoːn | deːɐ̯ balˈkoːn ɪst klaɪn ˈaːbɐ ʃøːn",
+      "intonation": "positive",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Es gibt",
+          "lemme": "es gibt",
+          "classe_grammaticale": "expression d’existence",
+          "traduction_directe": "Il y a",
+          "phonetique": "ɛs ɡɪpt",
+          "note": "Es gibt + accusatif pour dire ce qui existe"
+        }
+      ]
+    }
+  ],
+
+  "vocabulaire_complet": [
+    { "mot": "die Wohnung", "traduction": "l’appartement", "type": "nom féminin", "phonetique": "ˈvoːnʊŋ" },
+    { "mot": "das Haus", "traduction": "la maison", "type": "nom neutre", "phonetique": "haʊs" },
+    { "mot": "das Zimmer", "traduction": "la pièce / la chambre", "type": "nom neutre", "phonetique": "ˈtsɪmɐ" },
+    { "mot": "das Wohnzimmer", "traduction": "le salon", "type": "nom neutre", "phonetique": "ˈvoːnˌtsɪmɐ" },
+    { "mot": "das Schlafzimmer", "traduction": "la chambre à coucher", "type": "nom neutre", "phonetique": "ˈʃlaːfˌtsɪmɐ" },
+    { "mot": "die Küche", "traduction": "la cuisine", "type": "nom féminin", "phonetique": "ˈkyːçə" },
+    { "mot": "das Bad", "traduction": "la salle de bain", "type": "nom neutre", "phonetique": "baːt" },
+    { "mot": "der Balkon", "traduction": "le balcon", "type": "nom masculin", "phonetique": "balˈkoːn" },
+    { "mot": "gemütlich", "traduction": "cosy / confortable", "type": "adjectif", "phonetique": "ɡəˈmyːtlɪç" }
+  ],
+
+  "grammaire": [
+    {
+      "titre": "Prépositions de lieu courantes",
+      "niveau": "A1",
+      "tableau": [
+        { "préposition": "in / im", "exemple": "im Wohnzimmer" },
+        { "préposition": "auf", "exemple": "auf dem Tisch" },
+        { "préposition": "neben", "exemple": "neben dem Sofa" },
+        { "préposition": "unter", "exemple": "unter dem Bett" }
+      ]
+    },
+    {
+      "titre": "Es gibt …",
+      "niveau": "A1",
+      "explication": "Pour dire ce qui existe dans un lieu → Es gibt + accusatif.",
+      "exemple": "Es gibt einen Balkon."
+    }
+  ],
+
+  "exercices": [
+    {
+      "id": "ex-001",
+      "type": "choix_multiple",
+      "difficulte": 1,
+      "question": "Comment dit-on 'Il y a un balcon' ?",
+      "options": ["Es ist ein Balkon.", "Es gibt einen Balkon.", "Es hat einen Balkon."],
+      "reponse_correcte": 1,
+      "explication": "Es gibt + accusatif"
+    },
+    {
+      "id": "ex-002",
+      "type": "traduction",
+      "difficulte": 2,
+      "question": "Traduire : 'Mon appartement est petit mais cosy. Dans le salon il y a un grand canapé et une table.'",
+      "reponse_attendue": "Meine Wohnung ist klein, aber gemütlich. Im Wohnzimmer steht ein großes Sofa und ein Tisch.",
+      "explication": "gemütlich + im + stehen"
+    },
+    {
+      "id": "ex-010",
+      "type": "situation",
+      "difficulte": 3,
+      "question": "Décris ton logement ou un logement idéal : nombre de pièces, ce qu’il y a dans chaque pièce, taille, ce que tu aimes.",
+      "modele_reponse": "Ich habe eine kleine Wohnung mit zwei Zimmern. Im Wohnzimmer steht ein Sofa und ein Tisch. Die Küche ist modern. Es gibt auch einen Balkon. Sie ist gemütlich.",
+      "criteres_evaluation": ["vocabulaire pièces et meubles", "prépositions de lieu", "adjectifs descriptifs", "Es gibt / stehen / ist"]
+    }
+  ],
+
+  "comprehension": [
+    {
+      "question": "Quelle est la différence entre 'Im Zimmer ist ein Bett' et 'Es gibt ein Bett im Zimmer' ?",
+      "reponse": "Les deux sont possibles, mais 'Es gibt' insiste sur l’existence, tandis que 'Im Zimmer ist/steht' décrit la position."
+    }
+  ],
+
+  "culture": {
+    "titre": "Le logement en pays germanophones",
+    "points": [
+      { "sujet": "Gemütlichkeit", "explication": "Le concept de 'Gemütlichkeit' est central : un intérieur chaleureux, confortable et accueillant est très important." }
+    ]
+  },
+
+  "astuces_pedagogiques": [
+    {
+      "titre": "Structure simple pour décrire",
+      "astuce": "Ma Wohnung ist … → Es gibt … → Im … steht/liegt/ist …"
+    }
+  ],
+
+  "progression": {
+    "xp": 80,
+    "badges_deblocables": ["Wohnungs-Profi", "Beschreibungs-Meister"],
+    "niveau_suivant": "a1-020",
+    "apercu_suivant": "Leçon suivante : Parler du temps et de la météo"
+  }
+}

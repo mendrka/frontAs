@@ -1,0 +1,119 @@
+{
+  "id": "b1-005",
+  "niveau": "B1",
+  "module": "B1.1",
+  "titre": "Raconter une histoire personnelle",
+  "objectifs": {
+    "communicatif": "Raconter un souvenir, un événement marquant ou une anecdote de manière structurée",
+    "linguistique": "Maîtriser les conjonctions temporelles 'als', 'wenn', 'nachdem' et 'bevor'",
+    "culturel": "La narration en Allemagne : l'équilibre entre faits et émotions",
+    "cognitif": "Gérer la chronologie complexe (antériorité et simultanéité)"
+  },
+  "metadonnees": {
+    "duree_estimee_minutes": 65,
+    "difficulte_cognitive": 4,
+    "prerequis": ["b1-001", "b1-004"],
+    "competences_visees": ["production orale", "expression écrite"],
+    "themes_croises": ["biographie", "souvenirs", "projets"]
+  },
+  "situation": {
+    "contexte": "Tu racontes à un ami comment tu as décidé de devenir développeur web et tes premiers pas dans la tech.",
+    "lieu": "Une promenade au bord de l'Isar, Munich",
+    "type": "Récit biographique",
+    "registre": "informel / personnel"
+  },
+  "dialogue": [
+    {
+      "id": 1,
+      "de": "Als ich 14 Jahre alt war, habe ich mein erstes Programm geschrieben. Das war ein tolles Gefühl!",
+      "fr": "Quand j'avais 14 ans, j'ai écrit mon premier programme. C'était un sentiment génial !",
+      "phonetique": "als ɪç ˈfiːɐ̯ˌt͡seːn jaːʁə alt vaːɐ̯ | ˈhaːbə ɪç maɪn ˈeːɐ̯stəs pʁoˈɡʁam ɡəˈʃʁiːbən | das vaːɐ̯ aɪn ˈtɔləs ɡəˈfyːl",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Als",
+          "regle_grammaticale": {
+            "titre": "Als vs Wenn",
+            "explication": "On utilise 'Als' pour un événement UNIQUE dans le passé (une période ou un moment précis).",
+            "exemple": "Als ich ein Kind war... (Quand j'étais enfant...)"
+          }
+        },
+        {
+          "mot": "geschrieben",
+          "lemme": "schreiben",
+          "forme": "Participe II (Passé composé)",
+          "note": "Verbe fort : schreiben -> schrieb -> geschrieben."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "de": "Bevor ich mit React angefangen habe, hatte ich schon HTML und CSS gelernt.",
+      "fr": "Avant de commencer avec React, j'avais déjà appris le HTML et le CSS.",
+      "phonetique": "bəˈfoːɐ̯ ɪç mɪt ʁiˈɛkt ˈanɡəˌfaŋən ˈhaːbə | ˈhatə ɪç ʃoːn haː-teː-ɛm-ɛl ʊnt t͡seː-ɛs-ɛs ɡəˈlɛʁnt",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Bevor",
+          "traduction": "Avant que / Avant de",
+          "syntaxe": "Conjonction de subordination (verbe à la fin)."
+        },
+        {
+          "mot": "hatte ... gelernt",
+          "grammaire": "Plus-que-parfait (Plusquamperfekt)",
+          "usage": "Pour exprimer une action qui s'est passée AVANT une autre action passée."
+        }
+      ]
+    }
+  ],
+  "grammaire": [
+    {
+      "titre": "Le Plus-que-parfait (Plusquamperfekt)",
+      "explication": "On l'utilise pour l'antériorité dans le passé. On prend l'auxiliaire 'haben' ou 'sein' au PRÉTÉRIT + Participe II.",
+      "tableau": [
+        { "temps": "Parfait", "exemple": "Ich habe gelernt (J'ai appris)" },
+        { "temps": "Plus-que-parfait", "exemple": "Ich HATTE gelernt (J'avais appris)" },
+        { "temps": "Plus-que-parfait (mouvement)", "exemple": "Ich WAR gegangen (J'étais allé)" }
+      ]
+    },
+    {
+      "titre": "Connecteurs temporels de récit",
+      "liste": [
+        { "mot": "Nachdem", "sens": "Après que", "note": "Souvent utilisé avec le Plus-que-parfait." },
+        { "mot": "Seitdem", "sens": "Depuis que", "note": "L'action continue jusqu'à maintenant." },
+        { "mot": "Während", "sens": "Pendant que", "note": "Simultanéité." }
+      ]
+    }
+  ],
+  "vocabulaire_cles": [
+    { "de": "die Kindheit", "fr": "l'enfance" },
+    { "de": "die Entscheidung", "fr": "la décision" },
+    { "de": "sich erinnern an (+ Akk)", "fr": "se souvenir de" },
+    { "de": "damals", "fr": "à l'époque" },
+    { "de": "plötzlich", "fr": "soudainement" }
+  ],
+  "exercices": [
+    {
+      "id": "ex-b1-005-1",
+      "type": "choix_multiple",
+      "question": "Quelle conjonction utiliser pour : '____ ich klein war, spielte ich viel draußen.' (Événement passé unique)",
+      "options": ["Wenn", "Als", "Nachdem"],
+      "reponse_correcte": 1
+    },
+    {
+      "id": "ex-b1-005-2",
+      "type": "conjugaison",
+      "question": "Mettez au plus-que-parfait : 'Er (sein) schon im Bett.'",
+      "reponse_attendue": "Er war schon im Bett gewesen.",
+      "explication": "Auxiliaire 'sein' au prétérit (war) + participe passé de 'sein' (gewesen)."
+    }
+  ],
+  "culture": {
+    "titre": "Le 'Rote Faden' (Le fil rouge)",
+    "explication": "Dans un récit ou un CV allemand, on cherche toujours le 'Rote Faden'. C'est la cohérence logique de ton parcours. Chaque étape doit sembler mener logiquement à la suivante."
+  },
+  "progression": {
+    "xp": 200,
+    "prochain_module": "B1.2",
+    "prochaine_lecon": "b1-006 (Faire des réservations complexes)",
+    "statut": "Module B1.1 terminé !"
+  }
+}

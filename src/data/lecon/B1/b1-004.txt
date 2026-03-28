@@ -1,0 +1,114 @@
+{
+  "id": "b1-004",
+  "niveau": "B1",
+  "module": "B1.1",
+  "titre": "Exprimer des opinions simples et argumenter",
+  "objectifs": {
+    "communicatif": "Donner son avis, approuver ou contredire quelqu'un, justifier un point de vue avec des arguments",
+    "linguistique": "Maîtriser les structures 'Meiner Meinung nach', 'Ich bin der Meinung, dass' et les connecteurs de cause/conséquence (darum, deswegen, daher)",
+    "culturel": "La culture du débat en Allemagne (Diskussionskultur) : être direct mais constructif",
+    "cognitif": "Organiser sa pensée de manière logique (thèse, argument, exemple)"
+  },
+  "metadonnees": {
+    "duree_estimee_minutes": 50,
+    "difficulte_cognitive": 3,
+    "prerequis": ["b1-003"],
+    "competences_visees": ["interaction orale", "production écrite"],
+    "themes_croises": ["société", "technologie", "éthique"]
+  },
+  "situation": {
+    "contexte": "Débat lors d'un cours de langue ou d'une réunion sur l'impact de l'IA dans le travail.",
+    "lieu": "Salle de réunion / Classe",
+    "type": "Discussion argumentative",
+    "registre": "standard"
+  },
+  "dialogue": [
+    {
+      "id": 1,
+      "de": "Meiner Meinung nach verbessert KI unsere Effizienz. Deswegen sollten wir sie nutzen.",
+      "fr": "À mon avis, l'IA améliore notre efficacité. C'est pourquoi nous devrions l'utiliser.",
+      "phonetique": "ˈmaɪnɐ ˈmaɪnʊŋ nax fɛɐ̯ˈbɛsɐt kaː-iː ˈʊnzəʁə ɛfɪˈt͡si̯ɛnt͡s | dɛsˈveːɡən ˈzɔltən viːɐ̯ ziː ˈnʊt͡sən",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Meiner Meinung nach",
+          "usage": "Structure fixe pour donner son avis. Attention : le verbe suit immédiatement 'nach' (Position 2).",
+          "exemple": "Meiner Meinung nach IST (V) das (S) wichtig."
+        },
+        {
+          "mot": "Deswegen",
+          "traduction": "C'est pourquoi / Pour cette raison",
+          "syntaxe": "Adverbe de liaison. Il occupe la position 1, donc le verbe est en position 2. Synonymes : darum, daher."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "de": "Ich bin da anderer Meinung. Dass Maschinen alles machen, finde ich gefährlich.",
+      "fr": "Je suis d'un autre avis. Je trouve dangereux que les machines fassent tout.",
+      "phonetique": "ɪç bɪn daː ˈandəʁɐ ˈmaɪnʊŋ | das maˈʃiːnən ˈaləs ˈmaxən | ˈfɪndə ɪç ɡəˈfɛːɐ̯lɪç",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "anderer Meinung sein",
+          "expression": "Être d'un autre avis / ne pas être d'accord.",
+          "grammaire": "Utilise le génitif (anderer Meinung)."
+        },
+        {
+          "mot": "Dass...",
+          "effet": "La proposition complétive avec 'dass' peut être placée en début de phrase pour mettre l'accent sur l'idée. Le verbe principal 'finde' reste en position 2."
+        }
+      ]
+    }
+  ],
+  "grammaire": [
+    {
+      "titre": "Exprimer son opinion",
+      "liste": [
+        { "expression": "Ich finde / glaube / denke, dass...", "note": "Le plus simple, verbe à la fin." },
+        { "expression": "Meiner Meinung nach + Verbe + Sujet", "note": "Très utilisé, attention à l'inversion." },
+        { "expression": "Ich bin überzeugt, dass...", "note": "Pour exprimer une conviction forte (Je suis convaincu que)." }
+      ]
+    },
+    {
+      "titre": "Connecteurs de cause et conséquence",
+      "tableau": [
+        { "mot": "weil / da", "type": "Subordonnant", "position_verbe": "FIN", "exemple": "Ich lerne, weil es wichtig ist." },
+        { "mot": "deswegen / darum", "type": "Adverbe", "position_verbe": "2 (après le mot)", "exemple": "Es ist wichtig, deswegen lerne ich." },
+        { "mot": "denn", "type": "Conjonction", "position_verbe": "Standard (Position 0)", "exemple": "Ich lerne, denn es ist wichtig." }
+      ]
+    }
+  ],
+  "vocabulaire_cles": [
+    { "de": "das Argument", "fr": "l'argument" },
+    { "de": "zustimmen", "fr": "être d'accord / approuver" },
+    { "de": "widersprechen", "fr": "contredire" },
+    { "de": "einerseits ... andererseits", "fr": "d'une part ... d'autre part" },
+    { "de": "der Standpunkt", "fr": "le point de vue" }
+  ],
+  "exercices": [
+    {
+      "id": "ex-b1-004-1",
+      "type": "reconstruction",
+      "question": "Remettez dans l'ordre : [meiner Meinung nach | ist | das Projekt | genial]",
+      "reponse_attendue": "Meiner Meinung nach ist das Projekt genial.",
+      "explication": "Le verbe 'ist' doit être placé immédiatement après l'expression d'opinion."
+    },
+    {
+      "id": "ex-b1-004-2",
+      "type": "choix_multiple",
+      "question": "Lequel de ces mots demande le verbe à la fin ?",
+      "options": ["darum", "denn", "weil", "deswegen"],
+      "reponse_correcte": 2
+    }
+  ],
+  "astuces_pedagogiques": [
+    {
+      "titre": "Le 'Ja, aber...'",
+      "astuce": "En Allemagne, il est courant d'écouter l'argument de l'autre, de dire 'Ja' (pour montrer qu'on a compris) puis d'enchaîner avec 'aber' pour donner son propre point de vue. C'est une marque de respect intellectuel."
+    }
+  ],
+  "progression": {
+    "xp": 150,
+    "niveau_suivant": "b1-005",
+    "apercu_suivant": "Leçon B1.5 : Raconter une histoire personnelle (récit complexe)."
+  }
+}

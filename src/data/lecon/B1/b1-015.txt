@@ -1,0 +1,112 @@
+{
+  "id": "b1-015",
+  "niveau": "B1",
+  "module": "B1.3",
+  "titre": "Comprendre des annonces radio ou TV simples",
+  "objectifs": {
+    "communicatif": "Saisir l'essentiel d'un bulletin météo, d'une alerte trafic ou d'une brève d'actualité audio",
+    "linguistique": "Identifier les structures nominales, les adverbes de fréquence et les prépositions temporelles (während, innerhalb, außerhalb)",
+    "culturel": "Le rôle des médias publics en Allemagne (ARD, ZDF, Deutschlandfunk)",
+    "cognitif": "Développer l'écoute sélective (repérer les mots-clés sans tout comprendre)"
+  },
+  "metadonnees": {
+    "duree_estimee_minutes": 55,
+    "difficulte_cognitive": 4,
+    "prerequis": ["b1-007", "b1-011"],
+    "competences_visees": ["compréhension orale", "prise de notes"],
+    "themes_croises": ["météo", "trafic", "information"]
+  },
+  "situation": {
+    "contexte": "Écoute d'un flash info à la radio (station 'Bayern 3') pendant un trajet en voiture ou au petit-déjeuner.",
+    "lieu": "Cuisine / Voiture",
+    "type": "Annonce médiatique",
+    "registre": "standard / soutenu"
+  },
+  "dialogue_audio": [
+    {
+      "id": 1,
+      "de": "Und nun zum Wetter: Innerhalb der nächsten Stunden kommt es im Süden zu starken Regenfällen.",
+      "fr": "Et maintenant la météo : dans les prochaines heures, de fortes pluies sont attendues dans le sud.",
+      "phonetique": "ʊnt nuːn t͡suːm ˈvɛtɐ | ˈɪnɐˌhalp deːɐ̯ ˈnɛːçstən ˈʃtʊndən kɔmt ɛs ɪm ˈzyːdən t͡suː ˈʃtaʁkən ˈʁeːɡənˌfɛlən",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Innerhalb (+ Génitif)",
+          "grammaire": "Préposition de temps et d'espace.",
+          "sens": "À l'intérieur de / au cours de (une période)."
+        },
+        {
+          "mot": "Regenfällen",
+          "composition": "Regen (pluie) + Fälle (chutes).",
+          "note": "Exemple typique de nominalisation pour désigner un phénomène."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "de": "Vorsicht auf der A8! Wegen einer Baustelle gibt es derzeit zehn Kilometer Stau in Richtung München.",
+      "fr": "Prudence sur l'A8 ! En raison d'un chantier, il y a actuellement dix kilomètres de bouchons en direction de Munich.",
+      "phonetique": "ˈfoːɐ̯ˌzɪçt aʊf deːɐ̯ aː-axt | ˈveːɡən ˈaɪnɐ ˈbaʊˌʃtɛlə ɡiːpt ɛs ˈdeːɐ̯ˌt͡saɪt t͡seːn kiloˈmeːtɐ ʃtaʊ ɪn ˈʁɪçtʊŋ ˈmʏnçən",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Wegen (+ Génitif)",
+          "traduction": "À cause de / en raison de.",
+          "note": "À l'oral familier, on entend souvent le datif, mais au niveau B1 (et à la radio), le génitif reste la norme."
+        },
+        {
+          "mot": "derzeit",
+          "synonyme": "im Moment / aktuell.",
+          "traduction": "actuellement."
+        }
+      ]
+    }
+  ],
+  "grammaire": [
+    {
+      "titre": "Les prépositions avec le Génitif",
+      "explication": "Le langage des médias utilise beaucoup le génitif pour être précis et concis.",
+      "tableau": [
+        { "Préposition": "während", "Sens": "pendant", "Exemple": "während des Tages" },
+        { "Préposition": "wegen", "Sens": "à cause de", "Exemple": "wegen des Wetters" },
+        { "Préposition": "trotz", "Sens": "malgré", "Exemple": "trotz des Regens" },
+        { "Préposition": "innerhalb", "Sens": "au sein de / en l'espace de", "Exemple": "innerhalb einer Woche" }
+      ]
+    },
+    {
+      "titre": "L'écoute sélective",
+      "astuce": "Ne cherche pas à traduire chaque mot. Concentre-toi sur les nombres (kilomètres, degrés), les lieux (München, Autobahn A8) et les mots chargés de sens (Stau, Regen, Sonne)."
+    }
+  ],
+  "vocabulaire_cles": [
+    { "de": "die Nachrichten", "fr": "les informations / les nouvelles" },
+    { "de": "die Ansage", "fr": "l'annonce" },
+    { "de": "der Stau", "fr": "le bouchon / l'embouteillage" },
+    { "de": "bewölkt / sonnig", "fr": "nuageux / ensoleillé" },
+    { "de": "die Baustelle", "fr": "le chantier / les travaux" }
+  ],
+  "exercices": [
+    {
+      "id": "ex-b1-015-1",
+      "type": "comprehension",
+      "question": "Si vous entendez 'Trotz der Sonne ist es kalt', fait-il chaud ?",
+      "reponse_attendue": "Non, il fait froid malgré le soleil.",
+      "explication": "'Trotz' exprime l'opposition (malgré)."
+    },
+    {
+      "id": "ex-b1-015-2",
+      "type": "vocabulaire",
+      "question": "Quel mot désigne un bouchon sur l'autoroute ?",
+      "reponse_attendue": "Der Stau",
+      "explication": "Mot indispensable pour tout conducteur en Allemagne."
+    }
+  ],
+  "culture": {
+    "titre": "Tagesschau",
+    "explication": "La 'Tagesschau' sur la chaîne ARD est le journal télévisé le plus regardé d'Allemagne. Il dure exactement 15 minutes et est connu pour son sérieux et sa neutralité. C'est un excellent exercice pour un étudiant de niveau B1."
+  },
+  "progression": {
+    "xp": 200,
+    "prochain_module": "B2.1",
+    "prochaine_lecon": "b2-001 (Présenter un projet ou une idée)",
+    "statut": "Félicitations ! Niveau B1 entièrement terminé !"
+  }
+}

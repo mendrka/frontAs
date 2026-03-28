@@ -1,0 +1,232 @@
+{
+  "id": "a1-011",
+  "niveau": "A1",
+  "module": "A1.2",
+  "titre": "Parler de sa famille",
+  "objectifs": {
+    "communicatif": "Présenter sa famille, dire qui est qui, parler du nombre de personnes dans la famille et décrire les membres simplement",
+    "linguistique": "Maîtriser les noms de famille (Vater, Mutter, Bruder, Schwester, Großeltern…), le possessif mein/meine/mein, les nombres avec Personen, les phrases avec haben et sein",
+    "culturel": "Connaître les structures familiales typiques en pays germanophones et l’importance de la famille dans les conversations",
+    "cognitif": "Utiliser correctement les possessifs et distinguer les genres des noms de famille"
+  },
+  "metadonnees": {
+    "duree_estimee_minutes": 40,
+    "difficulte_cognitive": 2,
+    "prerequis": ["a1-010"],
+    "competences_visees": ["expression orale", "description personnelle"],
+    "themes_croises": ["identité", "vie quotidienne"]
+  },
+
+  "situation": {
+    "contexte": "Suite de la soirée internationale à Vienne – les invités parlent de leur famille",
+    "lieu": "Appartement privé, Vienne (Wien), Autriche",
+    "type": "conversation informelle",
+    "registre": "informel"
+  },
+
+  "dialogue": [
+    {
+      "id": 1,
+      "de": "Hast du eine große Familie? Ja, ich habe eine große Familie.",
+      "fr": "As-tu une grande famille ? Oui, j’ai une grande famille.",
+      "audio": "/audio/a1-011-1.mp3",
+      "phonetique": "hast duː ˈaɪnə ˈɡʁoːsə faˈmiːljə | jaː ɪç ˈhaːbə ˈaɪnə ˈɡʁoːsə faˈmiːljə",
+      "intonation": "montante sur la question, descendante sur la réponse",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Hast du eine große Familie?",
+          "lemme": "die Familie",
+          "classe_grammaticale": "nom féminin",
+          "traduction_directe": "As-tu une grande famille ?",
+          "phonetique": "ˈfaˈmiːljə",
+          "note": "Familie est toujours féminin → eine große Familie"
+        },
+        {
+          "mot": "große",
+          "lemme": "groß",
+          "classe_grammaticale": "adjectif épithète",
+          "traduction_directe": "grande",
+          "phonetique": "ˈɡʁoːsə",
+          "regle": "Féminin accusatif → -e (eine große)"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "de": "Wie viele Geschwister hast du? Ich habe einen Bruder und zwei Schwestern.",
+      "fr": "Combien de frères et sœurs as-tu ? J’ai un frère et deux sœurs.",
+      "audio": "/audio/a1-011-2.mp3",
+      "phonetique": "viː ˈfiːlə ɡəˈʃvɪstɐ hast duː | ɪç ˈhaːbə ˈaɪnən ˈbʁuːdɐ ʊnt tsvaɪ ˈʃvɛstɐn",
+      "intonation": "montante sur la question",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Wie viele",
+          "lemme": "viele",
+          "classe_grammaticale": "quantificateur",
+          "traduction_directe": "Combien de",
+          "phonetique": "viː ˈfiːlə"
+        },
+        {
+          "mot": "Geschwister",
+          "lemme": "die Geschwister",
+          "classe_grammaticale": "nom pluriel",
+          "traduction_directe": "frères et sœurs",
+          "phonetique": "ɡəˈʃvɪstɐ",
+          "note": "Toujours pluriel, pas d’article indéfini"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "de": "Das ist mein Vater. Er ist Lehrer. Meine Mutter ist Ärztin.",
+      "fr": "Voici mon père. Il est professeur. Ma mère est médecin.",
+      "audio": "/audio/a1-011-3.mp3",
+      "phonetique": "das ɪst maɪn ˈfaːtɐ | eːɐ̯ ɪst ˈleːʁɐ | ˈmaɪnə ˈmʊtɐ ɪst ˈɛʁtstɪn",
+      "intonation": "informative",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "mein Vater",
+          "lemme": "mein",
+          "classe_grammaticale": "possessif masculin",
+          "traduction_directe": "mon père",
+          "phonetique": "maɪn ˈfaːtɐ",
+          "regle": "Masculin nominatif : mein (pas de terminaison supplémentaire)"
+        },
+        {
+          "mot": "meine Mutter",
+          "lemme": "meine",
+          "classe_grammaticale": "possessif féminin",
+          "traduction_directe": "ma mère",
+          "phonetique": "ˈmaɪnə ˈmʊtɐ"
+        },
+        {
+          "mot": "Lehrer / Ärztin",
+          "lemme": "der Lehrer / die Ärztin",
+          "classe_grammaticale": "noms de professions",
+          "traduction_directe": "professeur / médecin (femme)",
+          "phonetique": "ˈleːʁɐ / ˈɛʁtstɪn"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "de": "Meine Großeltern wohnen in Madagaskar. Ich habe auch einen Onkel und eine Tante.",
+      "fr": "Mes grands-parents habitent à Madagascar. J’ai aussi un oncle et une tante.",
+      "audio": "/audio/a1-011-4.mp3",
+      "phonetique": "ˈmaɪnə ˈɡʁoːsˌɛltɐn ˈvoːnən ɪn madaˈɡaskaʁ | ɪç ˈhaːbə aʊx ˈaɪnən ˈʊŋkəl ʊnt ˈaɪnə ˈtantə",
+      "intonation": "informative",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Großeltern",
+          "lemme": "die Großeltern",
+          "classe_grammaticale": "nom pluriel",
+          "traduction_directe": "grands-parents",
+          "phonetique": "ˈɡʁoːsˌɛltɐn"
+        },
+        {
+          "mot": "Onkel / Tante",
+          "lemme": "der Onkel / die Tante",
+          "classe_grammaticale": "noms de famille",
+          "traduction_directe": "oncle / tante",
+          "phonetique": "ˈʊŋkəl / ˈtantə"
+        }
+      ]
+    }
+  ],
+
+  "vocabulaire_complet": [
+    { "mot": "die Familie", "traduction": "la famille", "type": "nom féminin", "phonetique": "faˈmiːljə" },
+    { "mot": "der Vater", "traduction": "le père", "type": "nom masculin", "phonetique": "ˈfaːtɐ" },
+    { "mot": "die Mutter", "traduction": "la mère", "type": "nom féminin", "phonetique": "ˈmʊtɐ" },
+    { "mot": "der Bruder", "traduction": "le frère", "type": "nom masculin", "phonetique": "ˈbʁuːdɐ" },
+    { "mot": "die Schwester", "traduction": "la sœur", "type": "nom féminin", "phonetique": "ˈʃvɛstɐ" },
+    { "mot": "die Geschwister", "traduction": "les frères et sœurs", "type": "nom pluriel", "phonetique": "ɡəˈʃvɪstɐ" },
+    { "mot": "der Großvater", "traduction": "le grand-père", "type": "nom masculin", "phonetique": "ˈɡʁoːsˌfaːtɐ" },
+    { "mot": "die Großmutter", "traduction": "la grand-mère", "type": "nom féminin", "phonetique": "ˈɡʁoːsˌmʊtɐ" },
+    { "mot": "der Onkel", "traduction": "l’oncle", "type": "nom masculin", "phonetique": "ˈʊŋkəl" },
+    { "mot": "die Tante", "traduction": "la tante", "type": "nom féminin", "phonetique": "ˈtantə" },
+    { "mot": "mein / meine", "traduction": "mon / ma", "type": "possessif", "phonetique": "maɪn / ˈmaɪnə" }
+  ],
+
+  "grammaire": [
+    {
+      "titre": "Possessifs mein / meine / mein",
+      "niveau": "A1",
+      "tableau": [
+        { "genre": "Masculin", "nominatif": "mein Vater", "accusatif": "meinen Vater" },
+        { "genre": "Féminin", "nominatif": "meine Mutter", "accusatif": "meine Mutter" },
+        { "genre": "Neutre", "nominatif": "mein Kind", "accusatif": "mein Kind" },
+        { "genre": "Pluriel", "nominatif": "meine Geschwister", "accusatif": "meine Geschwister" }
+      ]
+    },
+    {
+      "titre": "Wie viele … ?",
+      "niveau": "A1",
+      "explication": "Pour demander le nombre → Wie viele + nom pluriel ?",
+      "exemples": [
+        "Wie viele Geschwister hast du?",
+        "Wie viele Kinder hast du?"
+      ]
+    }
+  ],
+
+  "exercices": [
+    {
+      "id": "ex-001",
+      "type": "choix_multiple",
+      "difficulte": 1,
+      "question": "Complète : Das ist ___ Mutter.",
+      "options": ["mein", "meine", "meinen", "meinem"],
+      "reponse_correcte": 1,
+      "explication": "meine Mutter (féminin)"
+    },
+    {
+      "id": "ex-002",
+      "type": "traduction",
+      "difficulte": 2,
+      "question": "Traduire : 'J’ai deux sœurs. Ma sœur s’appelle Anna.'",
+      "reponse_attendue": "Ich habe zwei Schwestern. Meine Schwester heißt Anna.",
+      "explication": "zwei Schwestern (pluriel) + meine Schwester"
+    },
+    {
+      "id": "ex-010",
+      "type": "situation",
+      "difficulte": 3,
+      "question": "Présente ta famille complète : nombre de personnes, parents, frères/sœurs, grands-parents et professions simples.",
+      "modele_reponse": "Ich habe eine große Familie. Mein Vater ist Lehrer. Meine Mutter ist … Ich habe einen Bruder und …",
+      "criteres_evaluation": ["possessifs corrects", "noms de famille avec genre juste", "Wie viele … correctement utilisé"]
+    }
+  ],
+
+  "comprehension": [
+    {
+      "question": "Pourquoi dit-on 'meine Schwester' et non 'mein Schwester' ?",
+      "reponse": "Schwester est féminin → possessif devient meine (comme eine)."
+    }
+  ],
+
+  "culture": {
+    "titre": "La famille en pays germanophones",
+    "points": [
+      { "sujet": "Structures familiales", "explication": "Les familles sont souvent petites (1-2 enfants). Les grands-parents jouent un rôle important. On dit souvent 'die Familie' avec fierté." }
+    ]
+  },
+
+  "astuces_pedagogiques": [
+    {
+      "titre": "Mémo des possessifs",
+      "astuce": "mein pour masculin et neutre, meine pour féminin et pluriel. Pense 'mon père' = mein Vater, 'ma mère' = meine Mutter."
+    }
+  ],
+
+  "progression": {
+    "xp": 70,
+    "badges_deblocables": ["Familien-Profi", "Besitz-und-Familie-Meister"],
+    "niveau_suivant": "a1-012",
+    "apercu_suivant": "Leçon suivante : Parler de ses amis"
+  }
+}

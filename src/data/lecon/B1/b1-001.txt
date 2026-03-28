@@ -1,0 +1,129 @@
+{
+  "id": "b1-001",
+  "niveau": "B1",
+  "module": "B1.1",
+  "titre": "Décrire son parcours et ses expériences",
+  "objectifs": {
+    "communicatif": "Raconter les étapes majeures de sa vie, ses études et ses premières expériences professionnelles",
+    "linguistique": "Maîtriser l'alternance Parfait/Prétérit et les marqueurs temporels (vor, seit, für)",
+    "culturel": "Comprendre le système éducatif allemand et la valeur du CV (Lebenslauf)",
+    "cognitif": "Structurer un récit chronologique cohérent"
+  },
+  "metadonnees": {
+    "duree_estimee_minutes": 60,
+    "difficulte_cognitive": 3,
+    "prerequis": ["a2-015", "a2-010"],
+    "competences_visees": ["expression écrite", "narration orale"],
+    "themes_croises": ["éducation", "biographie", "travail"]
+  },
+  "situation": {
+    "contexte": "Entretien pour un stage ou un projet de volontariat en Allemagne. Le candidat présente son parcours.",
+    "lieu": "Bureau ou appel vidéo, Berlin",
+    "type": "Entretien semi-formel",
+    "registre": "standard"
+  },
+  "dialogue": [
+    {
+      "id": 1,
+      "de": "Ich habe 2024 mein Abitur in Madagaskar gemacht. Danach war ich als Web-Entwickler tätig.",
+      "fr": "J'ai passé mon baccalauréat en 2024 à Madagascar. Après cela, j'ai travaillé comme développeur web.",
+      "phonetique": "ɪç ˈhaːbə t͡svaɪˈtaʊzntˌfiːɐ̯ʊntˈt͡svant͡sɪç maɪn abiˈtuːɐ̯ ɪn madaˈɡaskaʁ ɡəˈmaxt | daˈnaːx vaːɐ̯ ɪç als vɛp-ɛntˈvɪklɐ ˈtɛːtɪç",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Abitur",
+          "lemme": "Abitur",
+          "classe_grammaticale": "nom neutre",
+          "traduction_directe": "Baccalauréat",
+          "note_culturelle": "L'Abitur est le diplôme de fin d'études secondaires en Allemagne permettant d'entrer à l'université."
+        },
+        {
+          "mot": "war",
+          "lemme": "sein",
+          "classe_grammaticale": "verbe (Prétérit)",
+          "forme": "1ère personne du singulier",
+          "regle": "Au niveau B1, on utilise systématiquement le Prétérit pour 'sein' et 'haben', même à l'oral."
+        },
+        {
+          "mot": "tätig",
+          "traduction": "actif / en activité",
+          "expression": "als ... tätig sein = exercer la fonction de ..."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "de": "Das klingt gut! Seit wann lernst du Deutsch? - Ich lerne es seit einem Jahr, weil ich nach Deutschland gehen will.",
+      "fr": "Cela semble bien ! Depuis quand apprends-tu l'allemand ? - Je l'apprends depuis un an, car je veux aller en Allemagne.",
+      "phonetique": "das klɪŋt ɡuːt | zaɪt van ˈlɛʁnst duː dɔɪtʃ | ɪç ˈlɛʁnə ɛs zaɪt ˈaɪnəm jaːɐ̯ | vaɪl ɪç naːx ˈdɔɪtʃlant ˈɡeːən vɪl",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "seit",
+          "classe_grammaticale": "préposition",
+          "regime": "Datif",
+          "regle_temporelle": "Indique une action qui continue dans le présent. Contrairement au français, on utilise le présent en allemand : 'Ich lerne seit...' = 'J'apprends depuis...'"
+        },
+        {
+          "mot": "weil",
+          "classe_grammaticale": "conjonction de subordination",
+          "effet_syntaxique": "Rejette le verbe conjugué à la FIN de la proposition."
+        }
+      ]
+    }
+  ],
+  "grammaire": [
+    {
+      "titre": "Parfait vs Prétérit",
+      "explication": "En B1, il faut savoir jongler entre les deux.",
+      "points": [
+        {
+          "temps": "Parfait (habe gemacht / bin gegangen)",
+          "usage": "Majorité des verbes pour raconter des événements passés à l'oral."
+        },
+        {
+          "temps": "Prétérit (war / hatte / wollte)",
+          "usage": "Verbes d'état (sein/haben), verbes de modalité et récit écrit soutenu."
+        }
+      ]
+    },
+    {
+      "titre": "Les prépositions temporelles",
+      "tableau": [
+        { "mot": "vor (+ Datif)", "usage": "Moment précis dans le passé (il y a)", "exemple": "vor zwei Jahren (il y a deux ans)" },
+        { "mot": "seit (+ Datif)", "usage": "Durée commencée dans le passé et qui dure encore (depuis)", "exemple": "seit einem Monat (depuis un mois)" },
+        { "mot": "für (+ Accusatif)", "usage": "Durée prévue (pour)", "exemple": "für drei Wochen (pour trois semaines)" }
+      ]
+    }
+  ],
+  "vocabulaire_cles": [
+    { "de": "die Erfahrung", "fr": "l'expérience" },
+    { "de": "der Lebenslauf", "fr": "le CV" },
+    { "de": "die Ausbildung", "fr": "la formation / l'apprentissage" },
+    { "de": "das Studium", "fr": "les études supérieures" },
+    { "de": "abschließen", "fr": "terminer / valider (un diplôme)" }
+  ],
+  "exercices": [
+    {
+      "id": "ex-b1-001-1",
+      "type": "traduction",
+      "question": "Traduire : 'Il y a trois ans, j'ai commencé mon projet.'",
+      "reponse_attendue": "Vor drei Jahren habe ich mein Projekt begonnen.",
+      "explication": "vor + Datif pluriel (Jahren) + verbe en position 2."
+    },
+    {
+      "id": "ex-b1-001-2",
+      "type": "choix_multiple",
+      "question": "Quelle phrase exprime une action encore en cours ?",
+      "options": [
+        "Ich habe zwei Jahre Deutsch gelernt.",
+        "Ich lerne seit zwei Jahren Deutsch.",
+        "Ich lernte vor zwei Jahren Deutsch."
+      ],
+      "reponse_correcte": 1
+    }
+  ],
+  "progression": {
+    "xp": 150,
+    "niveau_suivant": "b1-002",
+    "apercu_suivant": "Leçon B1.2 : Parler de ses projets et ambitions (futur et conditionnel)."
+  }
+}

@@ -1,0 +1,212 @@
+{
+  "id": "a2-006",
+  "niveau": "A2",
+  "module": "A2.1",
+  "titre": "Parler de projets et ambitions",
+  "objectifs": {
+    "communicatif": "Parler de ses projets futurs (court et long terme), exprimer ses ambitions, ses rêves et ses objectifs professionnels ou personnels",
+    "linguistique": "Maîtriser le futur proche ('werden + infinitif'), les expressions 'Ich möchte…', 'Ich plane…', 'Ich hoffe…', 'In fünf Jahren…', les verbes de projet (lernen, studieren, reisen, gründen), les connecteurs de temps (nächstes Jahr, später, irgendwann)",
+    "culturel": "Connaître l’attitude allemande face aux projets (réalisme, planification, 'Ziele setzen')",
+    "cognitif": "Former le futur et structurer un discours sur l’avenir"
+  },
+  "metadonnees": {
+    "duree_estimee_minutes": 45,
+    "difficulte_cognitive": 2,
+    "prerequis": ["a2-005"],
+    "competences_visees": ["expression orale", "projet personnel"],
+    "themes_croises": ["ambitions", "avenir"]
+  },
+
+  "situation": {
+    "contexte": "Discussion entre amis sur l’avenir et les projets de vie",
+    "lieu": "Café à Vienne (Wien), Autriche",
+    "type": "conversation informelle",
+    "registre": "informel"
+  },
+
+  "dialogue": [
+    {
+      "id": 1,
+      "de": "Was sind deine Pläne für die Zukunft? Ich möchte nächstes Jahr nach Deutschland ziehen.",
+      "fr": "Quels sont tes projets pour l’avenir ? Je voudrais déménager en Allemagne l’année prochaine.",
+      "audio": "/audio/a2-006-1.mp3",
+      "phonetique": "vas zɪnt ˈdaɪnə ˈplaːnə fʏʁ diː tsuːˈkʊnft | ɪç ˈmœçtə ˈnɛːçstəs jaːɐ̯ nax ˈdɔɪtʃlant ˈtsiːən",
+      "intonation": "montante sur la question",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Was sind deine Pläne?",
+          "lemme": "der Plan",
+          "classe_grammaticale": "question sur l’avenir",
+          "traduction_directe": "Quels sont tes projets ?",
+          "phonetique": "ˈplaːnə"
+        },
+        {
+          "mot": "Ich möchte…",
+          "lemme": "möchten",
+          "classe_grammaticale": "expression de souhait",
+          "traduction_directe": "Je voudrais…",
+          "phonetique": "ˈmœçtə"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "de": "In zwei Jahren werde ich mein Studium abschließen und dann eine eigene Firma gründen.",
+      "fr": "Dans deux ans je terminerai mes études et ensuite je créerai ma propre entreprise.",
+      "audio": "/audio/a2-006-2.mp3",
+      "phonetique": "ɪn tsvaɪ ˈjaːʁən ˈveːʁdə ɪç maɪn ʃtuˈdiːʊm ˈapˌʃlɪsən ʊnt dan ˈaɪɡənə ˈfɪʁma ˈɡʁʏndən",
+      "intonation": "ambitieuse",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "werde ich … abschließen",
+          "lemme": "werden",
+          "classe_grammaticale": "futur proche",
+          "traduction_directe": "je terminerai",
+          "phonetique": "ˈveːʁdə",
+          "regle": "werden + infinitif = futur"
+        },
+        {
+          "mot": "eine eigene Firma gründen",
+          "lemme": "gründen",
+          "classe_grammaticale": "verbe",
+          "traduction_directe": "créer sa propre entreprise",
+          "phonetique": "ˈɡʁʏndən"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "de": "Ich hoffe, dass ich irgendwann nach Australien reisen kann.",
+      "fr": "J’espère que je pourrai un jour voyager en Australie.",
+      "audio": "/audio/a2-006-3.mp3",
+      "phonetique": "ɪç ˈhɔfə das ɪç ˈɪʁɡəntvan nax aʊsˈtraːliən ˈʁaɪzən kan",
+      "intonation": "rêveuse",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Ich hoffe, dass…",
+          "lemme": "hoffen",
+          "classe_grammaticale": "expression d’espoir",
+          "traduction_directe": "J’espère que…",
+          "phonetique": "ˈhɔfə"
+        },
+        {
+          "mot": "irgendwann",
+          "lemme": "irgendwann",
+          "classe_grammaticale": "adverbe",
+          "traduction_directe": "un jour / un de ces jours",
+          "phonetique": "ˈɪʁɡəntvan"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "de": "Und was sind deine Ziele? Ich möchte gesund bleiben und glücklich sein.",
+      "fr": "Et quels sont tes objectifs ? Je voudrais rester en bonne santé et être heureux.",
+      "audio": "/audio/a2-006-4.mp3",
+      "phonetique": "ʊnt vas zɪnt ˈdaɪnə ˈtsiːlə | ɪç ˈmœçtə ɡəˈzʊnt ˈblaɪbən ʊnt ˈɡlʏklɪç zaɪn",
+      "intonation": "réflexive",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Ziele",
+          "lemme": "das Ziel",
+          "classe_grammaticale": "nom neutre",
+          "traduction_directe": "objectifs",
+          "phonetique": "ˈtsiːlə"
+        }
+      ]
+    }
+  ],
+
+  "vocabulaire_complet": [
+    { "mot": "die Zukunft", "traduction": "l’avenir", "type": "nom féminin", "phonetique": "ˈtsuːkʊnft" },
+    { "mot": "der Plan", "traduction": "le projet / le plan", "type": "nom masculin", "phonetique": "plaːn" },
+    { "mot": "werden", "traduction": "aller (futur)", "type": "verbe auxiliaire", "phonetique": "ˈveːʁdən" },
+    { "mot": "abschließen", "traduction": "terminer (études)", "type": "verbe", "phonetique": "ˈapˌʃlɪsən" },
+    { "mot": "gründen", "traduction": "créer (entreprise)", "type": "verbe", "phonetique": "ˈɡʁʏndən" },
+    { "mot": "hoffen", "traduction": "espérer", "type": "verbe", "phonetique": "ˈhɔfən" },
+    { "mot": "irgendwann", "traduction": "un jour", "type": "adverbe", "phonetique": "ˈɪʁɡəntvan" },
+    { "mot": "das Ziel", "traduction": "l’objectif", "type": "nom neutre", "phonetique": "tsiːl" }
+  ],
+
+  "grammaire": [
+    {
+      "titre": "Le futur proche avec werden",
+      "niveau": "A2",
+      "explication": "werden (conjugué) + infinitif",
+      "tableau": [
+        { "phrase": "Ich werde studieren.", "traduction": "Je vais étudier." },
+        { "phrase": "Wir werden reisen.", "traduction": "Nous allons voyager." }
+      ]
+    },
+    {
+      "titre": "Expressions pour parler de l’avenir",
+      "niveau": "A2",
+      "tableau": [
+        { "expression": "nächstes Jahr", "fr": "l’année prochaine" },
+        { "expression": "in zwei Jahren", "fr": "dans deux ans" },
+        { "expression": "irgendwann", "fr": "un jour" },
+        { "expression": "später", "fr": "plus tard" }
+      ]
+    }
+  ],
+
+  "exercices": [
+    {
+      "id": "ex-001",
+      "type": "choix_multiple",
+      "difficulte": 1,
+      "question": "Comment dit-on 'Je vais déménager l’année prochaine' ?",
+      "options": ["Ich ziehe nächstes Jahr um.", "Ich werde nächstes Jahr umziehen.", "Ich habe nächstes Jahr umgezogen."],
+      "reponse_correcte": 1,
+      "explication": "werden + infinitif"
+    },
+    {
+      "id": "ex-002",
+      "type": "traduction",
+      "difficulte": 2,
+      "question": "Traduire : 'Dans cinq ans j’espère avoir mon propre restaurant. Je voudrais voyager en Asie et apprendre le japonais.'",
+      "reponse_attendue": "In fünf Jahren hoffe ich, dass ich mein eigenes Restaurant habe. Ich möchte nach Asien reisen und Japanisch lernen.",
+      "explication": "hoffen + möchten + futur"
+    },
+    {
+      "id": "ex-010",
+      "type": "situation",
+      "difficulte": 3,
+      "question": "Parle de tes projets à court terme (cette année) et à long terme (dans 5-10 ans). Mentionne au moins 6 ambitions différentes.",
+      "modele_reponse": "Nächstes Jahr werde ich einen neuen Job suchen. In fünf Jahren möchte ich eine Familie gründen und ein Haus kaufen. Irgendwann werde ich nach Madagaskar zurückkehren.",
+      "criteres_evaluation": ["werden + infinitif", "expressions de temps", "vocabulaire d’ambition"]
+    }
+  ],
+
+  "comprehension": [
+    {
+      "question": "Quelle est la différence entre 'Ich möchte…' et 'Ich werde…' ?",
+      "reponse": "'Ich möchte…' exprime un désir. 'Ich werde…' exprime une intention ou une prédiction concrète."
+    }
+  ],
+
+  "culture": {
+    "titre": "Les ambitions en Allemagne/Autriche",
+    "points": [
+      { "sujet": "Planung", "explication": "Les Allemands aiment planifier (Ziele setzen). On parle souvent de carrière, de formation continue et d’équilibre vie pro/perso." }
+    ]
+  },
+
+  "astuces_pedagogiques": [
+    {
+      "titre": "Structure pour parler de projets",
+      "astuce": "Kurzfristig werde ich … → Langfristig möchte ich … → Irgendwann hoffe ich …"
+    }
+  ],
+
+  "progression": {
+    "xp": 90,
+    "badges_deblocables": ["Zukunfts-Planer", "Ambitions-Profi"],
+    "niveau_suivant": "a2-007",
+    "apercu_suivant": "Leçon suivante : Parler de la santé et des émotions (approfondissement)"
+  }
+}

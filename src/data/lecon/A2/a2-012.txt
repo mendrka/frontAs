@@ -1,0 +1,202 @@
+{
+  "id": "a2-012",
+  "niveau": "A2",
+  "module": "A2.2",
+  "titre": "À l’hôtel : réserver et poser des questions",
+  "objectifs": {
+    "communicatif": "Réserver une chambre d’hôtel par téléphone ou en ligne, poser des questions sur les disponibilités, le prix, les équipements, demander des informations pratiques (WiFi, petit-déjeuner, parking…) et confirmer une réservation",
+    "linguistique": "Maîtriser les expressions de réservation ('Ich möchte ein Zimmer reservieren', 'Haben Sie noch ein Zimmer frei?'), le vocabulaire hôtelier (Einzelzimmer, Doppelzimmer, Frühstück, Bad, WLAN…), les questions polies avec 'können' et 'haben', les formules de confirmation",
+    "culturel": "Connaître les pratiques hôtelières en Allemagne/Autriche (petit-déjeuner inclus, ponctualité du check-in, pourboire pour le personnel)",
+    "cognitif": "Utiliser le conditionnel de politesse et structurer une conversation de réservation"
+  },
+  "metadonnees": {
+    "duree_estimee_minutes": 45,
+    "difficulte_cognitive": 2,
+    "prerequis": ["a2-011"],
+    "competences_visees": ["situations pratiques", "politesse"],
+    "themes_croises": ["voyages", "services"]
+  },
+
+  "situation": {
+    "contexte": "Un voyageur téléphone à un hôtel à Vienne pour réserver une chambre",
+    "lieu": "Téléphone ou réception d’hôtel à Vienne (Wien), Autriche",
+    "type": "situation de service",
+    "registre": "semi-formel"
+  },
+
+  "dialogue": [
+    {
+      "id": 1,
+      "de": "Guten Tag, ich möchte ein Zimmer reservieren. Für wann denn?",
+      "fr": "Bonjour, je voudrais réserver une chambre. Pour quand ?",
+      "audio": "/audio/a2-012-1.mp3",
+      "phonetique": "ˈɡuːtn̩ taːk | ɪç ˈmœçtə aɪn ˈtsɪmɐ ʁezɛʁˈviːʁən | fʏʁ van dɛn",
+      "intonation": "accueillante",
+      "registre": "semi-formel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Ich möchte ein Zimmer reservieren",
+          "lemme": "reservieren",
+          "classe_grammaticale": "expression de réservation",
+          "traduction_directe": "Je voudrais réserver une chambre",
+          "phonetique": "ʁezɛʁˈviːʁən"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "de": "Haben Sie noch ein Doppelzimmer frei für den 15. bis 20. Mai? Ja, wir haben noch ein Zimmer mit Bad und WLAN.",
+      "fr": "Avez-vous encore une chambre double libre du 15 au 20 mai ? Oui, nous avons encore une chambre avec salle de bain et WiFi.",
+      "audio": "/audio/a2-012-2.mp3",
+      "phonetique": "ˈhaːbən ziː nɔx aɪn ˈdɔpəlˌtsɪmɐ fʁaɪ fʏʁ deːn fʏnftseːntə bɪs tsvantsɪçstə maɪ | jaː viːɐ̯ ˈhaːbən nɔx aɪn ˈtsɪmɐ mɪt baːt ʊnt veːˈlaːn",
+      "intonation": "professionnelle",
+      "registre": "semi-formel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Doppelzimmer",
+          "lemme": "das Doppelzimmer",
+          "classe_grammaticale": "nom neutre",
+          "traduction_directe": "chambre double",
+          "phonetique": "ˈdɔpəlˌtsɪmɐ"
+        },
+        {
+          "mot": "frei",
+          "lemme": "frei",
+          "classe_grammaticale": "adjectif",
+          "traduction_directe": "libre / disponible",
+          "phonetique": "fʁaɪ"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "de": "Wie viel kostet das Zimmer pro Nacht? 120 Euro inklusive Frühstück.",
+      "fr": "Combien coûte la chambre par nuit ? 120 euros petit-déjeuner inclus.",
+      "audio": "/audio/a2-012-3.mp3",
+      "phonetique": "viː fiːl ˈkɔstət das ˈtsɪmɐ pʁoː naxt | aɪnˈhʊndɐt tsvaɪntsɪç ˈɔɪʁo ɪnkluˈziːvə ˈfʁyːʃtʏk",
+      "intonation": "informative",
+      "registre": "semi-formel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "pro Nacht",
+          "lemme": "pro",
+          "classe_grammaticale": "expression de prix",
+          "traduction_directe": "par nuit",
+          "phonetique": "pʁoː naxt"
+        },
+        {
+          "mot": "inklusive",
+          "lemme": "inklusive",
+          "classe_grammaticale": "préposition",
+          "traduction_directe": "inclus",
+          "phonetique": "ɪnkluˈziːvə"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "de": "Gut, ich nehme das Zimmer. Kann ich mit Kreditkarte zahlen? Ja, natürlich.",
+      "fr": "Bien, je prends la chambre. Puis-je payer par carte de crédit ? Oui, bien sûr.",
+      "audio": "/audio/a2-012-4.mp3",
+      "phonetique": "ɡuːt ɪç ˈneːmə das ˈtsɪmɐ | kan ɪç mɪt kʁeˈdiːtˌkaʁtə ˈtsaːlən | jaː naˈtʏːʁlɪç",
+      "intonation": "confirmation",
+      "registre": "semi-formel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Ich nehme das Zimmer",
+          "lemme": "nehmen",
+          "classe_grammaticale": "confirmation de réservation",
+          "traduction_directe": "Je prends la chambre",
+          "phonetique": "ˈneːmə"
+        }
+      ]
+    }
+  ],
+
+  "vocabulaire_complet": [
+    { "mot": "das Hotel", "traduction": "l’hôtel", "type": "nom neutre", "phonetique": "hoˈtɛl" },
+    { "mot": "das Zimmer", "traduction": "la chambre", "type": "nom neutre", "phonetique": "ˈtsɪmɐ" },
+    { "mot": "das Einzelzimmer", "traduction": "la chambre individuelle", "type": "nom neutre", "phonetique": "ˈaɪntsəlˌtsɪmɐ" },
+    { "mot": "das Doppelzimmer", "traduction": "la chambre double", "type": "nom neutre", "phonetique": "ˈdɔpəlˌtsɪmɐ" },
+    { "mot": "das Frühstück", "traduction": "le petit-déjeuner", "type": "nom neutre", "phonetique": "ˈfʁyːʃtʏk" },
+    { "mot": "reservieren", "traduction": "réserver", "type": "verbe", "phonetique": "ʁezɛʁˈviːʁən" },
+    { "mot": "frei", "traduction": "libre / disponible", "type": "adjectif", "phonetique": "fʁaɪ" },
+    { "mot": "pro Nacht", "traduction": "par nuit", "type": "expression", "phonetique": "pʁoː naxt" }
+  ],
+
+  "grammaire": [
+    {
+      "titre": "Expressions de réservation",
+      "niveau": "A2",
+      "tableau": [
+        { "expression": "Ich möchte ein Zimmer reservieren.", "usage": "Je voudrais réserver une chambre" },
+        { "expression": "Haben Sie noch ein Zimmer frei?", "usage": "Avez-vous encore une chambre disponible ?" },
+        { "expression": "Wie viel kostet das Zimmer pro Nacht?", "usage": "Combien coûte la chambre par nuit ?" }
+      ]
+    },
+    {
+      "titre": "Politesse avec können et möchten",
+      "niveau": "A2",
+      "exemples": [
+        "Kann ich mit Karte zahlen?",
+        "Möchten Sie das Zimmer mit Frühstück?"
+      ]
+    }
+  ],
+
+  "exercices": [
+    {
+      "id": "ex-001",
+      "type": "choix_multiple",
+      "difficulte": 1,
+      "question": "Comment demande-t-on poliment une chambre ?",
+      "options": ["Gib mir ein Zimmer!", "Ich möchte ein Zimmer reservieren.", "Ich brauche ein Zimmer."],
+      "reponse_correcte": 1,
+      "explication": "möchten est plus poli"
+    },
+    {
+      "id": "ex-002",
+      "type": "traduction",
+      "difficulte": 2,
+      "question": "Traduire : 'Bonjour, avez-vous une chambre double libre du 10 au 15 juin ? Combien coûte-t-elle par nuit avec petit-déjeuner ?'",
+      "reponse_attendue": "Guten Tag, haben Sie ein Doppelzimmer frei vom 10. bis 15. Juni? Wie viel kostet es pro Nacht mit Frühstück?",
+      "explication": "formule complète de réservation"
+    },
+    {
+      "id": "ex-010",
+      "type": "situation",
+      "difficulte": 3,
+      "question": "Tu téléphones à un hôtel : réserve une chambre pour 3 nuits, pose des questions sur le prix, le petit-déjeuner, le WiFi et confirme la réservation.",
+      "modele_reponse": "Guten Tag, ich möchte ein Einzelzimmer vom 20. bis 23. April reservieren. Haben Sie noch etwas frei? Wie viel kostet es mit Frühstück? Kann ich mit Kreditkarte zahlen? Gut, ich nehme es.",
+      "criteres_evaluation": ["expressions de réservation", "questions pratiques", "politesse"]
+    }
+  ],
+
+  "comprehension": [
+    {
+      "question": "Pourquoi dit-on souvent 'Ich möchte … reservieren' au lieu de 'Ich will … reservieren' ?",
+      "reponse": "'Möchte' est la forme polie de 'wollen'. C’est beaucoup plus courtois dans les situations de service."
+    }
+  ],
+
+  "culture": {
+    "titre": "L’hôtellerie en Autriche et Allemagne",
+    "points": [
+      { "sujet": "Check-in / Check-out", "explication": "Check-in généralement à 15h, check-out à 11h. Le petit-déjeuner est souvent inclus dans le prix." }
+    ]
+  },
+
+  "astuces_pedagogiques": [
+    {
+      "titre": "Phrase clé pour réserver",
+      "astuce": "Guten Tag, ich möchte ein Zimmer reservieren. Für den … bis …"
+    }
+  ],
+
+  "progression": {
+    "xp": 90,
+    "badges_deblocables": ["Hotel-Profi", "Reservierungs-Meister"],
+    "niveau_suivant": "a2-013",
+    "apercu_suivant": "Leçon suivante : Situations d’urgence (police, médecin, perte d’objet)"
+  }
+}

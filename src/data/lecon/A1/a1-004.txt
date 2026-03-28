@@ -1,0 +1,278 @@
+{
+  "id": "a1-004",
+  "niveau": "A1",
+  "module": "A1.1",
+  "titre": "Dire où l’on habite",
+  "objectifs": {
+    "communicatif": "Savoir dire sa ville de résidence, son quartier, sa rue et donner une adresse simple",
+    "linguistique": "Maîtriser le verbe 'wohnen', la préposition 'in' + datif pour la localisation, les questions 'Wo ? / In welcher Straße ?', les noms de rues et quartiers, adjectifs descriptifs de base (klein, groß, schön, zentral)",
+    "culturel": "Connaître le format des adresses en pays germanophones (DACH) et les quartiers typiques (Zentrum, Bezirk, Vorort)",
+    "cognitif": "Comprendre la différence 'in' (localisation statique) vs 'aus' (origine) et la structure des adresses allemandes"
+  },
+  "metadonnees": {
+    "duree_estimee_minutes": 35,
+    "difficulte_cognitive": 1,
+    "prerequis": ["a1-003"],
+    "competences_visees": ["expression orale", "interaction sociale de base"],
+    "themes_croises": ["identité", "géographie", "vie quotidienne"]
+  },
+
+  "situation": {
+    "contexte": "Suite de la conversation lors de la soirée internationale à Vienne",
+    "lieu": "Appartement privé, Vienne (Wien), Autriche",
+    "type": "conversation informelle",
+    "registre": "informel à semi-formel"
+  },
+
+  "dialogue": [
+    {
+      "id": 1,
+      "de": "Wo wohnst du jetzt? Ich wohne in Wien, im 7. Bezirk.",
+      "fr": "Où habites-tu maintenant ? J’habite à Vienne, dans le 7e arrondissement.",
+      "audio": "/audio/a1-004-1.mp3",
+      "phonetique": "voː ˈvoːnst duː jɛtst | ɪç ˈvoːnə ɪn viːn | ɪm ˈziːbən bəˈtsɪʁk",
+      "intonation": "montante sur 'Wo wohnst du jetzt?' — question. Descendante sur la réponse.",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Wo",
+          "lemme": "wo",
+          "classe_grammaticale": "adverbe interrogatif de lieu (statique)",
+          "traduction_directe": "Où",
+          "phonetique": "voː",
+          "distinction_wo_woher_wohin": {
+            "wo": { "sens": "Où (position, on ne bouge pas)", "exemple": "Wo wohnst du? (Où habites-tu ?)" },
+            "woher": { "sens": "D’où (origine)", "exemple": "Woher kommst du?" },
+            "wohin": { "sens": "Où (destination)", "exemple": "Wohin gehst du?" }
+          },
+          "mnemonique": "Wo = où je suis MAINTENANT. Woher = d’où je VIENS. Wohin = où je VAIS.",
+          "erreurs_frequentes": [
+            {
+              "erreur": "Woher wohnst du? ❌",
+              "correction": "Wo wohnst du? ✓",
+              "explication": "woher = origine (leçon précédente). Pour la résidence actuelle → toujours 'Wo'."
+            }
+          ]
+        },
+        {
+          "mot": "wohnst",
+          "lemme": "wohnen",
+          "classe_grammaticale": "verbe",
+          "forme": "2ème personne singulier, présent indicatif",
+          "traduction_directe": "tu habites",
+          "phonetique": "ˈvoːnst",
+          "conjugaison_complete": {
+            "titre": "wohnen (habiter) — présent indicatif",
+            "formes": [
+              { "pronom": "ich", "forme": "wohne", "phonetique": "ˈvoːnə" },
+              { "pronom": "du", "forme": "wohnst", "phonetique": "ˈvoːnst" },
+              { "pronom": "er/sie/es", "forme": "wohnt", "phonetique": "voːnt" },
+              { "pronom": "wir", "forme": "wohnen", "phonetique": "ˈvoːnən" },
+              { "pronom": "ihr", "forme": "wohnt", "phonetique": "voːnt" },
+              { "pronom": "sie/Sie", "forme": "wohnen", "phonetique": "ˈvoːnən" }
+            ]
+          },
+          "construction": "wohnen + in + [lieu au datif]",
+          "mnemonique": "wohnen = 'to reside' en anglais — même racine que 'Wohnung' (appartement)."
+        },
+        {
+          "mot": "in",
+          "lemme": "in",
+          "classe_grammaticale": "préposition",
+          "traduction_directe": "à / en / dans",
+          "phonetique": "ɪn",
+          "regime_grammatical": "in + datif (localisation statique)",
+          "note_pedagogique_A1": "Pour l’instant : 'in' + ville/quartier/rue = où j’habite maintenant.",
+          "usages_principaux": [
+            { "usage": "Ville", "exemple": "in Wien" },
+            { "usage": "Quartier", "exemple": "im 7. Bezirk (in + dem)" },
+            { "usage": "Rue", "exemple": "in der Mariahilfer Straße" }
+          ],
+          "in_vs_aus": {
+            "aus": "origine (leçon a1-003)",
+            "in": "localisation actuelle"
+          }
+        },
+        {
+          "mot": "Bezirk",
+          "lemme": "der Bezirk",
+          "classe_grammaticale": "nom masculin",
+          "traduction_directe": "arrondissement",
+          "phonetique": "bəˈtsɪʁk",
+          "info_culturelle": "À Vienne on dit souvent 'im 7. Bezirk' au lieu de la rue complète."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "de": "In welcher Straße wohnst du? Ich wohne in der Mariahilfer Straße 42.",
+      "fr": "Dans quelle rue habites-tu ? J’habite au 42 Mariahilfer Straße.",
+      "audio": "/audio/a1-004-2.mp3",
+      "phonetique": "ɪn ˈvɛlçɐ ˈʃtʁaːsə ˈvoːnst duː | ɪç ˈvoːnə ɪn deːɐ maˈʁiːaˌhɪlfɐ ˈʃtʁaːsə ˈfɪʁtsvaɪntsɪç",
+      "intonation": "montante sur la question, descendante sur la réponse",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "In welcher Straße",
+          "lemme": "welcher",
+          "classe_grammaticale": "pronom interrogatif",
+          "traduction_directe": "dans quelle rue",
+          "phonetique": "ɪn ˈvɛlçɐ ˈʃtʁaːsə",
+          "regle": "welcher / welche / welches selon le genre du nom. Ici féminin (die Straße) → welcher."
+        },
+        {
+          "mot": "Straße",
+          "lemme": "die Straße",
+          "classe_grammaticale": "nom féminin",
+          "traduction_directe": "la rue",
+          "phonetique": "ˈʃtʁaːsə",
+          "pluriel": "die Straßen",
+          "usage_adresse": "in der Straße (datif féminin = der)"
+        },
+        {
+          "mot": "Mariahilfer Straße",
+          "lemme": "Mariahilfer Straße",
+          "classe_grammaticale": "nom propre",
+          "traduction_directe": "Mariahilfer Straße (grande avenue de Vienne)",
+          "phonetique": "maˈʁiːaˌhɪlfɐ ˈʃtʁaːsə"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "de": "Ist deine Wohnung groß? Nein, sie ist klein aber zentral.",
+      "fr": "Ton appartement est grand ? Non, il est petit mais central.",
+      "audio": "/audio/a1-004-3.mp3",
+      "phonetique": "ɪst ˈdaɪnə ˈvoːnʊŋ ɡʁoːs | naɪn ziː ɪst klaɪn ˈaːbɐ tsɛnˈtʁaːl",
+      "intonation": "montante sur la question, descendante sur la réponse",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Wohnung",
+          "lemme": "die Wohnung",
+          "classe_grammaticale": "nom féminin",
+          "traduction_directe": "l’appartement",
+          "phonetique": "ˈvoːnʊŋ",
+          "pluriel": "die Wohnungen"
+        },
+        {
+          "mot": "klein aber zentral",
+          "lemme": "klein / zentral",
+          "classe_grammaticale": "adjectifs",
+          "traduction_directe": "petit mais central",
+          "phonetique": "klaɪn ˈaːbɐ tsɛnˈtʁaːl",
+          "regle": "Après 'sein' les adjectifs restent invariables (pas de terminaison)."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "de": "Wie ist deine Adresse genau? Meine Adresse ist Mariahilfer Straße 42, 1060 Wien.",
+      "fr": "Quelle est ton adresse exactement ? Mon adresse est Mariahilfer Straße 42, 1060 Vienne.",
+      "audio": "/audio/a1-004-4.mp3",
+      "phonetique": "viː ɪst ˈdaɪnə aˈdʁɛsə ɡəˈnaʊ | ˈmaɪnə aˈdʁɛsə ɪst maˈʁiːaˌhɪlfɐ ˈʃtʁaːsə ˈfɪʁtsvaɪntsɪç ˈtsɛːnˈzaɪtsɪç viːn",
+      "intonation": "montante sur la question, informative sur la réponse",
+      "registre": "semi-formel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Adresse",
+          "lemme": "die Adresse",
+          "classe_grammaticale": "nom féminin",
+          "traduction_directe": "l’adresse",
+          "phonetique": "aˈdʁɛsə",
+          "format_allemand": "Rue numéro, code postal Ville"
+        }
+      ]
+    }
+  ],
+
+  "vocabulaire_complet": [
+    { "mot": "wohnen", "traduction": "habiter", "type": "verbe", "phonetique": "ˈvoːnən", "frequence": "fondamental" },
+    { "mot": "die Wohnung", "traduction": "l’appartement", "type": "nom féminin", "phonetique": "ˈvoːnʊŋ", "pluriel": "die Wohnungen" },
+    { "mot": "die Straße", "traduction": "la rue", "type": "nom féminin", "phonetique": "ˈʃtʁaːsə", "pluriel": "die Straßen" },
+    { "mot": "die Adresse", "traduction": "l’adresse", "type": "nom féminin", "phonetique": "aˈdʁɛsə" },
+    { "mot": "das Zentrum", "traduction": "le centre-ville", "type": "nom neutre", "phonetique": "ˈtsɛntʁʊm" },
+    { "mot": "der Bezirk", "traduction": "l’arrondissement", "type": "nom masculin", "phonetique": "bəˈtsɪʁk" },
+    { "mot": "der Vorort", "traduction": "la banlieue", "type": "nom masculin", "phonetique": "ˈfoːɐ̯ˌɔʁt" },
+    { "mot": "klein", "traduction": "petit", "type": "adjectif", "phonetique": "klaɪn" },
+    { "mot": "groß", "traduction": "grand", "type": "adjectif", "phonetique": "ɡʁoːs" },
+    { "mot": "schön", "traduction": "joli", "type": "adjectif", "phonetique": "ʃøːn" },
+    { "mot": "zentral", "traduction": "central", "type": "adjectif", "phonetique": "tsɛnˈtʁaːl" }
+  ],
+
+  "grammaire": [
+    {
+      "titre": "in + datif pour la localisation",
+      "niveau": "A1 — règle fondamentale",
+      "explication": "Pour dire où on habite, on utilise toujours 'in' + datif.",
+      "tableau": [
+        { "exemple": "Ich wohne in Wien.", "explication": "ville (pas d’article)" },
+        { "exemple": "Ich wohne in der Mariahilfer Straße.", "explication": "rue (die Straße → der au datif)" },
+        { "exemple": "Ich wohne im Zentrum.", "explication": "das Zentrum → im (in + dem)" }
+      ],
+      "contraction": "in + dem = im ; in + der = in der"
+    },
+    {
+      "titre": "Question 'In welcher… ?'",
+      "niveau": "A1",
+      "explication": "Pour demander un détail précis → 'In welcher + nom féminin' ou 'In welchem + nom masculin/neutre'."
+    }
+  ],
+
+  "exercices": [
+    {
+      "id": "ex-001",
+      "type": "choix_multiple",
+      "difficulte": 1,
+      "question": "Comment demande-t-on 'Où habites-tu ?' ?",
+      "options": ["Woher wohnst du?", "Wo wohnst du?", "Wohin wohnst du?"],
+      "reponse_correcte": 1,
+      "explication": "Wo = localisation actuelle."
+    },
+    {
+      "id": "ex-002",
+      "type": "traduction",
+      "difficulte": 1,
+      "question": "Traduire : 'J’habite au centre-ville.'",
+      "reponse_attendue": "Ich wohne im Zentrum.",
+      "explication": "im = in + dem (Zentrum neutre)"
+    },
+    {
+      "id": "ex-010",
+      "type": "situation",
+      "difficulte": 3,
+      "question": "Présente ton logement complet : ville, rue, quartier, taille et description simple.",
+      "modele_reponse": "Ich wohne in [ville], in der [rue] [numéro], im [quartier]. Meine Wohnung ist klein aber schön und zentral.",
+      "criteres_evaluation": ["wohnen + in + datif", "préposition correcte", "adjectifs descriptifs"]
+    }
+  ],
+
+  "comprehension": [
+    {
+      "question": "Quelle est la différence entre 'Ich komme aus Wien' et 'Ich wohne in Wien' ?",
+      "reponse": "Ich komme aus Wien = je suis originaire de Vienne. Ich wohne in Wien = j’habite actuellement à Vienne."
+    }
+  ],
+
+  "culture": {
+    "titre": "Les adresses en pays germanophones (DACH)",
+    "points": [
+      { "sujet": "Format standard", "explication": "Rue numéro, code postal Ville\nExemple : Mariahilfer Straße 42, 1060 Wien" },
+      { "sujet": "Vienne", "explication": "23 Bezirke numérotés. On dit souvent 'im 7. Bezirk'." }
+    ]
+  },
+
+  "astuces_pedagogiques": [
+    {
+      "titre": "in = localisation",
+      "astuce": "Pense 'INside' : je suis IN la ville, IN la rue."
+    }
+  ],
+
+  "progression": {
+    "xp": 50,
+    "badges_deblocables": ["Stadtbewohner", "Adresse-Meister"],
+    "niveau_suivant": "a1-005",
+    "apercu_suivant": "Leçon suivante : Dire son numéro de téléphone et son âge"
+  }
+}

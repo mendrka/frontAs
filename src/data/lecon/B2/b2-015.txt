@@ -1,0 +1,115 @@
+{
+  "id": "b2-015",
+  "niveau": "B2",
+  "module": "B2.3",
+  "titre": "Langue, dialectes et intégration",
+  "objectifs": {
+    "communicatif": "Comprendre les enjeux de l'intégration sociolinguistique, identifier les principaux dialectes, discuter de l'évolution de la langue allemande (Anglicismes vs Tradition)",
+    "linguistique": "Maîtriser les alternatives au passif (man, -bar, -lich, sein + zu), utiliser les verbes de modalité pour des suppositions passées (hätte ... sein müssen) et les connecteurs de condition complexes",
+    "culturel": "La diversité des dialectes (Bayerisch, Plattdeutsch, Sächsisch) et le concept de 'Heimat' (chez-soi/patrie)",
+    "cognitif": "Synthétiser des concepts identitaires et linguistiques"
+  },
+  "metadonnees": {
+    "duree_estimee_minutes": 80,
+    "difficulte_cognitive": 5,
+    "prerequis": ["b2-014"],
+    "competences_visees": ["compréhension orale (accents)", "réflexion socioculturelle"],
+    "themes_croises": ["linguistique", "sociologie", "immigration"]
+  },
+  "situation": {
+    "contexte": "Tu discutes avec ta future famille d'accueil en Allemagne ou avec des partenaires locaux à Stuttgart. Ils utilisent quelques expressions régionales et tu les interroges sur leur importance.",
+    "lieu": "Dîner de famille / Réunion locale",
+    "type": "Échange interculturel",
+    "registre": "standard / amical"
+  },
+  "dialogue_modele": [
+    {
+      "id": 1,
+      "de": "In Süddeutschland ist der Dialekt oft noch sehr präsent. Das ist für Lernende anfangs schwer zu verstehen.",
+      "fr": "Dans le sud de l'Allemagne, le dialecte est souvent encore très présent. Pour les apprenants, c'est difficile à comprendre au début.",
+      "phonetique": "ɪn ˈzyːtˌdɔʏt͡ʃlant ɪst deːɐ̯ di.aˈlɛkt ɔft nɔx zeːɐ̯ pʁɛˈzɛnt | das ɪst fyːɐ̯ ˈlɛʁnəndə ˈanfaŋs ʃveːɐ̯ t͡suː fɛɐ̯ˈʃteːən",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "schwer zu verstehen",
+          "grammaire": {
+            "titre": "Alternative au passif (sein + zu + Infinitiv)",
+            "explication": "Cette structure exprime une possibilité ou une nécessité passive. 'Es ist zu verstehen' = 'On peut le comprendre' ou 'Il doit être compris'.",
+            "exemple": "Die Aufgabe ist leicht zu lösen. (La tâche est facile à résoudre.)"
+          }
+        },
+        {
+          "mot": "Lernende",
+          "grammaire": "Participe présent substantivé.",
+          "traduction": "les apprenants / ceux qui apprennent."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "de": "Integration bedeutet nicht, seine Identität aufzugeben, sondern eine neue Heimat mitzugestalten.",
+      "fr": "L'intégration ne signifie pas abandonner son identité, mais contribuer à façonner un nouveau 'chez-soi'.",
+      "phonetique": "ɪntəɡʁat͡si̯ˈoːn bəˈdɔʏtət nɪçt | ˈzaɪnə ʔidɛntiˈtɛːt ˈaʊfɡəˌbeːn | ˈzɔndɐn ˈaɪnə ˈnɔʏə ˈhaɪmaːt ˈmɪtɡəˌʃtaltən",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Heimat",
+          "note_culturelle": "Un concept allemand intraduisible qui lie lieu géographique, sentiment d'appartenance et souvenirs d'enfance."
+        },
+        {
+          "mot": "mitzugestalten",
+          "lemme": "mitgestalten",
+          "traduction": "participer à la conception / façonner ensemble."
+        }
+      ]
+    }
+  ],
+  "grammaire": [
+    {
+      "titre": "Remplacer le Passif (Passiversatzformen)",
+      "explication": "En B2, on évite la répétition de 'werden' en utilisant ces structures élégantes :",
+      "tableau": [
+        { "Structure": "sein + zu + Infinitiv", "Exemple": "Das ist zu machen.", "Sens": "C'est faisable / à faire." },
+        { "Structure": "Suffixe -bar", "Exemple": "Das ist machbar.", "Sens": "C'est réalisable." },
+        { "Structure": "Suffixe -lich", "Exemple": "Das ist erklärlich.", "Sens": "C'est explicable." },
+        { "Structure": "Pronom 'man'", "Exemple": "Man macht das so.", "Sens": "On fait ça comme ça." }
+      ]
+    },
+    {
+      "titre": "Hypothèses sur le passé (Modalverben + Konjunktiv II)",
+      "explication": "Pour exprimer une forte probabilité sur un événement passé.",
+      "exemple": "Er hätte da sein müssen. (Il aurait dû être là - obligation manquée.) / Das müsste so gewesen sein. (Cela a dû se passer ainsi.)"
+    }
+  ],
+  "vocabulaire_cles": [
+    { "de": "die Mundart / der Dialekt", "fr": "le dialecte / le parler local" },
+    { "de": "die Amtssprache", "fr": "la langue officielle" },
+    { "de": "das Zugehörigkeitsgefühl", "fr": "le sentiment d'appartenance" },
+    { "de": "vielfältig", "fr": "diversifié / varié" },
+    { "de": "die Sprachbarriere", "fr": "la barrière de la langue" }
+  ],
+  "exercices": [
+    {
+      "id": "ex-b2-015-1",
+      "type": "transformation",
+      "question": "Transformez au passif alternatif (sein + zu) : 'Man kann das Problem lösen.'",
+      "reponse_attendue": "Das Problem ist zu lösen.",
+      "explication": "Structure concise remplaçant 'kann gelöst werden'."
+    },
+    {
+      "id": "ex-b2-015-2",
+      "type": "vocabulaire",
+      "question": "Comment dit-on 'Bonjour' en Bavière (Sud de l'Allemagne) ?",
+      "options": ["Moin Moin", "Grüß Gott", "Hallo"],
+      "reponse_correcte": 1
+    }
+  ],
+  "culture": {
+    "titre": "Dialekte in Deutschland",
+    "explication": "Même si tout le monde comprend le 'Hochdeutsch', les identités régionales sont fortes. Au Nord, on dira 'Moin'. En Bavière, 'Servus' ou 'Grüß Gott'. En tant qu'Au Pair, ne sois pas surpris si les enfants utilisent des mots locaux que tu n'as pas vus dans tes livres !"
+  },
+  "progression": {
+    "xp": 500,
+    "statut": "NIVEAU B2 TERMINÉ !",
+    "prochain_id": "c1-001",
+    "apercu_suivant": "Module C1.1 – Vers l'expertise : Analyser des textes scientifiques et abstraits."
+  }
+}

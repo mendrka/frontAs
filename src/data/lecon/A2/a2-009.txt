@@ -1,0 +1,198 @@
+{
+  "id": "a2-009",
+  "niveau": "A2",
+  "module": "A2.1",
+  "titre": "Décrire des objets et des personnes",
+  "objectifs": {
+    "communicatif": "Décrire l’apparence physique d’une personne, décrire des objets (forme, couleur, taille, matériau, fonction), comparer simplement",
+    "linguistique": "Maîtriser les adjectifs descriptifs (groß, klein, dick, dünn, blond, nett…), l’accord des adjectifs en position épithète (nominatif et accusatif), les comparatifs simples ('größer als', 'schöner als'), les verbes 'aussehen', 'haben', 'tragen'",
+    "culturel": "Connaître les normes de description polie en Allemagne/Autriche et l’importance de la discrétion",
+    "cognitif": "Accorder correctement les adjectifs et structurer une description claire"
+  },
+  "metadonnees": {
+    "duree_estimee_minutes": 45,
+    "difficulte_cognitive": 2,
+    "prerequis": ["a2-008"],
+    "competences_visees": ["description détaillée"],
+    "themes_croises": ["apparence", "objets quotidiens"]
+  },
+
+  "situation": {
+    "contexte": "On parle des invités de la soirée ou on décrit quelqu’un/qu’un objet perdu",
+    "lieu": "Appartement à Vienne (Wien), Autriche",
+    "type": "conversation informelle",
+    "registre": "informel"
+  },
+
+  "dialogue": [
+    {
+      "id": 1,
+      "de": "Wie sieht dein Bruder aus? Er ist groß, hat dunkle Haare und trägt eine Brille.",
+      "fr": "À quoi ressemble ton frère ? Il est grand, il a les cheveux foncés et il porte des lunettes.",
+      "audio": "/audio/a2-009-1.mp3",
+      "phonetique": "viː ziːt daɪn ˈbʁuːdɐ aʊs | eːɐ̯ ɪst ɡʁoːs | hat ˈdʊŋkələ ˈhaːʁə ʊnt tʁeːɡt ˈaɪnə ˈbʁɪlə",
+      "intonation": "descriptive",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Wie sieht … aus?",
+          "lemme": "aussehen",
+          "classe_grammaticale": "question d’apparence",
+          "traduction_directe": "À quoi ressemble… ?",
+          "phonetique": "ˈaʊsˌzeːən"
+        },
+        {
+          "mot": "hat dunkle Haare",
+          "lemme": "dunkel",
+          "classe_grammaticale": "adjectif épithète pluriel",
+          "traduction_directe": "a les cheveux foncés",
+          "phonetique": "ˈdʊŋkələ ˈhaːʁə"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "de": "Das ist ein alter, roter Rucksack. Er ist groß und praktisch.",
+      "fr": "Ceci est un vieux sac à dos rouge. Il est grand et pratique.",
+      "audio": "/audio/a2-009-2.mp3",
+      "phonetique": "das ɪst aɪn ˈaltɐ ˈʁoːtɐ ˈʁʊkˌzak | eːɐ̯ ɪst ɡʁoːs ʊnt ˈpʁaktɪʃ",
+      "intonation": "descriptive",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "alter, roter Rucksack",
+          "lemme": "alt / rot",
+          "classe_grammaticale": "adjectifs épithètes masculins",
+          "traduction_directe": "vieux sac à dos rouge",
+          "phonetique": "ˈaltɐ ˈʁoːtɐ ˈʁʊkˌzak",
+          "regle": "Masculin nominatif : -er pour chaque adjectif"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "de": "Meine Freundin ist schlank, hat lange blonde Haare und ist sehr freundlich.",
+      "fr": "Mon amie est mince, elle a de longs cheveux blonds et elle est très gentille.",
+      "audio": "/audio/a2-009-3.mp3",
+      "phonetique": "ˈmaɪnə ˈfʁɔɪndɪn ɪst ʃlaŋk | hat ˈlaŋə ˈblɔndə ˈhaːʁə ʊnt ɪst zeːɐ̯ ˈfʁɔɪntlɪç",
+      "intonation": "positive",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "lange blonde Haare",
+          "lemme": "lang / blond",
+          "classe_grammaticale": "adjectifs épithètes pluriel",
+          "traduction_directe": "longs cheveux blonds",
+          "phonetique": "ˈlaŋə ˈblɔndə ˈhaːʁə"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "de": "Dieses neue Handy ist klein und leicht, aber teuer.",
+      "fr": "Ce nouveau téléphone est petit et léger, mais cher.",
+      "audio": "/audio/a2-009-4.mp3",
+      "phonetique": "ˈdiːzəs ˈnɔɪə ˈhɛndi ɪst klaɪn ʊnt laɪçt | ˈaːbɐ ˈtɔɪɐ̯",
+      "intonation": "évaluative",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "klein und leicht",
+          "lemme": "leicht",
+          "classe_grammaticale": "adjectifs attributs",
+          "traduction_directe": "petit et léger",
+          "phonetique": "laɪçt"
+        }
+      ]
+    }
+  ],
+
+  "vocabulaire_complet": [
+    { "mot": "aussehen", "traduction": "avoir l’air / ressembler", "type": "verbe", "phonetique": "ˈaʊsˌzeːən" },
+    { "mot": "groß / klein", "traduction": "grand / petit", "type": "adjectif", "phonetique": "ɡʁoːs / klaɪn" },
+    { "mot": "dick / dünn", "traduction": "gros / mince", "type": "adjectif", "phonetique": "dɪk / dʏn" },
+    { "mot": "blond / dunkel", "traduction": "blond / foncé", "type": "adjectif", "phonetique": "blɔnt / ˈdʊŋkəl" },
+    { "mot": "freundlich", "traduction": "gentil", "type": "adjectif", "phonetique": "ˈfʁɔɪntlɪç" },
+    { "mot": "praktisch", "traduction": "pratique", "type": "adjectif", "phonetique": "ˈpʁaktɪʃ" },
+    { "mot": "teuer", "traduction": "cher", "type": "adjectif", "phonetique": "ˈtɔɪɐ̯" },
+    { "mot": "das Handy", "traduction": "le téléphone portable", "type": "nom neutre", "phonetique": "ˈhɛndi" }
+  ],
+
+  "grammaire": [
+    {
+      "titre": "Accord des adjectifs (nominatif & accusatif)",
+      "niveau": "A2",
+      "tableau": [
+        { "genre": "Masculin", "nominatif": "ein großer Mann", "accusatif": "einen großen Mann" },
+        { "genre": "Féminin", "nominatif": "eine schöne Frau", "accusatif": "eine schöne Frau" },
+        { "genre": "Neutre", "nominatif": "ein kleines Kind", "accusatif": "ein kleines Kind" },
+        { "genre": "Pluriel", "nominatif": "große Häuser", "accusatif": "große Häuser" }
+      ]
+    },
+    {
+      "titre": "Verbes pour décrire",
+      "niveau": "A2",
+      "exemples": [
+        "Er sieht nett aus.",
+        "Sie hat lange Haare.",
+        "Das Buch ist interessant."
+      ]
+    }
+  ],
+
+  "exercices": [
+    {
+      "id": "ex-001",
+      "type": "choix_multiple",
+      "difficulte": 1,
+      "question": "Complète : Das ist ein ___ roter Rucksack.",
+      "options": ["groß", "großer", "große", "großes"],
+      "reponse_correcte": 1,
+      "explication": "Masculin nominatif → -er"
+    },
+    {
+      "id": "ex-002",
+      "type": "traduction",
+      "difficulte": 2,
+      "question": "Traduire : 'Ma sœur est grande, mince et a les cheveux longs et blonds. Elle est très gentille.'",
+      "reponse_attendue": "Meine Schwester ist groß, schlank und hat lange blonde Haare. Sie ist sehr freundlich.",
+      "explication": "adjectifs attributs + épithètes"
+    },
+    {
+      "id": "ex-010",
+      "type": "situation",
+      "difficulte": 3,
+      "question": "Décris 2 personnes (apparence physique + personnalité) et 2 objets (forme, couleur, fonction).",
+      "modele_reponse": "Mein bester Freund ist groß, hat kurze braune Haare und ist sehr lustig. Mein neues Handy ist klein, schwarz und sehr praktisch.",
+      "criteres_evaluation": ["accord des adjectifs correct", "vocabulaire varié", "structures descriptives"]
+    }
+  ],
+
+  "comprehension": [
+    {
+      "question": "Pourquoi dit-on 'ein großer Mann' et non 'ein groß Mann' ?",
+      "reponse": "L’adjectif en position épithète (devant le nom) doit prendre une terminaison selon le genre et le cas."
+    }
+  ],
+
+  "culture": {
+    "titre": "Décrire les gens en Allemagne/Autriche",
+    "points": [
+      { "sujet": "Politesse", "explication": "On évite les commentaires sur le poids ou l’apparence physique sauf si c’est positif et demandé. On préfère décrire le caractère." }
+    ]
+  },
+
+  "astuces_pedagogiques": [
+    {
+      "titre": "Mémo des terminaisons adjectifs",
+      "astuce": "Masculin : -er (nom.) / -en (acc.) ; Féminin : -e ; Neutre : -es ; Pluriel : -e"
+    }
+  ],
+
+  "progression": {
+    "xp": 90,
+    "badges_deblocables": ["Beschreibungs-Meister", "Adjektiv-Profi"],
+    "niveau_suivant": "a2-010",
+    "apercu_suivant": "Leçon suivante : Parler de films, livres et musique"
+  }
+}

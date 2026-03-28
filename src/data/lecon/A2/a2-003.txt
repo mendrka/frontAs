@@ -1,0 +1,217 @@
+{
+  "id": "a2-003",
+  "niveau": "A2",
+  "module": "A2.1",
+  "titre": "Parler de la santé et des émotions",
+  "objectifs": {
+    "communicatif": "Décrire son état de santé, dire ce qu’on ressent (physique et émotionnel), demander des nouvelles, donner des conseils simples",
+    "linguistique": "Maîtriser le vocabulaire de la santé (Kopfweh, Halsschmerzen, müde, erkältet…), les émotions (glücklich, traurig, wütend, gestresst…), les structures 'Ich fühle mich…', 'Mir ist…', 'Ich habe…', les conseils avec 'Du solltest…'",
+    "culturel": "Connaître les expressions courantes pour parler de santé en pays germanophones et l’attitude face à la maladie",
+    "cognitif": "Distinguer les constructions avec 'haben' (douleurs) et 'sein/fühlen' (état général)"
+  },
+  "metadonnees": {
+    "duree_estimee_minutes": 45,
+    "difficulte_cognitive": 2,
+    "prerequis": ["a2-002"],
+    "competences_visees": ["expression orale", "interaction sociale"],
+    "themes_croises": ["santé", "émotions"]
+  },
+
+  "situation": {
+    "contexte": "Un ami n’a pas l’air en forme pendant la conversation",
+    "lieu": "Café à Vienne (Wien), Autriche",
+    "type": "conversation informelle entre amis",
+    "registre": "informel"
+  },
+
+  "dialogue": [
+    {
+      "id": 1,
+      "de": "Wie geht es dir? Mir geht es nicht so gut. Ich fühle mich müde.",
+      "fr": "Comment vas-tu ? Je ne vais pas très bien. Je me sens fatigué.",
+      "audio": "/audio/a2-003-1.mp3",
+      "phonetique": "viː ɡeːt ɛs diːɐ̯ | miːɐ̯ ɡeːt ɛs nɪçt zoː ɡuːt | ɪç ˈfyːlə mɪç ˈmyːdə",
+      "intonation": "montante sur la question, un peu faible sur la réponse",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Wie geht es dir?",
+          "lemme": "gehen",
+          "classe_grammaticale": "question de santé",
+          "traduction_directe": "Comment vas-tu ?",
+          "phonetique": "viː ɡeːt ɛs diːɐ̯"
+        },
+        {
+          "mot": "Ich fühle mich müde",
+          "lemme": "fühlen",
+          "classe_grammaticale": "verbe réfléchi",
+          "traduction_directe": "Je me sens fatigué",
+          "phonetique": "ˈfyːlə mɪç ˈmyːdə"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "de": "Ich habe Kopfschmerzen und Halsschmerzen. Ich bin erkältet.",
+      "fr": "J’ai mal à la tête et mal à la gorge. Je suis enrhumé.",
+      "audio": "/audio/a2-003-2.mp3",
+      "phonetique": "ɪç ˈhaːbə ˈkɔpfˌʃmɛʁtsən ʊnt ˈhalsˌʃmɛʁtsən | ɪç bɪn ɛɐ̯ˈkɛltət",
+      "intonation": "fatiguée",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Ich habe …schmerzen",
+          "lemme": "Schmerzen haben",
+          "classe_grammaticale": "expression de douleur",
+          "traduction_directe": "J’ai mal à…",
+          "phonetique": "ˈʃmɛʁtsən"
+        },
+        {
+          "mot": "erkältet",
+          "lemme": "erkältet",
+          "classe_grammaticale": "adjectif",
+          "traduction_directe": "enrhumé",
+          "phonetique": "ɛɐ̯ˈkɛltət"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "de": "Du solltest zu Hause bleiben und viel Tee trinken.",
+      "fr": "Tu devrais rester à la maison et boire beaucoup de thé.",
+      "audio": "/audio/a2-003-3.mp3",
+      "phonetique": "duː ˈzɔltəst tsuː ˈhaʊzə ˈblaɪbən ʊnt fiːl teː ˈtʁɪŋkən",
+      "intonation": "conseil amical",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Du solltest",
+          "lemme": "sollen",
+          "classe_grammaticale": "verbe modal de conseil",
+          "traduction_directe": "Tu devrais",
+          "phonetique": "ˈzɔltəst"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "de": "Ich bin traurig, weil ich meine Familie vermisse. Morgen geht es mir bestimmt besser.",
+      "fr": "Je suis triste parce que je manque à ma famille. Demain je me sentirai sûrement mieux.",
+      "audio": "/audio/a2-003-4.mp3",
+      "phonetique": "ɪç bɪn ˈtʁaʊʁɪç vaɪl ɪç ˈmaɪnə faˈmiːljə fɛɐ̯ˈmɪsə | ˈmɔʁɡən ɡeːt ɛs miːɐ̯ bəˈʃtɪmt ˈbɛsɐ",
+      "intonation": "émotionnelle puis optimiste",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Ich bin traurig",
+          "lemme": "traurig",
+          "classe_grammaticale": "émotion avec sein",
+          "traduction_directe": "Je suis triste",
+          "phonetique": "ˈtʁaʊʁɪç"
+        },
+        {
+          "mot": "vermissen",
+          "lemme": "vermissen",
+          "classe_grammaticale": "verbe",
+          "traduction_directe": "manquer à",
+          "phonetique": "fɛɐ̯ˈmɪsən"
+        }
+      ]
+    }
+  ],
+
+  "vocabulaire_complet": [
+    { "mot": "die Gesundheit", "traduction": "la santé", "type": "nom féminin", "phonetique": "ɡəˈzʊnthait" },
+    { "mot": "Kopfschmerzen", "traduction": "mal de tête", "type": "nom pluriel", "phonetique": "ˈkɔpfˌʃmɛʁtsən" },
+    { "mot": "Halsschmerzen", "traduction": "mal de gorge", "type": "nom pluriel", "phonetique": "ˈhalsˌʃmɛʁtsən" },
+    { "mot": "erkältet sein", "traduction": "être enrhumé", "type": "expression", "phonetique": "ɛɐ̯ˈkɛltət" },
+    { "mot": "müde", "traduction": "fatigué", "type": "adjectif", "phonetique": "ˈmyːdə" },
+    { "mot": "traurig", "traduction": "triste", "type": "adjectif", "phonetique": "ˈtʁaʊʁɪç" },
+    { "mot": "glücklich", "traduction": "heureux", "type": "adjectif", "phonetique": "ˈɡlʏklɪç" },
+    { "mot": "gestresst", "traduction": "stressé", "type": "adjectif", "phonetique": "ɡəˈʃtʁɛst" },
+    { "mot": "sich fühlen", "traduction": "se sentir", "type": "verbe réfléchi", "phonetique": "ˈfyːlən" }
+  ],
+
+  "grammaire": [
+    {
+      "titre": "Douleurs avec haben",
+      "niveau": "A2",
+      "exemples": [
+        "Ich habe Kopfschmerzen.",
+        "Ich habe Bauchschmerzen."
+      ]
+    },
+    {
+      "titre": "État général avec sein / sich fühlen",
+      "niveau": "A2",
+      "exemples": [
+        "Ich bin müde. / Ich fühle mich müde.",
+        "Ich bin traurig."
+      ]
+    },
+    {
+      "titre": "Conseils avec sollen",
+      "niveau": "A2",
+      "exemples": [
+        "Du solltest zum Arzt gehen.",
+        "Du solltest viel trinken."
+      ]
+    }
+  ],
+
+  "exercices": [
+    {
+      "id": "ex-001",
+      "type": "choix_multiple",
+      "difficulte": 1,
+      "question": "Comment dit-on 'J’ai mal à la tête' ?",
+      "options": ["Ich bin Kopfschmerzen.", "Ich habe Kopfschmerzen.", "Ich fühle Kopfschmerzen."],
+      "reponse_correcte": 1,
+      "explication": "haben + Schmerzen"
+    },
+    {
+      "id": "ex-002",
+      "type": "traduction",
+      "difficulte": 2,
+      "question": "Traduire : 'Je me sens fatigué et triste. Tu devrais rester à la maison et te reposer.'",
+      "reponse_attendue": "Ich fühle mich müde und traurig. Du solltest zu Hause bleiben und dich ausruhen.",
+      "explication": "sich fühlen + sollen"
+    },
+    {
+      "id": "ex-010",
+      "type": "situation",
+      "difficulte": 3,
+      "question": "Tu ne te sens pas bien : explique tes symptômes, dis comment tu te sens émotionnellement, et accepte ou refuse un conseil d’un ami.",
+      "modele_reponse": "Mir geht es nicht gut. Ich habe Halsschmerzen und bin erkältet. Ich fühle mich traurig. — Du solltest zum Arzt gehen. — Ja, du hast recht.",
+      "criteres_evaluation": ["vocabulaire santé/émotions", "Ich habe… / Ich fühle mich…", "conseils avec sollen"]
+    }
+  ],
+
+  "comprehension": [
+    {
+      "question": "Quelle est la différence entre 'Ich bin krank' et 'Ich habe eine Erkältung' ?",
+      "reponse": "'Ich bin krank' = je suis malade (état général). 'Ich habe eine Erkältung' = j’ai un rhume (maladie précise)."
+    }
+  ],
+
+  "culture": {
+    "titre": "La santé en pays germanophones",
+    "points": [
+      { "sujet": "Attitude", "explication": "On va souvent chez le médecin même pour un simple rhume. Le repos (sich ausruhen) est très recommandé." }
+    ]
+  },
+
+  "astuces_pedagogiques": [
+    {
+      "titre": "Mémo santé",
+      "astuce": "Douleurs → Ich habe …schmerzen. État → Ich bin / Ich fühle mich + adjectif."
+    }
+  ],
+
+  "progression": {
+    "xp": 90,
+    "badges_deblocables": ["Gesundheits-Profi", "Gefühls-Meister"],
+    "niveau_suivant": "a2-004",
+    "apercu_suivant": "Leçon suivante : Raconter sa journée"
+  }
+}

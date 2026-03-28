@@ -1,0 +1,204 @@
+{
+  "id": "a2-004",
+  "niveau": "A2",
+  "module": "A2.1",
+  "titre": "Raconter sa journée",
+  "objectifs": {
+    "communicatif": "Raconter ce qu’on a fait dans la journée (matin, après-midi, soir), parler de son emploi du temps quotidien, décrire une journée typique",
+    "linguistique": "Maîtriser le passé composé (Perfekt) avec sein et haben, les adverbes temporels (zuerst, dann, danach, schließlich), les verbes séparables et irréguliers courants, les connecteurs (und, aber, weil)",
+    "culturel": "Connaître les rythmes de vie typiques en Allemagne/Autriche (horaires de travail, pause déjeuner, Freizeit)",
+    "cognitif": "Former correctement le Perfekt et organiser un récit chronologique simple"
+  },
+  "metadonnees": {
+    "duree_estimee_minutes": 45,
+    "difficulte_cognitive": 3,
+    "prerequis": ["a2-003"],
+    "competences_visees": ["narration", "expression orale"],
+    "themes_croises": ["vie quotidienne", "temps"]
+  },
+
+  "situation": {
+    "contexte": "Un ami demande comment s’est passée la journée",
+    "lieu": "Café à Vienne (Wien), Autriche",
+    "type": "conversation informelle entre amis",
+    "registre": "informel"
+  },
+
+  "dialogue": [
+    {
+      "id": 1,
+      "de": "Wie war dein Tag? Mein Tag war ganz okay.",
+      "fr": "Comment s’est passée ta journée ? Ma journée s’est plutôt bien passée.",
+      "audio": "/audio/a2-004-1.mp3",
+      "phonetique": "viː vaːɐ̯ daɪn taːk | maɪn taːk vaːɐ̯ ɡants ˈoːkeː",
+      "intonation": "montante sur la question",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Wie war dein Tag?",
+          "lemme": "sein",
+          "classe_grammaticale": "question au passé",
+          "traduction_directe": "Comment était ta journée ?",
+          "phonetique": "viː vaːɐ̯"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "de": "Zuerst bin ich um 7 Uhr aufgestanden. Dann habe ich gefrühstückt.",
+      "fr": "D’abord je me suis levé à 7 heures. Ensuite j’ai pris mon petit-déjeuner.",
+      "audio": "/audio/a2-004-2.mp3",
+      "phonetique": "ˈtsuːɐ̯st bɪn ɪç ʊm ziːbən uːɐ̯ ˈaʊfɡəˌʃtandən | dan ˈhaːbə ɪç ɡəˈfʁyːʃtʏkt",
+      "intonation": "chronologique",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Zuerst… Dann…",
+          "lemme": "zuerst / dann",
+          "classe_grammaticale": "connecteurs temporels",
+          "traduction_directe": "D’abord… Ensuite…",
+          "phonetique": "ˈtsuːɐ̯st / dan"
+        },
+        {
+          "mot": "bin … aufgestanden",
+          "lemme": "aufstehen",
+          "classe_grammaticale": "verbe séparable + sein",
+          "traduction_directe": "me suis levé",
+          "phonetique": "ˈaʊfɡəˌʃtandən"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "de": "Nachmittags habe ich gearbeitet und danach bin ich einkaufen gegangen.",
+      "fr": "L’après-midi j’ai travaillé et ensuite je suis allé faire les courses.",
+      "audio": "/audio/a2-004-3.mp3",
+      "phonetique": "ˈnaːxˌmɪtaːks ˈhaːbə ɪç ɡəˈaʁbaɪtət ʊnt ˈdaːnaːx bɪn ɪç ˈaɪnˌkaʊfən ˈɡaŋən",
+      "intonation": "narrative",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Nachmittags",
+          "lemme": "nachmittags",
+          "classe_grammaticale": "adverbe de temps",
+          "traduction_directe": "l’après-midi",
+          "phonetique": "ˈnaːxˌmɪtaːks"
+        },
+        {
+          "mot": "bin … gegangen",
+          "lemme": "gehen",
+          "classe_grammaticale": "verbe de mouvement + sein",
+          "traduction_directe": "suis allé",
+          "phonetique": "ˈɡaŋən"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "de": "Abends habe ich mit Freunden gegessen. Es war ein schöner Tag.",
+      "fr": "Le soir j’ai mangé avec des amis. C’était une belle journée.",
+      "audio": "/audio/a2-004-4.mp3",
+      "phonetique": "ˈaːbənts ˈhaːbə ɪç mɪt ˈfʁɔɪndən ɡəˈɡɛsən | ɛs vaːɐ̯ aɪn ˈʃøːnɐ taːk",
+      "intonation": "conclusion positive",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Abends",
+          "lemme": "abends",
+          "classe_grammaticale": "adverbe de temps",
+          "traduction_directe": "le soir",
+          "phonetique": "ˈaːbənts"
+        }
+      ]
+    }
+  ],
+
+  "vocabulaire_complet": [
+    { "mot": "der Tag", "traduction": "la journée", "type": "nom masculin", "phonetique": "taːk" },
+    { "mot": "zuerst", "traduction": "d’abord", "type": "adverbe", "phonetique": "ˈtsuːɐ̯st" },
+    { "mot": "dann", "traduction": "ensuite", "type": "adverbe", "phonetique": "dan" },
+    { "mot": "danach", "traduction": "après cela", "type": "adverbe", "phonetique": "ˈdaːnaːx" },
+    { "mot": "schließlich", "traduction": "enfin", "type": "adverbe", "phonetique": "ˈʃliːslɪç" },
+    { "mot": "aufstehen", "traduction": "se lever", "type": "verbe séparable", "phonetique": "ˈaʊfˌʃteːən" },
+    { "mot": "frühstücken", "traduction": "prendre le petit-déjeuner", "type": "verbe", "phonetique": "ˈfʁyːʃtʏkən" },
+    { "mot": "arbeiten", "traduction": "travailler", "type": "verbe", "phonetique": "ˈaʁbaɪtən" }
+  ],
+
+  "grammaire": [
+    {
+      "titre": "Le Perfekt (passé composé)",
+      "niveau": "A2",
+      "explication": "Auxiliaire haben ou sein + participe passé",
+      "tableau": [
+        { "auxiliaire": "haben (la plupart)", "exemple": "Ich habe gearbeitet." },
+        { "auxiliaire": "sein (mouvement, changement d’état)", "exemple": "Ich bin aufgestanden." }
+      ]
+    },
+    {
+      "titre": "Adverbes de temps pour raconter",
+      "niveau": "A2",
+      "tableau": [
+        { "adverbe": "zuerst", "fr": "d’abord" },
+        { "adverbe": "dann / danach", "fr": "ensuite" },
+        { "adverbe": "abends", "fr": "le soir" },
+        { "adverbe": "schließlich", "fr": "enfin" }
+      ]
+    }
+  ],
+
+  "exercices": [
+    {
+      "id": "ex-001",
+      "type": "choix_multiple",
+      "difficulte": 1,
+      "question": "Quel auxiliaire pour 'se lever' ?",
+      "options": ["Ich habe aufgestanden.", "Ich bin aufgestanden."],
+      "reponse_correcte": 1,
+      "explication": "Verbe de mouvement → sein"
+    },
+    {
+      "id": "ex-002",
+      "type": "traduction",
+      "difficulte": 2,
+      "question": "Traduire : 'D’abord je me suis levé à 7 heures, ensuite j’ai pris mon petit-déjeuner et après je suis allé travailler.'",
+      "reponse_attendue": "Zuerst bin ich um 7 Uhr aufgestanden, dann habe ich gefrühstückt und danach bin ich arbeiten gegangen.",
+      "explication": "sein pour mouvement + haben pour actions"
+    },
+    {
+      "id": "ex-010",
+      "type": "situation",
+      "difficulte": 3,
+      "question": "Raconte ta journée d’hier du matin au soir en utilisant au moins 8 verbes au Perfekt et des connecteurs temporels.",
+      "modele_reponse": "Gestern bin ich um 7 Uhr aufgestanden. Dann habe ich gefrühstückt. Danach bin ich zur Arbeit gegangen. Abends habe ich mit Freunden gegessen. Es war ein schöner Tag.",
+      "criteres_evaluation": ["Perfekt correct avec haben/sein", "connecteurs temporels", "chronologie claire"]
+    }
+  ],
+
+  "comprehension": [
+    {
+      "question": "Pourquoi certains verbes utilisent 'sein' et d’autres 'haben' au Perfekt ?",
+      "reponse": "Les verbes de mouvement et de changement d’état utilisent 'sein'. Les autres utilisent 'haben'."
+    }
+  ],
+
+  "culture": {
+    "titre": "La journée typique en Allemagne/Autriche",
+    "points": [
+      { "sujet": "Rythme", "explication": "Début du travail souvent à 8-9h, pause déjeuner à 12h, fin vers 17h. Beaucoup de gens font du sport ou des activités après le travail." }
+    ]
+  },
+
+  "astuces_pedagogiques": [
+    {
+      "titre": "Structure pour raconter une journée",
+      "astuce": "Zuerst … Dann … Danach … Abends … Schließlich …"
+    }
+  ],
+
+  "progression": {
+    "xp": 90,
+    "badges_deblocables": ["Tageserzähler", "Perfekt-Profi"],
+    "niveau_suivant": "a2-005",
+    "apercu_suivant": "Leçon suivante : Parler de son travail quotidien"
+  }
+}

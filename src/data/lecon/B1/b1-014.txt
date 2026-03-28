@@ -1,0 +1,113 @@
+{
+  "id": "b1-014",
+  "niveau": "B1",
+  "module": "B1.3",
+  "titre": "Parler de musique et de loisirs",
+  "objectifs": {
+    "communicatif": "Décrire ses activités de temps libre, parler de ses goûts musicaux et sportifs, expliquer les bénéfices d'un loisir",
+    "linguistique": "Différencier 'um... zu' et 'damit', utiliser les verbes de goût (stehen auf, abfahren auf) et le lexique du fitness/sport",
+    "culturel": "La culture des associations (Vereine) en Allemagne et l'importance du 'Feierabend'",
+    "cognitif": "Exprimer la finalité et le but d'une action personnelle"
+  },
+  "metadonnees": {
+    "duree_estimee_minutes": 50,
+    "difficulte_cognitive": 3,
+    "prerequis": ["b1-005", "b1-013"],
+    "competences_visees": ["expression orale", "interaction sociale"],
+    "themes_croises": ["musique", "sport", "bien-être"]
+  },
+  "situation": {
+    "contexte": "Discussion entre collègues ou amis sur ce qu'ils font pour décompresser après le travail ou les études.",
+    "lieu": "Salle de sport ou studio de musique",
+    "type": "Échange informel",
+    "registre": "familier / standard"
+  },
+  "dialogue": [
+    {
+      "id": 1,
+      "de": "Ich gehe regelmäßig ins Fitnessstudio, um fit zu bleiben. Außerdem spiele ich gerne Fußball im Verein.",
+      "fr": "Je vais régulièrement à la salle de sport pour rester en forme. De plus, j'aime jouer au football en club.",
+      "phonetique": "ɪç ˈɡeːə ˈʁeːɡəlˌmɛːsɪç ɪns ˈfɪtnəsˌʃtuːdi̯oː | ʊm fɪt t͡suː ˈblaɪbən | ˈaʊsɐˌdeːm ˈʃpiːlə ɪç ˈɡɛʁnə ˈfuːsˌbal ɪm fɛɐ̯ˈaɪn",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "um fit zu bleiben",
+          "grammaire": "Structure finale (but).",
+          "regle": "Le sujet de la phrase principale (ich) est le même que celui de l'infinitif. On utilise donc 'um... zu'."
+        },
+        {
+          "mot": "Verein",
+          "note_culturelle": "Le 'Verein' (association/club) est le pilier de la vie sociale allemande. Presque chaque Allemand est membre d'un club de sport, de musique ou de jardinage."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "de": "Ich stehe total auf elektronische Musik. Ich höre sie oft beim Training, damit ich motiviert bin.",
+      "fr": "Je kiffe grave la musique électronique. J'en écoute souvent pendant l'entraînement pour être motivé.",
+      "phonetique": "ɪç ˈʃteːə toˈtaːl aʊf ɛlɛkˈtʁoːnɪʃə muˈziːk | ɪç ˈhøːʁə ziː ɔft baɪm ˈtʁɛːnɪŋ | daˈmɪt ɪç moːtiˈviːɐ̯t bɪn",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "stehen auf (+ Akk)",
+          "expression": "Adorer / kiffer quelque chose.",
+          "registre": "Familier mais très courant."
+        },
+        {
+          "mot": "damit",
+          "grammaire": "Conjonction de but.",
+          "regle": "On utilise 'damit' quand le but concerne un changement d'état ou pour insister sur la conséquence. Le verbe est à la fin."
+        }
+      ]
+    }
+  ],
+  "grammaire": [
+    {
+      "titre": "Exprimer le but : 'um... zu' vs 'damit'",
+      "explication": "Les deux signifient 'pour / afin de', mais leur usage diffère.",
+      "tableau": [
+        { "Structure": "um ... zu + Infinitiv", "Condition": "Même sujet dans les deux propositions", "Exemple": "Ich trainiere, um gesund zu sein." },
+        { "Structure": "damit + Phrase complète", "Condition": "Sujets identiques OU différents", "Exemple": "Ich trainiere, damit ich gesund bleibe." }
+      ]
+    },
+    {
+      "titre": "La préposition 'bei' + temps",
+      "explication": "On utilise 'beim' (bei + dem) pour exprimer la simultanéité d'une activité.",
+      "exemples": [
+        { "allemand": "beim Essen", "fr": "en mangeant / pendant le repas" },
+        { "allemand": "beim Training", "fr": "pendant l'entraînement" },
+        { "allemand": "beim Lernen", "fr": "en étudiant" }
+      ]
+    }
+  ],
+  "vocabulaire_cles": [
+    { "de": "das Mitglied", "fr": "le membre (d'un club)" },
+    { "de": "sich entspannen", "fr": "se détendre" },
+    { "de": "die Ausdauer", "fr": "l'endurance" },
+    { "de": "das Instrument", "fr": "l'instrument" },
+    { "de": "der Kopfhörer", "fr": "le casque / les écouteurs" }
+  ],
+  "exercices": [
+    {
+      "id": "ex-b1-014-1",
+      "type": "syntaxe",
+      "question": "Complétez : 'Ich brauche Musik, ____ ich besser arbeiten kann.'",
+      "reponse_attendue": "damit",
+      "explication": "On utilise 'damit' ici pour introduire la proposition avec sujet et verbe à la fin."
+    },
+    {
+      "id": "ex-b1-014-2",
+      "type": "traduction",
+      "question": "Traduisez : 'Je joue de la guitare pour me détendre.'",
+      "reponse_attendue": "Ich spiele Gitarre, um mich zu entspannen.",
+      "explication": "'Um... zu' car le sujet est le même. Ne pas oublier le 'mich' du verbe réfléchi."
+    }
+  ],
+  "culture": {
+    "titre": "Feierabend",
+    "explication": "Le 'Feierabend' n'est pas juste la fin de la journée de travail, c'est un concept sacré. C'est le moment où l'on coupe strictement avec le professionnel pour se consacrer à ses 'Hobbys' ou à son 'Verein'."
+  },
+  "progression": {
+    "xp": 150,
+    "prochain_id": "b1-015",
+    "apercu_suivant": "Leçon B1.3-5 : Comprendre des annonces radio ou TV simples."
+  }
+}

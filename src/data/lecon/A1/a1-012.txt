@@ -1,0 +1,232 @@
+{
+  "id": "a1-012",
+  "niveau": "A1",
+  "module": "A1.2",
+  "titre": "Parler de ses amis",
+  "objectifs": {
+    "communicatif": "Présenter ses amis, décrire leur apparence, leur personnalité, leur âge et leur origine, dire ce qu’on fait ensemble",
+    "linguistique": "Maîtriser les adjectifs de personnalité et d’apparence (nett, lustig, groß, klein…), les possessifs pluriels (meine Freunde), les verbes 'sein' et 'haben' pour décrire, les expressions 'mit + datif'",
+    "culturel": "Connaître l’importance des amis en Allemagne/Autriche et les expressions courantes pour décrire les relations",
+    "cognitif": "Combiner possessifs, adjectifs et verbes pour faire des descriptions simples"
+  },
+  "metadonnees": {
+    "duree_estimee_minutes": 40,
+    "difficulte_cognitive": 2,
+    "prerequis": ["a1-011"],
+    "competences_visees": ["expression orale", "description"],
+    "themes_croises": ["identité", "relations sociales"]
+  },
+
+  "situation": {
+    "contexte": "Suite de la soirée internationale à Vienne – on parle des amis qui sont venus ou qu’on a laissés au pays",
+    "lieu": "Appartement privé, Vienne (Wien), Autriche",
+    "type": "conversation informelle",
+    "registre": "informel"
+  },
+
+  "dialogue": [
+    {
+      "id": 1,
+      "de": "Hast du viele Freunde? Ja, ich habe viele gute Freunde.",
+      "fr": "As-tu beaucoup d’amis ? Oui, j’ai beaucoup de bons amis.",
+      "audio": "/audio/a1-012-1.mp3",
+      "phonetique": "hast duː ˈfiːlə ˈfʁɔɪndə | jaː ɪç ˈhaːbə ˈfiːlə ˈɡuːtə ˈfʁɔɪndə",
+      "intonation": "montante sur la question, descendante sur la réponse",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "viele Freunde",
+          "lemme": "viele",
+          "classe_grammaticale": "quantificateur + nom pluriel",
+          "traduction_directe": "beaucoup d’amis",
+          "phonetique": "ˈfiːlə ˈfʁɔɪndə",
+          "note": "viele + nom pluriel (pas d’article)"
+        },
+        {
+          "mot": "gute Freunde",
+          "lemme": "gut",
+          "classe_grammaticale": "adjectif épithète pluriel",
+          "traduction_directe": "bons amis",
+          "phonetique": "ˈɡuːtə ˈfʁɔɪndə",
+          "regle": "Pluriel : adjectif + -e (gute)"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "de": "Das ist mein bester Freund. Er ist sehr lustig und nett.",
+      "fr": "Voici mon meilleur ami. Il est très drôle et gentil.",
+      "audio": "/audio/a1-012-2.mp3",
+      "phonetique": "das ɪst maɪn ˈbɛstɐ fʁɔɪnt | eːɐ̯ ɪst zeːɐ̯ ˈlʊstɪç ʊnt nɛt",
+      "intonation": "informative et chaleureuse",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "mein bester Freund",
+          "lemme": "bester",
+          "classe_grammaticale": "adjectif superlatif + possessif",
+          "traduction_directe": "mon meilleur ami",
+          "phonetique": "ˈbɛstɐ fʁɔɪnt",
+          "regle": "Masculin nominatif : -er (bester)"
+        },
+        {
+          "mot": "lustig und nett",
+          "lemme": "lustig / nett",
+          "classe_grammaticale": "adjectifs attributs",
+          "traduction_directe": "drôle et gentil",
+          "phonetique": "ˈlʊstɪç ʊnt nɛt",
+          "note": "Après 'sein' → pas de terminaison"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "de": "Meine Freundin kommt aus Madagaskar. Sie ist 25 Jahre alt und sehr intelligent.",
+      "fr": "Mon amie vient de Madagascar. Elle a 25 ans et elle est très intelligente.",
+      "audio": "/audio/a1-012-3.mp3",
+      "phonetique": "ˈmaɪnə ˈfʁɔɪndɪn kɔmt aʊs madaˈɡaskaʁ | ziː ɪst ˈfʏnftsɪç ˈjaːʁə alt ʊnt zeːɐ̯ ɪntɛliˈɡɛnt",
+      "intonation": "informative",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "meine Freundin",
+          "lemme": "die Freundin",
+          "classe_grammaticale": "nom féminin",
+          "traduction_directe": "mon amie",
+          "phonetique": "ˈfʁɔɪndɪn",
+          "distinction": "Freund = ami (garçon), Freundin = amie (fille)"
+        },
+        {
+          "mot": "intelligent",
+          "lemme": "intelligent",
+          "classe_grammaticale": "adjectif",
+          "traduction_directe": "intelligent(e)",
+          "phonetique": "ɪntɛliˈɡɛnt"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "de": "Wir gehen oft zusammen ins Kino. Mit meinen Freunden ist es immer lustig.",
+      "fr": "Nous allons souvent ensemble au cinéma. Avec mes amis c’est toujours drôle.",
+      "audio": "/audio/a1-012-4.mp3",
+      "phonetique": "viːɐ̯ ˈɡeːən ɔft tsuˈzamən ɪns ˈkiːno | mɪt ˈmaɪnən ˈfʁɔɪndən ɪst ɛs ˈɪmɐ ˈlʊstɪç",
+      "intonation": "enthousiaste",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "zusammen",
+          "lemme": "zusammen",
+          "classe_grammaticale": "adverbe",
+          "traduction_directe": "ensemble",
+          "phonetique": "tsuˈzamən"
+        },
+        {
+          "mot": "mit meinen Freunden",
+          "lemme": "mit",
+          "classe_grammaticale": "préposition + datif",
+          "traduction_directe": "avec mes amis",
+          "phonetique": "mɪt ˈmaɪnən ˈfʁɔɪndən",
+          "note": "mit exige toujours le datif"
+        }
+      ]
+    }
+  ],
+
+  "vocabulaire_complet": [
+    { "mot": "der Freund", "traduction": "l’ami (garçon)", "type": "nom masculin", "phonetique": "fʁɔɪnt" },
+    { "mot": "die Freundin", "traduction": "l’amie (fille)", "type": "nom féminin", "phonetique": "ˈfʁɔɪndɪn" },
+    { "mot": "die Freunde", "traduction": "les amis", "type": "nom pluriel", "phonetique": "ˈfʁɔɪndə" },
+    { "mot": "nett", "traduction": "gentil", "type": "adjectif", "phonetique": "nɛt" },
+    { "mot": "lustig", "traduction": "drôle / amusant", "type": "adjectif", "phonetique": "ˈlʊstɪç" },
+    { "mot": "intelligent", "traduction": "intelligent", "type": "adjectif", "phonetique": "ɪntɛliˈɡɛnt" },
+    { "mot": "schön", "traduction": "beau / jolie", "type": "adjectif", "phonetique": "ʃøːn" },
+    { "mot": "zusammen", "traduction": "ensemble", "type": "adverbe", "phonetique": "tsuˈzamən" },
+    { "mot": "mit", "traduction": "avec", "type": "préposition", "phonetique": "mɪt" }
+  ],
+
+  "grammaire": [
+    {
+      "titre": "Possessifs au pluriel : meine",
+      "niveau": "A1",
+      "explication": "Pour le pluriel on utilise toujours 'meine' (mes).",
+      "exemples": [
+        "meine Freunde",
+        "meine Geschwister"
+      ]
+    },
+    {
+      "titre": "Adjectifs de personnalité et apparence",
+      "niveau": "A1",
+      "tableau": [
+        { "adjectif": "nett", "fr": "gentil" },
+        { "adjectif": "lustig", "fr": "drôle" },
+        { "adjectif": "freundlich", "fr": "aimable" },
+        { "adjectif": "groß / klein", "fr": "grand / petit" },
+        { "adjectif": "schön", "fr": "beau / jolie" }
+      ]
+    },
+    {
+      "titre": "mit + datif",
+      "niveau": "A1",
+      "explication": "La préposition 'mit' (avec) est toujours suivie du datif.",
+      "exemple": "Mit meinen Freunden ist es lustig."
+    }
+  ],
+
+  "exercices": [
+    {
+      "id": "ex-001",
+      "type": "choix_multiple",
+      "difficulte": 1,
+      "question": "Complète : Das sind ___ besten Freunde.",
+      "options": ["mein", "meine", "meinen", "meinem"],
+      "reponse_correcte": 1,
+      "explication": "meine besten Freunde (pluriel)"
+    },
+    {
+      "id": "ex-002",
+      "type": "traduction",
+      "difficulte": 2,
+      "question": "Traduire : 'Mon amie est très gentille et intelligente. Nous allons souvent ensemble au cinéma.'",
+      "reponse_attendue": "Meine Freundin ist sehr nett und intelligent. Wir gehen oft zusammen ins Kino.",
+      "explication": "adjectifs attributs + zusammen"
+    },
+    {
+      "id": "ex-010",
+      "type": "situation",
+      "difficulte": 3,
+      "question": "Présente 3 de tes amis : nom/prénom ou description, âge, origine, personnalité et ce que vous faites ensemble.",
+      "modele_reponse": "Das ist mein bester Freund. Er heißt … Er ist 26 Jahre alt und kommt aus … Er ist lustig und nett. Wir spielen oft Fußball zusammen.",
+      "criteres_evaluation": ["possessifs corrects", "adjectifs bien accordés", "mit + datif si utilisé", "verbes sein/haben/gehen"]
+    }
+  ],
+
+  "comprehension": [
+    {
+      "question": "Quelle est la différence entre 'Freund' et 'Freundin' ?",
+      "reponse": "Freund = ami (garçon ou ami en général), Freundin = amie (fille). Au pluriel on dit meistens 'Freunde' pour les deux."
+    }
+  ],
+
+  "culture": {
+    "titre": "Les amis en pays germanophones",
+    "points": [
+      { "sujet": "Amitié", "explication": "Les Allemands et Autrichiens ont souvent un petit cercle d’amis proches (die besten Freunde). On dit 'du' assez vite avec les amis." }
+    ]
+  },
+
+  "astuces_pedagogiques": [
+    {
+      "titre": "Mémo pour décrire les amis",
+      "astuce": "Âge → sein + Jahre alt ; Personnalité → sein + adjectif ; Activité → wir + verbe + zusammen."
+    }
+  ],
+
+  "progression": {
+    "xp": 70,
+    "badges_deblocables": ["Freunde-Profi", "Beschreibungs-Meister"],
+    "niveau_suivant": "a1-013",
+    "apercu_suivant": "Leçon suivante : Les professions"
+  }
+}

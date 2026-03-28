@@ -1,0 +1,225 @@
+{
+  "id": "a1-009",
+  "niveau": "A1",
+  "module": "A1.1",
+  "titre": "Les articles définis et indéfinis + nominatif et accusatif",
+  "objectifs": {
+    "communicatif": "Savoir utiliser correctement les articles (der/die/das, ein/eine) et distinguer nominatif et accusatif dans les phrases simples",
+    "linguistique": "Maîtriser les articles définis et indéfinis au nominatif et accusatif (masculin, féminin, neutre, pluriel), les changements d’articles, la structure sujet-verbe-objet",
+    "culturel": "Comprendre que l’allemand est une langue à cas et que le cas change la forme des articles",
+    "cognitif": "Apprendre à identifier le rôle du nom dans la phrase (sujet ou objet) pour choisir le bon article"
+  },
+  "metadonnees": {
+    "duree_estimee_minutes": 40,
+    "difficulte_cognitive": 2,
+    "prerequis": ["a1-008"],
+    "competences_visees": ["grammaire de base", "expression orale"],
+    "themes_croises": ["objets quotidiens", "description simple"]
+  },
+
+  "situation": {
+    "contexte": "Continuation de la soirée internationale à Vienne – on décrit ce qu’on voit dans l’appartement et ce qu’on a",
+    "lieu": "Appartement privé, Vienne (Wien), Autriche",
+    "type": "conversation informelle",
+    "registre": "informel"
+  },
+
+  "dialogue": [
+    {
+      "id": 1,
+      "de": "Das ist ein Buch. Ich lese das Buch.",
+      "fr": "Ceci est un livre. Je lis le livre.",
+      "audio": "/audio/a1-009-1.mp3",
+      "phonetique": "das ɪst aɪn buːx | ɪç ˈleːzə das buːx",
+      "intonation": "informative",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Das ist",
+          "lemme": "das",
+          "classe_grammaticale": "article défini neutre + verbe",
+          "traduction_directe": "Ceci est",
+          "phonetique": "das ɪst",
+          "usage": "Pour présenter quelque chose (nominatif)"
+        },
+        {
+          "mot": "ein Buch",
+          "lemme": "das Buch",
+          "classe_grammaticale": "article indéfini + nom neutre",
+          "traduction_directe": "un livre",
+          "phonetique": "aɪn buːx",
+          "cas": "nominatif (sujet de la phrase)"
+        },
+        {
+          "mot": "das Buch",
+          "lemme": "das Buch",
+          "classe_grammaticale": "article défini neutre",
+          "traduction_directe": "le livre",
+          "phonetique": "das buːx",
+          "cas": "accusatif (objet du verbe lesen)"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "de": "Ich habe einen Hund. Der Hund ist sehr lieb.",
+      "fr": "J’ai un chien. Le chien est très gentil.",
+      "audio": "/audio/a1-009-2.mp3",
+      "phonetique": "ɪç ˈhaːbə ˈaɪnən hʊnt | deːɐ̯ hʊnt ɪst zeːɐ̯ liːp",
+      "intonation": "informative",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "einen Hund",
+          "lemme": "der Hund",
+          "classe_grammaticale": "article indéfini masculin accusatif",
+          "traduction_directe": "un chien",
+          "phonetique": "ˈaɪnən hʊnt",
+          "regle": "Masculin : ein (nom.) → einen (acc.)"
+        },
+        {
+          "mot": "Der Hund",
+          "lemme": "der Hund",
+          "classe_grammaticale": "article défini masculin nominatif",
+          "traduction_directe": "le chien",
+          "phonetique": "deːɐ̯ hʊnt",
+          "regle": "Masculin : der (nom. et acc. identiques pour défini)"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "de": "Siehst du die Frau? Ja, die Frau ist meine Lehrerin.",
+      "fr": "Vois-tu la femme ? Oui, la femme est mon professeur.",
+      "audio": "/audio/a1-009-3.mp3",
+      "phonetique": "ˈziːst duː diː fʁaʊ | jaː diː fʁaʊ ɪst ˈmaɪnə ˈleːʁəʁɪn",
+      "intonation": "montante sur la question",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "die Frau",
+          "lemme": "die Frau",
+          "classe_grammaticale": "article défini féminin",
+          "traduction_directe": "la femme",
+          "phonetique": "diː fʁaʊ",
+          "note": "Féminin : die reste le même au nominatif et accusatif"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "de": "Ich trinke einen Kaffee. Der Kaffee ist gut.",
+      "fr": "Je bois un café. Le café est bon.",
+      "audio": "/audio/a1-009-4.mp3",
+      "phonetique": "ɪç ˈtʁɪŋkə ˈaɪnən kaˈfeː | deːɐ̯ kaˈfeː ɪst ɡuːt",
+      "intonation": "informative",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "einen Kaffee",
+          "lemme": "der Kaffee",
+          "classe_grammaticale": "article indéfini masculin accusatif",
+          "traduction_directe": "un café",
+          "phonetique": "ˈaɪnən kaˈfeː"
+        }
+      ]
+    }
+  ],
+
+  "vocabulaire_complet": [
+    { "mot": "das Buch", "traduction": "le livre", "type": "nom neutre", "phonetique": "buːx" },
+    { "mot": "der Hund", "traduction": "le chien", "type": "nom masculin", "phonetique": "hʊnt" },
+    { "mot": "die Frau", "traduction": "la femme", "type": "nom féminin", "phonetique": "fʁaʊ" },
+    { "mot": "der Kaffee", "traduction": "le café", "type": "nom masculin", "phonetique": "kaˈfeː" },
+    { "mot": "die Lehrerin", "traduction": "la professeur (femme)", "type": "nom féminin", "phonetique": "ˈleːʁəʁɪn" },
+    { "mot": "sehen", "traduction": "voir", "type": "verbe irrégulier", "phonetique": "ˈzeːən" }
+  ],
+
+  "grammaire": [
+    {
+      "titre": "Articles définis au nominatif et accusatif",
+      "niveau": "A1",
+      "tableau": [
+        { "genre": "Masculin", "nominatif": "der", "accusatif": "den" },
+        { "genre": "Féminin", "nominatif": "die", "accusatif": "die" },
+        { "genre": "Neutre", "nominatif": "das", "accusatif": "das" },
+        { "genre": "Pluriel", "nominatif": "die", "accusatif": "die" }
+      ]
+    },
+    {
+      "titre": "Articles indéfinis au nominatif et accusatif",
+      "niveau": "A1",
+      "tableau": [
+        { "genre": "Masculin", "nominatif": "ein", "accusatif": "einen" },
+        { "genre": "Féminin", "nominatif": "eine", "accusatif": "eine" },
+        { "genre": "Neutre", "nominatif": "ein", "accusatif": "ein" },
+        { "genre": "Pluriel", "nominatif": "— (keine)", "accusatif": "— (keine)" }
+      ]
+    },
+    {
+      "titre": "Quand utiliser nominatif ou accusatif ?",
+      "niveau": "A1",
+      "explication": "Nominatif = sujet de la phrase (celui qui fait l’action). Accusatif = objet direct (celui qui subit l’action).",
+      "exemples": [
+        "Der Hund beißt den Mann. (Le chien mord l’homme → der = sujet, den = objet)",
+        "Ich sehe das Buch. (Je vois le livre → das = objet)"
+      ]
+    }
+  ],
+
+  "exercices": [
+    {
+      "id": "ex-001",
+      "type": "choix_multiple",
+      "difficulte": 1,
+      "question": "Complète : Ich habe ___ Hund.",
+      "options": ["der", "den", "ein", "einen"],
+      "reponse_correcte": 3,
+      "explication": "einen Hund (accusatif masculin)"
+    },
+    {
+      "id": "ex-002",
+      "type": "traduction",
+      "difficulte": 2,
+      "question": "Traduire : 'Je lis un livre. Le livre est intéressant.'",
+      "reponse_attendue": "Ich lese ein Buch. Das Buch ist interessant.",
+      "explication": "ein Buch (nominatif neutre) → das Buch (accusatif neutre = même forme)"
+    },
+    {
+      "id": "ex-010",
+      "type": "situation",
+      "difficulte": 3,
+      "question": "Décris 5 objets que tu vois autour de toi en utilisant articles définis et indéfinis correctement (nominatif + accusatif).",
+      "modele_reponse": "Das ist ein Tisch. Ich habe einen Stuhl. Die Lampe ist schön.",
+      "criteres_evaluation": ["choix correct des articles", "distinction nominatif/accusatif", "genre des noms"]
+    }
+  ],
+
+  "comprehension": [
+    {
+      "question": "Pourquoi dit-on 'Ich sehe den Hund' et non 'Ich sehe der Hund' ?",
+      "reponse": "Hund est masculin. Au nominatif c’est 'der Hund', mais comme objet direct (accusatif) il devient 'den Hund'."
+    }
+  ],
+
+  "culture": {
+    "titre": "Les cas en allemand",
+    "points": [
+      { "sujet": "Pourquoi des cas ?", "explication": "Les cas indiquent la fonction du nom dans la phrase. L’allemand en a 4 : nominatif, accusatif, datif, génitif. On commence par nominatif et accusatif à A1." }
+    ]
+  },
+
+  "astuces_pedagogiques": [
+    {
+      "titre": "Truc pour l’accusatif masculin",
+      "astuce": "Masculin = le seul qui change vraiment ! der → den et ein → einen. Pour féminin, neutre et pluriel, l’accusatif est souvent identique au nominatif."
+    }
+  ],
+
+  "progression": {
+    "xp": 70,
+    "badges_deblocables": ["Artikel-Meister", "Kasus-Profi"],
+    "niveau_suivant": "a1-010",
+    "apercu_suivant": "Leçon suivante : Les couleurs, les adjectifs et leur accord simple"
+  }
+}

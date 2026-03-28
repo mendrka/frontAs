@@ -1,0 +1,115 @@
+{
+  "id": "b2-005",
+  "niveau": "B2",
+  "module": "B2.1",
+  "titre": "Débattre sur des sujets simples : Opinions et Arguments",
+  "objectifs": {
+    "communicatif": "Exprimer une opinion nuancée, peser le pour et le contre (Abwägen), réagir aux arguments d'autrui et conclure un débat",
+    "linguistique": "Maîtriser les connecteurs doubles (einerseits... andererseits), les conjonctions de concession (obwohl, zwar... aber) et les verbes d'opinion avancés (behaupten, bezweifeln)",
+    "culturel": "La culture du débat en Allemagne (Streitkultur) : on peut être très en désaccord sur les idées tout en restant respectueux des personnes",
+    "cognitif": "Développer une pensée critique et synthétique en langue étrangère"
+  },
+  "metadonnees": {
+    "duree_estimee_minutes": 75,
+    "difficulte_cognitive": 4,
+    "prerequis": ["b2-001", "b2-004"],
+    "competences_visees": ["expression orale", "interaction argumentative"],
+    "themes_croises": ["société", "technologie", "éthique"]
+  },
+  "situation": {
+    "contexte": "Une discussion sur l'impact de l'intelligence artificielle sur le marché du travail ou l'importance de l'automatisation dans l'industrie.",
+    "lieu": "Séminaire / Table ronde",
+    "type": "Débat d'idées",
+    "registre": "soutenu"
+  },
+  "dialogue_modele": [
+    {
+      "id": 1,
+      "de": "Einerseits bietet die KI enorme Chancen für die Effizienz, andererseits dürfen wir die sozialen Folgen nicht ignorieren.",
+      "fr": "D'une part, l'IA offre d'énormes opportunités en termes d'efficacité, d'autre part, nous ne devons pas ignorer les conséquences sociales.",
+      "phonetique": "ˈaɪnɐˌzaɪt͡s ˈbiːtət diː kaː-iː eˈnɔʁmə ˈʃansn̩ fyːɐ̯ diː ɛfiˈt͡si̯ɛnt͡s | ˈandəʁɐˌzaɪt͡s ˈdʏʁfən viːɐ̯ diː zoˈt͡si̯aːlən ˈfɔlɡən nɪçt ɪɡnoˈʁiːʁən",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Einerseits... andererseits",
+          "grammaire": "Connecteurs doubles.",
+          "usage": "Indispensable pour présenter deux facettes d'un problème. Le verbe suit immédiatement chaque connecteur."
+        },
+        {
+          "mot": "Folgen",
+          "traduction": "conséquences / suites.",
+          "note": "Souvent utilisé au pluriel dans les débats."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "de": "Da haben Sie recht, aber ich bezweifle, dass die Automatisierung kurzfristig zu Massenarbeitslosigkeit führt.",
+      "fr": "Vous avez raison sur ce point, mais je doute que l'automatisation mène à court terme à un chômage de masse.",
+      "phonetique": "daː ˈhaːbən ziː ʁɛçt | ˈaːbɐ ɪç bəˈt͡svaɪflə | das diː aʊtoːmaːtiˈziːʁʊŋ ˈkʊʁt͡sˌfʁɪstɪç t͡suː ˈmasənˌaʁbaɪt͡sloːzɪçkaɪt fyːɐ̯t",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "bezweifeln",
+          "traduction": "douter de.",
+          "usage": "Plus fort et plus précis que 'ich glaube nicht'."
+        },
+        {
+          "mot": "kurzfristig",
+          "antonyme": "langfristig (à long terme).",
+          "traduction": "à court terme."
+        }
+      ]
+    }
+  ],
+  "grammaire": [
+    {
+      "titre": "Les connecteurs doubles (Doppelkonjunktionen)",
+      "explication": "Ils structurent ta pensée de manière équilibrée.",
+      "liste": [
+        { "structure": "zwar ... aber", "sens": "Certes ... mais", "exemple": "Das ist zwar teuer, aber effizient." },
+        { "structure": "entweder ... oder", "sens": "Soit ... soit", "exemple": "Entweder wir investieren, oder wir warten." },
+        { "structure": "nicht nur ... sondern auch", "sens": "Non seulement ... mais aussi", "exemple": "KI ist nicht nur schnell, sondern auch präzise." }
+      ]
+    },
+    {
+      "titre": "Exprimer la concession avec 'obwohl' et 'trotzdem'",
+      "explication": "Différencier la subordonnée de l'adverbe.",
+      "exemples": [
+        { "type": "Obwohl (conjonction)", "phrase": "Obwohl es Risiken gibt, bin ich optimistisch. (Verbe à la fin)" },
+        { "type": "Trotzdem (adverbe)", "phrase": "Es gibt Risiken, trotzdem bin ich optimistisch. (Verbe en pos. 2)" }
+      ]
+    }
+  ],
+  "vocabulaire_cles": [
+    { "de": "das Argument / das Gegenargument", "fr": "l'argument / le contre-argument" },
+    { "de": "der Standpunkt / die Ansicht", "fr": "le point de vue / l'avis" },
+    { "de": "überzeugen", "fr": "convaincre" },
+    { "de": "widersprechen", "fr": "contredire" },
+    { "de": "im Vergleich zu", "fr": "en comparaison avec" }
+  ],
+  "exercices": [
+    {
+      "id": "ex-b2-005-1",
+      "type": "syntaxe",
+      "question": "Complétez avec les connecteurs : '____ ist die Technik neu, ____ sie funktioniert gut.' (Certes... mais)",
+      "reponse_attendue": "Zwar ... aber",
+      "explication": "Zwar introduit la concession, aber introduit l'opposition."
+    },
+    {
+      "id": "ex-b2-005-2",
+      "type": "expression",
+      "question": "Comment dire poliment 'Je ne suis pas de votre avis' ?",
+      "reponse_attendue": "Ich bin da anderer Meinung. / Ich sehe das etwas anders.",
+      "explication": "On évite le 'Du hast unrecht' (Tu as tort) trop frontal en milieu pro."
+    }
+  ],
+  "culture": {
+    "titre": "Sachliche Diskussion",
+    "explication": "En Allemagne, le débat est souvent 'sachlich' (factuel). Si quelqu'un contredit ton idée avec force, il n'attaque pas ta personne, il teste la solidité de ton argument. Répondre avec des données et une logique calme est la meilleure stratégie."
+  },
+  "progression": {
+    "xp": 300,
+    "prochain_module": "B2.2",
+    "prochaine_lecon": "b2-006 (Santé, assurance et finances)",
+    "statut": "Module B2.1 terminé ! Tu maîtrises les bases du business allemand."
+  }
+}

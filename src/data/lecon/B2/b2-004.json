@@ -1,0 +1,114 @@
+{
+  "id": "b2-004",
+  "niveau": "B2",
+  "module": "B2.1",
+  "titre": "Participer à un entretien d’embauche ou d'admission",
+  "objectifs": {
+    "communicatif": "Présenter son parcours académique et professionnel, mettre en avant ses points forts (Stärken), justifier ses motivations pour un poste ou un projet",
+    "linguistique": "Maîtriser la nominalisation (ex: 'bei der Erstellung' au lieu de 'als ich erstellt habe'), les adjectifs qualificatifs de haut niveau et les structures avec 'haben ... zu' (obligation)",
+    "culturel": "Les codes de l'entretien en Allemagne : ponctualité absolue, honnêteté sur les compétences, et l'importance des certificats",
+    "cognitif": "Transformer une expérience vécue en compétence professionnelle"
+  },
+  "metadonnees": {
+    "duree_estimee_minutes": 70,
+    "difficulte_cognitive": 4,
+    "prerequis": ["b2-001", "b2-002"],
+    "competences_visees": ["expression orale", "confiance en soi"],
+    "themes_croises": ["carrière", "éducation", "psychologie"]
+  },
+  "situation": {
+    "contexte": "Entretien pour une place en programme d'entrepreneuriat ou pour un poste de développeur junior à Stuttgart.",
+    "lieu": "Bureau de recrutement / Appel vidéo",
+    "type": "Entretien formel",
+    "registre": "formel (Sie)"
+  },
+  "dialogue_modele": [
+    {
+      "id": 1,
+      "de": "Ich verfüge über fundierte Kenntnisse in der Webentwicklung und habe bereits eigene Projekte erfolgreich umgesetzt.",
+      "fr": "Je dispose de connaissances approfondies en développement web et j'ai déjà mis en œuvre mes propres projets avec succès.",
+      "phonetique": "ɪç fɛɐ̯ˈfyːɡə ˈyːbɐ fʊnˈdiːɐ̯tə ˈkɛntnɪsə ɪn deːɐ̯ ˈvɛp-ɛntˈvɪklʊŋ ʊnt ˈhaːbə baˈʁaɪts ˈaɪɡənə pʁoˈjɛktə ɛɐ̯ˈfɔlkˌʁaɪç ˈʊmɡəˌzɛt͡st",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "verfügen über (+ Akk)",
+          "usage": "Plus élégant que 'haben' pour parler de compétences ou de ressources."
+        },
+        {
+          "mot": "fundierte Kenntnisse",
+          "traduction": "connaissances approfondies / solides.",
+          "note": "Un terme très apprécié dans les CV allemands."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "de": "Zu meinen Stärken zählen Belastbarkeit und eine schnelle Auffassungsgabe, was bei der Lösung technischer Probleme hilfreich ist.",
+      "fr": "Parmi mes points forts, on compte la résistance au stress et une grande rapidité de compréhension, ce qui est utile pour résoudre des problèmes techniques.",
+      "phonetique": "t͡suː ˈmaɪnən ˈʃtɛʁkən ˈt͡sɛːlən bəˈlastbaːɐ̯ˌkaɪt ʊnt ˈaɪnə ˈʃnɛlə ˈaʊfˌfasʊŋsˌɡaːbə | vas baɪ deːɐ̯ ˈløːzʊŋ ˈtɛçnɪʃɐ pʁoˈbleːmə ˈhɪlfˌʁaɪç ɪst",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Belastbarkeit",
+          "sens": "Capacité à travailler sous pression / résistance au stress."
+        },
+        {
+          "mot": "Auffassungsgabe",
+          "traduction": "faculté de compréhension / vivacité d'esprit."
+        },
+        {
+          "mot": "bei der Lösung",
+          "grammaire": "Nominalisation (de 'lösen' à 'die Lösung').",
+          "usage": "Donne un ton beaucoup plus professionnel et synthétique."
+        }
+      ]
+    }
+  ],
+  "grammaire": [
+    {
+      "titre": "La Nominalisation (Verbe → Nom)",
+      "explication": "En B2, on préfère utiliser des noms avec des prépositions plutôt que des subordonnées avec 'weil' ou 'wenn'.",
+      "tableau": [
+        { "Phrase verbale (B1)": "Als ich das Projekt plante...", "Phrase nominale (B2)": "Bei der Planung des Projekts..." },
+        { "Phrase verbale (B1)": "Weil die Technik komplex ist...", "Phrase nominale (B2)": "Aufgrund der technischen Komplexität..." }
+      ]
+    },
+    {
+      "titre": "La structure 'haben ... zu + Infinitiv'",
+      "explication": "Une alternative élégante à 'müssen' (devoir/avoir à faire).",
+      "exemple": "Ich habe noch einige Aufgaben zu erledigen. (J'ai encore quelques tâches à accomplir.)"
+    }
+  ],
+  "vocabulaire_cles": [
+    { "de": "die Stärken / die Schwächen", "fr": "les points forts / les points faibles" },
+    { "de": "die Berufserfahrung", "fr": "l'expérience professionnelle" },
+    { "de": "zielorientiert", "fr": "axé sur les objectifs" },
+    { "de": "teamfähig", "fr": "capable de travailler en équipe" },
+    { "de": "sich einer Herausforderung stellen", "fr": "relever un défi" }
+  ],
+  "exercices": [
+    {
+      "id": "ex-b2-004-1",
+      "type": "nominalisation",
+      "question": "Transformez en style nominal : 'Wenn man die API integriert...' (Utilisez 'Bei...')",
+      "reponse_attendue": "Bei der Integration der API...",
+      "explication": "Le verbe 'integrieren' devient le nom 'Integration' au génitif."
+    },
+    {
+      "id": "ex-b2-004-2",
+      "type": "vocabulaire",
+      "question": "Quel mot signifie 'apprendre vite' dans un contexte pro ?",
+      "reponse_attendue": "Die schnelle Auffassungsgabe",
+      "explication": "C'est un terme standard pour dire qu'on comprend et apprend rapidement."
+    }
+  ],
+  "astuces_pedagogiques": [
+    {
+      "titre": "Le 'Selbstmarketing' allemand",
+      "astuce": "Ne sois pas trop modeste, mais reste factuel. Au lieu de dire 'Je suis le meilleur', dis 'Grâce à mon projet WebBuilder, j'ai acquis une expérience pratique en React'. Les faits (Fakten) parlent plus fort que les adjectifs."
+    }
+  ],
+  "progression": {
+    "xp": 250,
+    "prochain_id": "b2-005",
+    "apercu_suivant": "Leçon B2.1-5 : Débattre sur des sujets simples (opinions et arguments)."
+  }
+}

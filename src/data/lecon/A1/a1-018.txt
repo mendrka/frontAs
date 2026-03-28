@@ -1,0 +1,212 @@
+{
+  "id": "a1-018",
+  "niveau": "A1",
+  "module": "A1.4",
+  "titre": "Faire ses courses simples",
+  "objectifs": {
+    "communicatif": "Demander des produits au supermarché ou au marché, dire ce qu’on veut acheter, demander les prix, comprendre les quantités et payer",
+    "linguistique": "Maîtriser le vocabulaire des aliments de base, les quantités ('ein Kilo', 'eine Packung', 'zwei Stück'), les questions 'Wie viel kostet… ?', 'Haben Sie… ?', les expressions 'Ich nehme…', 'Das macht…'",
+    "culturel": "Connaître les habitudes d’achat en Allemagne/Autriche (supermarchés discount, marchés, paiement en espèces ou carte)",
+    "cognitif": "Utiliser les nombres, les articles et les quantités dans un contexte réel"
+  },
+  "metadonnees": {
+    "duree_estimee_minutes": 40,
+    "difficulte_cognitive": 2,
+    "prerequis": ["a1-017"],
+    "competences_visees": ["situations pratiques", "nombres"],
+    "themes_croises": ["vie quotidienne", "alimentation"]
+  },
+
+  "situation": {
+    "contexte": "Après la soirée, un participant va faire des courses au supermarché Billa ou Spar à Vienne",
+    "lieu": "Supermarché à Vienne (Wien), Autriche",
+    "type": "situation de service",
+    "registre": "semi-formel (avec la caissière)"
+  },
+
+  "dialogue": [
+    {
+      "id": 1,
+      "de": "Entschuldigung, wo finde ich Brot? Dort drüben, beim Backregal.",
+      "fr": "Excusez-moi, où est-ce que je trouve du pain ? Là-bas, au rayon boulangerie.",
+      "audio": "/audio/a1-018-1.mp3",
+      "phonetique": "ɛntˈʃʊldɪɡʊŋ voː ˈfɪndə ɪç bʁoːt | dɔʁt ˈdʁyːbən baɪm ˈbakˌʁeːɡal",
+      "intonation": "polie",
+      "registre": "semi-formel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Entschuldigung",
+          "lemme": "die Entschuldigung",
+          "classe_grammaticale": "interjection de politesse",
+          "traduction_directe": "Excusez-moi",
+          "phonetique": "ɛntˈʃʊldɪɡʊŋ"
+        },
+        {
+          "mot": "wo finde ich",
+          "lemme": "finden",
+          "classe_grammaticale": "question de localisation",
+          "traduction_directe": "où est-ce que je trouve",
+          "phonetique": "voː ˈfɪndə ɪç"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "de": "Ich nehme ein Kilo Äpfel, zwei Packungen Milch und ein Brot.",
+      "fr": "Je prends un kilo de pommes, deux briques de lait et un pain.",
+      "audio": "/audio/a1-018-2.mp3",
+      "phonetique": "ɪç ˈneːmə aɪn ˈkiːloː ˈɛpfəl | tsvaɪ ˈpakʊŋən mɪlç ʊnt aɪn bʁoːt",
+      "intonation": "claire et décidée",
+      "registre": "semi-formel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Ich nehme",
+          "lemme": "nehmen",
+          "classe_grammaticale": "verbe irrégulier",
+          "traduction_directe": "Je prends",
+          "phonetique": "ˈneːmə",
+          "note": "Très courant quand on choisit des produits"
+        },
+        {
+          "mot": "ein Kilo Äpfel",
+          "lemme": "das Kilo",
+          "classe_grammaticale": "quantité",
+          "traduction_directe": "un kilo de pommes",
+          "phonetique": "ˈkiːloː ˈɛpfəl"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "de": "Wie viel kostet das alles? Das macht 12,50 Euro.",
+      "fr": "Combien coûte tout ça ? Ça fait 12,50 euros.",
+      "audio": "/audio/a1-018-3.mp3",
+      "phonetique": "viː fiːl ˈkɔstət das ˈaləs | das maxt tsveːləf ˈfʏnft͡sɪç ˈɔɪʁo",
+      "intonation": "question puis réponse",
+      "registre": "semi-formel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Wie viel kostet",
+          "lemme": "kosten",
+          "classe_grammaticale": "question de prix",
+          "traduction_directe": "Combien coûte",
+          "phonetique": "viː fiːl ˈkɔstət"
+        },
+        {
+          "mot": "Das macht",
+          "lemme": "machen",
+          "classe_grammaticale": "expression de total",
+          "traduction_directe": "Ça fait",
+          "phonetique": "das maxt"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "de": "Bar oder mit Karte? Mit Karte bitte. Hier ist Ihr Bon.",
+      "fr": "En espèces ou par carte ? Par carte s’il vous plaît. Voici votre ticket.",
+      "audio": "/audio/a1-018-4.mp3",
+      "phonetique": "baːʁ ˈoːdɐ mɪt ˈkaʁtə | mɪt ˈkaʁtə ˈbɪtə | hiːɐ̯ ɪst iːɐ̯ boːn",
+      "intonation": "pratique",
+      "registre": "semi-formel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Bar oder mit Karte?",
+          "lemme": "bar",
+          "classe_grammaticale": "question de paiement",
+          "traduction_directe": "En espèces ou par carte ?",
+          "phonetique": "baːʁ"
+        }
+      ]
+    }
+  ],
+
+  "vocabulaire_complet": [
+    { "mot": "das Brot", "traduction": "le pain", "type": "nom neutre", "phonetique": "bʁoːt" },
+    { "mot": "der Apfel", "traduction": "la pomme", "type": "nom masculin", "phonetique": "ˈapfəl", "pluriel": "Äpfel" },
+    { "mot": "die Milch", "traduction": "le lait", "type": "nom féminin", "phonetique": "mɪlç" },
+    { "mot": "das Kilo", "traduction": "le kilo", "type": "nom neutre", "phonetique": "ˈkiːloː" },
+    { "mot": "die Packung", "traduction": "le paquet / la brique", "type": "nom féminin", "phonetique": "ˈpakʊŋ" },
+    { "mot": "kosten", "traduction": "coûter", "type": "verbe", "phonetique": "ˈkɔstən" },
+    { "mot": "bar", "traduction": "en espèces", "type": "adverbe", "phonetique": "baːʁ" },
+    { "mot": "mit Karte", "traduction": "par carte", "type": "expression", "phonetique": "mɪt ˈkaʁtə" }
+  ],
+
+  "grammaire": [
+    {
+      "titre": "Quantités courantes",
+      "niveau": "A1",
+      "tableau": [
+        { "quantité": "ein Kilo", "fr": "un kilo" },
+        { "quantité": "eine Packung", "fr": "une brique / un paquet" },
+        { "quantité": "zwei Stück", "fr": "deux pièces" },
+        { "quantité": "eine Flasche", "fr": "une bouteille" }
+      ]
+    },
+    {
+      "titre": "Questions au supermarché",
+      "niveau": "A1",
+      "exemples": [
+        "Wo finde ich … ?",
+        "Wie viel kostet das?",
+        "Haben Sie … ?"
+      ]
+    }
+  ],
+
+  "exercices": [
+    {
+      "id": "ex-001",
+      "type": "choix_multiple",
+      "difficulte": 1,
+      "question": "Comment dit-on 'Je prends un kilo de pommes' ?",
+      "options": ["Ich nehme ein Kilo Äpfel.", "Ich habe ein Kilo Äpfel.", "Ich bin ein Kilo Äpfel."],
+      "reponse_correcte": 0,
+      "explication": "Ich nehme … pour choisir des produits"
+    },
+    {
+      "id": "ex-002",
+      "type": "traduction",
+      "difficulte": 2,
+      "question": "Traduire : 'Excusez-moi, où est le lait ? Je prends deux paquets de lait et un pain. Combien ça fait ?'",
+      "reponse_attendue": "Entschuldigung, wo finde ich die Milch? Ich nehme zwei Packungen Milch und ein Brot. Wie viel kostet das?",
+      "explication": "Wo finde ich + Ich nehme + Wie viel kostet"
+    },
+    {
+      "id": "ex-010",
+      "type": "situation",
+      "difficulte": 3,
+      "question": "Tu fais tes courses : demande 4 produits différents, pose une question sur le prix, paie et dis au revoir.",
+      "modele_reponse": "Entschuldigung, wo finde ich Brot und Milch? Ich nehme ein Kilo Äpfel, zwei Packungen Milch, ein Brot und eine Flasche Wasser. Wie viel kostet das? Mit Karte bitte. Danke und auf Wiedersehen!",
+      "criteres_evaluation": ["expressions de localisation et quantité", "Ich nehme", "Wie viel kostet", "politesse"]
+    }
+  ],
+
+  "comprehension": [
+    {
+      "question": "Quelle est la différence entre 'Ich nehme …' et 'Ich hätte gern …' ?",
+      "reponse": "'Ich nehme …' est direct quand on choisit au rayon. 'Ich hätte gern …' est plus poli quand on commande au comptoir ou au café."
+    }
+  ],
+
+  "culture": {
+    "titre": "Faire les courses en Autriche",
+    "points": [
+      { "sujet": "Supermarchés", "explication": "Billa, Spar, Hofer (Aldi) sont très courants. On pèse souvent les fruits et légumes soi-même et on met une étiquette." }
+    ]
+  },
+
+  "astuces_pedagogiques": [
+    {
+      "titre": "Phrase utile au supermarché",
+      "astuce": "Entschuldigung, wo finde ich … ? + Ich nehme … + Wie viel kostet das alles?"
+    }
+  ],
+
+  "progression": {
+    "xp": 80,
+    "badges_deblocables": ["Einkaufs-Profi", "Supermarkt-Meister"],
+    "niveau_suivant": "a1-019",
+    "apercu_suivant": "Leçon suivante : Décrire sa maison ou son appartement"
+  }
+}

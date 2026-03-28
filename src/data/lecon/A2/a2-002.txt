@@ -1,0 +1,217 @@
+{
+  "id": "a2-002",
+  "niveau": "A2",
+  "module": "A2.1",
+  "titre": "Inviter et accepter / refuser une invitation",
+  "objectifs": {
+    "communicatif": "Inviter quelqu’un à faire une activité, accepter ou refuser poliment, proposer une alternative, fixer un rendez-vous",
+    "linguistique": "Maîtriser les expressions d’invitation ('Hast du Lust… ?', 'Möchtest du… ?', 'Wie wäre es mit… ?'), les réponses positives ('Ja, gern!', 'Klar!', 'Super!'), les refus polis ('Leider nicht', 'Ich kann leider nicht', 'Vielleicht ein anderes Mal'), les formules pour fixer l’heure et le lieu",
+    "culturel": "Connaître les codes d’invitation en Allemagne/Autriche (ponctualité, confirmation, tutoiement entre amis)",
+    "cognitif": "Utiliser les structures avec 'zu + infinitif' et les modaux möchten/können dans un contexte social"
+  },
+  "metadonnees": {
+    "duree_estimee_minutes": 45,
+    "difficulte_cognitive": 2,
+    "prerequis": ["a2-001"],
+    "competences_visees": ["interaction sociale", "expression orale"],
+    "themes_croises": ["loisirs", "relations"]
+  },
+
+  "situation": {
+    "contexte": "Après avoir parlé des hobbies, on propose une activité ensemble",
+    "lieu": "Café à Vienne (Wien), Autriche",
+    "type": "conversation informelle entre amis",
+    "registre": "informel"
+  },
+
+  "dialogue": [
+    {
+      "id": 1,
+      "de": "Hast du Lust, am Samstag ins Kino zu gehen? Ja, gern! Um wie viel Uhr?",
+      "fr": "As-tu envie d’aller au cinéma samedi ? Oui, avec plaisir ! À quelle heure ?",
+      "audio": "/audio/a2-002-1.mp3",
+      "phonetique": "hast duː lʊst am ˈzamstaːk ɪns ˈkiːno tsuː ˈɡeːən | jaː ɡɛʁn | ʊm viː fiːl uːɐ̯",
+      "intonation": "enthousiaste",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Hast du Lust… zu gehen?",
+          "lemme": "Lust haben",
+          "classe_grammatical": "structure d’invitation",
+          "traduction_directe": "As-tu envie de… ?",
+          "phonetique": "lʊst",
+          "regle": "Lust haben + zu + infinitif"
+        },
+        {
+          "mot": "Ja, gern!",
+          "lemme": "gern",
+          "classe_grammaticale": "réponse positive",
+          "traduction_directe": "Oui, avec plaisir !",
+          "phonetique": "ɡɛʁn"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "de": "Möchtest du mit uns Kaffee trinken gehen? Leider kann ich nicht, ich habe schon etwas vor.",
+      "fr": "Veux-tu aller prendre un café avec nous ? Malheureusement je ne peux pas, j’ai déjà quelque chose de prévu.",
+      "audio": "/audio/a2-002-2.mp3",
+      "phonetique": "ˈmœçtəst duː mɪt ʊns kaˈfeː ˈtʁɪŋkən ˈɡeːən | ˈlaɪdɐ kan ɪç nɪçt | ɪç ˈhaːbə ʃoːn ˈɛtvas foːɐ̯",
+      "intonation": "invitation puis refus poli",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Möchtest du… gehen?",
+          "lemme": "möchten",
+          "classe_grammaticale": "verbe modal d’invitation",
+          "traduction_directe": "Veux-tu… ?",
+          "phonetique": "ˈmœçtəst"
+        },
+        {
+          "mot": "Leider kann ich nicht",
+          "lemme": "leider",
+          "classe_grammaticale": "refus poli",
+          "traduction_directe": "Malheureusement je ne peux pas",
+          "phonetique": "ˈlaɪdɐ"
+        },
+        {
+          "mot": "etwas vorhaben",
+          "lemme": "vorhaben",
+          "classe_grammaticale": "expression",
+          "traduction_directe": "avoir quelque chose de prévu",
+          "phonetique": "ˈfoːɐ̯ˌhaːbən"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "de": "Wie wäre es mit einem Spaziergang im Park? Gute Idee! Wann treffen wir uns?",
+      "fr": "Que dirais-tu d’une promenade au parc ? Bonne idée ! Quand est-ce qu’on se retrouve ?",
+      "audio": "/audio/a2-002-3.mp3",
+      "phonetique": "viː ˈvɛːʁə ɛs mɪt ˈaɪnəm ʃpaˈtsiːɐ̯ɡaŋ ɪm paʁk | ˈɡuːtə iˈdeː | van ˈtʁɛfən viːɐ̯ ʊns",
+      "intonation": "proposition alternative",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Wie wäre es mit… ?",
+          "lemme": "wie wäre es mit",
+          "classe_grammaticale": "proposition douce",
+          "traduction_directe": "Que dirais-tu de… ?",
+          "phonetique": "viː ˈvɛːʁə ɛs mɪt"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "de": "Treffen wir uns um 15 Uhr vor dem Café? Ja, super! Bis dann!",
+      "fr": "On se retrouve à 15 heures devant le café ? Oui, super ! À tout à l’heure !",
+      "audio": "/audio/a2-002-4.mp3",
+      "phonetique": "ˈtʁɛfən viːɐ̯ ʊns ʊm ˈfʏnftseːn uːɐ̯ foːɐ̯ deːm kaˈfeː | jaː ˈzuːpɐ | bɪs dan",
+      "intonation": "confirmation joyeuse",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Treffen wir uns… ?",
+          "lemme": "sich treffen",
+          "classe_grammaticale": "proposition de rendez-vous",
+          "traduction_directe": "On se retrouve… ?",
+          "phonetique": "ˈtʁɛfən"
+        },
+        {
+          "mot": "Bis dann!",
+          "lemme": "bis dann",
+          "classe_grammaticale": "au revoir",
+          "traduction_directe": "À tout à l’heure !",
+          "phonetique": "bɪs dan"
+        }
+      ]
+    }
+  ],
+
+  "vocabulaire_complet": [
+    { "mot": "Lust haben", "traduction": "avoir envie", "type": "expression", "phonetique": "lʊst" },
+    { "mot": "möchten", "traduction": "vouloir (poliment)", "type": "verbe modal", "phonetique": "ˈmœçtən" },
+    { "mot": "leider", "traduction": "malheureusement", "type": "adverbe", "phonetique": "ˈlaɪdɐ" },
+    { "mot": "vorhaben", "traduction": "avoir prévu", "type": "verbe", "phonetique": "ˈfoːɐ̯ˌhaːbən" },
+    { "mot": "Wie wäre es mit… ?", "traduction": "Que dirais-tu de… ?", "type": "expression", "phonetique": "viː ˈvɛːʁə ɛs mɪt" },
+    { "mot": "Gute Idee!", "traduction": "Bonne idée !", "type": "expression", "phonetique": "ˈɡuːtə iˈdeː" },
+    { "mot": "sich treffen", "traduction": "se retrouver", "type": "verbe réfléchi", "phonetique": "ˈtʁɛfən" },
+    { "mot": "Bis dann!", "traduction": "À tout à l’heure !", "type": "expression", "phonetique": "bɪs dan" }
+  ],
+
+  "grammaire": [
+    {
+      "titre": "Invitations avec 'zu + infinitif'",
+      "niveau": "A2",
+      "exemples": [
+        "Hast du Lust, ins Kino zu gehen?",
+        "Möchtest du mit uns essen zu gehen?"
+      ]
+    },
+    {
+      "titre": "Refus polis",
+      "niveau": "A2",
+      "tableau": [
+        { "refus": "Leider nicht.", "niveau": "simple" },
+        { "refus": "Ich kann leider nicht.", "niveau": "plus poli" },
+        { "refus": "Vielleicht ein anderes Mal.", "niveau": "ouvert" }
+      ]
+    }
+  ],
+
+  "exercices": [
+    {
+      "id": "ex-001",
+      "type": "choix_multiple",
+      "difficulte": 1,
+      "question": "Quelle est une invitation polie ?",
+      "options": ["Komm ins Kino!", "Hast du Lust, ins Kino zu gehen?", "Du gehst ins Kino."],
+      "reponse_correcte": 1,
+      "explication": "Hast du Lust… zu + infinitif est très courant"
+    },
+    {
+      "id": "ex-002",
+      "type": "traduction",
+      "difficulte": 2,
+      "question": "Traduire : 'Veux-tu venir avec nous au parc samedi ? Malheureusement je ne peux pas, mais peut-être une autre fois.'",
+      "reponse_attendue": "Möchtest du mit uns in den Park gehen am Samstag? Leider kann ich nicht, aber vielleicht ein anderes Mal.",
+      "explication": "möchten + refus poli"
+    },
+    {
+      "id": "ex-010",
+      "type": "situation",
+      "difficulte": 3,
+      "question": "Invite un ami à 3 activités différentes (cinéma, randonnée, café). Accepte une invitation et refuse poliment une autre en proposant une alternative.",
+      "modele_reponse": "Hast du Lust, am Freitag ins Kino zu gehen? — Ja, gern! Um 20 Uhr? / Leider kann ich nicht, aber wie wäre es mit Samstag?",
+      "criteres_evaluation": ["structures d’invitation", "réponses positives/négatives", "fixer heure/lieu"]
+    }
+  ],
+
+  "comprehension": [
+    {
+      "question": "Pourquoi utilise-t-on souvent 'Hast du Lust… ?' au lieu de 'Willst du… ?'",
+      "reponse": "'Hast du Lust… ?' est plus doux et poli que 'Willst du… ?' qui peut paraître trop direct."
+    }
+  ],
+
+  "culture": {
+    "titre": "Invitations en pays germanophones",
+    "points": [
+      { "sujet": "Ponctualité", "explication": "Les Allemands et Autrichiens sont très ponctuels. Si on dit 15 Uhr, on arrive à 15 Uhr." }
+    ]
+  },
+
+  "astuces_pedagogiques": [
+    {
+      "titre": "Phrases clés pour inviter",
+      "astuce": "Hast du Lust… ? / Möchtest du… ? / Wie wäre es mit… ?"
+    }
+  ],
+
+  "progression": {
+    "xp": 90,
+    "badges_deblocables": ["Einladungs-Profi", "Sozial-Meister"],
+    "niveau_suivant": "a2-003",
+    "apercu_suivant": "Leçon suivante : Parler de la santé et des émotions"
+  }
+}

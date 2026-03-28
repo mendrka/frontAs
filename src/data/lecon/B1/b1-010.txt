@@ -1,0 +1,117 @@
+{
+  "id": "b1-010",
+  "niveau": "B1",
+  "module": "B1.2",
+  "titre": "Gérer les situations imprévues",
+  "objectifs": {
+    "communicatif": "Signaler un problème, demander de l'aide en cas d'urgence ou de perte, comprendre des explications sur un incident technique",
+    "linguistique": "Maîtriser le Prétérit des verbes de modalité, le Konjunktiv II pour les requêtes polies et les verbes à particules inséparables (ver-, ent-, be-)",
+    "culturel": "Le service client en Allemagne et les réflexes à avoir (Fundbüro, Kundendialog)",
+    "cognitif": "Garder son calme et structurer une plainte ou une demande d'assistance"
+  },
+  "metadonnees": {
+    "duree_estimee_minutes": 55,
+    "difficulte_cognitive": 4,
+    "prerequis": ["b1-007", "b1-008"],
+    "competences_visees": ["interaction orale", "résolution de problèmes"],
+    "themes_croises": ["sécurité", "transport", "communication"]
+  },
+  "situation": {
+    "contexte": "Tu as oublié ton sac à dos (contenant ton ordinateur) dans le train pour Stuttgart. Tu t'adresses au bureau des objets trouvés.",
+    "lieu": "Fundbüro (Bureau des objets trouvés), Gare de Stuttgart",
+    "type": "Déclaration de perte / Réclamation",
+    "registre": "standard / formel"
+  },
+  "dialogue": [
+    {
+      "id": 1,
+      "de": "Entschuldigung, ich habe meinen Rucksack im Zug vergessen. Könnten Sie mir bitte helfen, ihn wiederzufinden?",
+      "fr": "Excusez-moi, j'ai oublié mon sac à dos dans le train. Pourriez-vous m'aider à le retrouver s'il vous plaît ?",
+      "phonetique": "ɛntˈʃʊldɪɡʊŋ | ɪç ˈhaːbə maɪnən ˈʁʊkˌzak ɪm t͡suːk fɛɐ̯ˈɡɛsən | ˈkœntən ziː miːɐ̯ ˈbɪtə ˈhɛlfən | iːn ˈviːdɐt͡suːˌfɪndən",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "vergessen",
+          "grammaire": "Verbe à particule inséparable (ver-).",
+          "note": "Les verbes commençant par ver-, be-, ent-, er-, emp-, ge-, miss-, zer- ne prennent JAMAIS de 'ge-' au participe passé."
+        },
+        {
+          "mot": "Könnten Sie",
+          "usage": "Konjunktiv II. Indispensable pour obtenir de l'aide avec le sourire de l'employé."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "de": "Ich musste schnell aussteigen, weil der Anschlusszug schon bereitstand. Ich war sehr gestresst.",
+      "fr": "J'ai dû descendre rapidement parce que la correspondance était déjà à quai. J'étais très stressé.",
+      "phonetique": "ɪç ˈmʊstə ʃnɛl ˈaʊsˌʃtaɪɡən | vaɪl deːɐ̯ ˈanˌʃlʊsˌt͡suːk ʃoːn bəˈʁaɪtˌʃtant | ɪç vaːɐ̯ zeːɐ̯ ɡəˈʃtʁɛst",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "musste",
+          "grammaire": "Prétérit de 'müssen'.",
+          "usage": "Indique une obligation passée. Indispensable pour raconter un incident."
+        },
+        {
+          "mot": "bereitstand",
+          "lemme": "bereitstehen",
+          "traduction": "être prêt / être à disposition."
+        }
+      ]
+    }
+  ],
+  "grammaire": [
+    {
+      "titre": "Le Prétérit des verbes de modalité",
+      "explication": "À l'oral, on utilise presque toujours le prétérit pour les modaux.",
+      "tableau": [
+        { "Présent": "ich muss", "Prétérit": "ich musste" },
+        { "Présent": "ich kann", "Prétérit": "ich konnte" },
+        { "Présent": "ich will", "Prétérit": "ich wollte" },
+        { "Présent": "ich darf", "Prétérit": "ich durfte" },
+        { "Présent": "ich soll", "Prétérit": "ich sollte" }
+      ]
+    },
+    {
+      "titre": "Les verbes à particules inséparables",
+      "explication": "Ces verbes ne se séparent jamais et leur participe passé est particulier.",
+      "exemples": [
+        { "verbe": "verlieren (perdre)", "participe": "verloren (perdu)" },
+        { "verbe": "verstehen (comprendre)", "participe": "verstanden (compris)" },
+        { "verbe": "bestellen (commander)", "participe": "bestellt (commandé)" }
+      ]
+    }
+  ],
+  "vocabulaire_cles": [
+    { "de": "das Fundbüro", "fr": "le bureau des objets trouvés" },
+    { "de": "verlieren", "fr": "perdre" },
+    { "de": "stehlen / gestohlen", "fr": "voler / volé" },
+    { "de": "kaputt", "fr": "cassé / en panne" },
+    { "de": "der Notfall", "fr": "l'urgence" }
+  ],
+  "exercices": [
+    {
+      "id": "ex-b1-010-1",
+      "type": "conjugaison",
+      "question": "Mettez au passé : 'Ich kann den Schlüssel nicht finden.'",
+      "reponse_attendue": "Ich konnte den Schlüssel nicht finden.",
+      "explication": "Le prétérit de 'kann' est 'konnte'."
+    },
+    {
+      "id": "ex-b1-010-2",
+      "type": "traduction",
+      "question": "Comment dit-on 'J'ai perdu mon passeport' ?",
+      "reponse_attendue": "Ich habe meinen Reisepass verloren.",
+      "explication": "'Verlieren' est un verbe à particule inséparable, donc pas de 'ge-' : verloren."
+    }
+  ],
+  "culture": {
+    "titre": "La sécurité en Allemagne",
+    "explication": "L'Allemagne est un pays relativement sûr. Si vous perdez quelque chose dans le train, il y a de fortes chances qu'il finisse au 'Fundbüro'. Les Allemands rapportent très souvent les objets trouvés à la police ou au personnel de bord."
+  },
+  "progression": {
+    "xp": 200,
+    "prochain_module": "B1.3",
+    "prochaine_lecon": "b1-011 (Comprendre des articles courts)",
+    "statut": "Module B1.2 terminé !"
+  }
+}

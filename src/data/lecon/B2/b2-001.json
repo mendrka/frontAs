@@ -1,0 +1,116 @@
+{
+  "id": "b2-001",
+  "niveau": "B2",
+  "module": "B2.1",
+  "titre": "Présenter un projet ou une idée",
+  "objectifs": {
+    "communicatif": "Exposer un concept de manière structurée, argumenter sur la faisabilité d'un projet, répondre à des questions critiques",
+    "linguistique": "Utiliser les connecteurs logiques de haut niveau (folglich, infolgedessen), le subjonctif II pour les hypothèses de marché et le passif avec modaux",
+    "culturel": "La culture de la présentation en Allemagne : directe, basée sur les faits (Fakten orientiert) et la précision",
+    "cognitif": "Passer d'une description linéaire à une argumentation stratégique"
+  },
+  "metadonnees": {
+    "duree_estimee_minutes": 70,
+    "difficulte_cognitive": 4,
+    "prerequis": ["niveau-b1-complet"],
+    "competences_visees": ["production orale continue", "argumentation"],
+    "themes_croises": ["entrepreneuriat", "innovation", "business"]
+  },
+  "situation": {
+    "contexte": "Tu présentes ton concept de 'WebBuilder' ou de 'Stark Café' devant des partenaires potentiels ou un incubateur à Berlin.",
+    "lieu": "Espace de coworking / Salle de réunion",
+    "type": "Pitch / Présentation professionnelle",
+    "registre": "formel / professionnel"
+  },
+  "presentation_model": [
+    {
+      "id": 1,
+      "de": "Mein Ziel ist es, eine Plattform zu entwickeln, die das Webdesign für Start-ups vereinfacht.",
+      "fr": "Mon objectif est de développer une plateforme qui simplifie le webdesign pour les start-ups.",
+      "phonetique": "maɪn t͡siːl ɪst ɛs | ˈaɪnə ˈplatˌfɔʁm t͡suː ɛntˈvɪkəln | diː das ˈvɛpdiˌzaɪn fyːɐ̯ ˈstaʁtˌaps fɛɐ̯ˈaɪnfaxt",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Mein Ziel ist es, ... zu",
+          "usage": "Structure idéale pour annoncer une mission ou une vision d'entreprise."
+        },
+        {
+          "mot": "vereinfacht",
+          "lemme": "vereinfachen",
+          "traduction": "simplifier",
+          "note": "Mot puissant en business : la simplification est une valeur ajoutée."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "de": "Infolgedessen könnten die Kosten gesenkt werden, was ein entscheidender Vorteil wäre.",
+      "fr": "Par conséquent, les coûts pourraient être réduits, ce qui serait un avantage décisif.",
+      "phonetique": "ˈɪnfɔlɡədɛsən ˈkœntən diː ˈkɔstən ɡəˈzɛŋkt ˈvɛʁdən | vas aɪn ɛntˈʃaɪdəndɐ ˈfɔːɐ̯ˌtaɪl ˈvɛːʁə",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Infolgedessen",
+          "grammaire": "Connecteur de conséquence (niveau B2).",
+          "usage": "Plus formel et précis que 'deswegen'."
+        },
+        {
+          "mot": "gesenkt werden",
+          "grammaire": "Passif avec modal (könnten).",
+          "traduction": "pouvoir être réduit."
+        },
+        {
+          "mot": "wäre",
+          "grammaire": "Konjunktiv II de 'sein' (serait).",
+          "usage": "Exprime le potentiel ou l'hypothèse."
+        }
+      ]
+    }
+  ],
+  "grammaire": [
+    {
+      "titre": "Connecteurs logiques de conséquence (B2)",
+      "explication": "Pour lier tes idées comme un pro, remplace 'und' ou 'dann'.",
+      "liste": [
+        { "mot": "Folglich", "sens": "Par conséquent / En conséquence", "position": "Verbe en position 2" },
+        { "mot": "Demzufolge", "sens": "Selon ce qui précède", "position": "Verbe en position 2" },
+        { "mot": "Somit", "sens": "Ainsi / De cette façon", "position": "Verbe en position 2" }
+      ]
+    },
+    {
+      "titre": "La nominalisation avec 'zu'",
+      "explication": "Transformer des actions en buts.",
+      "exemple": "Die Notwendigkeit, neue Märkte zu erschließen. (La nécessité de conquérir de nouveaux marchés.)"
+    }
+  ],
+  "vocabulaire_professionnel": [
+    { "de": "die Marktlücke", "fr": "le créneau / la niche commerciale" },
+    { "de": "das Alleinstellungsmerkmal (USP)", "fr": "l'argument clé de vente / ce qui rend unique" },
+    { "de": "die Umsetzung", "fr": "la mise en œuvre / l'exécution" },
+    { "de": "nachhaltig", "fr": "durable / pérenne" },
+    { "de": "das Wachstumspotenzial", "fr": "le potentiel de croissance" }
+  ],
+  "exercices": [
+    {
+      "id": "ex-b2-001-1",
+      "type": "argumentation",
+      "question": "Reliez ces deux idées avec 'infolgedessen' : 'Wir nutzen KI. Wir arbeiten effizienter.'",
+      "reponse_attendue": "Wir nutzen KI, infolgedessen arbeiten wir effizienter.",
+      "explication": "Infolgedessen est suivi du verbe conjugué."
+    },
+    {
+      "id": "ex-b2-001-2",
+      "type": "vocabulaire",
+      "question": "Comment dit-on 'un avantage décisif' ?",
+      "reponse_attendue": "Ein entscheidender Vorteil",
+      "explication": "Adjectif 'entscheidend' (décisif) décliné au nominatif masculin."
+    }
+  ],
+  "culture": {
+    "titre": "Sachlichkeit (Objectivité)",
+    "explication": "En Allemagne, un pitch n'est pas basé sur l'émotion pure (le 'hype'), mais sur la 'Sachlichkeit'. Sois prêt à donner des chiffres, des délais clairs et à expliquer techniquement comment ton projet fonctionne. L'humilité technique est souvent mieux vue que l'arrogance commerciale."
+  },
+  "progression": {
+    "xp": 250,
+    "prochain_id": "b2-002",
+    "apercu_suivant": "Leçon B2.1-2 : Comprendre des réunions et des discussions techniques."
+  }
+}

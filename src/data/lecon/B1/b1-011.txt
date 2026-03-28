@@ -1,0 +1,112 @@
+{
+  "id": "b1-011",
+  "niveau": "B1",
+  "module": "B1.3",
+  "titre": "Comprendre des articles courts et les journaux",
+  "objectifs": {
+    "communicatif": "Extraire les informations principales d'un fait divers ou d'un article de presse, comprendre la structure d'un journal allemand",
+    "linguistique": "Maîtriser le Passif au Prétérit (wurde + Partizip II) et les conjonctions de cause complexes (da, aufgrund von)",
+    "culturel": "Le paysage médiatique allemand (Zeitungen vs. Online-Magazine) et le style journalistique",
+    "cognitif": "Distinguer les faits des opinions dans un texte écrit"
+  },
+  "metadonnees": {
+    "duree_estimee_minutes": 60,
+    "difficulte_cognitive": 4,
+    "prerequis": ["b1-004", "b1-010"],
+    "competences_visees": ["compréhension écrite", "synthèse d'information"],
+    "themes_croises": ["actualité", "technologie", "société"]
+  },
+  "situation": {
+    "contexte": "Lecture d'un court article dans un magazine tech allemand (type 'Heise' ou 'Spiegel Netzwelt') concernant une nouvelle innovation à Berlin.",
+    "lieu": "Tablette / Journal numérique",
+    "type": "Lecture informative",
+    "registre": "soutenu / journalistique"
+  },
+  "dialogue": [
+    {
+      "id": 1,
+      "de": "Ein neues Start-up aus Berlin wurde gestern für seine innovative KI-Software ausgezeichnet.",
+      "fr": "Une nouvelle start-up berlinoise a été récompensée hier pour son logiciel d'IA innovant.",
+      "phonetique": "aɪn ˈnɔɪəs ˈstaʁtˌap aʊs bɛʁˈliːn ˈvʊʁdə ˈɡɛstɐn fyːɐ̯ ˈzaɪnə ɪnnoˈvaˈtiːvə kaː-iː-ˈzɔftvɛːɐ̯ ˈaʊsɡəˌt͡saɪçnət",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "wurde ... ausgezeichnet",
+          "grammaire": {
+            "titre": "Le Passif au Prétérit (Präteritum Passiv)",
+            "explication": "Formation : 'wurde' (prétérit de werden) + Participe II à la fin. Très utilisé dans les journaux pour rapporter des événements passés.",
+            "exemple": "Das Gebäude wurde 1920 gebaut. (Le bâtiment a été construit en 1920.)"
+          }
+        },
+        {
+          "mot": "KI-Software",
+          "traduction": "Logiciel d'IA",
+          "note": "Künstliche Intelligenz."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "de": "Da die Nachfrage groß ist, wird das Team bald vergrößert. Das berichtet die Tageszeitung.",
+      "fr": "Puisque la demande est grande, l'équipe sera bientôt agrandie. C'est ce que rapporte le quotidien.",
+      "phonetique": "daː diː ˈnaːxˌfʁaːɡə ɡʁoːs ɪst | vɪʁt das tiːm balt fɛɐ̯ˈɡʁøːsɐt | das bəˈʁɪçtət diː ˈtaːɡəsˌt͡saɪtʊŋ",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Da",
+          "sens": "Puisque / Comme / Étant donné que",
+          "usage": "Synonyme de 'weil', mais placé souvent en début de phrase. Le verbe est à la fin de la proposition."
+        },
+        {
+          "mot": "Tageszeitung",
+          "composition": "Tag (jour) + Zeitung (journal).",
+          "traduction": "Quotidien (journal paraissant tous les jours)."
+        }
+      ]
+    }
+  ],
+  "grammaire": [
+    {
+      "titre": "Le Passif : Présent vs Prétérit",
+      "tableau": [
+        { "Temps": "Présent", "Structure": "wird + Partizip II", "Exemple": "Der Artikel wird gelesen. (L'article est lu.)" },
+        { "Temps": "Prétérit", "Structure": "wurde + Partizip II", "Exemple": "Der Artikel wurde gelesen. (L'article a été lu.)" }
+      ]
+    },
+    {
+      "titre": "La structure de l'information (W-Fragen)",
+      "explication": "Un bon article répond toujours aux questions : Wer? (Qui), Was? (Quoi), Wann? (Quand), Wo? (Où), Warum? (Pourquoi).",
+      "exemple": "Wer? Ein Start-up. Was? Auszeichnung erhalten. Wann? Gestern."
+    }
+  ],
+  "vocabulaire_cles": [
+    { "de": "die Schlagzeile", "fr": "le gros titre" },
+    { "de": "die Quelle", "fr": "la source" },
+    { "de": "der Bericht", "fr": "le rapport / le compte-rendu" },
+    { "de": "veröffentlichen", "fr": "publier" },
+    { "de": "laut (+ Génitif/Datif)", "fr": "selon / d'après" }
+  ],
+  "exercices": [
+    {
+      "id": "ex-b1-011-1",
+      "type": "transformation",
+      "question": "Mettez au passif (prétérit) : 'Die Firma entwickelte die App.'",
+      "reponse_attendue": "Die App wurde (von der Firma) entwickelt.",
+      "explication": "Sujet (Die App) + wurde + Partizip II (entwickelt)."
+    },
+    {
+      "id": "ex-b1-011-2",
+      "type": "vocabulaire",
+      "question": "Comment dit-on 'selon le journal' ?",
+      "options": ["da die Zeitung", "laut der Zeitung", "weil die Zeitung"],
+      "reponse_correcte": 1
+    }
+  ],
+  "culture": {
+    "titre": "Qualitätszeitungen",
+    "explication": "L'Allemagne a une forte culture de la presse écrite. Des journaux comme la 'Süddeutsche Zeitung' (Munich) ou la 'FAZ' (Francfort) sont des références mondiales pour leur analyse sérieuse, loin du style sensationnaliste."
+  },
+  "progression": {
+    "xp": 150,
+    "prochain_id": "b1-012",
+    "apercu_suivant": "Leçon B1.3-2 : Écrire un mail ou un message plus complexe (professionnel/privé)."
+  }
+}

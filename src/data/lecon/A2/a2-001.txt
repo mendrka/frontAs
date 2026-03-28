@@ -1,0 +1,196 @@
+{
+  "id": "a2-001",
+  "niveau": "A2",
+  "module": "A2.1",
+  "titre": "Parler de ses hobbies et loisirs",
+  "objectifs": {
+    "communicatif": "Parler de ses loisirs, dire ce qu’on aime faire pendant son temps libre, inviter quelqu’un à faire une activité ensemble",
+    "linguistique": "Maîtriser les verbes de loisirs (lesen, schwimmen, tanzen, kochen…), l’expression 'gern + verbe', les structures 'Ich spiele gern…', 'Ich gehe gern…', les adverbes de fréquence (oft, manchmal, nie)",
+    "culturel": "Connaître les loisirs populaires en pays germanophones (Wandern, Skifahren, Vereine…) et l’importance du temps libre",
+    "cognitif": "Utiliser correctement les verbes avec 'gern' et décrire ses habitudes de loisirs"
+  },
+  "metadonnees": {
+    "duree_estimee_minutes": 45,
+    "difficulte_cognitive": 2,
+    "prerequis": ["a1-020"],
+    "competences_visees": ["expression orale", "parler de soi"],
+    "themes_croises": ["loisirs", "vie quotidienne"]
+  },
+
+  "situation": {
+    "contexte": "Conversation entre amis ou nouveaux collègues à Vienne – on parle de ce qu’on fait pendant son temps libre",
+    "lieu": "Café ou appartement à Vienne (Wien), Autriche",
+    "type": "conversation informelle",
+    "registre": "informel"
+  },
+
+  "dialogue": [
+    {
+      "id": 1,
+      "de": "Was machst du gern in deiner Freizeit? Ich lese gern und gehe oft wandern.",
+      "fr": "Qu’est-ce que tu aimes faire pendant ton temps libre ? J’aime lire et je vais souvent faire de la randonnée.",
+      "audio": "/audio/a2-001-1.mp3",
+      "phonetique": "vas maxst duː ɡɛʁn ɪn ˈdaɪnɐ ˈfʁaɪˌtsaɪt | ɪç ˈleːzə ɡɛʁn ʊnt ˈɡeːə ɔft ˈvandɐn",
+      "intonation": "montante sur la question",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "in deiner Freizeit",
+          "lemme": "die Freizeit",
+          "classe_grammaticale": "expression",
+          "traduction_directe": "pendant ton temps libre",
+          "phonetique": "ˈfʁaɪˌtsaɪt"
+        },
+        {
+          "mot": "gern",
+          "lemme": "gern",
+          "classe_grammaticale": "adverbe",
+          "traduction_directe": "volontiers / aimer (faire)",
+          "phonetique": "ɡɛʁn",
+          "regle": "gern + verbe = j’aime faire quelque chose"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "de": "Ich spiele gern Gitarre und höre Musik. Und du?",
+      "fr": "J’aime jouer de la guitare et écouter de la musique. Et toi ?",
+      "audio": "/audio/a2-001-2.mp3",
+      "phonetique": "ɪç ˈʃpiːlə ɡɛʁn ɡiˈtaʁə ʊnt ˈhøːʁə muˈziːk | ʊnt duː",
+      "intonation": "enthousiaste",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "spiele gern Gitarre",
+          "lemme": "spielen",
+          "classe_grammaticale": "verbe + instrument",
+          "traduction_directe": "joue volontiers de la guitare",
+          "phonetique": "ˈʃpiːlə ɡɛʁn ɡiˈtaʁə"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "de": "Manchmal koche ich mit Freunden. Das macht Spaß!",
+      "fr": "Parfois je cuisine avec des amis. Ça fait plaisir !",
+      "audio": "/audio/a2-001-3.mp3",
+      "phonetique": "ˈmançmaːl ˈkɔxə ɪç mɪt ˈfʁɔɪndən | das maxt ʃpaːs",
+      "intonation": "positive",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "das macht Spaß",
+          "lemme": "Spaß machen",
+          "classe_grammaticale": "expression",
+          "traduction_directe": "ça fait plaisir / c’est amusant",
+          "phonetique": "ʃpaːs"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "de": "Hast du Lust, am Wochenende wandern zu gehen? Ja, gern!",
+      "fr": "As-tu envie d’aller randonner ce week-end ? Oui, avec plaisir !",
+      "audio": "/audio/a2-001-4.mp3",
+      "phonetique": "hast duː lʊst am ˈvoːxənˌɛndə ˈvandɐn tsuː ˈɡeːən | jaː ɡɛʁn",
+      "intonation": "invitation + acceptation",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Hast du Lust… zu gehen?",
+          "lemme": "Lust haben",
+          "classe_grammaticale": "invitation",
+          "traduction_directe": "As-tu envie de… ?",
+          "phonetique": "lʊst"
+        }
+      ]
+    }
+  ],
+
+  "vocabulaire_complet": [
+    { "mot": "die Freizeit", "traduction": "le temps libre", "type": "nom féminin", "phonetique": "ˈfʁaɪˌtsaɪt" },
+    { "mot": "gern", "traduction": "volontiers / aimer faire", "type": "adverbe", "phonetique": "ɡɛʁn" },
+    { "mot": "lesen", "traduction": "lire", "type": "verbe", "phonetique": "ˈleːzən" },
+    { "mot": "wandern", "traduction": "faire de la randonnée", "type": "verbe", "phonetique": "ˈvandɐn" },
+    { "mot": "spielen", "traduction": "jouer (instrument/sport)", "type": "verbe", "phonetique": "ˈʃpiːlən" },
+    { "mot": "kochen", "traduction": "cuisiner", "type": "verbe", "phonetique": "ˈkɔxən" },
+    { "mot": "Spaß machen", "traduction": "être amusant", "type": "expression", "phonetique": "ʃpaːs" },
+    { "mot": "Lust haben", "traduction": "avoir envie", "type": "expression", "phonetique": "lʊst" }
+  ],
+
+  "grammaire": [
+    {
+      "titre": "Gern + verbe",
+      "niveau": "A2",
+      "explication": "Pour dire qu’on aime faire quelque chose : gern + verbe conjugué",
+      "exemples": [
+        "Ich lese gern.",
+        "Ich spiele gern Fußball."
+      ]
+    },
+    {
+      "titre": "Invitations avec Lust haben",
+      "niveau": "A2",
+      "exemples": [
+        "Hast du Lust, … zu + infinitif ?",
+        "Ja, gern! / Nein, leider nicht."
+      ]
+    }
+  ],
+
+  "exercices": [
+    {
+      "id": "ex-001",
+      "type": "choix_multiple",
+      "difficulte": 1,
+      "question": "Comment dit-on 'J’aime lire' ?",
+      "options": ["Ich lese.", "Ich lese gern.", "Ich habe lesen."],
+      "reponse_correcte": 1,
+      "explication": "gern + verbe"
+    },
+    {
+      "id": "ex-002",
+      "type": "traduction",
+      "difficulte": 2,
+      "question": "Traduire : 'Pendant mon temps libre j’aime cuisiner et écouter de la musique. As-tu envie d’aller au cinéma samedi ?'",
+      "reponse_attendue": "In meiner Freizeit koche ich gern und höre Musik. Hast du Lust, am Samstag ins Kino zu gehen?",
+      "explication": "gern + Lust haben + zu + infinitif"
+    },
+    {
+      "id": "ex-010",
+      "type": "situation",
+      "difficulte": 3,
+      "question": "Parle de tes hobbies : ce que tu fais souvent, parfois, jamais, et invite quelqu’un à faire une activité avec toi.",
+      "modele_reponse": "In meiner Freizeit lese ich gern und spiele Fußball. Manchmal koche ich mit Freunden. Hast du Lust, am Wochenende wandern zu gehen?",
+      "criteres_evaluation": ["gern + verbes", "adverbes de fréquence", "invitation avec Lust haben"]
+    }
+  ],
+
+  "comprehension": [
+    {
+      "question": "Quelle est la différence entre 'Ich spiele Fußball' et 'Ich spiele gern Fußball' ?",
+      "reponse": "La première décrit simplement l’action. La deuxième exprime qu’on aime le faire."
+    }
+  ],
+
+  "culture": {
+    "titre": "Les loisirs en pays germanophones",
+    "points": [
+      { "sujet": "Vereine", "explication": "Beaucoup d’Allemands et Autrichiens sont membres d’un club (Fußballverein, Gesangsverein, Wanderverein…). Le temps libre est très valorisé." }
+    ]
+  },
+
+  "astuces_pedagogiques": [
+    {
+      "titre": "Phrase magique pour parler de hobbies",
+      "astuce": "In meiner Freizeit … ich gern …"
+    }
+  ],
+
+  "progression": {
+    "xp": 90,
+    "badges_deblocables": ["Hobby-Profi", "Freizeit-Meister"],
+    "niveau_suivant": "a2-002",
+    "apercu_suivant": "Leçon suivante : Inviter et accepter/refuser une invitation"
+  }
+}

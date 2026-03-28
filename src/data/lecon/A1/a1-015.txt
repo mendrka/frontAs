@@ -1,0 +1,228 @@
+{
+  "id": "a1-015",
+  "niveau": "A1",
+  "module": "A1.3",
+  "titre": "Les jours de la semaine, les mois et les heures",
+  "objectifs": {
+    "communicatif": "Dire le jour, la date, l’heure, parler de son emploi du temps et poser des questions sur les jours et les horaires",
+    "linguistique": "Maîtriser les jours de la semaine, les mois, les nombres pour l’heure (offizielle und umgangssprachliche Zeit), les prépositions am/um, les expressions wie 'heute', 'morgen', 'am Montag'",
+    "culturel": "Connaître le format des dates et heures en Allemagne, Autriche et Suisse (24h) et les jours fériés courants",
+    "cognitif": "Apprendre à former les heures avec 'Uhr' et distinguer les expressions de temps"
+  },
+  "metadonnees": {
+    "duree_estimee_minutes": 40,
+    "difficulte_cognitive": 2,
+    "prerequis": ["a1-014"],
+    "competences_visees": ["expression orale", "nombres et temps"],
+    "themes_croises": ["vie quotidienne", "emploi du temps"]
+  },
+
+  "situation": {
+    "contexte": "Suite de la soirée internationale à Vienne – on parle de l’emploi du temps de la semaine et des rendez-vous",
+    "lieu": "Appartement privé, Vienne (Wien), Autriche",
+    "type": "conversation informelle",
+    "registre": "informel"
+  },
+
+  "dialogue": [
+    {
+      "id": 1,
+      "de": "Welcher Tag ist heute? Heute ist Montag.",
+      "fr": "Quel jour sommes-nous aujourd’hui ? Aujourd’hui c’est lundi.",
+      "audio": "/audio/a1-015-1.mp3",
+      "phonetique": "ˈvɛlçɐ taːk ɪst ˈhɔɪtə | ˈhɔɪtə ɪst ˈmoːntaːk",
+      "intonation": "montante sur la question",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Welcher Tag",
+          "lemme": "welcher",
+          "classe_grammaticale": "pronom interrogatif",
+          "traduction_directe": "Quel jour",
+          "phonetique": "ˈvɛlçɐ taːk"
+        },
+        {
+          "mot": "Montag",
+          "lemme": "der Montag",
+          "classe_grammaticale": "nom masculin",
+          "traduction_directe": "lundi",
+          "phonetique": "ˈmoːntaːk",
+          "regle": "Tous les jours de la semaine sont masculins : der Montag, der Dienstag…"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "de": "Wie spät ist es? Es ist halb zehn.",
+      "fr": "Quelle heure est-il ? Il est neuf heures et demie.",
+      "audio": "/audio/a1-015-2.mp3",
+      "phonetique": "viː ʃpeːt ɪst ɛs | ɛs ɪst halp tseːn",
+      "intonation": "montante sur la question",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Wie spät ist es?",
+          "lemme": "spät",
+          "classe_grammaticale": "question pour l’heure",
+          "traduction_directe": "Quelle heure est-il ?",
+          "phonetique": "viː ʃpeːt ɪst ɛs"
+        },
+        {
+          "mot": "halb zehn",
+          "lemme": "halb",
+          "classe_grammaticale": "expression de l’heure",
+          "traduction_directe": "neuf heures et demie",
+          "phonetique": "halp tseːn",
+          "regle_heure": "halb + heure = et demie"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "de": "Am Dienstag habe ich Deutschkurs um 14 Uhr.",
+      "fr": "Mardi j’ai cours d’allemand à 14 heures.",
+      "audio": "/audio/a1-015-3.mp3",
+      "phonetique": "am ˈdiːnstaːk ˈhaːbə ɪç ˈdɔɪtʃkʊʁs ʊm ˈfɪʁtseːn uːɐ̯",
+      "intonation": "informative",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Am Dienstag",
+          "lemme": "am",
+          "classe_grammaticale": "contraction an + dem",
+          "traduction_directe": "mardi",
+          "phonetique": "am ˈdiːnstaːk",
+          "regle": "an + dem = am pour les jours (am Montag, am Dienstag…)"
+        },
+        {
+          "mot": "um 14 Uhr",
+          "lemme": "um",
+          "classe_grammaticale": "préposition pour l’heure exacte",
+          "traduction_directe": "à 14 heures",
+          "phonetique": "ʊm ˈfɪʁtseːn uːɐ̯"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "de": "Im Juli fahre ich nach Madagaskar. Der Januar ist sehr kalt in Wien.",
+      "fr": "En juillet je vais à Madagascar. Janvier est très froid à Vienne.",
+      "audio": "/audio/a1-015-4.mp3",
+      "phonetique": "ɪm ˈjuːli ˈfaːʁə ɪç nax madaˈɡaskaʁ | deːɐ̯ jaˈnʊaʁ ɪst zeːɐ̯ kalt ɪn viːn",
+      "intonation": "informative",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Im Juli",
+          "lemme": "im",
+          "classe_grammaticale": "contraction in + dem",
+          "traduction_directe": "en juillet",
+          "phonetique": "ɪm ˈjuːli",
+          "regle": "in + dem = im pour les mois"
+        }
+      ]
+    }
+  ],
+
+  "vocabulaire_complet": [
+    { "mot": "der Montag", "traduction": "lundi", "type": "nom masculin", "phonetique": "ˈmoːntaːk" },
+    { "mot": "der Dienstag", "traduction": "mardi", "type": "nom masculin", "phonetique": "ˈdiːnstaːk" },
+    { "mot": "der Mittwoch", "traduction": "mercredi", "type": "nom masculin", "phonetique": "ˈmɪtvoːx" },
+    { "mot": "der Donnerstag", "traduction": "jeudi", "type": "nom masculin", "phonetique": "ˈdɔnɐsˌtaːk" },
+    { "mot": "der Freitag", "traduction": "vendredi", "type": "nom masculin", "phonetique": "ˈfʁaɪtaːk" },
+    { "mot": "der Samstag", "traduction": "samedi", "type": "nom masculin", "phonetique": "ˈzamstaːk" },
+    { "mot": "der Sonntag", "traduction": "dimanche", "type": "nom masculin", "phonetique": "ˈzɔntaːk" },
+    { "mot": "der Januar", "traduction": "janvier", "type": "nom masculin", "phonetique": "jaˈnʊaʁ" },
+    { "mot": "der Juli", "traduction": "juillet", "type": "nom masculin", "phonetique": "ˈjuːli" },
+    { "mot": "Uhr", "traduction": "heure", "type": "nom féminin", "phonetique": "uːɐ̯" },
+    { "mot": "halb", "traduction": "et demie", "type": "adverbe", "phonetique": "halp" }
+  ],
+
+  "grammaire": [
+    {
+      "titre": "Jours de la semaine",
+      "niveau": "A1",
+      "tableau": [
+        { "jour": "Montag", "abréviation": "Mo." },
+        { "jour": "Dienstag", "abréviation": "Di." },
+        { "jour": "Mittwoch", "abréviation": "Mi." },
+        { "jour": "Donnerstag", "abréviation": "Do." },
+        { "jour": "Freitag", "abréviation": "Fr." },
+        { "jour": "Samstag", "abréviation": "Sa." },
+        { "jour": "Sonntag", "abréviation": "So." }
+      ],
+      "regle": "Tous masculins → am Montag"
+    },
+    {
+      "titre": "Mois de l’année",
+      "niveau": "A1",
+      "note": "Tous masculins → im Januar, im Februar…"
+    },
+    {
+      "titre": "L’heure en allemand",
+      "niveau": "A1",
+      "exemples": [
+        "Es ist 8 Uhr. → Il est 8 heures.",
+        "Es ist Viertel nach 9. → Il est 9h15.",
+        "Es ist halb 10. → Il est 9h30.",
+        "Es ist Viertel vor 11. → Il est 10h45."
+      ]
+    }
+  ],
+
+  "exercices": [
+    {
+      "id": "ex-001",
+      "type": "choix_multiple",
+      "difficulte": 1,
+      "question": "Comment dit-on 'mardi' ?",
+      "options": ["Montag", "Dienstag", "Mittwoch"],
+      "reponse_correcte": 1,
+      "explication": "Dienstag = mardi"
+    },
+    {
+      "id": "ex-002",
+      "type": "traduction",
+      "difficulte": 2,
+      "question": "Traduire : 'Aujourd’hui c’est vendredi. À 14h30 j’ai cours. En juillet je vais en vacances.'",
+      "reponse_attendue": "Heute ist Freitag. Um halb drei habe ich Unterricht. Im Juli fahre ich in den Urlaub.",
+      "explication": "am/um/im + temps"
+    },
+    {
+      "id": "ex-010",
+      "type": "situation",
+      "difficulte": 3,
+      "question": "Parle de ton emploi du temps : quel jour on est aujourd’hui, à quelle heure tu te lèves, ce que tu fais chaque jour de la semaine, et tes projets pour un mois.",
+      "modele_reponse": "Heute ist Mittwoch. Ich stehe um 7 Uhr auf. Am Montag habe ich Deutschkurs um 18 Uhr. Im August fahre ich nach …",
+      "criteres_evaluation": ["jours et mois corrects", "heures avec um/halb", "am/im/um bien utilisés"]
+    }
+  ],
+
+  "comprehension": [
+    {
+      "question": "Quelle est la différence entre 'am Montag' et 'im Montag' ?",
+      "reponse": "am Montag = le lundi (jour). im Montag n’existe pas → on dit im Januar pour les mois."
+    }
+  ],
+
+  "culture": {
+    "titre": "Le temps en pays germanophones",
+    "points": [
+      { "sujet": "Format 24 heures", "explication": "On utilise souvent le format 24h (14 Uhr au lieu de 2 pm). Les trains et horaires officiels sont en 24h." }
+    ]
+  },
+
+  "astuces_pedagogiques": [
+    {
+      "titre": "Mémo des jours",
+      "astuce": "Montag (lune), Dienstag (Mars), Mittwoch (Mercure), Donnerstag (Jupiter), Freitag (Vénus), Samstag (Saturne), Sonntag (Soleil)."
+    }
+  ],
+
+  "progression": {
+    "xp": 80,
+    "badges_deblocables": ["Zeit-Meister", "Kalender-Profi"],
+    "niveau_suivant": "a1-016",
+    "apercu_suivant": "Leçon suivante : Les couleurs et les vêtements (suite et descriptions)"
+  }
+}

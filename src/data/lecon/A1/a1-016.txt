@@ -1,0 +1,218 @@
+{
+  "id": "a1-016",
+  "niveau": "A1",
+  "module": "A1.3",
+  "titre": "Les couleurs et les vêtements",
+  "objectifs": {
+    "communicatif": "Décrire ses vêtements, poser des questions sur les couleurs et les habits, faire des compliments simples sur l’apparence",
+    "linguistique": "Maîtriser les couleurs (révision + nouvelles), les noms de vêtements, l’accord des adjectifs de couleur en position épithète et attribut, les expressions 'tragen', 'anziehen', 'gefallen'",
+    "culturel": "Connaître les habitudes vestimentaires en pays germanophones et les expressions courantes pour parler de la mode",
+    "cognitif": "Combiner couleurs + adjectifs + vêtements avec le bon accord"
+  },
+  "metadonnees": {
+    "duree_estimee_minutes": 40,
+    "difficulte_cognitive": 2,
+    "prerequis": ["a1-015"],
+    "competences_visees": ["description", "expression orale"],
+    "themes_croises": ["vie quotidienne", "apparence"]
+  },
+
+  "situation": {
+    "contexte": "Suite de la soirée internationale à Vienne – on commente les tenues des invités",
+    "lieu": "Appartement privé, Vienne (Wien), Autriche",
+    "type": "conversation informelle",
+    "registre": "informel"
+  },
+
+  "dialogue": [
+    {
+      "id": 1,
+      "de": "Was trägst du heute? Ich trage eine blaue Jeans und ein weißes T-Shirt.",
+      "fr": "Qu’est-ce que tu portes aujourd’hui ? Je porte un jean bleu et un T-shirt blanc.",
+      "audio": "/audio/a1-016-1.mp3",
+      "phonetique": "vas tʁeːɡst duː ˈhɔɪtə | ɪç tʁaːɡə ˈaɪnə ˈblaʊə dʒiːns ʊnt aɪn ˈvaɪsəs ˈtiːʃœʁt",
+      "intonation": "montante sur la question",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "trägst",
+          "lemme": "tragen",
+          "classe_grammaticale": "verbe irrégulier",
+          "forme": "2ème personne singulier",
+          "traduction_directe": "portes",
+          "phonetique": "tʁeːɡst",
+          "conjugaison_complete": {
+            "titre": "tragen (porter des vêtements) – présent",
+            "formes": [
+              { "pronom": "ich", "forme": "trage", "phonetique": "ˈtʁaːɡə" },
+              { "pronom": "du", "forme": "trägst", "phonetique": "tʁeːɡst" },
+              { "pronom": "er/sie/es", "forme": "trägt", "phonetique": "tʁeːkt" },
+              { "pronom": "wir", "forme": "tragen", "phonetique": "ˈtʁaːɡən" }
+            ]
+          }
+        },
+        {
+          "mot": "blaue Jeans",
+          "lemme": "blau",
+          "classe_grammaticale": "adjectif épithète féminin",
+          "traduction_directe": "jean bleu",
+          "phonetique": "ˈblaʊə dʒiːns",
+          "regle": "Féminin → -e (eine blaue Jeans)"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "de": "Deine rote Jacke gefällt mir sehr. Danke! Sie ist neu.",
+      "fr": "Ta veste rouge me plaît beaucoup. Merci ! Elle est neuve.",
+      "audio": "/audio/a1-016-2.mp3",
+      "phonetique": "ˈdaɪnə ˈʁoːtə ˈjakə ɡəˈfɛlt miːɐ̯ zeːɐ̯ | ˈdaŋkə | ziː ɪst nɔɪ",
+      "intonation": "chaleureuse",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "gefällt mir",
+          "lemme": "gefallen",
+          "classe_grammaticale": "verbe irrégulier",
+          "traduction_directe": "me plaît",
+          "phonetique": "ɡəˈfɛlt miːɐ̯",
+          "note": "etwas gefällt mir = quelque chose me plaît"
+        },
+        {
+          "mot": "rote Jacke",
+          "lemme": "rot",
+          "classe_grammaticale": "adjectif épithète",
+          "traduction_directe": "veste rouge",
+          "phonetique": "ˈʁoːtə ˈjakə"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "de": "Trägst du oft Schwarz? Ja, Schwarz steht mir gut.",
+      "fr": "Portes-tu souvent du noir ? Oui, le noir me va bien.",
+      "audio": "/audio/a1-016-3.mp3",
+      "phonetique": "tʁeːɡst duː ɔft ʃvaʁts | jaː ʃvaʁts ʃteːt miːɐ̯ ɡuːt",
+      "intonation": "montante sur la question",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Schwarz",
+          "lemme": "schwarz",
+          "classe_grammaticale": "couleur utilisée comme nom",
+          "traduction_directe": "du noir",
+          "phonetique": "ʃvaʁts",
+          "note": "Couleurs comme nom : souvent sans article (Schwarz steht mir)"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "de": "Meine Schuhe sind braun und meine Hose ist grau.",
+      "fr": "Mes chaussures sont marron et mon pantalon est gris.",
+      "audio": "/audio/a1-016-4.mp3",
+      "phonetique": "ˈmaɪnə ˈʃuːə zɪnt bʁaʊn ʊnt ˈmaɪnə ˈhoːzə ɪst ɡʁaʊ",
+      "intonation": "informative",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "braun / grau",
+          "lemme": "braun / grau",
+          "classe_grammaticale": "adjectifs attributs",
+          "traduction_directe": "marron / gris",
+          "phonetique": "bʁaʊn / ɡʁaʊ"
+        }
+      ]
+    }
+  ],
+
+  "vocabulaire_complet": [
+    { "mot": "tragen", "traduction": "porter (vêtements)", "type": "verbe irrégulier", "phonetique": "ˈtʁaːɡən" },
+    { "mot": "die Jeans", "traduction": "le jean", "type": "nom féminin (invariable)", "phonetique": "dʒiːns" },
+    { "mot": "das T-Shirt", "traduction": "le T-shirt", "type": "nom neutre", "phonetique": "ˈtiːʃœʁt" },
+    { "mot": "die Jacke", "traduction": "la veste", "type": "nom féminin", "phonetique": "ˈjakə" },
+    { "mot": "die Hose", "traduction": "le pantalon", "type": "nom féminin", "phonetique": "ˈhoːzə" },
+    { "mot": "die Schuhe", "traduction": "les chaussures", "type": "nom pluriel", "phonetique": "ˈʃuːə" },
+    { "mot": "das Hemd", "traduction": "la chemise", "type": "nom neutre", "phonetique": "hɛmt" },
+    { "mot": "der Pullover", "traduction": "le pull", "type": "nom masculin", "phonetique": "ˈpʊloːvɐ" },
+    { "mot": "gefallen", "traduction": "plaire", "type": "verbe irrégulier", "phonetique": "ɡəˈfalən" }
+  ],
+
+  "grammaire": [
+    {
+      "titre": "Accord des adjectifs de couleur",
+      "niveau": "A1",
+      "tableau": [
+        { "position": "Attribut (après sein)", "exemple": "Die Jacke ist rot." },
+        { "position": "Épithète (devant le nom)", "exemple": "eine rote Jacke / ein rotes T-Shirt / ein roter Pullover" }
+      ]
+    },
+    {
+      "titre": "Couleurs supplémentaires",
+      "niveau": "A1",
+      "tableau": [
+        { "couleur": "braun", "fr": "marron" },
+        { "couleur": "grau", "fr": "gris" },
+        { "couleur": "rosa", "fr": "rose" },
+        { "couleur": "lila", "fr": "violet" },
+        { "couleur": "orange", "fr": "orange" }
+      ]
+    }
+  ],
+
+  "exercices": [
+    {
+      "id": "ex-001",
+      "type": "choix_multiple",
+      "difficulte": 1,
+      "question": "Complète : Ich trage eine ___ Hose.",
+      "options": ["blau", "blaue", "blauen", "blaus"],
+      "reponse_correcte": 1,
+      "explication": "eine blaue Hose (féminin)"
+    },
+    {
+      "id": "ex-002",
+      "type": "traduction",
+      "difficulte": 2,
+      "question": "Traduire : 'Ta veste rouge me plaît beaucoup. Je porte souvent un pull gris.'",
+      "reponse_attendue": "Deine rote Jacke gefällt mir sehr. Ich trage oft einen grauen Pullover.",
+      "explication": "adjectif épithète + gefallen"
+    },
+    {
+      "id": "ex-010",
+      "type": "situation",
+      "difficulte": 3,
+      "question": "Décris ce que tu portes aujourd’hui et ce que tu portes habituellement. Fais des compliments sur les vêtements de 2 personnes imaginaires.",
+      "modele_reponse": "Heute trage ich eine schwarze Hose und ein blaues Hemd. Meine Freundin trägt eine rote Jacke. Sie steht ihr gut.",
+      "criteres_evaluation": ["accord des adjectifs", "tragen/gefallen corrects", "vocabulaire vêtements et couleurs"]
+    }
+  ],
+
+  "comprehension": [
+    {
+      "question": "Pourquoi dit-on 'eine rote Jacke' et non 'eine rot Jacke' ?",
+      "reponse": "Quand l’adjectif est devant le nom (épithète), il prend une terminaison (-e pour féminin ici)."
+    }
+  ],
+
+  "culture": {
+    "titre": "Les vêtements en pays germanophones",
+    "points": [
+      { "sujet": "Style", "explication": "Les Allemands et Autrichiens privilégient souvent un style pratique et de qualité. Le noir est très courant ('Schwarz steht immer')." }
+    ]
+  },
+
+  "astuces_pedagogiques": [
+    {
+      "titre": "Mémo couleurs + vêtements",
+      "astuce": "Couleur + e pour féminin (rote Jacke), + es pour neutre (rotes T-Shirt), + er pour masculin (roter Pullover)."
+    }
+  ],
+
+  "progression": {
+    "xp": 80,
+    "badges_deblocables": ["Mode-Meister", "Farben-und-Kleidung-Profi"],
+    "niveau_suivant": "a1-017",
+    "apercu_suivant": "Leçon suivante : Commander dans un café ou un restaurant"
+  }
+}

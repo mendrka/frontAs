@@ -1,0 +1,114 @@
+{
+  "id": "b1-013",
+  "niveau": "B1",
+  "module": "B1.3",
+  "titre": "Discuter d’un film ou d’un livre",
+  "objectifs": {
+    "communicatif": "Résumer l'intrigue d'une œuvre, décrire les traits de caractère d'un personnage, exprimer son enthousiasme ou sa déception",
+    "linguistique": "Utiliser les adjectifs substantivés (der Verwandte, etwas Gutes), les verbes à prépositions (sich freuen auf, träumen von) et le subjonctif II pour des scénarios hypothétiques",
+    "culturel": "L'importance de la science-fiction et de la bande dessinée (Comics) en Allemagne",
+    "cognitif": "Structurer une critique constructive"
+  },
+  "metadonnees": {
+    "duree_estimee_minutes": 55,
+    "difficulte_cognitive": 3,
+    "prerequis": ["b1-004", "b1-012"],
+    "competences_visees": ["expression orale", "appréciation culturelle"],
+    "themes_croises": ["cinéma", "littérature", "futurisme"]
+  },
+  "situation": {
+    "contexte": "Discussion entre amis après avoir vu un film de super-héros ou lu un manga de sport.",
+    "lieu": "Sortie de cinéma ou café",
+    "type": "Discussion informelle",
+    "registre": "amical"
+  },
+  "dialogue": [
+    {
+      "id": 1,
+      "de": "Ich interessiere mich sehr für Science-Fiction, weil die Technik dort oft unglaublich ist. Der Hauptcharakter erinnert mich an ein Genie.",
+      "fr": "Je m'intéresse beaucoup à la science-fiction car la technologie y est souvent incroyable. Le personnage principal me fait penser à un génie.",
+      "phonetique": "ɪç ɪntəʁɛˈsiːʁə mɪç zeːɐ̯ fyːɐ̯ ˈsaɪəns-ˈfɪkʃn̩ | vaɪl diː ˈtɛçnɪk dɔʁt ɔft ˈʊnɡlaʊplɪç ɪst | deːɐ̯ ˈhaʊptkaˌʁaktɐ ɛɐ̯ˈɪnɐt mɪç an aɪn ʒeˈniː",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "interessieren für",
+          "grammaire": "Verbe à préposition fixe + Accusatif.",
+          "note": "On dit toujours 'sich interessieren FÜR' quelque chose."
+        },
+        {
+          "mot": "erinnert mich an",
+          "lemme": "jemanden erinnern an (+ Akk)",
+          "traduction": "rappeler quelqu'un à quelqu'un / faire penser à."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "de": "Stimmt! Es geht um einen Helden, der die Welt retten will. Ich finde die Handlung spannend, obwohl sie manchmal unrealistisch ist.",
+      "fr": "C'est vrai ! Il s'agit d'un héros qui veut sauver le monde. Je trouve l'intrigue captivante, bien qu'elle soit parfois irréaliste.",
+      "phonetique": "ʃtɪmt | ɛs ɡeːt ʊm ˈaɪnən ˈhɛldən | deːɐ̯ diː vɛlt ˈʁɛtən vɪl | ɪç ˈfɪndə diː ˈhandlʊŋ ˈʃpanənt | ɔpˈvoːl ziː ˈmançmaːl ˈʊnʁeaˌlɪstɪʃ ɪst",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Es geht um",
+          "expression": "Il s'agit de / Ça parle de...",
+          "usage": "Indispensable pour introduire le sujet d'un film ou d'un livre."
+        },
+        {
+          "mot": "Handlung",
+          "traduction": "L'intrigue / l'action."
+        }
+      ]
+    }
+  ],
+  "grammaire": [
+    {
+      "titre": "Verbes avec prépositions fixes",
+      "explication": "Beaucoup de verbes de sentiment demandent une préposition spécifique.",
+      "liste": [
+        { "verbe": "träumen von (+ Dat)", "fr": "rêver de", "exemple": "Ich träume von der Zukunft." },
+        { "verbe": "warten auf (+ Akk)", "fr": "attendre (quelqu'un/quelque chose)", "exemple": "Ich warte auf den nächsten Teil." },
+        { "verbe": "denken an (+ Akk)", "fr": "penser à", "exemple": "Er denkt an den Film." }
+      ]
+    },
+    {
+      "titre": "Les adjectifs substantivés",
+      "explication": "On peut transformer un adjectif en nom. Il garde alors sa déclinaison d'adjectif mais prend une majuscule.",
+      "exemples": [
+        { "adjectif": "gut", "nom": "etwas Gutes (quelque chose de bon)" },
+        { "adjectif": "neu", "nom": "etwas Neues (quelque chose de nouveau)" },
+        { "adjectif": "spannend", "nom": "nichts Spannendes (rien de captivant)" }
+      ]
+    }
+  ],
+  "vocabulaire_cles": [
+    { "de": "der Hauptcharakter / die Hauptfigur", "fr": "le personnage principal" },
+    { "de": "die Handlung / die Geschichte", "fr": "l'intrigue / l'histoire" },
+    { "de": "der Drehort", "fr": "le lieu de tournage" },
+    { "de": "empfehlen", "fr": "recommander" },
+    { "de": "langweilig vs. spannend", "fr": "ennuyeux vs. captivant" }
+  ],
+  "exercices": [
+    {
+      "id": "ex-b1-013-1",
+      "type": "préposition",
+      "question": "Complétez : 'Ich interessiere mich ___ Technik.'",
+      "reponse_attendue": "für",
+      "explication": "Le verbe 'interessieren' est toujours suivi de 'für'."
+    },
+    {
+      "id": "ex-b1-013-2",
+      "type": "traduction",
+      "question": "Traduisez : 'C'est un film qui parle de l'intelligence artificielle.'",
+      "reponse_attendue": "Das ist ein Film, der von künstlicher Intelligenz handelt. (ou: Es geht um KI.)",
+      "explication": "On utilise 'handeln von' ou 'es geht um'."
+    }
+  ],
+  "culture": {
+    "titre": "Comics und Graphic Novels",
+    "explication": "En Allemagne, le neuvième art est très respecté. Il existe de nombreux festivals comme le 'Comic-Salon Erlangen'. Les thèmes futuristes et historiques y sont particulièrement populaires."
+  },
+  "progression": {
+    "xp": 150,
+    "prochain_id": "b1-014",
+    "apercu_suivant": "Leçon B1.3-4 : Parler de musique et de loisirs créatifs."
+  }
+}

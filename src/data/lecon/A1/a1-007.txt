@@ -1,0 +1,257 @@
+{
+  "id": "a1-007",
+  "niveau": "A1",
+  "module": "A1.1",
+  "titre": "Les verbes réguliers et irréguliers de base",
+  "objectifs": {
+    "communicatif": "Savoir conjuguer et utiliser les verbes les plus fréquents au présent pour parler de soi, de ses habitudes et de ses actions quotidiennes",
+    "linguistique": "Maîtriser la conjugaison au présent des verbes réguliers (-en), des verbes à changement de voyelle (irréguliers), les verbes séparables, et la position du verbe en 2e position",
+    "culturel": "Comprendre que l’allemand est une langue très structurée où la position du verbe est cruciale",
+    "cognitif": "Différencier verbes réguliers et irréguliers et mémoriser les changements de radical les plus courants"
+  },
+  "metadonnees": {
+    "duree_estimee_minutes": 40,
+    "difficulte_cognitive": 2,
+    "prerequis": ["a1-006"],
+    "competences_visees": ["expression orale", "grammaire de base"],
+    "themes_croises": ["vie quotidienne", "habitudes"]
+  },
+
+  "situation": {
+    "contexte": "Conversation continue lors de la soirée internationale – on parle de ses habitudes et de ce qu’on fait",
+    "lieu": "Appartement privé, Vienne (Wien), Autriche",
+    "type": "conversation informelle",
+    "registre": "informel"
+  },
+
+  "dialogue": [
+    {
+      "id": 1,
+      "de": "Was machst du gern? Ich lerne Deutsch und spiele Fußball.",
+      "fr": "Qu’est-ce que tu aimes faire ? J’apprends l’allemand et je joue au football.",
+      "audio": "/audio/a1-007-1.mp3",
+      "phonetique": "vas ˈmaxst duː ɡɛʁn | ɪç ˈlɛʁnə dɔɪtʃ ʊnt ˈʃpiːlə ˈfuːsbal",
+      "intonation": "montante sur la question, descendante sur la réponse",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "machst",
+          "lemme": "machen",
+          "classe_grammaticale": "verbe régulier",
+          "forme": "2ème personne singulier, présent",
+          "traduction_directe": "fais",
+          "phonetique": "ˈmaxst",
+          "conjugaison_complete": {
+            "titre": "machen (faire) – verbe régulier",
+            "formes": [
+              { "pronom": "ich", "forme": "mache", "phonetique": "ˈmaxə" },
+              { "pronom": "du", "forme": "machst", "phonetique": "ˈmaxst" },
+              { "pronom": "er/sie/es", "forme": "macht", "phonetique": "maxt" },
+              { "pronom": "wir", "forme": "machen", "phonetique": "ˈmaxən" },
+              { "pronom": "ihr", "forme": "macht", "phonetique": "maxt" },
+              { "pronom": "sie/Sie", "forme": "machen", "phonetique": "ˈmaxən" }
+            ]
+          },
+          "regle_reguliere": "Infinitif -en → on enlève -en et on ajoute : -e, -st, -t, -en, -t, -en"
+        },
+        {
+          "mot": "lerne",
+          "lemme": "lernen",
+          "classe_grammaticale": "verbe régulier",
+          "forme": "1ère personne singulier",
+          "traduction_directe": "apprends",
+          "phonetique": "ˈlɛʁnə",
+          "exemple_phrase": "Ich lerne Deutsch. (J’apprends l’allemand.)"
+        },
+        {
+          "mot": "spiele",
+          "lemme": "spielen",
+          "classe_grammaticale": "verbe régulier",
+          "forme": "1ère personne singulier",
+          "traduction_directe": "joue",
+          "phonetique": "ˈʃpiːlə"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "de": "Ich esse gern Pizza, aber ich trinke keinen Alkohol.",
+      "fr": "J’aime manger de la pizza, mais je ne bois pas d’alcool.",
+      "audio": "/audio/a1-007-2.mp3",
+      "phonetique": "ɪç ˈɛsə ɡɛʁn ˈpɪtsa | ˈaːbɐ ɪç ˈtʁɪŋkə ˈkaɪnən alkoˈhoːl",
+      "intonation": "informative",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "esse",
+          "lemme": "essen",
+          "classe_grammaticale": "verbe irrégulier (changement e → i)",
+          "forme": "1ère personne singulier",
+          "traduction_directe": "mange",
+          "phonetique": "ˈɛsə",
+          "conjugaison_complete": {
+            "titre": "essen (manger) – irrégulier",
+            "formes": [
+              { "pronom": "ich", "forme": "esse", "phonetique": "ˈɛsə" },
+              { "pronom": "du", "forme": "isst", "phonetique": "ɪst" },
+              { "pronom": "er/sie/es", "forme": "isst", "phonetique": "ɪst" },
+              { "pronom": "wir", "forme": "essen", "phonetique": "ˈɛsən" },
+              { "pronom": "ihr", "forme": "esst", "phonetique": "ɛst" },
+              { "pronom": "sie/Sie", "forme": "essen", "phonetique": "ˈɛsən" }
+            ]
+          },
+          "regle_changement": "e → i aux personnes du/er/sie/es"
+        },
+        {
+          "mot": "trinke",
+          "lemme": "trinken",
+          "classe_grammaticale": "verbe irrégulier (changement i → i, mais pas de changement visible à ich)",
+          "forme": "1ère personne",
+          "phonetique": "ˈtʁɪŋkə"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "de": "Wann stehst du auf? Ich stehe um 7 Uhr auf.",
+      "fr": "Quand te lèves-tu ? Je me lève à 7 heures.",
+      "audio": "/audio/a1-007-3.mp3",
+      "phonetique": "van ˈʃteːst duː aʊf | ɪç ˈʃteːə ʊm ziːbən uːɐ̯ aʊf",
+      "intonation": "montante sur la question",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "stehst ... auf",
+          "lemme": "aufstehen",
+          "classe_grammaticale": "verbe séparable irrégulier",
+          "forme": "2ème personne",
+          "traduction_directe": "te lèves",
+          "phonetique": "ˈʃteːst ... aʊf",
+          "regle_separable": "Le préfixe 'auf' va à la fin de la phrase. Le radical change e → ie."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "de": "Ich arbeite in einem Café und lerne jeden Tag Deutsch.",
+      "fr": "Je travaille dans un café et j’apprends l’allemand tous les jours.",
+      "audio": "/audio/a1-007-4.mp3",
+      "phonetique": "ɪç ˈaʁbaɪtə ɪn ˈaɪnəm kaˈfeː ʊnt ˈlɛʁnə ˈjeːdən taːk dɔɪtʃ",
+      "intonation": "informative",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "arbeite",
+          "lemme": "arbeiten",
+          "classe_grammaticale": "verbe régulier avec -t- supplémentaire",
+          "forme": "1ère personne",
+          "phonetique": "ˈaʁbaɪtə",
+          "regle": "Verbes terminés par -t ou -d ajoutent un -e- avant -st et -t (du arbeitest, er arbeitet)"
+        }
+      ]
+    }
+  ],
+
+  "vocabulaire_complet": [
+    { "mot": "machen", "traduction": "faire", "type": "verbe régulier", "phonetique": "ˈmaxən" },
+    { "mot": "lernen", "traduction": "apprendre", "type": "verbe régulier", "phonetique": "ˈlɛʁnən" },
+    { "mot": "spielen", "traduction": "jouer", "type": "verbe régulier", "phonetique": "ˈʃpiːlən" },
+    { "mot": "essen", "traduction": "manger", "type": "verbe irrégulier", "phonetique": "ˈɛsən" },
+    { "mot": "trinken", "traduction": "boire", "type": "verbe irrégulier", "phonetique": "ˈtʁɪŋkən" },
+    { "mot": "aufstehen", "traduction": "se lever", "type": "verbe séparable irrégulier", "phonetique": "ˈaʊfˌʃteːən" },
+    { "mot": "arbeiten", "traduction": "travailler", "type": "verbe régulier", "phonetique": "ˈaʁbaɪtən" },
+    { "mot": "gern", "traduction": "volontiers / aimer (faire)", "type": "adverbe", "phonetique": "ɡɛʁn" }
+  ],
+
+  "grammaire": [
+    {
+      "titre": "Conjugaison au présent – Verbes réguliers",
+      "niveau": "A1",
+      "explication": "Infinitif se termine par -en. On enlève -en et on ajoute les terminaisons.",
+      "tableau": [
+        { "pronom": "ich", "terminaison": "-e" },
+        { "pronom": "du", "terminaison": "-st" },
+        { "pronom": "er/sie/es", "terminaison": "-t" },
+        { "pronom": "wir/ihr/sie", "terminaison": "-en / -t / -en" }
+      ],
+      "note": "Verbes en -t/-d : on ajoute un -e- avant -st et -t (du arbeitest, er arbeitet)"
+    },
+    {
+      "titre": "Verbes irréguliers à changement de voyelle",
+      "niveau": "A1",
+      "explication": "Certains verbes changent de voyelle au radical aux personnes du/er/sie/es.",
+      "tableau": [
+        { "verbe": "essen (e→i)", "du": "isst", "er": "isst" },
+        { "verbe": "lesen (e→ie)", "du": "liest", "er": "liest" },
+        { "verbe": "fahren (a→ä)", "du": "fährst", "er": "fährt" }
+      ]
+    },
+    {
+      "titre": "Verbes séparables",
+      "niveau": "A1",
+      "explication": "Le préfixe (auf-, an-, ein-…) va à la fin de la phrase.",
+      "exemple": "Ich stehe um 7 Uhr auf."
+    },
+    {
+      "titre": "Position du verbe",
+      "niveau": "A1",
+      "explication": "Le verbe conjugué est toujours en 2ème position dans la phrase déclarative."
+    }
+  ],
+
+  "exercices": [
+    {
+      "id": "ex-001",
+      "type": "choix_multiple",
+      "difficulte": 1,
+      "question": "Conjugue 'lernen' à la 2ème personne du singulier.",
+      "options": ["lernst", "lern", "lernt", "lernest"],
+      "reponse_correcte": 0,
+      "explication": "du lernst (verbe régulier)"
+    },
+    {
+      "id": "ex-002",
+      "type": "traduction",
+      "difficulte": 2,
+      "question": "Traduire : 'Je me lève à 7 heures et je mange du pain.'",
+      "reponse_attendue": "Ich stehe um 7 Uhr auf und ich esse Brot.",
+      "explication": "verbe séparable + irrégulier essen"
+    },
+    {
+      "id": "ex-010",
+      "type": "situation",
+      "difficulte": 3,
+      "question": "Parle de tes habitudes quotidiennes en utilisant au moins 6 verbes différents (réguliers et irréguliers).",
+      "modele_reponse": "Ich stehe um 7 Uhr auf. Ich esse Frühstück. Ich lerne Deutsch. Ich arbeite... etc.",
+      "criteres_evaluation": ["conjugaison correcte", "position du verbe", "mélange régulier/irrégulier"]
+    }
+  ],
+
+  "comprehension": [
+    {
+      "question": "Quelle est la différence entre un verbe régulier et un verbe irrégulier ?",
+      "reponse": "Les verbes irréguliers changent de voyelle au radical (essen → isst). Les réguliers gardent le même radical et suivent les terminaisons standards."
+    }
+  ],
+
+  "culture": {
+    "titre": "L’importance de la position du verbe en allemand",
+    "points": [
+      { "sujet": "Verbe en 2e position", "explication": "C’est la règle la plus importante de la syntaxe allemande. Même les débutants doivent la respecter dès le début." }
+    ]
+  },
+
+  "astuces_pedagogiques": [
+    {
+      "titre": "Mémo des verbes irréguliers courants",
+      "astuce": "Les plus fréquents à A1 : sein, haben, essen, trinken, lesen, fahren, schlafen, laufen, nehmen, geben, sehen."
+    }
+  ],
+
+  "progression": {
+    "xp": 60,
+    "badges_deblocables": ["Verbenmeister", "Konjugationsprofi"],
+    "niveau_suivant": "a1-008",
+    "apercu_suivant": "Leçon suivante : Le verbe 'haben' et parler de ce qu’on possède"
+  }
+}

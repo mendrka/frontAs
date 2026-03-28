@@ -1,0 +1,115 @@
+{
+  "id": "b2-012",
+  "niveau": "B2",
+  "module": "B2.3",
+  "titre": "Histoire et mémoire collective",
+  "objectifs": {
+    "communicatif": "Raconter des événements historiques majeurs, expliquer l'importance de la 'culture de la mémoire' (Erinnerungskultur), débattre de l'influence du passé sur l'identité nationale",
+    "linguistique": "Maîtriser le Plus-que-parfait (Plusquamperfekt), les prépositions temporelles de longue durée (seitdem, von ... an) et le lexique de la commémoration",
+    "culturel": "La chute du Mur (Mauerfall), la réunification et le concept de 'Vergangenheitsbewältigung' (surmontement du passé)",
+    "cognitif": "Établir des liens de causalité historique et comprendre la chronologie"
+  },
+  "metadonnees": {
+    "duree_estimee_minutes": 85,
+    "difficulte_cognitive": 5,
+    "prerequis": ["b2-011"],
+    "competences_visees": ["compréhension de documents historiques", "narration au passé"],
+    "themes_croises": ["histoire", "société", "philosophie"]
+  },
+  "situation": {
+    "contexte": "Visite d'un musée à Berlin ou discussion lors d'un 'Stammtisch' sur ce que signifie 'être allemand' 35 ans après la réunification.",
+    "lieu": "Mémorial du Mur de Berlin / Musée d'Histoire",
+    "type": "Discussion culturelle",
+    "registre": "soutenu / réflexif"
+  },
+  "dialogue_modele": [
+    {
+      "id": 1,
+      "de": "Bevor die Mauer 1989 fiel, hatten viele Menschen jahrelang für ihre Freiheit demonstriert.",
+      "fr": "Avant que le Mur ne tombe en 1989, beaucoup de gens avaient manifesté pendant des années pour leur liberté.",
+      "phonetique": "bəˈfoːɐ̯ diː ˈmaʊ̯ɐ ˈnɔʏ̯nt͡seːnˈhʊndɐtˈnɔʏ̯nʊntˈʔaxt͡sɪç fiːl | ˈhatn̩ ˈfiːlə ˈmɛnʃn̩ ˈjaːʁəˌlaŋ fyːɐ̯ ˈiːʁə ˈfʁaɪ̯haɪ̯t deːmɔnˈstʁiːɐ̯t",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "hatten demonstriert",
+          "grammaire": {
+            "titre": "Le Plus-que-parfait (Plusquamperfekt)",
+            "explication": "Formation : Auxiliaire (haben/sein) au Prétérit + Partizip II. Utilisé pour une action terminée avant une autre action au passé.",
+            "exemple": "Nachdem er gegessen hatte, ging er spazieren."
+          }
+        },
+        {
+          "mot": "Mauerfall",
+          "composition": "Mauer (mur) + Fall (chute).",
+          "note": "Terme historique désignant la chute du mur de Berlin."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "de": "Die Auseinandersetzung mit der Geschichte ist ein zentraler Bestandteil der deutschen Identität.",
+      "fr": "La confrontation avec l'histoire est un élément central de l'identité allemande.",
+      "phonetique": "diː ˈʔaʊ̯sʔaɪ̯nandɐˌzɛt͡sʊŋ mɪt deːɐ̯ ɡəˈʃɪçtə ɪst aɪ̯n t͡sɛnˈtʁaːlɐ bəˈʃtantˌdaɪ̯l deːɐ̯ ˈdɔʏ̯t͡ʃn̩ ʔidɛntiˈtɛːt",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Auseinandersetzung",
+          "traduction": "débat / confrontation / analyse critique.",
+          "note": "Un mot typiquement B2/C1 pour exprimer une réflexion profonde sur un sujet."
+        },
+        {
+          "mot": "Bestandteil",
+          "traduction": "composante / élément partie prenante."
+        }
+      ]
+    }
+  ],
+  "grammaire": [
+    {
+      "titre": "La concordance des temps au passé",
+      "explication": "Quand tu racontes une histoire, le récit principal est au Prétérit, et les retours en arrière au Plus-que-parfait.",
+      "tableau": [
+        { "Action 1 (la plus ancienne)": "Plusquamperfekt", "Exemple": "Ich hatte gelernt," },
+        { "Action 2 (plus récente)": "Präteritum", "Exemple": "bevor ich die Prüfung schrieb." }
+      ]
+    },
+    {
+      "titre": "Les adverbes de temps narratifs",
+      "liste": [
+        { "mot": "damals", "sens": "à l'époque", "usage": "Pour situer un contexte lointain." },
+        { "mot": "daraufhin", "sens": "suite à quoi / alors", "usage": "Pour marquer la conséquence logique." },
+        { "mot": "ehemals", "sens": "anciennement / jadis", "usage": "Pour désigner un état révolu." }
+      ]
+    }
+  ],
+  "vocabulaire_cles": [
+    { "de": "die Wiedervereinigung", "fr": "la réunification" },
+    { "de": "das Zeitzeugnis", "fr": "le témoignage d'époque" },
+    { "de": "das Denkmal / das Mahnmal", "fr": "le monument / le mémorial (pour avertir)" },
+    { "de": "die Besatzungszonen", "fr": "les zones d'occupation" },
+    { "de": "der Widerstand", "fr": "la résistance" }
+  ],
+  "exercices": [
+    {
+      "id": "ex-b2-012-1",
+      "type": "conjugaison",
+      "question": "Complétez au Plus-que-parfait : 'Nachdem wir das Museum ____ (besuchen), gingen wir essen.'",
+      "reponse_attendue": "besucht hatten",
+      "explication": "L'action de visiter est antérieure à celle d'aller manger."
+    },
+    {
+      "id": "ex-b2-012-2",
+      "type": "vocabulaire",
+      "question": "Comment appelle-t-on le processus de travail sur le passé en Allemagne ?",
+      "reponse_attendue": "Die Vergangenheitsbewältigung",
+      "explication": "C'est un concept unique qui désigne l'effort collectif pour affronter les crimes du passé (Nazisme/Stasi)."
+    }
+  ],
+  "culture": {
+    "titre": "Stolpersteine",
+    "explication": "En marchant dans les rues allemandes, tu verras souvent des petits cubes de laiton dorés au sol. Ce sont des 'Stolpersteine' (pierres sur lesquelles on trébuche). Chaque pierre porte le nom d'une victime du nazisme devant son dernier domicile. C'est la mémoire intégrée au quotidien."
+  },
+  "progression": {
+    "xp": 300,
+    "prochain_id": "b2-013",
+    "apercu_suivant": "Leçon B2.3-3 : Médias, réseaux sociaux et influence (Digitalisierung)."
+  }
+}

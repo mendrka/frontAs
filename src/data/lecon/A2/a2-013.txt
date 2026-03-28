@@ -1,0 +1,194 @@
+{
+  "id": "a2-013",
+  "niveau": "A2",
+  "module": "A2.2",
+  "titre": "Situations d’urgence (police, médecin, perte d’objet)",
+  "objectifs": {
+    "communicatif": "Expliquer une situation d’urgence, signaler un vol ou une perte, demander de l’aide médicale, parler à la police, décrire un problème simplement",
+    "linguistique": "Maîtriser le vocabulaire d’urgence (Diebstahl, Unfall, Krankenhaus, Polizei, Schmerzen, verloren…), les phrases 'Ich brauche Hilfe', 'Mein … wurde gestohlen', 'Ich habe … verloren', les structures impératives et questions d’urgence",
+    "culturel": "Connaître les numéros d’urgence en Allemagne/Autriche (112, 133, 144) et les procédures courantes",
+    "cognitif": "Former des phrases claires et précises en situation stressante"
+  },
+  "metadonnees": {
+    "duree_estimee_minutes": 50,
+    "difficulte_cognitive": 3,
+    "prerequis": ["a2-012"],
+    "competences_visees": ["situations pratiques", "urgence"],
+    "themes_croises": ["voyages", "sécurité"]
+  },
+
+  "situation": {
+    "contexte": "Un voyageur a perdu son portefeuille ou se sent mal pendant son séjour à Vienne",
+    "lieu": "Rue ou commissariat/hôpital à Vienne (Wien), Autriche",
+    "type": "situation d’urgence",
+    "registre": "semi-formel (avec autorités ou personnel médical)"
+  },
+
+  "dialogue": [
+    {
+      "id": 1,
+      "de": "Entschuldigung, ich brauche Hilfe! Mein Portemonnaie wurde gestohlen.",
+      "fr": "Excusez-moi, j’ai besoin d’aide ! Mon portefeuille a été volé.",
+      "audio": "/audio/a2-013-1.mp3",
+      "phonetique": "ɛntˈʃʊldɪɡʊŋ | ɪç ˈbʁaʊxə ˈhɪlfə | maɪn pɔʁtəˈmɔnɛː vʊʁdə ɡəˈʃtoːlən",
+      "intonation": "stressée mais claire",
+      "registre": "semi-formel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Ich brauche Hilfe!",
+          "lemme": "brauchen",
+          "classe_grammaticale": "appel à l’aide",
+          "traduction_directe": "J’ai besoin d’aide !",
+          "phonetique": "ˈbʁaʊxə ˈhɪlfə"
+        },
+        {
+          "mot": "wurde gestohlen",
+          "lemme": "stehlen",
+          "classe_grammaticale": "passif au Perfekt",
+          "traduction_directe": "a été volé",
+          "phonetique": "ɡəˈʃtoːlən"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "de": "Ich habe starke Bauchschmerzen. Können Sie einen Arzt rufen?",
+      "fr": "J’ai de fortes douleurs au ventre. Pouvez-vous appeler un médecin ?",
+      "audio": "/audio/a2-013-2.mp3",
+      "phonetique": "ɪç ˈhaːbə ˈʃtaʁkə ˈbaʊxˌʃmɛʁtsən | ˈkœnən ziː ˈaɪnən aʁtst ˈʁuːfən",
+      "intonation": "douleur",
+      "registre": "semi-formel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "starke Bauchschmerzen",
+          "lemme": "stark",
+          "classe_grammaticale": "douleur intense",
+          "traduction_directe": "fortes douleurs au ventre",
+          "phonetique": "ˈʃtaʁkə"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "de": "Wo ist die nächste Polizeistation? Gehen Sie geradeaus und dann rechts.",
+      "fr": "Où est le commissariat le plus proche ? Allez tout droit puis à droite.",
+      "audio": "/audio/a2-013-3.mp3",
+      "phonetique": "voː ɪst diː ˈnɛːçstə poˈlɪtsaɪˌʃtaːtsjoːn | ˈɡeːən ziː ɡəˈʁaːdəaʊs ʊnt dan ʁɛçts",
+      "intonation": "directive",
+      "registre": "semi-formel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "die nächste Polizeistation",
+          "lemme": "nächste",
+          "classe_grammaticale": "superlatif",
+          "traduction_directe": "le commissariat le plus proche",
+          "phonetique": "ˈnɛːçstə"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "de": "Ich habe meinen Pass verloren. Was soll ich jetzt machen?",
+      "fr": "J’ai perdu mon passeport. Que dois-je faire maintenant ?",
+      "audio": "/audio/a2-013-4.mp3",
+      "phonetique": "ɪç ˈhaːbə ˈmaɪnən pas fɛɐ̯ˈloːʁən | vas zɔl ɪç jɛtst ˈmaxən",
+      "intonation": "paniquée",
+      "registre": "semi-formel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Was soll ich jetzt machen?",
+          "lemme": "sollen",
+          "classe_grammaticale": "demande de conseil",
+          "traduction_directe": "Que dois-je faire maintenant ?",
+          "phonetique": "zɔl"
+        }
+      ]
+    }
+  ],
+
+  "vocabulaire_complet": [
+    { "mot": "die Hilfe", "traduction": "l’aide", "type": "nom féminin", "phonetique": "ˈhɪlfə" },
+    { "mot": "der Diebstahl", "traduction": "le vol", "type": "nom masculin", "phonetique": "ˈdiːpʃtaːl" },
+    { "mot": "verloren haben", "traduction": "avoir perdu", "type": "expression", "phonetique": "fɛɐ̯ˈloːʁən" },
+    { "mot": "der Pass", "traduction": "le passeport", "type": "nom masculin", "phonetique": "pas" },
+    { "mot": "die Polizei", "traduction": "la police", "type": "nom féminin", "phonetique": "poˈlɪtsaɪ" },
+    { "mot": "der Arzt / die Ärztin", "traduction": "le médecin", "type": "nom", "phonetique": "aʁtst" },
+    { "mot": "starke Schmerzen", "traduction": "fortes douleurs", "type": "expression", "phonetique": "ˈʃtaʁkə ˈʃmɛʁtsən" }
+  ],
+
+  "grammaire": [
+    {
+      "titre": "Expressions d’urgence",
+      "niveau": "A2",
+      "tableau": [
+        { "expression": "Ich brauche Hilfe!", "fr": "J’ai besoin d’aide !" },
+        { "expression": "Mein … wurde gestohlen.", "fr": "Mon … a été volé." },
+        { "expression": "Ich habe … verloren.", "fr": "J’ai perdu …" }
+      ]
+    },
+    {
+      "titre": "Conseils et instructions",
+      "niveau": "A2",
+      "exemples": [
+        "Sie sollten zur Polizei gehen.",
+        "Rufen Sie einen Krankenwagen!"
+      ]
+    }
+  ],
+
+  "exercices": [
+    {
+      "id": "ex-001",
+      "type": "choix_multiple",
+      "difficulte": 1,
+      "question": "Comment dit-on 'J’ai perdu mon téléphone' ?",
+      "options": ["Ich habe mein Handy gestohlen.", "Ich habe mein Handy verloren.", "Mein Handy wurde gefunden."],
+      "reponse_correcte": 1,
+      "explication": "haben + verloren"
+    },
+    {
+      "id": "ex-002",
+      "type": "traduction",
+      "difficulte": 2,
+      "question": "Traduire : 'Excusez-moi, j’ai besoin d’aide ! Mon sac a été volé. Pouvez-vous appeler la police ?'",
+      "reponse_attendue": "Entschuldigung, ich brauche Hilfe! Meine Tasche wurde gestohlen. Können Sie die Polizei rufen?",
+      "explication": "urgence + passif"
+    },
+    {
+      "id": "ex-010",
+      "type": "situation",
+      "difficulte": 3,
+      "question": "Tu as perdu ton passeport ou tu te sens mal : explique la situation à la police ou au médecin, donne des détails et demande de l’aide.",
+      "modele_reponse": "Guten Tag, ich brauche Hilfe. Mein Pass wurde gestohlen. Ich war im Café und plötzlich war er weg. Können Sie mir helfen?",
+      "criteres_evaluation": ["vocabulaire d’urgence", "phrases claires", "demande d’aide polie"]
+    }
+  ],
+
+  "comprehension": [
+    {
+      "question": "Pourquoi dit-on 'Mein Portemonnaie wurde gestohlen' plutôt que 'Ich habe mein Portemonnaie gestohlen' ?",
+      "reponse": "Le passif met l’accent sur l’objet volé et évite de dire que la personne a volé quelque chose."
+    }
+  ],
+
+  "culture": {
+    "titre": "Situations d’urgence en Allemagne/Autriche",
+    "points": [
+      { "sujet": "Numéros d’urgence", "explication": "112 (général), 133 (police), 144 (ambulance). Les Allemands et Autrichiens apprécient les descriptions claires et calmes." }
+    ]
+  },
+
+  "astuces_pedagogiques": [
+    {
+      "titre": "Phrase de base en urgence",
+      "astuce": "Entschuldigung, ich brauche Hilfe! + description claire + Bitte helfen Sie mir!"
+    }
+  ],
+
+  "progression": {
+    "xp": 100,
+    "badges_deblocables": ["Notfall-Profi", "Hilfe-Meister"],
+    "niveau_suivant": "a2-014",
+    "apercu_suivant": "Leçon suivante : Téléphoner simplement"
+  }
+}

@@ -1,0 +1,200 @@
+{
+  "id": "a2-008",
+  "niveau": "A2",
+  "module": "A2.1",
+  "titre": "Raconter une histoire personnelle",
+  "objectifs": {
+    "communicatif": "Raconter une expérience passée (voyage, événement, anecdote), décrire ce qui s’est passé, exprimer ses sentiments pendant et après l’événement",
+    "linguistique": "Maîtriser le Perfekt (révision approfondie), les connecteurs temporels (plötzlich, dann, danach, schließlich, als), les verbes de narration (passieren, geschehen, erzählen), les expressions 'Es war …', 'Ich habe … erlebt'",
+    "culturel": "Connaître l’art de raconter des histoires en Allemagne/Autriche (humour, détails concrets, 'Anekdoten')",
+    "cognitif": "Organiser un récit chronologique cohérent au passé"
+  },
+  "metadonnees": {
+    "duree_estimee_minutes": 50,
+    "difficulte_cognitive": 3,
+    "prerequis": ["a2-007"],
+    "competences_visees": ["narration", "expression orale"],
+    "themes_croises": ["expériences personnelles", "voyages"]
+  },
+
+  "situation": {
+    "contexte": "Pendant la soirée ou une pause, un ami demande de raconter une anecdote personnelle",
+    "lieu": "Appartement à Vienne (Wien), Autriche",
+    "type": "conversation informelle entre amis",
+    "registre": "informel"
+  },
+
+  "dialogue": [
+    {
+      "id": 1,
+      "de": "Erzähl mal, was ist dir letztes Jahr passiert? Letztes Jahr bin ich zum ersten Mal nach Österreich gefahren.",
+      "fr": "Raconte, qu’est-ce qui t’est arrivé l’année dernière ? L’année dernière je suis allé en Autriche pour la première fois.",
+      "audio": "/audio/a2-008-1.mp3",
+      "phonetique": "ɛɐ̯ˈtseːl mal | vas ɪst diːɐ̯ ˈlɛtstəs jaːɐ̯ paˈsiːɐ̯t | ˈlɛtstəs jaːɐ̯ bɪn ɪç tsuːm ˈɛɐ̯stən mal nax ˈøːstɐʁaɪç ɡəˈfaːʁən",
+      "intonation": "invitation à raconter",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Erzähl mal",
+          "lemme": "erzählen",
+          "classe_grammaticale": "invitation à raconter",
+          "traduction_directe": "Raconte donc",
+          "phonetique": "ɛɐ̯ˈtseːl"
+        },
+        {
+          "mot": "was ist dir passiert?",
+          "lemme": "passieren",
+          "classe_grammaticale": "expression pour événement",
+          "traduction_directe": "qu’est-ce qui t’est arrivé ?",
+          "phonetique": "paˈsiːɐ̯t"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "de": "Als ich am Flughafen ankam, habe ich meinen Koffer verloren. Plötzlich war ich ganz allein ohne Gepäck.",
+      "fr": "Quand je suis arrivé à l’aéroport, j’ai perdu ma valise. Soudain je me suis retrouvé tout seul sans bagages.",
+      "audio": "/audio/a2-008-2.mp3",
+      "phonetique": "als ɪç am ˈfluːkhaːfən anˈkam | ˈhaːbə ɪç ˈmaɪnən ˈkɔfɐ fɛɐ̯ˈloːʁən | ˈplœtslɪç vaːɐ̯ ɪç ɡants aˈlaɪn ˈoːnə ɡəˈpɛk",
+      "intonation": "dramatique",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Als … ankam",
+          "lemme": "als",
+          "classe_grammaticale": "connecteur temporel (passé)",
+          "traduction_directe": "Quand …",
+          "phonetique": "als"
+        },
+        {
+          "mot": "Plötzlich",
+          "lemme": "plötzlich",
+          "classe_grammaticale": "adverbe",
+          "traduction_directe": "soudain",
+          "phonetique": "ˈplœtslɪç"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "de": "Dann hat mir eine nette Frau geholfen. Schließlich habe ich meinen Koffer wiederbekommen.",
+      "fr": "Ensuite une gentille dame m’a aidé. Finalement j’ai récupéré ma valise.",
+      "audio": "/audio/a2-008-3.mp3",
+      "phonetique": "dan hat miːɐ̯ ˈaɪnə ˈnɛtə fʁaʊ ɡəˈhɔlfən | ˈʃliːslɪç ˈhaːbə ɪç ˈmaɪnən ˈkɔfɐ ˈviːdɐbəˌkɔmən",
+      "intonation": "résolution positive",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Dann … Schließlich",
+          "lemme": "dann / schließlich",
+          "classe_grammaticale": "connecteurs narratifs",
+          "traduction_directe": "Ensuite … Finalement",
+          "phonetique": "dan / ˈʃliːslɪç"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "de": "Es war ein lustiges Abenteuer. Ich habe viel gelernt.",
+      "fr": "C’était une aventure amusante. J’ai beaucoup appris.",
+      "audio": "/audio/a2-008-4.mp3",
+      "phonetique": "ɛs vaːɐ̯ aɪn ˈlʊstɪɡəs apˈvɛntoːɐ̯ | ɪç ˈhaːbə fiːl ɡəˈlɛʁnt",
+      "intonation": "conclusion positive",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Es war ein lustiges Abenteuer",
+          "lemme": "Abenteuer",
+          "classe_grammaticale": "expression de bilan",
+          "traduction_directe": "C’était une aventure amusante",
+          "phonetique": "apˈvɛntoːɐ̯"
+        }
+      ]
+    }
+  ],
+
+  "vocabulaire_complet": [
+    { "mot": "erzählen", "traduction": "raconter", "type": "verbe", "phonetique": "ɛɐ̯ˈtseːlən" },
+    { "mot": "passieren", "traduction": "arriver / se passer", "type": "verbe", "phonetique": "paˈsiːɐ̯n" },
+    { "mot": "plötzlich", "traduction": "soudain", "type": "adverbe", "phonetique": "ˈplœtslɪç" },
+    { "mot": "schließlich", "traduction": "finalement", "type": "adverbe", "phonetique": "ˈʃliːslɪç" },
+    { "mot": "das Abenteuer", "traduction": "l’aventure", "type": "nom neutre", "phonetique": "apˈvɛntoːɐ̯" },
+    { "mot": "lustig", "traduction": "amusant", "type": "adjectif", "phonetique": "ˈlʊstɪç" },
+    { "mot": "lernen", "traduction": "apprendre", "type": "verbe", "phonetique": "ˈlɛʁnən" }
+  ],
+
+  "grammaire": [
+    {
+      "titre": "Connecteurs temporels pour raconter",
+      "niveau": "A2",
+      "tableau": [
+        { "connecteur": "zuerst", "fr": "d’abord" },
+        { "connecteur": "dann / danach", "fr": "ensuite" },
+        { "connecteur": "plötzlich", "fr": "soudain" },
+        { "connecteur": "schließlich", "fr": "finalement" },
+        { "connecteur": "als", "fr": "quand (passé)" }
+      ]
+    },
+    {
+      "titre": "Perfekt pour narration",
+      "niveau": "A2",
+      "explication": "Utiliser haben ou sein selon le verbe + participe passé"
+    }
+  ],
+
+  "exercices": [
+    {
+      "id": "ex-001",
+      "type": "choix_multiple",
+      "difficulte": 1,
+      "question": "Quel connecteur signifie 'soudain' ?",
+      "options": ["dann", "plötzlich", "schließlich"],
+      "reponse_correcte": 1,
+      "explication": "plötzlich = soudain"
+    },
+    {
+      "id": "ex-002",
+      "type": "traduction",
+      "difficulte": 2,
+      "question": "Traduire : 'L’année dernière j’ai perdu mon passeport à l’aéroport. Soudain une dame m’a aidé et finalement j’ai tout récupéré. C’était une aventure amusante.'",
+      "reponse_attendue": "Letztes Jahr habe ich meinen Pass am Flughafen verloren. Plötzlich hat mir eine Dame geholfen und schließlich habe ich alles wiederbekommen. Es war ein lustiges Abenteuer.",
+      "explication": "Perfekt + connecteurs"
+    },
+    {
+      "id": "ex-010",
+      "type": "situation",
+      "difficulte": 3,
+      "question": "Raconte une expérience personnelle (voyage, incident, moment drôle ou émouvant) en utilisant au moins 8 phrases avec Perfekt et connecteurs temporels.",
+      "modele_reponse": "Letztes Jahr bin ich nach Paris gefahren. Zuerst habe ich den Eiffelturm gesehen. Plötzlich hat es geregnet. Dann habe ich in einem Café gewartet. Schließlich war es ein schöner Tag.",
+      "criteres_evaluation": ["Perfekt correct", "connecteurs variés", "cohérence chronologique", "sentiments exprimés"]
+    }
+  ],
+
+  "comprehension": [
+    {
+      "question": "Pourquoi utilise-t-on souvent 'plötzlich' et 'schließlich' dans les histoires ?",
+      "reponse": "Ils rendent le récit plus vivant : 'plötzlich' crée de la surprise, 'schließlich' marque la résolution."
+    }
+  ],
+
+  "culture": {
+    "titre": "Raconter en allemand",
+    "points": [
+      { "sujet": "Style", "explication": "Les Allemands aiment les histoires avec des détails concrets et un peu d’humour. On utilise souvent 'und dann…' pour garder le rythme." }
+    ]
+  },
+
+  "astuces_pedagogiques": [
+    {
+      "titre": "Structure simple pour une anecdote",
+      "astuce": "Einleitung (was passiert ist) → Verlauf (zuerst, dann, plötzlich) → Ende (schließlich, es war …)"
+    }
+  ],
+
+  "progression": {
+    "xp": 100,
+    "badges_deblocables": ["Geschichtenerzähler", "Perfekt-Narrator"],
+    "niveau_suivant": "a2-009",
+    "apercu_suivant": "Leçon suivante : Décrire des objets et des personnes"
+  }
+}

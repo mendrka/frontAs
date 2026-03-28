@@ -1,0 +1,113 @@
+{
+  "id": "b2-011",
+  "niveau": "B2",
+  "module": "B2.3",
+  "titre": "Actualités, politique et société",
+  "objectifs": {
+    "communicatif": "Suivre un débat politique à la télévision, comprendre le fonctionnement des élections en Allemagne, exprimer des doutes ou des certitudes sur des réformes sociales",
+    "linguistique": "Maîtriser les noms collectifs (das Bürgertum, die Menschheit), les particules modales pour nuancer l'opinion et le passif d'état (Zustandspassiv)",
+    "culturel": "Le système fédéral (Bundesländer), le rôle du Bundestag et la culture du compromis politique",
+    "cognitif": "Analyser la hiérarchie des pouvoirs et les enjeux de la citoyenneté"
+  },
+  "metadonnees": {
+    "duree_estimee_minutes": 80,
+    "difficulte_cognitive": 5,
+    "prerequis": ["module-b2-2-complet"],
+    "competences_visees": ["compréhension de textes complexes", "culture générale"],
+    "themes_croises": ["politique", "histoire", "sociologie"]
+  },
+  "situation": {
+    "contexte": "Tu regardes une émission comme 'Anne Will' ou 'Maybrit Illner' et tu discutes ensuite avec ton colocataire des dernières décisions du gouvernement fédéral.",
+    "lieu": "Salon / Université / Café",
+    "type": "Analyse de l'actualité",
+    "registre": "soutenu / intellectuel"
+  },
+  "dialogue_modele": [
+    {
+      "id": 1,
+      "de": "Das Gesetz ist bereits verabschiedet, aber die Umsetzung ist noch völlig unklar.",
+      "fr": "La loi est déjà adoptée, mais sa mise en œuvre est encore totalement floue.",
+      "phonetique": "das ɡəˈzɛt͡s ɪst baˈʁaɪts fɛɐ̯ˈapˌʃiːdət | ˈaːbɐ diː ˈʊmˌzɛt͡sʊŋ ɪst nɔx ˈfœlɪç ˈʊnˌklaːɐ̯",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "ist verabschiedet",
+          "grammaire": {
+            "titre": "Le Passif d'état (Zustandspassiv)",
+            "explication": "Structure : sein + Partizip II. Contrairement au passif d'action (werden), il décrit le résultat final, l'état actuel.",
+            "exemple": "Die Tür ist geschlossen (La porte est fermée - état) vs Die Tür wird geschlossen (On ferme la porte - action)."
+          }
+        },
+        {
+          "mot": "verabschiedet",
+          "traduction": "adoptée (pour une loi) / votée.",
+          "note": "Attention, pour une personne, cela signifie 'dire au revoir'."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "de": "In einer Demokratie ist es ja wichtig, dass die Meinungsfreiheit gewahrt bleibt.",
+      "fr": "Dans une démocratie, il est (comme on le sait) important que la liberté d'expression soit préservée.",
+      "phonetique": "ɪn ˈaɪnɐ deːmoːkʁaˈtiː ɪst ɛs jaː ˈvɪçtɪç | das diː ˈmaɪnʊŋsfʁaɪhaɪt ɡəˈvaːɐ̯t blaɪpt",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "ja",
+          "grammaire": "Particule modale.",
+          "usage": "Ici, elle n'est pas une réponse affirmative, mais souligne un fait que l'interlocuteur est censé déjà connaître ou trouver évident."
+        },
+        {
+          "mot": "gewahrt bleibt",
+          "traduction": "rester préservé / maintenu."
+        }
+      ]
+    }
+  ],
+  "grammaire": [
+    {
+      "titre": "Les Particules Modales (B2+)",
+      "explication": "Elles sont l'âme de l'allemand parlé. Elles n'ont pas de traduction directe mais changent l'intention de la phrase.",
+      "tableau": [
+        { "Particule": "denn", "Effet": "Curiosité ou agacement dans une question", "Exemple": "Was machst du denn da?" },
+        { "Particule": "doch", "Effet": "Insistance ou rappel d'une évidence", "Exemple": "Komm doch mit!" },
+        { "Particule": "mal", "Effet": "Rend une demande moins directe/plus amicale", "Exemple": "Schau mal!" }
+      ]
+    },
+    {
+      "titre": "Le Passif d'état au passé",
+      "explication": "On utilise le prétérit de 'sein'.",
+      "exemple": "Das Parlament war besetzt. (Le parlement était occupé - état passé)."
+    }
+  ],
+  "vocabulaire_cles": [
+    { "de": "das Grundgesetz", "fr": "la Loi fondamentale (Constitution allemande)" },
+    { "de": "der Bundestag / der Bundesrat", "fr": "le Parlement / la Chambre des États fédéraux" },
+    { "de": "die Koalition", "fr": "la coalition (alliance de partis)" },
+    { "de": "die Bürgerinitiative", "fr": "l'initiative citoyenne" },
+    { "de": "die Steuerreform", "fr": "la réforme fiscale" }
+  ],
+  "exercices": [
+    {
+      "id": "ex-b2-011-1",
+      "type": "grammaire",
+      "question": "Choisissez entre Passif d'action (werden) ou d'état (sein) : 'Das Fenster ____ gerade repariert.' / 'Das Fenster ____ repariert (le travail est fini).'",
+      "reponse_attendue": "wird / ist",
+      "explication": "Werden pour l'action en cours, sein pour l'état résultant."
+    },
+    {
+      "id": "ex-b2-011-2",
+      "type": "vocabulaire",
+      "question": "Comment appelle-t-on le texte qui sert de Constitution en Allemagne ?",
+      "reponse_attendue": "Das Grundgesetz",
+      "explication": "Établi en 1949, c'est le fondement de la démocratie allemande."
+    }
+  ],
+  "culture": {
+    "titre": "Föderalismus",
+    "explication": "L'Allemagne est un État fédéral composé de 16 'Bundesländer'. Cela signifie que l'éducation (très important pour ton projet Au Pair !), la culture et la police dépendent souvent de la région (le Land) et non de Berlin. Chaque Land a son propre gouvernement et ses spécificités."
+  },
+  "progression": {
+    "xp": 300,
+    "prochain_id": "b2-012",
+    "apercu_suivant": "Leçon B2.3-2 : Histoire et mémoire collective (Erinnerungskultur)."
+  }
+}

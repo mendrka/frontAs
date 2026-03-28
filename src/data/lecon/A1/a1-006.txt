@@ -1,0 +1,245 @@
+{
+  "id": "a1-006",
+  "niveau": "A1",
+  "module": "A1.1",
+  "titre": "Les salutations avancées et formelles",
+  "objectifs": {
+    "communicatif": "Savoir saluer selon l’heure, le contexte (formel/informel), prendre congé, souhaiter une bonne journée et répondre poliment",
+    "linguistique": "Maîtriser les expressions de salutation (Guten Morgen, Hallo, Auf Wiedersehen, Tschüss…), les adverbes de temps (heute, morgen…), les formules de politesse (bitte, danke, gern geschehen)",
+    "culturel": "Comprendre les différences formel/informel en Allemagne, Autriche et Suisse + usage des titres (Herr, Frau)",
+    "cognitif": "Différencier registres de langue et adapter son langage selon la situation"
+  },
+  "metadonnees": {
+    "duree_estimee_minutes": 35,
+    "difficulte_cognitive": 1,
+    "prerequis": ["a1-005"],
+    "competences_visees": ["expression orale", "interaction sociale de base", "politesse"],
+    "themes_croises": ["identité", "vie quotidienne", "communication pratique"]
+  },
+
+  "situation": {
+    "contexte": "Arrivée et départ lors de la soirée internationale à Vienne – passages du matin au soir",
+    "lieu": "Appartement privé puis rue à Vienne (Wien), Autriche",
+    "type": "conversation informelle et semi-formelle",
+    "registre": "mixte (informel avec amis, formel avec hôtes plus âgés)"
+  },
+
+  "dialogue": [
+    {
+      "id": 1,
+      "de": "Guten Morgen! Wie geht es dir heute? Mir geht es gut, danke.",
+      "fr": "Bonjour (matin) ! Comment vas-tu aujourd’hui ? Je vais bien, merci.",
+      "audio": "/audio/a1-006-1.mp3",
+      "phonetique": "ˈɡuːtn̩ ˈmɔʁɡən | viː ɡeːt ɛs diːʁ ˈhɔɪtə | miːɐ̯ ɡeːt ɛs ɡuːt ˈdaŋkə",
+      "intonation": "montante sur la question, chaleureuse et descendante sur la réponse",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Guten Morgen",
+          "lemme": "gut + Morgen",
+          "classe_grammaticale": "expression de salutation",
+          "traduction_directe": "Bonjour (le matin)",
+          "phonetique": "ˈɡuːtn̩ ˈmɔʁɡən",
+          "usage": "De 5h à environ 10h/11h. Formel ou informel.",
+          "variantes": [
+            { "expression": "Guten Tag", "usage": "dans la journée (10h-18h)" },
+            { "expression": "Guten Abend", "usage": "soir (à partir de 18h)" },
+            { "expression": "Gute Nacht", "usage": "avant de dormir" }
+          ],
+          "piège_francophone": "Ne pas dire 'Bonjour' toute la journée — les Allemands changent selon l’heure."
+        },
+        {
+          "mot": "Wie geht es dir?",
+          "lemme": "gehen",
+          "classe_grammaticale": "question de politesse",
+          "traduction_directe": "Comment vas-tu ?",
+          "phonetique": "viː ɡeːt ɛs diːʁ",
+          "forme_formelle": "Wie geht es Ihnen? (avec 'Ihnen' au datif formel)",
+          "reponses_courantes": [
+            { "reponse": "Mir geht es gut, danke.", "phonetique": "miːɐ̯ ɡeːt ɛs ɡuːt ˈdaŋkə" },
+            { "reponse": "Es geht so.", "traduction": "Ça va comme ci comme ça." },
+            { "reponse": "Nicht so gut.", "traduction": "Pas très bien." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "de": "Hallo! Schön dich zu sehen. Tschüss, bis bald!",
+      "fr": "Salut ! Content de te voir. Salut, à bientôt !",
+      "audio": "/audio/a1-006-2.mp3",
+      "phonetique": "haˈloː | ʃøːn dɪç tsuː ˈzeːən | tʃʏs bɪs balt",
+      "intonation": "enthousiaste et descendante sur l’au revoir",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Hallo",
+          "lemme": "Hallo",
+          "classe_grammaticale": "salutation informelle",
+          "traduction_directe": "Salut / Bonjour",
+          "phonetique": "haˈloː",
+          "usage": "Très courant entre amis, jeunes, collègues"
+        },
+        {
+          "mot": "Tschüss",
+          "lemme": "Tschüss",
+          "classe_grammaticale": "au revoir informel",
+          "traduction_directe": "Salut / À plus",
+          "phonetique": "tʃʏs",
+          "variantes_informelles": ["Ciao", "Mach’s gut", "Bis bald", "Bis später"],
+          "piège": "Ne pas utiliser 'Tschüss' avec des personnes plus âgées ou en contexte très formel."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "de": "Auf Wiedersehen! Danke für den Abend. Gute Nacht!",
+      "fr": "Au revoir ! Merci pour la soirée. Bonne nuit !",
+      "audio": "/audio/a1-006-3.mp3",
+      "phonetique": "aʊf ˈviːdɐˌzeːən | ˈdaŋkə fʏʁ deːn ˈaːbənt | ˈɡuːtə naxt",
+      "intonation": "polie et descendante",
+      "registre": "formel / semi-formel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Auf Wiedersehen",
+          "lemme": "wiedersehen",
+          "classe_grammaticale": "au revoir formel",
+          "traduction_directe": "Au revoir",
+          "phonetique": "aʊf ˈviːdɐˌzeːən",
+          "usage": "Formel, avec inconnus, collègues, supérieurs"
+        },
+        {
+          "mot": "Danke",
+          "lemme": "danken",
+          "classe_grammaticale": "expression de gratitude",
+          "traduction_directe": "Merci",
+          "phonetique": "ˈdaŋkə",
+          "réponses": [
+            { "reponse": "Bitte.", "traduction": "De rien." },
+            { "reponse": "Gern geschehen.", "traduction": "Avec plaisir." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "de": "Guten Tag, Frau Müller. Wie geht es Ihnen? Danke, sehr gut. Und Ihnen?",
+      "fr": "Bonjour, Madame Müller. Comment allez-vous ? Merci, très bien. Et vous ?",
+      "audio": "/audio/a1-006-4.mp3",
+      "phonetique": "ˈɡuːtn̩ taːk | fʁaʊ ˈmʏlɐ | viː ɡeːt ɛs ˈiːnən | ˈdaŋkə zeːɐ̯ ɡuːt | ʊnt ˈiːnən",
+      "intonation": "polie, montante sur la question",
+      "registre": "formel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Frau / Herr",
+          "lemme": "Frau / Herr",
+          "classe_grammaticale": "titre de politesse",
+          "traduction_directe": "Madame / Monsieur",
+          "phonetique": "fʁaʊ / hɛʁ",
+          "regle": "Toujours + nom de famille en contexte formel. Pas de prénom sauf si la personne propose 'Du'."
+        },
+        {
+          "mot": "Ihnen",
+          "lemme": "Sie (formel)",
+          "classe_grammaticale": "pronom formel au datif",
+          "traduction_directe": "vous (formel)",
+          "phonetique": "ˈiːnən",
+          "distinction": "dir (informel) vs Ihnen (formel)"
+        }
+      ]
+    }
+  ],
+
+  "vocabulaire_complet": [
+    { "mot": "Guten Morgen", "traduction": "Bonjour (matin)", "type": "expression", "phonetique": "ˈɡuːtn̩ ˈmɔʁɡən" },
+    { "mot": "Guten Tag", "traduction": "Bonjour (journée)", "type": "expression", "phonetique": "ˈɡuːtn̩ taːk" },
+    { "mot": "Guten Abend", "traduction": "Bonsoir", "type": "expression", "phonetique": "ˈɡuːtn̩ ˈaːbənt" },
+    { "mot": "Auf Wiedersehen", "traduction": "Au revoir (formel)", "type": "expression", "phonetique": "aʊf ˈviːdɐˌzeːən" },
+    { "mot": "Tschüss", "traduction": "Salut / À plus (informel)", "type": "expression", "phonetique": "tʃʏs" },
+    { "mot": "Hallo", "traduction": "Salut", "type": "expression", "phonetique": "haˈloː" },
+    { "mot": "danke", "traduction": "merci", "type": "expression", "phonetique": "ˈdaŋkə" },
+    { "mot": "bitte", "traduction": "s’il vous plaît / de rien", "type": "expression", "phonetique": "ˈbɪtə" },
+    { "mot": "Herr / Frau", "traduction": "Monsieur / Madame", "type": "titre", "phonetique": "hɛʁ / fʁaʊ" }
+  ],
+
+  "grammaire": [
+    {
+      "titre": "Formel vs Informel (Sie vs du)",
+      "niveau": "A1",
+      "explication": "En allemand on distingue clairement le 'tu' (du) et le 'vous' de politesse (Sie). Le verbe et les pronoms changent.",
+      "tableau": [
+        { "contexte": "Amis, jeunes, famille", "pronom": "du", "verbe_ex": "Wie geht es dir?" },
+        { "contexte": "Inconnus, collègues, supérieurs, personnes âgées", "pronom": "Sie", "verbe_ex": "Wie geht es Ihnen?" }
+      ]
+    },
+    {
+      "titre": "Salutations selon l’heure",
+      "niveau": "A1",
+      "tableau": [
+        { "heure": "Matin (jusqu’à ~11h)", "salutation": "Guten Morgen" },
+        { "heure": "Journée", "salutation": "Guten Tag" },
+        { "heure": "Soir (à partir de 18h)", "salutation": "Guten Abend" },
+        { "heure": "Nuit", "salutation": "Gute Nacht" }
+      ]
+    }
+  ],
+
+  "exercices": [
+    {
+      "id": "ex-001",
+      "type": "choix_multiple",
+      "difficulte": 1,
+      "question": "Quelle salutation utiliser à 9h du matin ?",
+      "options": ["Guten Abend", "Guten Morgen", "Gute Nacht"],
+      "reponse_correcte": 1,
+      "explication": "Guten Morgen = matin."
+    },
+    {
+      "id": "ex-002",
+      "type": "association",
+      "difficulte": 1,
+      "question": "Associez registre et expression",
+      "paires": [
+        { "gauche": "Avec un ami", "droite": "Hallo / Tschüss" },
+        { "gauche": "Avec un professeur", "droite": "Guten Tag / Auf Wiedersehen" }
+      ]
+    },
+    {
+      "id": "ex-010",
+      "type": "situation",
+      "difficulte": 3,
+      "question": "Saluer selon les situations : 1) ami le matin 2) hôte formel le soir 3) prendre congé poliment.",
+      "modele_reponse": "Guten Morgen! Wie geht es dir? — Guten Abend, Herr Müller. Auf Wiedersehen!",
+      "criteres_evaluation": ["choix registre correct", "formules de politesse", "intonation adaptée"]
+    }
+  ],
+
+  "comprehension": [
+    {
+      "question": "Quand utilise-t-on 'Tschüss' et quand 'Auf Wiedersehen' ?",
+      "reponse": "'Tschüss' est informel (amis, jeunes). 'Auf Wiedersehen' est formel ou neutre (inconnus, situations officielles)."
+    }
+  ],
+
+  "culture": {
+    "titre": "Politesse et registres en pays germanophones (DACH)",
+    "points": [
+      { "sujet": "Du vs Sie", "explication": "Le passage au 'du' est une décision importante. On attend souvent que la personne plus âgée ou supérieure propose 'Wir können du sagen'." },
+      { "sujet": "Autriche et Suisse", "explication": "En Autriche plus chaleureux qu’en Allemagne du Nord. En Suisse allemande on utilise souvent 'Grüezi' en plus." }
+    ]
+  },
+
+  "astuces_pedagogiques": [
+    {
+      "titre": "Mémo des salutations",
+      "astuce": "Matin = Morgen (comme 'morning'), Soir = Abend (comme 'evening'), Nuit = Nacht. Guten = good."
+    }
+  ],
+
+  "progression": {
+    "xp": 50,
+    "badges_deblocables": ["Höflichkeitsprofi", "Grüßmeister"],
+    "niveau_suivant": "a1-007",
+    "apercu_suivant": "Leçon suivante : Les verbes réguliers et irréguliers de base + conjugaison au présent"
+  }
+}

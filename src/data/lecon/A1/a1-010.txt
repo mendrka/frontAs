@@ -1,0 +1,235 @@
+{
+  "id": "a1-010",
+  "niveau": "A1",
+  "module": "A1.1",
+  "titre": "Les couleurs, les adjectifs et leur accord simple",
+  "objectifs": {
+    "communicatif": "Décrire des objets, des vêtements et des personnes avec des couleurs et des adjectifs simples",
+    "linguistique": "Maîtriser les couleurs de base, les adjectifs courants, l’accord des adjectifs en position attribut (après sein) et en position épithète (devant le nom) au nominatif et accusatif",
+    "culturel": "Connaître les couleurs préférées et les expressions courantes avec les couleurs en pays germanophones",
+    "cognitif": "Comprendre que les adjectifs s’accordent en genre, nombre et cas avec le nom qu’ils qualifient"
+  },
+  "metadonnees": {
+    "duree_estimee_minutes": 40,
+    "difficulte_cognitive": 2,
+    "prerequis": ["a1-009"],
+    "competences_visees": ["expression orale", "description"],
+    "themes_croises": ["objets quotidiens", "vêtements", "apparence"]
+  },
+
+  "situation": {
+    "contexte": "Suite de la soirée internationale à Vienne – on décrit les vêtements des invités et les objets dans la pièce",
+    "lieu": "Appartement privé, Vienne (Wien), Autriche",
+    "type": "conversation informelle",
+    "registre": "informel"
+  },
+
+  "dialogue": [
+    {
+      "id": 1,
+      "de": "Welche Farbe hat dein Hemd? Mein Hemd ist blau.",
+      "fr": "De quelle couleur est ta chemise ? Ma chemise est bleue.",
+      "audio": "/audio/a1-010-1.mp3",
+      "phonetique": "ˈvɛlçə ˈfaʁbə hat daɪn hɛmt | maɪn hɛmt ɪst blaʊ",
+      "intonation": "montante sur la question, descendante sur la réponse",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Welche Farbe",
+          "lemme": "welche",
+          "classe_grammaticale": "pronom interrogatif + nom",
+          "traduction_directe": "Quelle couleur",
+          "phonetique": "ˈvɛlçə ˈfaʁbə",
+          "regle": "welche (féminin) pour Farbe"
+        },
+        {
+          "mot": "hat",
+          "lemme": "haben",
+          "classe_grammaticale": "verbe",
+          "forme": "3ème personne singulier",
+          "traduction_directe": "a",
+          "phonetique": "hat"
+        },
+        {
+          "mot": "blau",
+          "lemme": "blau",
+          "classe_grammaticale": "adjectif (position attribut)",
+          "traduction_directe": "bleu",
+          "phonetique": "blaʊ",
+          "note": "Après 'sein' l’adjectif reste invariable (pas de terminaison)"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "de": "Das ist ein rotes Auto. Ich habe ein rotes Auto.",
+      "fr": "Ceci est une voiture rouge. J’ai une voiture rouge.",
+      "audio": "/audio/a1-010-2.mp3",
+      "phonetique": "das ɪst aɪn ˈʁoːtəs ˈaʊtoː | ɪç ˈhaːbə aɪn ˈʁoːtəs ˈaʊtoː",
+      "intonation": "informative",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "rotes",
+          "lemme": "rot",
+          "classe_grammaticale": "adjectif en position épithète",
+          "traduction_directe": "rouge",
+          "phonetique": "ˈʁoːtəs",
+          "regle_accord": "Neutre nominatif/accusatif : adjectif + -es (ein rotes Auto)"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "de": "Die schwarze Jacke ist schön. Ich mag die schwarze Jacke.",
+      "fr": "La veste noire est belle. J’aime la veste noire.",
+      "audio": "/audio/a1-010-3.mp3",
+      "phonetique": "diː ˈʃvaʁtsə ˈjakə ɪst ʃøːn | ɪç maːk diː ˈʃvaʁtsə ˈjakə",
+      "intonation": "informative",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "schwarze",
+          "lemme": "schwarz",
+          "classe_grammaticale": "adjectif",
+          "traduction_directe": "noire",
+          "phonetique": "ˈʃvaʁtsə",
+          "regle": "Féminin : -e au nominatif et accusatif (die schwarze Jacke)"
+        },
+        {
+          "mot": "mag",
+          "lemme": "mögen",
+          "classe_grammaticale": "verbe irrégulier",
+          "forme": "1ère personne",
+          "traduction_directe": "aime",
+          "phonetique": "maːk"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "de": "Meine Hose ist grün und mein T-Shirt ist weiß.",
+      "fr": "Mon pantalon est vert et mon T-shirt est blanc.",
+      "audio": "/audio/a1-010-4.mp3",
+      "phonetique": "ˈmaɪnə ˈhoːzə ɪst ɡʁyːn ʊnt maɪn ˈtiːʃœʁt ɪst vaɪs",
+      "intonation": "informative",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "grün / weiß",
+          "lemme": "grün / weiß",
+          "classe_grammaticale": "adjectifs attributs",
+          "traduction_directe": "vert / blanc",
+          "phonetique": "ɡʁyːn / vaɪs",
+          "note": "Pas de terminaison après 'sein'"
+        }
+      ]
+    }
+  ],
+
+  "vocabulaire_complet": [
+    { "mot": "die Farbe", "traduction": "la couleur", "type": "nom féminin", "phonetique": "ˈfaʁbə" },
+    { "mot": "rot", "traduction": "rouge", "type": "adjectif", "phonetique": "ʁoːt" },
+    { "mot": "blau", "traduction": "bleu", "type": "adjectif", "phonetique": "blaʊ" },
+    { "mot": "grün", "traduction": "vert", "type": "adjectif", "phonetique": "ɡʁyːn" },
+    { "mot": "gelb", "traduction": "jaune", "type": "adjectif", "phonetique": "ɡɛlp" },
+    { "mot": "schwarz", "traduction": "noir", "type": "adjectif", "phonetique": "ʃvaʁts" },
+    { "mot": "weiß", "traduction": "blanc", "type": "adjectif", "phonetique": "vaɪs" },
+    { "mot": "das Hemd", "traduction": "la chemise", "type": "nom neutre", "phonetique": "hɛmt" },
+    { "mot": "die Hose", "traduction": "le pantalon", "type": "nom féminin", "phonetique": "ˈhoːzə" },
+    { "mot": "die Jacke", "traduction": "la veste", "type": "nom féminin", "phonetique": "ˈjakə" }
+  ],
+
+  "grammaire": [
+    {
+      "titre": "Adjectifs en position attribut (après sein)",
+      "niveau": "A1",
+      "explication": "L’adjectif reste invariable (pas de terminaison).",
+      "exemples": [
+        "Das Auto ist rot.",
+        "Die Jacke ist schwarz.",
+        "Mein T-Shirt ist weiß."
+      ]
+    },
+    {
+      "titre": "Adjectifs en position épithète (devant le nom)",
+      "niveau": "A1",
+      "explication": "L’adjectif prend une terminaison selon le genre, le nombre et le cas.",
+      "tableau_accord_simple": [
+        { "genre": "Masculin", "nominatif": "-er (ein roter)", "accusatif": "-en (einen roten)" },
+        { "genre": "Féminin", "nominatif": "-e (eine rote)", "accusatif": "-e (eine rote)" },
+        { "genre": "Neutre", "nominatif": "-es (ein rotes)", "accusatif": "-es (ein rotes)" }
+      ]
+    },
+    {
+      "titre": "Liste des couleurs de base",
+      "niveau": "A1",
+      "tableau": [
+        { "couleur": "rot", "fr": "rouge" },
+        { "couleur": "blau", "fr": "bleu" },
+        { "couleur": "grün", "fr": "vert" },
+        { "couleur": "gelb", "fr": "jaune" },
+        { "couleur": "schwarz", "fr": "noir" },
+        { "couleur": "weiß", "fr": "blanc" },
+        { "couleur": "braun", "fr": "marron" },
+        { "couleur": "rosa", "fr": "rose" }
+      ]
+    }
+  ],
+
+  "exercices": [
+    {
+      "id": "ex-001",
+      "type": "choix_multiple",
+      "difficulte": 1,
+      "question": "Complète : Das ist ___ rotes Auto.",
+      "options": ["ein", "eine", "einen", "eines"],
+      "reponse_correcte": 0,
+      "explication": "ein rotes Auto (neutre)"
+    },
+    {
+      "id": "ex-002",
+      "type": "traduction",
+      "difficulte": 2,
+      "question": "Traduire : 'J’ai une veste noire. La veste est belle.'",
+      "reponse_attendue": "Ich habe eine schwarze Jacke. Die Jacke ist schön.",
+      "explication": "eine schwarze (féminin) + die Jacke (attribut)"
+    },
+    {
+      "id": "ex-010",
+      "type": "situation",
+      "difficulte": 3,
+      "question": "Décris tes vêtements et 3 objets de ta chambre en utilisant des couleurs et des adjectifs (grand/petit/joli…).",
+      "modele_reponse": "Mein T-Shirt ist blau. Ich habe eine schwarze Hose. Das Buch ist rot und interessant.",
+      "criteres_evaluation": ["accord des adjectifs correct", "position attribut/épithète", "couleurs bien utilisées"]
+    }
+  ],
+
+  "comprehension": [
+    {
+      "question": "Quelle est la différence entre 'Das Auto ist rot' et 'Das ist ein rotes Auto' ?",
+      "reponse": "Dans la première phrase l’adjectif est attribut (après sein → pas de terminaison). Dans la deuxième il est épithète (devant le nom → terminaison -es)."
+    }
+  ],
+
+  "culture": {
+    "titre": "Les couleurs en pays germanophones",
+    "points": [
+      { "sujet": "Expressions courantes", "explication": "Alles ist in Ordnung (tout est en ordre = tout va bien). Schwarzfahren = voyager sans ticket. Grün sein = être débutant." }
+    ]
+  },
+
+  "astuces_pedagogiques": [
+    {
+      "titre": "Mémo des terminaisons adjectifs",
+      "astuce": "Pour les débutants : Masculin change beaucoup (-er / -en). Féminin et neutre : souvent -e ou -es. Pense 'le rouge' = der rote, 'une voiture rouge' = ein rotes Auto."
+    }
+  ],
+
+  "progression": {
+    "xp": 70,
+    "badges_deblocables": ["Farben-Profi", "Adjektiv-Meister"],
+    "niveau_suivant": "a1-011",
+    "apercu_suivant": "Leçon suivante : Parler de sa famille"
+  }
+}

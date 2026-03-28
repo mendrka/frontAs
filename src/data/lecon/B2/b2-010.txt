@@ -1,0 +1,118 @@
+{
+  "id": "b2-010",
+  "niveau": "B2",
+  "module": "B2.2",
+  "titre": "Consommation et alimentation : Tendances et Éthique",
+  "objectifs": {
+    "communicatif": "Exprimer des exigences alimentaires précises, argumenter sur les avantages du commerce équitable, analyser les habitudes de consommation modernes",
+    "linguistique": "Maîtriser la corrélation 'je ... desto/umso' (comparaison proportionnelle), utiliser les adjectifs avec prépositions fixes (stolz auf, überzeugt von) et le lexique de la nutrition",
+    "culturel": "Le marché du 'Bio' en Allemagne (le plus grand d'Europe), le véganisme et les 'Wochenmärkte'",
+    "cognitif": "Établir des liens de cause à effet entre consommation et environnement"
+  },
+  "metadonnees": {
+    "duree_estimee_minutes": 60,
+    "difficulte_cognitive": 4,
+    "prerequis": ["b2-008", "b2-009"],
+    "competences_visees": ["expression orale", "sensibilisation éthique"],
+    "themes_croises": ["gastronomie", "commerce", "santé"]
+  },
+  "situation": {
+    "contexte": "Tu fais tes courses dans un 'Bioladen' ou tu discutes avec des amis allemands de la pertinence d'acheter des produits locaux pour ton projet 'Stark Café'.",
+    "lieu": "Supermarché / Cuisine / Café",
+    "type": "Discussion thématique",
+    "registre": "standard / engagé"
+  },
+  "dialogue_modele": [
+    {
+      "id": 1,
+      "de": "Je frischer die Produkte sind, desto besser schmeckt das Essen. Deshalb achte ich auf regionale Herkunft.",
+      "fr": "Plus les produits sont frais, meilleur est le goût de la nourriture. C'est pourquoi je fais attention à la provenance régionale.",
+      "phonetique": "jeː ˈfʁɪʃɐ diː pʁoˈdʊktə zɪnt | ˈdɛstoː ˈbɛsɐ ˈʃmɛkt das ˈɛsən | ˈdɛːɐ̯halp ˈaxtə ɪç aʊf ʁeɡi̯oˈnaːlə ˈhɛːɐ̯ˌkʊnft",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Je ... desto",
+          "grammaire": {
+            "titre": "La comparaison proportionnelle",
+            "explication": "Structure : Je + comparatif + sujet + verbe à la fin, DESTO + comparatif + verbe + sujet.",
+            "exemple": "Je mehr ich lerne, desto besser verstehe ich. (Plus j'apprends, mieux je comprends.)"
+          }
+        },
+        {
+          "mot": "regionale Herkunft",
+          "traduction": "provenance / origine régionale.",
+          "note": "Un argument de vente majeur en Allemagne (le 'Regio-Trend')."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "de": "Ich bin davon überzeugt, dass wir unseren Fleischkonsum reduzieren müssen, um die Umwelt zu schonen.",
+      "fr": "Je suis convaincu que nous devons réduire notre consommation de viande pour ménager l'environnement.",
+      "phonetique": "ɪç bɪn daˈfɔn ʏːbɐˈt͡sɔʏkt | das viːɐ̯ ˈʊnzəʁən ˈflaɪʃkɔnˌzuːm ʁeduˈt͡siːʁən ˈmʏsən | ʊm diː ˈʊmvɛlt t͡suː ˈʃoːnən",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "überzeugt von (+ Dat)",
+          "grammaire": "Adjectif avec préposition fixe.",
+          "traduction": "convaincu de."
+        },
+        {
+          "mot": "schonen",
+          "traduction": "ménager / préserver.",
+          "note": "Souvent utilisé pour l'environnement (Umwelt schonen) ou les ressources."
+        }
+      ]
+    }
+  ],
+  "grammaire": [
+    {
+      "titre": "Adjectifs avec prépositions",
+      "explication": "À ce niveau, tu dois connaître la préposition et le cas associés.",
+      "tableau": [
+        { "Adjectif": "stolz AUF (+ Akk)", "Traduction": "fier de", "Exemple": "Ich bin stolz auf dich." },
+        { "Adjectif": "zufrieden MIT (+ Dat)", "Traduction": "satisfait de", "Exemple": "Bist du mit dem Service zufrieden?" },
+        { "Adjectif": "interessiert AN (+ Dat)", "Traduction": "intéressé par", "Exemple": "Er ist an Bio-Produkten interessiert." }
+      ]
+    },
+    {
+      "titre": "Subordonnées avec 'da' et 'indem'",
+      "explication": "Pour expliquer le 'comment' ou le 'parce que' (plus formel que weil).",
+      "exemples": [
+        { "mot": "da", "sens": "puisque / comme", "phrase": "Da er Veganer ist, isst er keinen Käse." },
+        { "mot": "indem", "sens": "en (faisant quelque chose)", "phrase": "Man spart Plastik, indem man Stoffbeutel nutzt." }
+      ]
+    }
+  ],
+  "vocabulaire_cles": [
+    { "de": "das Bio-Siegel", "fr": "le label bio" },
+    { "de": "der Fleischverzicht", "fr": "le renoncement à la viande" },
+    { "de": "die Massentierhaltung", "fr": "l'élevage intensif" },
+    { "de": "saisonale Produkte", "fr": "produits de saison" },
+    { "de": "unverpackt", "fr": "en vrac / sans emballage" }
+  ],
+  "exercices": [
+    {
+      "id": "ex-b2-010-1",
+      "type": "syntaxe",
+      "question": "Reliez : 'Man kauft lokal. Man schützt das Klima.' (Utilisez Je... desto)",
+      "reponse_attendue": "Je lokaler man kauft, desto besser schützt man das Klima.",
+      "explication": "N'oublie pas la place du verbe dans la première partie (fin) et la deuxième (juste après le comparatif)."
+    },
+    {
+      "id": "ex-b2-010-2",
+      "type": "vocabulaire",
+      "question": "Traduisez : 'Je suis satisfait de la qualité.'",
+      "reponse_attendue": "Ich bin mit der Qualität zufrieden.",
+      "explication": "Zufrieden + mit + Datif."
+    }
+  ],
+  "culture": {
+    "titre": "Bio-Supermärkte (Denn's, Alnatura)",
+    "explication": "En Allemagne, le bio n'est pas qu'un rayon au supermarché, ce sont des chaînes entières dédiées. Les Allemands dépensent beaucoup pour la qualité de leur nourriture (relativement à leur budget). Le 'Sonntagsfrühstück' (petit-déjeuner du dimanche) est aussi un moment sacré avec des produits frais du boulanger."
+  },
+  "progression": {
+    "xp": 300,
+    "prochain_module": "B2.3",
+    "prochaine_lecon": "b2-011 (Actualités, politique et société)",
+    "statut": "Félicitations ! Module B2.2 terminé. Tu es prêt pour les sujets de société profonds !"
+  }
+}

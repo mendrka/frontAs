@@ -1,0 +1,114 @@
+{
+  "id": "b2-006",
+  "niveau": "B2",
+  "module": "B2.2",
+  "titre": "Santé, assurances et finances",
+  "objectifs": {
+    "communicatif": "Comprendre les termes d'un contrat d'assurance, expliquer un problème de santé complexe à un spécialiste, gérer des opérations bancaires avancées",
+    "linguistique": "Maîtriser le passif avec les verbes de modalité au présent et au prétérit, utiliser les prépositions complexes (aufgrund, bezüglich) et le lexique administratif",
+    "culturel": "Le système de santé allemand (Krankenkasse), la solidarité sociale et l'importance de la 'Haftpflichtversicherung'",
+    "cognitif": "Décrypter des documents administratifs denses"
+  },
+  "metadonnees": {
+    "duree_estimee_minutes": 75,
+    "difficulte_cognitive": 4,
+    "prerequis": ["module-b2-1-complet"],
+    "competences_visees": ["compréhension écrite", "interaction administrative"],
+    "themes_croises": ["santé", "droit", "économie"]
+  },
+  "situation": {
+    "contexte": "Tu appelles ta caisse d'assurance maladie (Krankenkasse) ou ton conseiller bancaire pour clarifier une prise en charge ou un virement international.",
+    "lieu": "Téléphone / Bureau administratif",
+    "type": "Entretien administratif",
+    "registre": "formel / administratif"
+  },
+  "dialogue_modele": [
+    {
+      "id": 1,
+      "de": "Muss diese Behandlung von der Krankenkasse übernommen werden oder ist eine Zusatzversicherung notwendig?",
+      "fr": "Ce traitement doit-il être pris en charge par la caisse d'assurance maladie ou une assurance complémentaire est-elle nécessaire ?",
+      "phonetique": "mʊs ˈdiːzə bəˈhandlʊŋ fɔn deːɐ̯ ˈkʁaŋkənˌkasə ˈyːbɐˌnɔmən ˈvɛʁdən | oːdɐ ɪst ˈaɪnə t͡suˈzat͡sfɛɐ̯ˌzɪçəʁʊŋ ˈnoːtvɛndɪç",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "übernommen werden",
+          "grammaire": "Passif de l'infinitif.",
+          "usage": "Utilisé ici avec le modal 'muss' pour exprimer l'obligation passive."
+        },
+        {
+          "mot": "Zusatzversicherung",
+          "composition": "Zusatz (supplément) + Versicherung (assurance).",
+          "note": "Très courant pour les soins dentaires ou les chambres individuelles à l'hôpital."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "de": "Aufgrund der neuen Bestimmungen konnten die Kosten leider nicht vollständig erstattet werden.",
+      "fr": "En raison des nouvelles dispositions, les coûts n'ont malheureusement pas pu être remboursés intégralement.",
+      "phonetique": "ˈaʊfɡʁʊnt deːɐ̯ ˈnɔɪən bəˈʃtɪmʊŋən ˈkɔntən diː ˈkɔstən ˈlaɪdɐ nɪçt ˈfɔlˌʃtɛndɪç ɛɐ̯ˈʃtatət ˈvɛʁdən",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Aufgrund (+ Génitif)",
+          "usage": "Préposition formelle pour exprimer la cause.",
+          "note_grammaire": "der neuen Bestimmungen (Génitif pluriel)."
+        },
+        {
+          "mot": "erstattet werden",
+          "lemme": "erstatten",
+          "traduction": "rembourser / restituer."
+        }
+      ]
+    }
+  ],
+  "grammaire": [
+    {
+      "titre": "Le Passif avec verbes de modalité",
+      "explication": "Structure : Modal + Partizip II + werden.",
+      "tableau": [
+        { "Temps": "Présent", "Structure": "muss gemacht werden", "Exemple": "Das Formular muss ausgefüllt werden." },
+        { "Temps": "Prétérit", "Structure": "musste gemacht werden", "Exemple": "Die Rechnung musste bezahlt werden." }
+      ]
+    },
+    {
+      "titre": "Les prépositions du Génitif (Révision B2)",
+      "explication": "Elles sont le moteur du style administratif allemand.",
+      "liste": [
+        { "mot": "Anstelle", "sens": "au lieu de", "exemple": "Anstelle eines Briefes..." },
+        { "mot": "Infolge", "sens": "à la suite de", "exemple": "Infolge des Unfalls..." },
+        { "mot": "Bezüglich", "sens": "concernant / au sujet de", "exemple": "Bezüglich Ihrer Anfrage..." }
+      ]
+    }
+  ],
+  "vocabulaire_cles": [
+    { "de": "die Versichertenkarte", "fr": "la carte d'assuré" },
+    { "de": "der Dauerauftrag", "fr": "le virement permanent" },
+    { "de": "die Haftpflichtversicherung", "fr": "l'assurance responsabilité civile" },
+    { "de": "das Attest / die Krankschreibung", "fr": "le certificat médical / l'arrêt maladie" },
+    { "de": "der Betrag / die Summe", "fr": "le montant / la somme" }
+  ],
+  "exercices": [
+    {
+      "id": "ex-b2-006-1",
+      "type": "conjugaison",
+      "question": "Mettez au passif : 'Man kann das Geld nicht abheben.'",
+      "reponse_attendue": "Das Geld kann nicht abgehoben werden.",
+      "explication": "Objet devient sujet + kann + Participe II + werden."
+    },
+    {
+      "id": "ex-b2-006-2",
+      "type": "vocabulaire",
+      "question": "Quelle assurance est quasi obligatoire moralement en Allemagne pour couvrir les dégâts causés à autrui ?",
+      "reponse_attendue": "Die Haftpflichtversicherung",
+      "explication": "Presque tous les Allemands l'ont pour se couvrir en cas d'accident involontaire (ex: casser le téléphone d'un ami)."
+    }
+  ],
+  "culture": {
+    "titre": "Versicherungsland Deutschland",
+    "explication": "On dit souvent que les Allemands sont les champions du monde de l'assurance. La 'Haftpflichtversicherung' est cruciale. Si tu es Au Pair, vérifie bien que ta famille d'accueil ou ton agence t'a enregistré auprès d'une caisse (AOK, TK, etc.). C'est la base de ta sécurité là-bas."
+  },
+  "progression": {
+    "xp": 250,
+    "prochain_id": "b2-007",
+    "apercu_suivant": "Leçon B2.2-2 : Études, formation continue et apprentissage (Berufliche Weiterbildung)."
+  }
+}

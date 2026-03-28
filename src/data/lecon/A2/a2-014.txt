@@ -1,0 +1,193 @@
+{
+  "id": "a2-014",
+  "niveau": "A2",
+  "module": "A2.2",
+  "titre": "Téléphoner simplement",
+  "objectifs": {
+    "communicatif": "Passer un appel téléphonique simple, se présenter au téléphone, laisser un message, demander quelqu’un, prendre un rendez-vous par téléphone, comprendre les réponses courantes",
+    "linguistique": "Maîtriser les expressions téléphoniques ('Hallo, hier ist …', 'Kann ich bitte mit … sprechen?', 'Ich rufe wegen … an', 'Können Sie mir eine Nachricht hinterlassen?'), les formules de politesse au téléphone, les verbes 'anrufen', 'sprechen', 'hinterlassen'",
+    "culturel": "Connaître les habitudes téléphoniques en Allemagne/Autriche (ponctualité des appels, formalité, messages vocaux)",
+    "cognitif": "Utiliser des phrases claires et structurées pour une communication orale sans contact visuel"
+  },
+  "metadonnees": {
+    "duree_estimee_minutes": 45,
+    "difficulte_cognitive": 2,
+    "prerequis": ["a2-013"],
+    "competences_visees": ["communication téléphonique"],
+    "themes_croises": ["vie quotidienne", "services"]
+  },
+
+  "situation": {
+    "contexte": "Appel pour réserver un rendez-vous chez le médecin ou contacter un ami/collegue",
+    "lieu": "Téléphone portable à Vienne (Wien), Autriche",
+    "type": "appel téléphonique",
+    "registre": "semi-formel / informel selon le destinataire"
+  },
+
+  "dialogue": [
+    {
+      "id": 1,
+      "de": "Hallo, hier ist Anna Müller. Kann ich bitte mit Herrn Schmidt sprechen?",
+      "fr": "Allô, ici Anna Müller. Puis-je parler à Monsieur Schmidt s’il vous plaît ?",
+      "audio": "/audio/a2-014-1.mp3",
+      "phonetique": "haˈloː | hiːɐ̯ ɪst ˈana ˈmʏlɐ | kan ɪç ˈbɪtə mɪt hɛʁn ʃmɪt ˈʃpʁɛçən",
+      "intonation": "claire et polie",
+      "registre": "semi-formel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Hallo, hier ist …",
+          "lemme": "hier ist",
+          "classe_grammaticale": "présentation au téléphone",
+          "traduction_directe": "Allô, ici …",
+          "phonetique": "hiːɐ̯ ɪst"
+        },
+        {
+          "mot": "Kann ich bitte mit … sprechen?",
+          "lemme": "sprechen",
+          "classe_grammaticale": "demande de parler à quelqu’un",
+          "traduction_directe": "Puis-je parler à … s’il vous plaît ?",
+          "phonetique": "ˈʃpʁɛçən"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "de": "Einen Moment bitte, ich verbinde Sie. — Hallo, Schmidt am Apparat.",
+      "fr": "Un moment s’il vous plaît, je vous mets en relation. — Allô, Schmidt à l’appareil.",
+      "audio": "/audio/a2-014-2.mp3",
+      "phonetique": "ˈaɪnən moˈmɛnt ˈbɪtə | ɪç fɛɐ̯ˈbɪndə ziː | haˈloː ʃmɪt am apaˈʁaːt",
+      "intonation": "professionnelle",
+      "registre": "semi-formel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "ich verbinde Sie",
+          "lemme": "verbinden",
+          "classe_grammaticale": "expression téléphonique",
+          "traduction_directe": "je vous mets en relation",
+          "phonetique": "fɛɐ̯ˈbɪndə"
+        },
+        {
+          "mot": "am Apparat",
+          "lemme": "am Apparat",
+          "classe_grammaticale": "réponse au téléphone",
+          "traduction_directe": "à l’appareil",
+          "phonetique": "apaˈʁaːt"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "de": "Herr Schmidt ist leider nicht da. Möchten Sie eine Nachricht hinterlassen?",
+      "fr": "Monsieur Schmidt n’est malheureusement pas là. Voulez-vous laisser un message ?",
+      "audio": "/audio/a2-014-3.mp3",
+      "phonetique": "hɛʁ ʃmɪt ɪst ˈlaɪdɐ nɪçt daː | ˈmœçtən ziː ˈaɪnə ˈnaːχʁɪçt ˈhɪntɐˌlasən",
+      "intonation": "aimable",
+      "registre": "semi-formel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "eine Nachricht hinterlassen",
+          "lemme": "hinterlassen",
+          "classe_grammaticale": "laisser un message",
+          "traduction_directe": "laisser un message",
+          "phonetique": "ˈhɪntɐˌlasən"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "de": "Ja, bitte sagen Sie ihm, dass Anna Müller angerufen hat und um Rückruf bittet.",
+      "fr": "Oui, s’il vous plaît dites-lui qu’Anna Müller a appelé et qu’elle demande qu’il la rappelle.",
+      "audio": "/audio/a2-014-4.mp3",
+      "phonetique": "jaː ˈbɪtə ˈzaːɡən ziː iːm das ˈana ˈmʏlɐ ˈanɡəˌʁuːfən hat ʊnt ʊm ˈʁʏkˌʁuːf ˈbɪtət",
+      "intonation": "claire",
+      "registre": "semi-formel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "um Rückruf bitten",
+          "lemme": "bitten",
+          "classe_grammaticale": "demander un rappel",
+          "traduction_directe": "demander qu’il rappelle",
+          "phonetique": "ˈʁʏkˌʁuːf"
+        }
+      ]
+    }
+  ],
+
+  "vocabulaire_complet": [
+    { "mot": "anrufen", "traduction": "appeler (au téléphone)", "type": "verbe", "phonetique": "ˈanˌʁuːfən" },
+    { "mot": "sprechen", "traduction": "parler", "type": "verbe", "phonetique": "ˈʃpʁɛçən" },
+    { "mot": "verbinden", "traduction": "mettre en relation", "type": "verbe", "phonetique": "fɛɐ̯ˈbɪndən" },
+    { "mot": "hinterlassen", "traduction": "laisser (message)", "type": "verbe", "phonetique": "ˈhɪntɐˌlasən" },
+    { "mot": "der Rückruf", "traduction": "le rappel", "type": "nom masculin", "phonetique": "ˈʁʏkˌʁuːf" },
+    { "mot": "am Apparat", "traduction": "à l’appareil", "type": "expression", "phonetique": "apaˈʁaːt" }
+  ],
+
+  "grammaire": [
+    {
+      "titre": "Expressions téléphoniques courantes",
+      "niveau": "A2",
+      "tableau": [
+        { "expression": "Hallo, hier ist …", "usage": "Présentation" },
+        { "expression": "Kann ich bitte mit … sprechen?", "usage": "Demander quelqu’un" },
+        { "expression": "Einen Moment bitte.", "usage": "Attendre" },
+        { "expression": "Möchten Sie eine Nachricht hinterlassen?", "usage": "Laisser un message" }
+      ]
+    }
+  ],
+
+  "exercices": [
+    {
+      "id": "ex-001",
+      "type": "choix_multiple",
+      "difficulte": 1,
+      "question": "Comment se présente-t-on au téléphone ?",
+      "options": ["Ich bin Anna.", "Hallo, hier ist Anna Müller.", "Mein Name Anna."],
+      "reponse_correcte": 1,
+      "explication": "Hier ist … est la formule standard"
+    },
+    {
+      "id": "ex-002",
+      "type": "traduction",
+      "difficulte": 2,
+      "question": "Traduire : 'Bonjour, ici Pierre Dubois. Puis-je parler à Madame Fischer ? Elle n’est pas là ? Pouvez-vous lui dire que j’ai appelé ?'",
+      "reponse_attendue": "Guten Tag, hier ist Pierre Dubois. Kann ich bitte mit Frau Fischer sprechen? Sie ist nicht da? Können Sie ihr sagen, dass ich angerufen habe?",
+      "explication": "formule complète de message"
+    },
+    {
+      "id": "ex-010",
+      "type": "situation",
+      "difficulte": 3,
+      "question": "Simule un appel téléphonique complet : tu appelles pour prendre rendez-vous chez le médecin ou réserver une table. Présente-toi, explique le motif, pose des questions et termine poliment.",
+      "modele_reponse": "Hallo, hier ist … Ich möchte einen Termin bei Dr. Müller machen. Wann wäre es möglich? Vielen Dank und auf Wiederhören!",
+      "criteres_evaluation": ["formules téléphoniques", "politesse", "clarté du message"]
+    }
+  ],
+
+  "comprehension": [
+    {
+      "question": "Pourquoi dit-on 'Hier ist …' au lieu de 'Ich bin …' au téléphone ?",
+      "reponse": "'Hier ist …' est la formule standard et plus formelle pour s’identifier au téléphone en allemand."
+    }
+  ],
+
+  "culture": {
+    "titre": "Téléphoner en Allemagne/Autriche",
+    "points": [
+      { "sujet": "Style", "explication": "Les appels sont souvent plus formels qu’en France. On dit 'auf Wiederhören' pour au revoir au téléphone." }
+    ]
+  },
+
+  "astuces_pedagogiques": [
+    {
+      "titre": "Structure d’un appel",
+      "astuce": "Salutation + Présentation (Hier ist …) + Motif + Questions + Remerciements + Au revoir (Auf Wiederhören)"
+    }
+  ],
+
+  "progression": {
+    "xp": 90,
+    "badges_deblocables": ["Telefon-Profi", "Anruf-Meister"],
+    "niveau_suivant": "a2-015",
+    "apercu_suivant": "Leçon suivante : Envoyer des SMS ou e-mails simples"
+  }
+}

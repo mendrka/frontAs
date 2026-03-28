@@ -1,0 +1,124 @@
+{
+  "id": "b1-002",
+  "niveau": "B1",
+  "module": "B1.1",
+  "titre": "Parler de projets et ambitions",
+  "objectifs": {
+    "communicatif": "Exprimer ses intentions futures, ses rêves professionnels et ses projets personnels",
+    "linguistique": "Maîtriser le Futur I (werden + infinitif) et le Konjunktiv II de politesse/souhait (würde, hätte, wäre)",
+    "culturel": "L'importance de la planification et de la spécialisation dans le monde du travail allemand",
+    "cognitif": "Différencier une certitude d'une simple possibilité"
+  },
+  "metadonnees": {
+    "duree_estimee_minutes": 50,
+    "difficulte_cognitive": 3,
+    "prerequis": ["b1-001"],
+    "competences_visees": ["expression orale", "planification"],
+    "themes_croises": ["futur", "ambition", "entrepreneuriat"]
+  },
+  "situation": {
+    "contexte": "Discussion entre deux amis sur leurs projets après leur séjour en Allemagne.",
+    "lieu": "Un café à Munich",
+    "type": "Discussion informelle sur l'avenir",
+    "registre": "standard / amical"
+  },
+  "dialogue": [
+    {
+      "id": 1,
+      "de": "Ich werde nächstes Jahr mein eigenes Unternehmen gründen. Das ist mein großer Traum.",
+      "fr": "Je vais fonder ma propre entreprise l'année prochaine. C'est mon grand rêve.",
+      "phonetique": "ɪç ˈvɛʁdə ˈnɛːçstəs jaːɐ̯ maɪn ˈaɪɡənəs ˌʊntɐˈneːmən ˈɡʁʏndən | das ɪst maɪn ˈɡʁoːsɐ tʁaʊm",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "werde ... gründen",
+          "lemme": "werden + Infinitiv",
+          "regle_grammaticale": {
+            "titre": "Le Futur I",
+            "construction": "Auxiliaire 'werden' (conjugué) + Infinitif (à la fin de la phrase).",
+            "usage": "Utilisé pour des intentions fermes, des promesses ou des prévisions."
+          }
+        },
+        {
+          "mot": "eigenes",
+          "traduction": "propre (à soi)",
+          "usage": "mein eigenes Unternehmen = ma propre entreprise."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "de": "Das wäre toll! Ich würde gerne in der KI-Branche arbeiten, wenn ich genug Erfahrung hätte.",
+      "fr": "Ce serait génial ! J'aimerais bien travailler dans le secteur de l'IA si j'avais assez d'expérience.",
+      "phonetique": "das ˈvɛːʁə tɔl | ɪç ˈvʏʁdə ˈɡɛʁnə ɪn deːɐ̯ kaː-iː-ˈbʁãːʃə ˈaʁbaɪtən | vɛn ɪç ɡəˈnuːk ɛɐ̯ˈfaːʁʊŋ ˈhɛtə",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "wäre / würde / hätte",
+          "grammaire": "Konjunktiv II (Subjonctif II)",
+          "explication": "C'est le mode de l'imaginaire. 'Wäre' (serait), 'hätte' (avait/aurait), 'würde + infinitif' (travaillerais)."
+        },
+        {
+          "mot": "KI-Branche",
+          "composition": "KI (Künstliche Intelligenz) + Branche (secteur).",
+          "note": "En allemand, IA se dit KI."
+        }
+      ]
+    }
+  ],
+  "grammaire": [
+    {
+      "titre": "Exprimer le futur",
+      "points": [
+        {
+          "structure": "Présent + marqueur temporel",
+          "exemple": "Ich gehe morgen nach Berlin.",
+          "note": "Le plus courant pour le futur proche."
+        },
+        {
+          "structure": "Futur I (werden + infinitif)",
+          "exemple": "Ich werde Erfolg haben.",
+          "note": "Plus formel ou pour souligner une intention forte."
+        }
+      ]
+    },
+    {
+      "titre": "Le Konjunktiv II (Le souhait)",
+      "tableau": [
+        { "verbe": "werden", "forme": "würde", "usage": "Pour la majorité des verbes (+ infinitif)" },
+        { "verbe": "sein", "forme": "wäre", "usage": "Indispensable (être -> serait)" },
+        { "verbe": "haben", "forme": "hätte", "usage": "Indispensable (avoir -> aurait/avais)" }
+      ]
+    }
+  ],
+  "vocabulaire_cles": [
+    { "de": "das Ziel", "fr": "le but / l'objectif" },
+    { "de": "die Absicht haben", "fr": "avoir l'intention de" },
+    { "de": "planen", "fr": "planifier" },
+    { "de": "erfolgreich", "fr": "prospère / couronné de succès" },
+    { "de": "die Gründung", "fr": "la création / fondation" }
+  ],
+  "exercices": [
+    {
+      "id": "ex-b1-002-1",
+      "type": "conjugaison",
+      "question": "Mettez au futur : 'Er baut eine App.'",
+      "reponse_attendue": "Er wird eine App bauen.",
+      "explication": "werden (3e pers. sing.) + infinitif à la fin."
+    },
+    {
+      "id": "ex-b1-002-2",
+      "type": "expression",
+      "question": "Comment dit-on poliment 'J'aimerais avoir un café' ?",
+      "options": ["Ich habe einen Kaffee.", "Ich hätte gerne einen Kaffee.", "Ich werde einen Kaffee haben."],
+      "reponse_correcte": 1
+    }
+  ],
+  "culture": {
+    "titre": "Le 'Mittelstand'",
+    "explication": "L'ambition en Allemagne se porte souvent sur le 'Mittelstand' (PME performantes). Beaucoup de leaders mondiaux dans des niches technologiques sont des entreprises familiales basées dans de petites villes."
+  },
+  "progression": {
+    "xp": 150,
+    "niveau_suivant": "b1-003",
+    "apercu_suivant": "Leçon B1.3 : Échanger sur le travail ou les études (débat et opinion)."
+  }
+}

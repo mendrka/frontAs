@@ -1,0 +1,235 @@
+{
+  "id": "a1-008",
+  "niveau": "A1",
+  "module": "A1.1",
+  "titre": "Le verbe haben et parler de ce qu’on possède",
+  "objectifs": {
+    "communicatif": "Savoir dire ce qu’on a ou n’a pas (objets, famille, temps, etc.), poser des questions avec haben et répondre",
+    "linguistique": "Maîtriser la conjugaison complète du verbe 'haben', l’utilisation de 'kein' dans la négation, les noms courants d’objets personnels, la structure 'haben + accusatif'",
+    "culturel": "Comprendre que 'haben' est l’un des verbes les plus importants de l’allemand et son rôle dans les conversations quotidiennes",
+    "cognitif": "Différencier 'sein' (être / âge / nationalité) et 'haben' (avoir / possession)"
+  },
+  "metadonnees": {
+    "duree_estimee_minutes": 35,
+    "difficulte_cognitive": 2,
+    "prerequis": ["a1-007"],
+    "competences_visees": ["expression orale", "grammaire de base"],
+    "themes_croises": ["vie quotidienne", "possession"]
+  },
+
+  "situation": {
+    "contexte": "Suite de la soirée internationale à Vienne – on parle de ce qu’on a dans la vie (téléphone, voiture, animaux, temps libre…)",
+    "lieu": "Appartement privé, Vienne (Wien), Autriche",
+    "type": "conversation informelle",
+    "registre": "informel"
+  },
+
+  "dialogue": [
+    {
+      "id": 1,
+      "de": "Hast du ein Auto? Ja, ich habe ein Auto. Und du?",
+      "fr": "As-tu une voiture ? Oui, j’ai une voiture. Et toi ?",
+      "audio": "/audio/a1-008-1.mp3",
+      "phonetique": "hast duː aɪn ˈaʊtoː | jaː ɪç ˈhaːbə aɪn ˈaʊtoː | ʊnt duː",
+      "intonation": "montante sur la question, descendante sur la réponse",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Hast du",
+          "lemme": "haben",
+          "classe_grammaticale": "verbe irrégulier",
+          "forme": "2ème personne singulier, présent",
+          "traduction_directe": "As-tu",
+          "phonetique": "hast duː",
+          "conjugaison_complete": {
+            "titre": "haben (avoir) — présent indicatif (très important !)",
+            "formes": [
+              { "pronom": "ich", "forme": "habe", "phonetique": "ˈhaːbə" },
+              { "pronom": "du", "forme": "hast", "phonetique": "hast" },
+              { "pronom": "er/sie/es", "forme": "hat", "phonetique": "hat" },
+              { "pronom": "wir", "forme": "haben", "phonetique": "ˈhaːbən" },
+              { "pronom": "ihr", "forme": "habt", "phonetique": "haːpt" },
+              { "pronom": "sie/Sie", "forme": "haben", "phonetique": "ˈhaːbən" }
+            ]
+          },
+          "mnemonique": "haben = have en anglais — presque le même son et le même sens !"
+        },
+        {
+          "mot": "ein Auto",
+          "lemme": "das Auto",
+          "classe_grammaticale": "nom neutre",
+          "traduction_directe": "une voiture",
+          "phonetique": "aɪn ˈaʊtoː",
+          "note": "Après 'haben' on utilise l’accusatif (mais pour les articles indéfinis il est identique au nominatif sauf au masculin)"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "de": "Ich habe einen Hund, aber ich habe keine Katze.",
+      "fr": "J’ai un chien, mais je n’ai pas de chat.",
+      "audio": "/audio/a1-008-2.mp3",
+      "phonetique": "ɪç ˈhaːbə ˈaɪnən hʊnt | ˈaːbɐ ɪç ˈhaːbə ˈkaɪnə ˈkatsə",
+      "intonation": "informative avec opposition",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "einen Hund",
+          "lemme": "der Hund",
+          "classe_grammaticale": "nom masculin",
+          "traduction_directe": "un chien",
+          "phonetique": "ˈaɪnən hʊnt",
+          "regle_accusatif": "Au masculin : ein → einen (accusatif)"
+        },
+        {
+          "mot": "keine Katze",
+          "lemme": "kein",
+          "classe_grammaticale": "article négatif",
+          "traduction_directe": "pas de chat",
+          "phonetique": "ˈkaɪnə ˈkatsə",
+          "nicht_vs_kein": "kein/keine/keinen remplace 'ein' dans la négation (voir leçon a1-003)"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "de": "Hast du Geschwister? Ja, ich habe einen Bruder und zwei Schwestern.",
+      "fr": "As-tu des frères et sœurs ? Oui, j’ai un frère et deux sœurs.",
+      "audio": "/audio/a1-008-3.mp3",
+      "phonetique": "hast duː ɡəˈʃvɪstɐ | jaː ɪç ˈhaːbə ˈaɪnən ˈbʁuːdɐ ʊnt tsvaɪ ˈʃvɛstɐn",
+      "intonation": "montante sur la question",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Geschwister",
+          "lemme": "die Geschwister",
+          "classe_grammaticale": "nom pluriel (toujours pluriel)",
+          "traduction_directe": "frères et sœurs",
+          "phonetique": "ɡəˈʃvɪstɐ",
+          "note": "Pas d’article indéfini au pluriel → keine Geschwister dans la négation"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "de": "Ich habe wenig Zeit, aber ich habe viele Freunde.",
+      "fr": "J’ai peu de temps, mais j’ai beaucoup d’amis.",
+      "audio": "/audio/a1-008-4.mp3",
+      "phonetique": "ɪç ˈhaːbə ˈveːnɪç tsaɪt | ˈaːbɐ ɪç ˈhaːbə ˈfiːlə ˈfʁɔɪndə",
+      "intonation": "opposition claire",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "wenig / viele",
+          "lemme": "wenig / viel",
+          "classe_grammaticale": "quantificateurs",
+          "traduction_directe": "peu / beaucoup",
+          "phonetique": "ˈveːnɪç / ˈfiːlə",
+          "usage": "wenig Zeit (peu de temps), viele Freunde (beaucoup d’amis)"
+        }
+      ]
+    }
+  ],
+
+  "vocabulaire_complet": [
+    { "mot": "haben", "traduction": "avoir", "type": "verbe irrégulier", "phonetique": "ˈhaːbən", "frequence": "fondamental" },
+    { "mot": "das Auto", "traduction": "la voiture", "type": "nom neutre", "phonetique": "ˈaʊtoː" },
+    { "mot": "der Hund", "traduction": "le chien", "type": "nom masculin", "phonetique": "hʊnt" },
+    { "mot": "die Katze", "traduction": "le chat", "type": "nom féminin", "phonetique": "ˈkatsə" },
+    { "mot": "der Bruder", "traduction": "le frère", "type": "nom masculin", "phonetique": "ˈbʁuːdɐ" },
+    { "mot": "die Schwester", "traduction": "la sœur", "type": "nom féminin", "phonetique": "ˈʃvɛstɐ" },
+    { "mot": "die Geschwister", "traduction": "les frères et sœurs", "type": "nom pluriel", "phonetique": "ɡəˈʃvɪstɐ" },
+    { "mot": "die Zeit", "traduction": "le temps", "type": "nom féminin", "phonetique": "tsaɪt" },
+    { "mot": "der Freund", "traduction": "l’ami", "type": "nom masculin", "phonetique": "fʁɔɪnt" }
+  ],
+
+  "grammaire": [
+    {
+      "titre": "Conjugaison complète de haben",
+      "niveau": "A1",
+      "tableau": [
+        { "pronom": "ich", "forme": "habe" },
+        { "pronom": "du", "forme": "hast" },
+        { "pronom": "er/sie/es", "forme": "hat" },
+        { "pronom": "wir", "forme": "haben" },
+        { "pronom": "ihr", "forme": "habt" },
+        { "pronom": "sie/Sie", "forme": "haben" }
+      ],
+      "mnemonique": "Je habe, tu hast, il hat — comme en anglais I have, you have, he has."
+    },
+    {
+      "titre": "Négation avec kein/keine/keinen",
+      "niveau": "A1",
+      "explication": "On utilise 'kein' quand il y aurait 'ein/eine/einen' dans la phrase positive.",
+      "tableau": [
+        { "positif": "Ich habe ein Auto.", "negatif": "Ich habe kein Auto." },
+        { "positif": "Ich habe einen Hund.", "negatif": "Ich habe keinen Hund." },
+        { "positif": "Ich habe eine Katze.", "negatif": "Ich habe keine Katze." }
+      ]
+    },
+    {
+      "titre": "sein vs haben – différence fondamentale",
+      "niveau": "A1",
+      "tableau": [
+        { "verbe": "sein", "usage": "nationalité, âge, état (Ich bin Franzose / Ich bin müde)" },
+        { "verbe": "haben", "usage": "possession (Ich habe ein Auto / Ich habe Hunger)" }
+      ]
+    }
+  ],
+
+  "exercices": [
+    {
+      "id": "ex-001",
+      "type": "choix_multiple",
+      "difficulte": 1,
+      "question": "Conjugue 'haben' à la 3ème personne du singulier.",
+      "options": ["habe", "hast", "hat", "habt"],
+      "reponse_correcte": 2,
+      "explication": "er/sie/es hat"
+    },
+    {
+      "id": "ex-002",
+      "type": "traduction",
+      "difficulte": 2,
+      "question": "Traduire : 'J’ai un frère mais je n’ai pas de sœur.'",
+      "reponse_attendue": "Ich habe einen Bruder, aber ich habe keine Schwester.",
+      "explication": "accusatif masculin + keine au féminin"
+    },
+    {
+      "id": "ex-010",
+      "type": "situation",
+      "difficulte": 3,
+      "question": "Dis ce que tu as et ce que tu n’as pas (voiture, animal, téléphone, frères/sœurs, temps libre…). Utilise au moins 8 phrases.",
+      "modele_reponse": "Ich habe ein Handy. Ich habe keinen Führerschein. Ich habe zwei Geschwister…",
+      "criteres_evaluation": ["conjugaison de haben correcte", "kein/keine/keinen bien utilisé", "accusatif au masculin"]
+    }
+  ],
+
+  "comprehension": [
+    {
+      "question": "Pourquoi dit-on 'Ich habe Hunger' et non 'Ich bin Hunger' ?",
+      "reponse": "Hunger est une possession/état temporaire → haben. On utilise haben pour la faim, la soif, le temps, les objets."
+    }
+  ],
+
+  "culture": {
+    "titre": "Expressions courantes avec haben",
+    "points": [
+      { "expression": "Ich habe Hunger / Durst / Zeit / keine Lust", "explication": "Très fréquent dans la vie quotidienne en Allemagne, Autriche et Suisse." }
+    ]
+  },
+
+  "astuces_pedagogiques": [
+    {
+      "titre": "Truc pour kein",
+      "astuce": "Si dans la phrase positive tu mettrais 'ein/eine/einen', alors dans la négative tu mets 'kein/keine/keinen'."
+    }
+  ],
+
+  "progression": {
+    "xp": 60,
+    "badges_deblocables": ["Haben-Held", "Besitzprofi"],
+    "niveau_suivant": "a1-009",
+    "apercu_suivant": "Leçon suivante : Les articles définis et indéfinis + nominatif et accusatif"
+  }
+}

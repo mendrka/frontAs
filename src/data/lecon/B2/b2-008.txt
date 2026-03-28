@@ -1,0 +1,111 @@
+{
+  "id": "b2-008",
+  "niveau": "B2",
+  "module": "B2.2",
+  "titre": "Environnement, écologie et durabilité",
+  "objectifs": {
+    "communicatif": "Argumenter sur les mesures de protection de l'environnement, comprendre des rapports sur le changement climatique, proposer des solutions durables pour une entreprise",
+    "linguistique": "Maîtriser le Futur II (supposition), les adjectifs dérivés de participes (der geschützte Bereich) et les connecteurs de restriction (nur wenn, außer wenn)",
+    "culturel": "La conscience écologique en Allemagne (Energiewende) et le système de consigne (Pfandsystem)",
+    "cognitif": "Évaluer des impacts environnementaux et formuler des hypothèses"
+  },
+  "metadonnees": {
+    "duree_estimee_minutes": 70,
+    "difficulte_cognitive": 4,
+    "prerequis": ["b2-007"],
+    "competences_visees": ["compréhension écrite", "argumentation complexe"],
+    "themes_croises": ["écologie", "technologie", "politique"]
+  },
+  "situation": {
+    "contexte": "Discussion sur l'implémentation de serveurs éco-responsables pour ton projet WebBuilder ou sur la gestion des déchets au Stark Café.",
+    "lieu": "Conférence sur le climat / Réunion de projet",
+    "type": "Débat d'experts",
+    "registre": "soutenu / scientifique"
+  },
+  "dialogue_modele": [
+    {
+      "id": 1,
+      "de": "Bis 2045 wird Deutschland seine Klimaziele hoffentlich erreicht haben. Erneuerbare Energien sind dabei entscheidend.",
+      "fr": "D'ici 2045, l'Allemagne aura, espérons-le, atteint ses objectifs climatiques. Les énergies renouvelables sont ici décisives.",
+      "phonetique": "bɪs t͡svaɪˌtaʊzntˈfʏnfʊntˈfɪʁt͡sɪç vɪʁt ˈdɔʏt͡ʃlant ˈzaɪnə ˈkliːmaˌt͡siːlə ˈhɔfn̩tlɪç ɛɐ̯ˈʁaɪçt ˈhaːbən | ɛɐ̯ˈnɔʏbːaːʁə ɛnɛʁˈɡiːən zɪnt daˈbaɪ ɛntˈʃaɪdnt",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "wird erreicht haben",
+          "grammaire": {
+            "titre": "Le Futur II",
+            "explication": "Formation : werden + Partizip II + haben/sein. Utilisé pour exprimer une action qui sera terminée à un moment précis du futur.",
+            "exemple": "Morgen wird er das Projekt abgeschlossen haben."
+          }
+        },
+        {
+          "mot": "Erneuerbare Energien",
+          "traduction": "énergies renouvelables (solaire, éolien, etc.)."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "de": "Der bewusste Umgang mit Ressourcen ist nicht nur ökologisch, sondern auch ökonomisch sinnvoll.",
+      "fr": "L'utilisation consciente des ressources est non seulement écologique, mais aussi judicieuse d'un point de vue économique.",
+      "phonetique": "deːɐ̯ bəˈvʊstə ˈʊmˌɡaŋ mɪt ʁɛˈsʊʁsn̩ ɪst nɪçt nuːɐ̯ økoˈloːɡɪʃ | ˈzɔndɐn aʊx økoˈnoːmɪʃ ˈzɪnfɔl",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "bewusste",
+          "grammaire": "Adjectif dérivé du participe passé 'bewusst' (conscient/connu).",
+          "traduction": "consciente / délibérée."
+        },
+        {
+          "mot": "nicht nur ... sondern auch",
+          "usage": "Connecteur double pour renforcer un argument."
+        }
+      ]
+    }
+  ],
+  "grammaire": [
+    {
+      "titre": "Les participes utilisés comme adjectifs",
+      "explication": "On peut transformer un verbe en adjectif pour qualifier un nom de manière précise.",
+      "tableau": [
+        { "Type": "Participe I (Action en cours)", "Structure": "Verbe + d + terminaison", "Exemple": "die kochende Milch (le lait qui bout)" },
+        { "Type": "Participe II (Action terminée)", "Structure": "Participe II + terminaison", "Exemple": "die gebrauchte Hardware (le matériel d'occasion)" }
+      ]
+    },
+    {
+      "titre": "Le Futur II (La supposition)",
+      "explication": "On l'utilise aussi pour faire une supposition sur le passé.",
+      "exemple": "Er wird wohl das Handy vergessen haben. (Il a sans doute dû oublier son portable.)"
+    }
+  ],
+  "vocabulaire_cles": [
+    { "de": "die Nachhaltigkeit", "fr": "la durabilité / le développement durable" },
+    { "de": "der Umweltschutz", "fr": "la protection de l'environnement" },
+    { "de": "die Müllvermeidung", "fr": "la réduction des déchets" },
+    { "de": "der ökologische Fußabdruck", "fr": "l'empreinte écologique" },
+    { "de": "erneuerbar vs. fossile Energieträger", "fr": "renouvelable vs. énergies fossiles" }
+  ],
+  "exercices": [
+    {
+      "id": "ex-b2-008-1",
+      "type": "grammaire",
+      "question": "Transformez au Futur II : 'Ich beende die Arbeit bis morgen.'",
+      "reponse_attendue": "Bis morgen werde ich die Arbeit beendet haben.",
+      "explication": "Structure : Futur de l'auxiliaire + Participe II + Infinitif de l'auxiliaire."
+    },
+    {
+      "id": "ex-b2-008-2",
+      "type": "vocabulaire",
+      "question": "Comment dit-on 'développement durable' en un seul mot ?",
+      "reponse_attendue": "Die Nachhaltigkeit",
+      "explication": "C'est le mot central de toute discussion écologique en Allemagne."
+    }
+  ],
+  "culture": {
+    "titre": "Das Pfandsystem",
+    "explication": "En Allemagne, presque toutes les bouteilles (plastique et verre) ont une consigne (Pfand). On les rapporte au supermarché dans des automates pour récupérer entre 0,08€ et 0,25€. C'est un réflexe quotidien qui illustre l'engagement pour le recyclage."
+  },
+  "progression": {
+    "xp": 300,
+    "prochain_id": "b2-009",
+    "apercu_suivant": "Leçon B2.2-4 : Mobilité, transports et voyages (Voyages d'affaires et durables)."
+  }
+}

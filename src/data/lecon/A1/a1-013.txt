@@ -1,0 +1,218 @@
+{
+  "id": "a1-013",
+  "niveau": "A1",
+  "module": "A1.2",
+  "titre": "Les professions",
+  "objectifs": {
+    "communicatif": "Dire sa profession, demander la profession des autres, parler de ce qu’on fait au travail et décrire simplement son métier",
+    "linguistique": "Maîtriser les noms de professions (avec article et genre), la structure 'Ich bin + profession', 'Ich arbeite als + profession', les verbes arbeiten et sein, les adjectifs liés au travail (interessant, stressig, gut…)",
+    "culturel": "Connaître les professions courantes en pays germanophones et l’importance de la formation (Ausbildung)",
+    "cognitif": "Utiliser correctement les articles avec les professions et distinguer 'sein' (identité) et 'arbeiten als' (activité)"
+  },
+  "metadonnees": {
+    "duree_estimee_minutes": 40,
+    "difficulte_cognitive": 2,
+    "prerequis": ["a1-012"],
+    "competences_visees": ["expression orale", "description professionnelle"],
+    "themes_croises": ["vie quotidienne", "travail"]
+  },
+
+  "situation": {
+    "contexte": "Suite de la soirée internationale à Vienne – on parle de ce que chacun fait dans la vie",
+    "lieu": "Appartement privé, Vienne (Wien), Autriche",
+    "type": "conversation informelle",
+    "registre": "informel à semi-formel"
+  },
+
+  "dialogue": [
+    {
+      "id": 1,
+      "de": "Was bist du von Beruf? Ich bin Lehrer.",
+      "fr": "Quelle est ta profession ? Je suis professeur.",
+      "audio": "/audio/a1-013-1.mp3",
+      "phonetique": "vas bɪst duː fɔn bəˈʁoːf | ɪç bɪn ˈleːʁɐ",
+      "intonation": "montante sur la question, descendante sur la réponse",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Was bist du von Beruf?",
+          "lemme": "der Beruf",
+          "classe_grammaticale": "expression fixe",
+          "traduction_directe": "Quelle est ta profession ?",
+          "phonetique": "bəˈʁoːf",
+          "variante_courante": "Was machst du beruflich?"
+        },
+        {
+          "mot": "Ich bin Lehrer",
+          "lemme": "sein",
+          "classe_grammaticale": "structure identité",
+          "traduction_directe": "Je suis professeur",
+          "phonetique": "ˈleːʁɐ",
+          "regle_importante": "Pour les professions : Ich bin + profession (sans article !)"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "de": "Ich arbeite als Krankenschwester in einem Krankenhaus.",
+      "fr": "Je travaille comme infirmière dans un hôpital.",
+      "audio": "/audio/a1-013-2.mp3",
+      "phonetique": "ɪç ˈaʁbaɪtə als ˈkʁaŋkənˌʃvɛstɐ ɪn ˈaɪnəm ˈkʁaŋkənˌhaʊs",
+      "intonation": "informative",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "arbeite als",
+          "lemme": "arbeiten als",
+          "classe_grammaticale": "structure professionnelle",
+          "traduction_directe": "travaille comme",
+          "phonetique": "ˈaʁbaɪtə als",
+          "note": "als = comme (profession)"
+        },
+        {
+          "mot": "Krankenschwester",
+          "lemme": "die Krankenschwester",
+          "classe_grammaticale": "nom féminin",
+          "traduction_directe": "infirmière",
+          "phonetique": "ˈkʁaŋkənˌʃvɛstɐ"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "de": "Mein Bruder ist Ingenieur. Er arbeitet bei Siemens.",
+      "fr": "Mon frère est ingénieur. Il travaille chez Siemens.",
+      "audio": "/audio/a1-013-3.mp3",
+      "phonetique": "maɪn ˈbʁuːdɐ ɪst ɪŋɡeˈniːɐ̯ | eːɐ̯ ˈaʁbaɪtət baɪ ˈziːməns",
+      "intonation": "informative",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Ingenieur",
+          "lemme": "der Ingenieur",
+          "classe_grammaticale": "nom masculin",
+          "traduction_directe": "ingénieur",
+          "phonetique": "ɪŋɡeˈniːɐ̯"
+        },
+        {
+          "mot": "bei Siemens",
+          "lemme": "bei",
+          "classe_grammaticale": "préposition",
+          "traduction_directe": "chez Siemens",
+          "phonetique": "baɪ",
+          "note": "bei + entreprise = travailler chez"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "de": "Meine Arbeit ist interessant, aber manchmal stressig.",
+      "fr": "Mon travail est intéressant, mais parfois stressant.",
+      "audio": "/audio/a1-013-4.mp3",
+      "phonetique": "ˈmaɪnə aʁˈbaɪt ɪst ɪntəʁɛˈsant | ˈaːbɐ ˈmançmaːl ˈʃtʁɛsɪç",
+      "intonation": "nuancée",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "stressig",
+          "lemme": "stressig",
+          "classe_grammaticale": "adjectif",
+          "traduction_directe": "stressant",
+          "phonetique": "ˈʃtʁɛsɪç"
+        }
+      ]
+    }
+  ],
+
+  "vocabulaire_complet": [
+    { "mot": "der Beruf", "traduction": "la profession", "type": "nom masculin", "phonetique": "bəˈʁoːf" },
+    { "mot": "arbeiten", "traduction": "travailler", "type": "verbe", "phonetique": "ˈaʁbaɪtən" },
+    { "mot": "als", "traduction": "comme (profession)", "type": "préposition", "phonetique": "als" },
+    { "mot": "der Lehrer", "traduction": "le professeur (homme)", "type": "nom masculin", "phonetique": "ˈleːʁɐ" },
+    { "mot": "die Lehrerin", "traduction": "la professeur (femme)", "type": "nom féminin", "phonetique": "ˈleːʁəʁɪn" },
+    { "mot": "der Arzt", "traduction": "le médecin (homme)", "type": "nom masculin", "phonetique": "aʁtst" },
+    { "mot": "die Ärztin", "traduction": "la médecin (femme)", "type": "nom féminin", "phonetique": "ˈɛʁtstɪn" },
+    { "mot": "der Ingenieur", "traduction": "l’ingénieur", "type": "nom masculin", "phonetique": "ɪŋɡeˈniːɐ̯" },
+    { "mot": "die Krankenschwester", "traduction": "l’infirmière", "type": "nom féminin", "phonetique": "ˈkʁaŋkənˌʃvɛstɐ" },
+    { "mot": "stressig", "traduction": "stressant", "type": "adjectif", "phonetique": "ˈʃtʁɛsɪç" },
+    { "mot": "interessant", "traduction": "intéressant", "type": "adjectif", "phonetique": "ɪntəʁɛˈsant" }
+  ],
+
+  "grammaire": [
+    {
+      "titre": "Dire sa profession",
+      "niveau": "A1",
+      "explication": "Deux structures principales :",
+      "tableau": [
+        { "structure": "Ich bin + profession", "exemple": "Ich bin Lehrer." },
+        { "structure": "Ich arbeite als + profession", "exemple": "Ich arbeite als Krankenschwester." }
+      ]
+    },
+    {
+      "titre": "Professions : genre et article",
+      "niveau": "A1",
+      "note": "La plupart des professions ont une forme masculine et une forme féminine (-in).",
+      "tableau": [
+        { "masculin": "der Lehrer", "féminin": "die Lehrerin" },
+        { "masculin": "der Arzt", "féminin": "die Ärztin" },
+        { "masculin": "der Ingenieur", "féminin": "die Ingenieurin" }
+      ]
+    }
+  ],
+
+  "exercices": [
+    {
+      "id": "ex-001",
+      "type": "choix_multiple",
+      "difficulte": 1,
+      "question": "Comment dit-on 'Je suis infirmière' ?",
+      "options": ["Ich bin Krankenschwester.", "Ich habe Krankenschwester.", "Ich arbeite Krankenschwester."],
+      "reponse_correcte": 0,
+      "explication": "Ich bin + profession (sans article)"
+    },
+    {
+      "id": "ex-002",
+      "type": "traduction",
+      "difficulte": 2,
+      "question": "Traduire : 'Mon père est ingénieur. Il travaille chez BMW. Mon travail est intéressant mais stressant.'",
+      "reponse_attendue": "Mein Vater ist Ingenieur. Er arbeitet bei BMW. Meine Arbeit ist interessant, aber stressig.",
+      "explication": "Ich bin + profession / bei + entreprise"
+    },
+    {
+      "id": "ex-010",
+      "type": "situation",
+      "difficulte": 3,
+      "question": "Présente ta profession ou celle de 3 membres de ta famille : métier, lieu de travail, ce que tu aimes ou n’aimes pas dans le travail.",
+      "modele_reponse": "Ich bin Student. Ich arbeite als Kellner. Meine Mutter ist Lehrerin. Ihre Arbeit ist interessant, aber manchmal stressig.",
+      "criteres_evaluation": ["Ich bin / Ich arbeite als correct", "genre des professions", "adjectifs bien utilisés"]
+    }
+  ],
+
+  "comprehension": [
+    {
+      "question": "Quelle est la différence entre 'Ich bin Lehrer' et 'Ich arbeite als Lehrer' ?",
+      "reponse": "'Ich bin Lehrer' = c’est mon identité / ma profession principale. 'Ich arbeite als Lehrer' = je travaille comme professeur (peut être temporaire)."
+    }
+  ],
+
+  "culture": {
+    "titre": "Les professions en pays germanophones",
+    "points": [
+      { "sujet": "Ausbildung", "explication": "Beaucoup de métiers s’apprennent par une formation en alternance (Ausbildung) de 2 à 3 ans. C’est très valorisé." }
+    ]
+  },
+
+  "astuces_pedagogiques": [
+    {
+      "titre": "Truc pour les professions",
+      "astuce": "Pour les femmes : ajoute souvent '-in' (Lehrer → Lehrerin, Arzt → Ärztin). Pour dire 'je suis' → toujours 'Ich bin' sans article."
+    }
+  ],
+
+  "progression": {
+    "xp": 70,
+    "badges_deblocables": ["Berufs-Profi", "Arbeits-Meister"],
+    "niveau_suivant": "a1-014",
+    "apercu_suivant": "Leçon suivante : Les verbes sein et haben (révision approfondie)"
+  }
+}

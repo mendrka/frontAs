@@ -1,0 +1,201 @@
+{
+  "id": "a2-005",
+  "niveau": "A2",
+  "module": "A2.1",
+  "titre": "Parler de son travail quotidien",
+  "objectifs": {
+    "communicatif": "Décrire son travail, ses tâches quotidiennes, son lieu de travail, ses horaires et ce qu’on aime ou n’aime pas dans son métier",
+    "linguistique": "Maîtriser le vocabulaire professionnel (Kollege, Chef, Büro, Meeting…), les verbes de routine au Perfekt et au présent, les expressions 'Ich arbeite als…', 'Meine Aufgabe ist…', 'jeden Tag', 'von … bis …'",
+    "culturel": "Connaître la culture du travail en Allemagne/Autriche (ponctualité, pause déjeuner, équilibre vie pro/vie perso, 'Feierabend')",
+    "cognitif": "Utiliser le Perfekt pour raconter une journée de travail et le présent pour décrire des habitudes"
+  },
+  "metadonnees": {
+    "duree_estimee_minutes": 45,
+    "difficulte_cognitive": 2,
+    "prerequis": ["a2-004"],
+    "competences_visees": ["narration", "description professionnelle"],
+    "themes_croises": ["travail", "vie quotidienne"]
+  },
+
+  "situation": {
+    "contexte": "Conversation entre amis ou collègues sur le quotidien professionnel",
+    "lieu": "Café à Vienne (Wien), Autriche",
+    "type": "conversation informelle",
+    "registre": "informel"
+  },
+
+  "dialogue": [
+    {
+      "id": 1,
+      "de": "Was machst du beruflich? Ich arbeite als Softwareentwickler in einem IT-Unternehmen.",
+      "fr": "Que fais-tu comme métier ? Je travaille comme développeur logiciel dans une entreprise IT.",
+      "audio": "/audio/a2-005-1.mp3",
+      "phonetique": "vas maxst duː bəˈʁuːflɪç | ɪç ˈaʁbaɪtə als ˈzɔftvɛːɐ̯ˌɛntvɪklɐ ɪn ˈaɪnəm iːteː ʊntɐˈneːmən",
+      "intonation": "montante sur la question",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Was machst du beruflich?",
+          "lemme": "beruflich",
+          "classe_grammaticale": "question sur le métier",
+          "traduction_directe": "Que fais-tu comme métier ?",
+          "phonetique": "bəˈʁuːflɪç"
+        },
+        {
+          "mot": "Ich arbeite als",
+          "lemme": "arbeiten als",
+          "classe_grammaticale": "structure professionnelle",
+          "traduction_directe": "Je travaille comme",
+          "phonetique": "ˈaʁbaɪtə als"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "de": "Jeden Morgen fahre ich mit der U-Bahn ins Büro. Dort habe ich Meetings und schreibe Code.",
+      "fr": "Chaque matin je prends le métro pour aller au bureau. Là-bas j’ai des réunions et j’écris du code.",
+      "audio": "/audio/a2-005-2.mp3",
+      "phonetique": "ˈjeːdən ˈmɔʁɡən ˈfaːʁə ɪç mɪt deːɐ̯ ˈuːbaːn ɪns ˈbyːʁo | dɔʁt ˈhaːbə ɪç ˈmiːtɪŋs ʊnt ˈʃraɪbə koːt",
+      "intonation": "descriptive",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Jeden Morgen",
+          "lemme": "jeden Morgen",
+          "classe_grammaticale": "expression de fréquence",
+          "traduction_directe": "Chaque matin",
+          "phonetique": "ˈjeːdən ˈmɔʁɡən"
+        },
+        {
+          "mot": "fahre ich … ins Büro",
+          "lemme": "fahren",
+          "classe_grammaticale": "verbe de mouvement",
+          "traduction_directe": "je vais au bureau",
+          "phonetique": "ˈfaːʁə"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "de": "Meine Arbeit ist interessant, aber manchmal sehr stressig.",
+      "fr": "Mon travail est intéressant, mais parfois très stressant.",
+      "audio": "/audio/a2-005-3.mp3",
+      "phonetique": "ˈmaɪnə aʁˈbaɪt ɪst ɪntəʁɛˈsant | ˈaːbɐ ˈmançmaːl zeːɐ̯ ˈʃtʁɛsɪç",
+      "intonation": "nuancée",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "stressig",
+          "lemme": "stressig",
+          "classe_grammaticale": "adjectif",
+          "traduction_directe": "stressant",
+          "phonetique": "ˈʃtʁɛsɪç"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "de": "Um 17 Uhr ist Feierabend. Dann gehe ich nach Hause und entspanne mich.",
+      "fr": "À 17 heures c’est la fin de la journée de travail. Ensuite je rentre à la maison et je me détends.",
+      "audio": "/audio/a2-005-4.mp3",
+      "phonetique": "ʊm ˈfʏnftseːn uːɐ̯ ɪst ˈfaɪɐ̯ˌaːbənt | dan ˈɡeːə ɪç nax ˈhaʊzə ʊnt ɛntˈʃpanə mɪç",
+      "intonation": "soulagée",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Feierabend",
+          "lemme": "der Feierabend",
+          "classe_grammaticale": "nom masculin (typiquement allemand)",
+          "traduction_directe": "fin de la journée de travail",
+          "phonetique": "ˈfaɪɐ̯ˌaːbənt",
+          "note": "Mot très important en allemand pour marquer la séparation travail / vie privée"
+        }
+      ]
+    }
+  ],
+
+  "vocabulaire_complet": [
+    { "mot": "beruflich", "traduction": "professionnel", "type": "adjectif", "phonetique": "bəˈʁuːflɪç" },
+    { "mot": "das Büro", "traduction": "le bureau", "type": "nom neutre", "phonetique": "ˈbyːʁo" },
+    { "mot": "das Meeting", "traduction": "la réunion", "type": "nom neutre", "phonetique": "ˈmiːtɪŋ" },
+    { "mot": "der Kollege / die Kollegin", "traduction": "le collègue / la collègue", "type": "nom", "phonetique": "koˈleːɡə" },
+    { "mot": "der Chef / die Chefin", "traduction": "le chef / la chef", "type": "nom", "phonetique": "ʃɛf" },
+    { "mot": "Feierabend", "traduction": "fin de la journée de travail", "type": "nom masculin", "phonetique": "ˈfaɪɐ̯ˌaːbənt" },
+    { "mot": "entspannen", "traduction": "se détendre", "type": "verbe", "phonetique": "ɛntˈʃpanən" }
+  ],
+
+  "grammaire": [
+    {
+      "titre": "Décrire des habitudes au présent",
+      "niveau": "A2",
+      "exemples": [
+        "Jeden Morgen fahre ich mit der U-Bahn.",
+        "Um 17 Uhr ist Feierabend."
+      ]
+    },
+    {
+      "titre": "Raconter une journée de travail au Perfekt",
+      "niveau": "A2",
+      "exemples": [
+        "Ich habe den ganzen Tag Code geschrieben.",
+        "Dann bin ich nach Hause gegangen."
+      ]
+    }
+  ],
+
+  "exercices": [
+    {
+      "id": "ex-001",
+      "type": "choix_multiple",
+      "difficulte": 1,
+      "question": "Comment dit-on 'Je travaille comme développeur' ?",
+      "options": ["Ich bin Softwareentwickler.", "Ich arbeite als Softwareentwickler.", "Ich habe Softwareentwickler."],
+      "reponse_correcte": 1,
+      "explication": "arbeiten als + profession"
+    },
+    {
+      "id": "ex-002",
+      "type": "traduction",
+      "difficulte": 2,
+      "question": "Traduire : 'Chaque matin je vais au bureau en métro. L’après-midi j’ai des réunions. À 17 heures c’est la fin de la journée et je me détends.'",
+      "reponse_attendue": "Jeden Morgen fahre ich mit der U-Bahn ins Büro. Nachmittags habe ich Meetings. Um 17 Uhr ist Feierabend und ich entspanne mich.",
+      "explication": "habitudes + Feierabend"
+    },
+    {
+      "id": "ex-010",
+      "type": "situation",
+      "difficulte": 3,
+      "question": "Décris ta journée de travail typique (horaires, tâches, ce que tu aimes ou n’aimes pas).",
+      "modele_reponse": "Ich arbeite als … Jeden Morgen stehe ich um … auf. Ich fahre … ins Büro. Meine Aufgaben sind … Um … Uhr ist Feierabend. Ich mag meine Arbeit, weil …",
+      "criteres_evaluation": ["vocabulaire professionnel", "adverbes temporels", "Perfekt et présent mélangés"]
+    }
+  ],
+
+  "comprehension": [
+    {
+      "question": "Qu’est-ce que 'Feierabend' signifie exactement ?",
+      "reponse": "C’est le moment où on arrête le travail et qu’on passe en mode 'temps libre'. C’est un concept très important dans la culture allemande."
+    }
+  ],
+
+  "culture": {
+    "titre": "Le travail en Allemagne/Autriche",
+    "points": [
+      { "sujet": "Feierabend", "explication": "Après Feierabend, on ne parle plus de travail. L’équilibre vie professionnelle / vie privée est très respecté." }
+    ]
+  },
+
+  "astuces_pedagogiques": [
+    {
+      "titre": "Structure pour décrire son travail",
+      "astuce": "Ich arbeite als … → Jeden Tag … → Um … Uhr … → Feierabend ist um …"
+    }
+  ],
+
+  "progression": {
+    "xp": 90,
+    "badges_deblocables": ["Arbeitsalltag-Profi", "Berufs-Narrator"],
+    "niveau_suivant": "a2-006",
+    "apercu_suivant": "Leçon suivante : Parler de projets et ambitions"
+  }
+}

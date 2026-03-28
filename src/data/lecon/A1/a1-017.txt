@@ -1,0 +1,208 @@
+{
+  "id": "a1-017",
+  "niveau": "A1",
+  "module": "A1.3",
+  "titre": "Commander dans un café ou un restaurant",
+  "objectifs": {
+    "communicatif": "Commander des boissons et des plats simples, demander l’addition, dire ce qu’on veut et ce qu’on ne veut pas, faire des demandes polies",
+    "linguistique": "Maîtriser les expressions de commande ('Ich hätte gern…', 'Ich nehme…', 'Für mich…'), le vocabulaire des boissons et plats de base, la politesse ('bitte', 'danke', 'Entschuldigung'), les questions 'Was möchten Sie?'",
+    "culturel": "Connaître les habitudes de commande en cafés et restaurants germanophones (service rapide, pourboire, tutoiement ou vouvoiement)",
+    "cognitif": "Utiliser les verbes möchten, nehmen, haben dans un contexte de service"
+  },
+  "metadonnees": {
+    "duree_estimee_minutes": 40,
+    "difficulte_cognitive": 2,
+    "prerequis": ["a1-016"],
+    "competences_visees": ["expression orale", "situations pratiques"],
+    "themes_croises": ["vie quotidienne", "alimentation"]
+  },
+
+  "situation": {
+    "contexte": "Les participants de la soirée vont dans un petit café viennois le lendemain",
+    "lieu": "Café traditionnel à Vienne (Wien), Autriche",
+    "type": "situation de service",
+    "registre": "semi-formel (avec le serveur)"
+  },
+
+  "dialogue": [
+    {
+      "id": 1,
+      "de": "Guten Tag! Was möchten Sie trinken? Ich hätte gern einen Kaffee, bitte.",
+      "fr": "Bonjour ! Que souhaitez-vous boire ? Je voudrais un café, s’il vous plaît.",
+      "audio": "/audio/a1-017-1.mp3",
+      "phonetique": "ˈɡuːtn̩ taːk | vas ˈmœçtən ziː ˈtʁɪŋkən | ɪç ˈhɛtə ɡɛʁn ˈaɪnən kaˈfeː ˈbɪtə",
+      "intonation": "polie et claire",
+      "registre": "semi-formel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Was möchten Sie?",
+          "lemme": "möchten",
+          "classe_grammaticale": "verbe modal de politesse",
+          "traduction_directe": "Que souhaitez-vous ?",
+          "phonetique": "ˈmœçtən",
+          "note": "möchten = forme polie de wollen (vouloir)"
+        },
+        {
+          "mot": "Ich hätte gern",
+          "lemme": "hätte gern",
+          "classe_grammaticale": "conditionnel de politesse",
+          "traduction_directe": "Je voudrais",
+          "phonetique": "ˈhɛtə ɡɛʁn",
+          "regle": "Très courante pour commander poliment"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "de": "Für mich einen Apfelsaft und ein Stück Apfelstrudel, bitte.",
+      "fr": "Pour moi un jus de pomme et une part de strudel aux pommes, s’il vous plaît.",
+      "audio": "/audio/a1-017-2.mp3",
+      "phonetique": "fʏʁ mɪç ˈaɪnən ˈapfəlˌzaft ʊnt aɪn ʃtʏk ˈapfəlˌʃtʁuːdəl ˈbɪtə",
+      "intonation": "aimable",
+      "registre": "semi-formel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Für mich",
+          "lemme": "für",
+          "classe_grammaticale": "expression de commande",
+          "traduction_directe": "Pour moi",
+          "phonetique": "fʏʁ mɪç"
+        },
+        {
+          "mot": "ein Stück Apfelstrudel",
+          "lemme": "das Stück",
+          "classe_grammaticale": "quantité",
+          "traduction_directe": "une part de strudel aux pommes",
+          "phonetique": "ʃtʏk"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "de": "Möchten Sie noch etwas? Nein danke, die Rechnung bitte.",
+      "fr": "Voulez-vous encore quelque chose ? Non merci, l’addition s’il vous plaît.",
+      "audio": "/audio/a1-017-3.mp3",
+      "phonetique": "ˈmœçtən ziː nɔx ˈɛtvas | naɪn ˈdaŋkə | diː ˈʁɛçnʊŋ ˈbɪtə",
+      "intonation": "polie",
+      "registre": "semi-formel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "die Rechnung",
+          "lemme": "die Rechnung",
+          "classe_grammaticale": "nom féminin",
+          "traduction_directe": "l’addition",
+          "phonetique": "ˈʁɛçnʊŋ"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "de": "Zahlen bitte! Stimmt so. Vielen Dank!",
+      "fr": "L’addition s’il vous plaît ! Gardez la monnaie. Merci beaucoup !",
+      "audio": "/audio/a1-017-4.mp3",
+      "phonetique": "ˈtsaːlən ˈbɪtə | ʃtɪmt zoː | ˈfiːlən daŋk",
+      "intonation": "conclue et reconnaissante",
+      "registre": "semi-formel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Stimmt so",
+          "lemme": "stimmen",
+          "classe_grammaticale": "expression pour le pourboire",
+          "traduction_directe": "Gardez la monnaie",
+          "phonetique": "ʃtɪmt zoː"
+        }
+      ]
+    }
+  ],
+
+  "vocabulaire_complet": [
+    { "mot": "möchten", "traduction": "vouloir (poliment)", "type": "verbe modal", "phonetique": "ˈmœçtən" },
+    { "mot": "hätte gern", "traduction": "je voudrais", "type": "expression", "phonetique": "ˈhɛtə ɡɛʁn" },
+    { "mot": "die Rechnung", "traduction": "l’addition", "type": "nom féminin", "phonetique": "ˈʁɛçnʊŋ" },
+    { "mot": "zahlen", "traduction": "payer", "type": "verbe", "phonetique": "ˈtsaːlən" },
+    { "mot": "der Kaffee", "traduction": "le café", "type": "nom masculin", "phonetique": "kaˈfeː" },
+    { "mot": "der Apfelsaft", "traduction": "le jus de pomme", "type": "nom masculin", "phonetique": "ˈapfəlˌzaft" },
+    { "mot": "der Apfelstrudel", "traduction": "le strudel aux pommes", "type": "nom masculin", "phonetique": "ˈapfəlˌʃtʁuːdəl" },
+    { "mot": "bitte", "traduction": "s’il vous plaît", "type": "expression", "phonetique": "ˈbɪtə" }
+  ],
+
+  "grammaire": [
+    {
+      "titre": "Expressions de commande polies",
+      "niveau": "A1",
+      "tableau": [
+        { "expression": "Ich hätte gern…", "usage": "Je voudrais…" },
+        { "expression": "Für mich…", "usage": "Pour moi…" },
+        { "expression": "Ich nehme…", "usage": "Je prends…" },
+        { "expression": "… bitte.", "usage": "… s’il vous plaît." }
+      ]
+    },
+    {
+      "titre": "Vocabulaire café/restaurant de base",
+      "niveau": "A1",
+      "tableau": [
+        { "plat/boisson": "Kaffee", "fr": "café" },
+        { "plat/boisson": "Tee", "fr": "thé" },
+        { "plat/boisson": "Apfelsaft", "fr": "jus de pomme" },
+        { "plat/boisson": "Apfelstrudel", "fr": "strudel aux pommes" },
+        { "plat/boisson": "Wiener Schnitzel", "fr": "escalope viennoise" }
+      ]
+    }
+  ],
+
+  "exercices": [
+    {
+      "id": "ex-001",
+      "type": "choix_multiple",
+      "difficulte": 1,
+      "question": "Comment dit-on poliment 'Je voudrais un café' ?",
+      "options": ["Ich will einen Kaffee.", "Ich hätte gern einen Kaffee.", "Ich nehme einen Kaffee ohne bitte."],
+      "reponse_correcte": 1,
+      "explication": "Ich hätte gern… est la forme la plus polie"
+    },
+    {
+      "id": "ex-002",
+      "type": "traduction",
+      "difficulte": 2,
+      "question": "Traduire : 'Pour moi un jus de pomme et l’addition, s’il vous plaît. Gardez la monnaie.'",
+      "reponse_attendue": "Für mich einen Apfelsaft und die Rechnung bitte. Stimmt so.",
+      "explication": "Für mich + bitte + Stimmt so"
+    },
+    {
+      "id": "ex-010",
+      "type": "situation",
+      "difficulte": 3,
+      "question": "Tu es au café. Commande un petit-déjeuner complet (boisson + plat), pose une question sur le menu, demande l’addition et laisse un pourboire.",
+      "modele_reponse": "Guten Tag! Ich hätte gern einen Kaffee und ein Croissant. Was ist im Wiener Frühstück? Die Rechnung bitte. Stimmt so. Vielen Dank!",
+      "criteres_evaluation": ["Ich hätte gern / Für mich", "politesse (bitte/danke)", "vocabulaire café correct"]
+    }
+  ],
+
+  "comprehension": [
+    {
+      "question": "Pourquoi utilise-t-on 'Ich hätte gern' au lieu de 'Ich will' quand on commande ?",
+      "reponse": "'Ich hätte gern' est beaucoup plus poli et courant dans les situations de service. 'Ich will' est trop direct."
+    }
+  ],
+
+  "culture": {
+    "titre": "Commander en Autriche et Allemagne",
+    "points": [
+      { "sujet": "Service", "explication": "On dit souvent 'bitte' en fin de phrase. Le pourboire (Trinkgeld) est de 5-10 %, on arrondit souvent ('Stimmt so')." }
+    ]
+  },
+
+  "astuces_pedagogiques": [
+    {
+      "titre": "Phrase magique pour commander",
+      "astuce": "Ich hätte gern … bitte. → fonctionne partout (café, restaurant, boulangerie)."
+    }
+  ],
+
+  "progression": {
+    "xp": 80,
+    "badges_deblocables": ["Bestell-Profi", "Café-Meister"],
+    "niveau_suivant": "a1-018",
+    "apercu_suivant": "Leçon suivante : Faire ses courses simples (supermarché)"
+  }
+}

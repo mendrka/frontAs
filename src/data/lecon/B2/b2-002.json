@@ -1,0 +1,115 @@
+{
+  "id": "b2-002",
+  "niveau": "B2",
+  "module": "B2.1",
+  "titre": "Comprendre des réunions et des discussions techniques",
+  "objectifs": {
+    "communicatif": "Suivre une discussion complexe, intervenir pour clarifier un point, exprimer un accord ou un désaccord nuancé, rapporter les propos d'un collègue",
+    "linguistique": "Maîtriser le Konjunktiv I (discours rapporté), les verbes à particules séparables complexes et les expressions d'interruption (Darf ich kurz unterbrechen?)",
+    "culturel": "La structure des réunions en Allemagne : l'importance de l'ordre du jour (Tagesordnung) et le respect du temps de parole",
+    "cognitif": "Synthétiser des avis divergents pour proposer une solution"
+  },
+  "metadonnees": {
+    "duree_estimee_minutes": 75,
+    "difficulte_cognitive": 4,
+    "prerequis": ["b2-001"],
+    "competences_visees": ["compréhension orale", "interaction professionnelle"],
+    "themes_croises": ["travail d'équipe", "technologie", "management"]
+  },
+  "situation": {
+    "contexte": "Une réunion technique sur l'architecture de ton projet WebBuilder. Tes collègues discutent de l'intégration d'une nouvelle API.",
+    "lieu": "Bureau / Visioconférence (Zoom/Teams)",
+    "type": "Réunion de travail",
+    "registre": "professionnel / soutenu"
+  },
+  "dialogue": [
+    {
+      "id": 1,
+      "de": "Darf ich kurz unterbrechen? Unser Entwickler sagte, die API sei noch nicht stabil genug.",
+      "fr": "Puis-je vous interrompre un instant ? Notre développeur a dit que l'API ne serait pas encore assez stable.",
+      "phonetique": "daʁf ɪç kʊʁt͡s ˌʊntɐˈbʁɛçən | ˈʊnzɐ ɛntˈvɪklɐ ˈzaːktə | diː aː-peː-ˈiː zaɪ nɔx nɪçt ʃtaˈbiːl ɡəˈnuːk",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Darf ich kurz unterbrechen?",
+          "usage": "La phrase magique pour prendre la parole poliment sans paraître agressif."
+        },
+        {
+          "mot": "sei",
+          "grammaire": "Konjunktiv I du verbe 'sein'.",
+          "usage": "Utilisé pour rapporter les paroles de quelqu'un d'autre sans prendre position sur la véracité de l'information."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "de": "Das sehe ich auch so. Wir sollten uns darauf konzentrieren, die bestehende Architektur zu optimieren.",
+      "fr": "C'est aussi mon avis. Nous devrions nous concentrer sur l'optimisation de l'architecture existante.",
+      "phonetique": "das ˈzeːə ɪç aʊx zoː | viːɐ̯ ˈzɔltən ʊns daˈʁaʊf kɔnt͡sɛnˈtʁiːʁən | diː bəˈʃteːəndə aʁçitɛkˈtuːɐ̯ t͡suː ɔptiˈmiːʁən",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Das sehe ich auch so",
+          "expression": "Façon élégante d'approuver une idée en réunion."
+        },
+        {
+          "mot": "bestehende",
+          "grammaire": "Participe présent utilisé comme adjectif (bestehen + d).",
+          "traduction": "existante / actuelle."
+        }
+      ]
+    }
+  ],
+  "grammaire": [
+    {
+      "titre": "Le Konjunktiv I (Discours rapporté)",
+      "explication": "Essentiel pour rapporter des faits en réunion sans dire 'je pense que'. On modifie le radical du verbe.",
+      "tableau": [
+        { "Verbe": "sein", "Konjunktiv I": "er sei", "Exemple": "Er sagte, er sei fertig." },
+        { "Verbe": "haben", "Konjunktiv I": "er habe", "Exemple": "Sie sagte, sie habe Zeit." },
+        { "Verbe": "kommen", "Konjunktiv I": "er komme", "Exemple": "Er sagte, er komme morgen." }
+      ],
+      "note": "Si le Konjunktiv I est identique au présent, on utilise le Konjunktiv II par sécurité."
+    },
+    {
+      "titre": "Interrompre et réagir",
+      "liste": [
+        { "expression": "Einen Moment bitte, dazu hätte ich eine Frage.", "usage": "Pour poser une question." },
+        { "expression": "Ich bin da anderer Meinung.", "usage": "Pour exprimer un désaccord poli." },
+        { "expression": "Könnten Sie das bitte näher erläutern?", "usage": "Pour demander des explications techniques." }
+      ]
+    }
+  ],
+  "vocabulaire_cles": [
+    { "de": "die Tagesordnung (TO)", "fr": "l'ordre du jour" },
+    { "de": "das Protokoll führen", "fr": "rédiger le compte-rendu / le procès-verbal" },
+    { "de": "beschließen", "fr": "décider / acter" },
+    { "de": "der Einwand", "fr": "l'objection" },
+    { "de": "die Abstimmung", "fr": "le vote / le suffrage" }
+  ],
+  "exercices": [
+    {
+      "id": "ex-b2-002-1",
+      "type": "transformation",
+      "question": "Rapportez les propos au Konjunktiv I : 'Der Chef sagt: Ich habe keine Zeit.'",
+      "reponse_attendue": "Der Chef sagt, er habe keine Zeit.",
+      "explication": "On transforme 'habe' (1ère pers.) en 'habe' (3e pers. Konjunktiv I) pour rapporter le discours."
+    },
+    {
+      "id": "ex-b2-002-2",
+      "type": "vocabulaire",
+      "question": "Que signifie 'Darf ich kurz unterbrechen?'",
+      "options": ["Je ne suis pas d'accord", "Puis-je intervenir ?", "C'est fini"],
+      "reponse_correcte": 1
+    }
+  ],
+  "astuces_pedagogiques": [
+    {
+      "titre": "Protokoll-Stil",
+      "astuce": "Dans les entreprises allemandes, on écrit souvent les décisions sous forme de 'Ergebnisprotokoll'. C'est court : qui a dit quoi (Konjunktiv I) et quelle décision a été prise. C'est la preuve ultime de ton professionnalisme."
+    }
+  ],
+  "progression": {
+    "xp": 200,
+    "prochain_id": "b2-003",
+    "apercu_suivant": "Leçon B2.1-3 : Écrire un e-mail formel (négociation et plaintes)."
+  }
+}

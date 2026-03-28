@@ -1,0 +1,234 @@
+{
+  "id": "a1-014",
+  "niveau": "A1",
+  "module": "A1.2",
+  "titre": "Révision approfondie des verbes sein et haben",
+  "objectifs": {
+    "communicatif": "Utiliser correctement 'sein' et 'haben' dans des phrases variées pour parler de soi, de sa famille, de ses possessions, de son âge, de sa nationalité et de son travail",
+    "linguistique": "Maîtriser les conjugaisons complètes de 'sein' et 'haben', les différences d’usage, la négation avec nicht et kein, les questions avec ces verbes, et combiner les deux verbes dans une même phrase",
+    "culturel": "Comprendre que ces deux verbes sont parmi les plus importants de l’allemand et apparaissent dans presque toutes les conversations quotidiennes",
+    "cognitif": "Distinguer clairement les contextes où on utilise 'sein' (identité, état, âge, nationalité) et 'haben' (possession, faim, soif, temps, relations)"
+  },
+  "metadonnees": {
+    "duree_estimee_minutes": 45,
+    "difficulte_cognitive": 2,
+    "prerequis": ["a1-013"],
+    "competences_visees": ["grammaire de base", "expression orale"],
+    "themes_croises": ["identité", "vie quotidienne", "famille", "travail"]
+  },
+
+  "situation": {
+    "contexte": "Suite de la soirée internationale à Vienne – révision naturelle à travers la conversation sur la vie personnelle",
+    "lieu": "Appartement privé, Vienne (Wien), Autriche",
+    "type": "conversation informelle",
+    "registre": "informel"
+  },
+
+  "dialogue": [
+    {
+      "id": 1,
+      "de": "Wie alt bist du? Ich bin 27 Jahre alt. Und du?",
+      "fr": "Quel âge as-tu ? J’ai 27 ans. Et toi ?",
+      "audio": "/audio/a1-014-1.mp3",
+      "phonetique": "viː alt bɪst duː | ɪç bɪn ˈziːbənʊntˈtsvaɪntsɪç ˈjaːʁə alt | ʊnt duː",
+      "intonation": "montante sur la question",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Wie alt bist du?",
+          "lemme": "sein",
+          "classe_grammaticale": "question avec sein pour l’âge",
+          "traduction_directe": "Quel âge as-tu ?",
+          "phonetique": "viː alt bɪst duː",
+          "regle": "Âge → toujours sein (jamais haben !)"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "de": "Ich habe einen Bruder und eine Schwester. Meine Schwester ist 24 Jahre alt.",
+      "fr": "J’ai un frère et une sœur. Ma sœur a 24 ans.",
+      "audio": "/audio/a1-014-2.mp3",
+      "phonetique": "ɪç ˈhaːbə ˈaɪnən ˈbʁuːdɐ ʊnt ˈaɪnə ˈʃvɛstɐ | ˈmaɪnə ˈʃvɛstɐ ɪst ˈfɪʁʊntˈtsvaɪntsɪç ˈjaːʁə alt",
+      "intonation": "informative",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "habe",
+          "lemme": "haben",
+          "classe_grammaticale": "possession (frères et sœurs)",
+          "traduction_directe": "j’ai",
+          "phonetique": "ˈhaːbə"
+        },
+        {
+          "mot": "ist",
+          "lemme": "sein",
+          "classe_grammaticale": "âge de la sœur",
+          "traduction_directe": "a (ans)",
+          "phonetique": "ɪst"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "de": "Ich bin aus Madagaskar, aber ich habe jetzt eine Wohnung in Wien.",
+      "fr": "Je viens de Madagascar, mais j’ai maintenant un appartement à Vienne.",
+      "audio": "/audio/a1-014-3.mp3",
+      "phonetique": "ɪç bɪn aʊs madaˈɡaskaʁ | ˈaːbɐ ɪç ˈhaːbə jɛtst ˈaɪnə ˈvoːnʊŋ ɪn viːn",
+      "intonation": "opposition claire",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "bin",
+          "lemme": "sein",
+          "classe_grammaticale": "origine / nationalité",
+          "traduction_directe": "suis",
+          "phonetique": "bɪn"
+        },
+        {
+          "mot": "habe",
+          "lemme": "haben",
+          "classe_grammaticale": "possession (appartement)",
+          "traduction_directe": "ai",
+          "phonetique": "ˈhaːbə"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "de": "Ich habe Hunger. Hast du etwas zu essen? Nein, ich habe nichts.",
+      "fr": "J’ai faim. As-tu quelque chose à manger ? Non, je n’ai rien.",
+      "audio": "/audio/a1-014-4.mp3",
+      "phonetique": "ɪç ˈhaːbə ˈhʊŋɐ | hast duː ˈɛtvas tsuː ˈɛsən | naɪn ɪç ˈhaːbə nɪçts",
+      "intonation": "naturelle et rapide",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Hunger haben",
+          "lemme": "haben",
+          "classe_grammaticale": "expression fixe",
+          "traduction_directe": "avoir faim",
+          "phonetique": "ˈhʊŋɐ",
+          "note": "Faim, soif, temps, envie → haben"
+        },
+        {
+          "mot": "nichts",
+          "lemme": "nichts",
+          "classe_grammaticale": "négation",
+          "traduction_directe": "rien",
+          "phonetique": "nɪçts"
+        }
+      ]
+    }
+  ],
+
+  "vocabulaire_complet": [
+    { "mot": "sein", "traduction": "être", "type": "verbe irrégulier", "phonetique": "zaɪn", "frequence": "fondamental" },
+    { "mot": "haben", "traduction": "avoir", "type": "verbe irrégulier", "phonetique": "ˈhaːbən", "frequence": "fondamental" },
+    { "mot": "Hunger haben", "traduction": "avoir faim", "type": "expression", "phonetique": "ˈhʊŋɐ" },
+    { "mot": "Durst haben", "traduction": "avoir soif", "type": "expression", "phonetique": "dʊʁst" },
+    { "mot": "Zeit haben", "traduction": "avoir le temps", "type": "expression", "phonetique": "tsaɪt" },
+    { "mot": "Lust haben", "traduction": "avoir envie", "type": "expression", "phonetique": "lʊst" },
+    { "mot": "nichts", "traduction": "rien", "type": "pronom", "phonetique": "nɪçts" }
+  ],
+
+  "grammaire": [
+    {
+      "titre": "Conjugaison complète de sein et haben (révision)",
+      "niveau": "A1",
+      "tableau_sein": [
+        { "pronom": "ich", "sein": "bin", "haben": "habe" },
+        { "pronom": "du", "sein": "bist", "haben": "hast" },
+        { "pronom": "er/sie/es", "sein": "ist", "haben": "hat" },
+        { "pronom": "wir", "sein": "sind", "haben": "haben" },
+        { "pronom": "ihr", "sein": "seid", "haben": "habt" },
+        { "pronom": "sie/Sie", "sein": "sind", "haben": "haben" }
+      ]
+    },
+    {
+      "titre": "Quand utiliser sein ?",
+      "niveau": "A1",
+      "exemples": [
+        "Nationalité : Ich bin Madagasse.",
+        "Âge : Ich bin 27 Jahre alt.",
+        "Profession : Ich bin Lehrer.",
+        "État : Ich bin müde / glücklich."
+      ]
+    },
+    {
+      "titre": "Quand utiliser haben ?",
+      "niveau": "A1",
+      "exemples": [
+        "Possession : Ich habe ein Auto.",
+        "Famille : Ich habe einen Bruder.",
+        "Faim/soif : Ich habe Hunger.",
+        "Temps : Ich habe keine Zeit."
+      ]
+    },
+    {
+      "titre": "Négation",
+      "niveau": "A1",
+      "explication": "nicht avec sein et verbes ; kein avec haben + nom.",
+      "exemples": [
+        "Ich bin nicht müde.",
+        "Ich habe kein Auto."
+      ]
+    }
+  ],
+
+  "exercices": [
+    {
+      "id": "ex-001",
+      "type": "choix_multiple",
+      "difficulte": 1,
+      "question": "Complète : Ich ___ 25 Jahre alt.",
+      "options": ["habe", "bin", "hat", "bist"],
+      "reponse_correcte": 1,
+      "explication": "sein pour l’âge"
+    },
+    {
+      "id": "ex-002",
+      "type": "traduction",
+      "difficulte": 2,
+      "question": "Traduire : 'J’ai faim mais je n’ai pas de temps. Ma sœur est médecin et elle a une voiture.'",
+      "reponse_attendue": "Ich habe Hunger, aber ich habe keine Zeit. Meine Schwester ist Ärztin und sie hat ein Auto.",
+      "explication": "haben pour faim/temps/voiture + sein pour profession"
+    },
+    {
+      "id": "ex-010",
+      "type": "situation",
+      "difficulte": 3,
+      "question": "Parle de toi en 8-10 phrases en utilisant sein et haben : âge, nationalité, famille, profession, possessions, état actuel, ce que tu as ou n’as pas.",
+      "modele_reponse": "Ich bin 28 Jahre alt. Ich bin aus Madagaskar. Ich habe eine große Familie. Ich bin Student. Ich habe ein Handy aber ich habe kein Auto. Ich habe Hunger...",
+      "criteres_evaluation": ["sein et haben correctement distingués", "négation juste", "phrases variées"]
+    }
+  ],
+
+  "comprehension": [
+    {
+      "question": "Pourquoi dit-on 'Ich bin müde' et non 'Ich habe müde' ?",
+      "reponse": "Müde décrit un état → sein. Hunger, Zeit, Auto sont des possessions ou sensations → haben."
+    }
+  ],
+
+  "culture": {
+    "titre": "sein et haben dans la vie quotidienne",
+    "points": [
+      { "sujet": "Fréquence", "explication": "Ces deux verbes représentent plus de 20 % des verbes utilisés dans les conversations allemandes courantes." }
+    ]
+  },
+
+  "astuces_pedagogiques": [
+    {
+      "titre": "Truc infaillible",
+      "astuce": "Pose-toi la question : Est-ce une identité/état/nationalité/âge/profession ? → sein. Est-ce une possession, une sensation (faim, soif), du temps ou une relation ? → haben."
+    }
+  ],
+
+  "progression": {
+    "xp": 80,
+    "badges_deblocables": ["Sein-Haben-Meister", "Grundverben-Profi"],
+    "niveau_suivant": "a1-015",
+    "apercu_suivant": "Leçon suivante : Les jours de la semaine, les mois et les heures"
+  }
+}

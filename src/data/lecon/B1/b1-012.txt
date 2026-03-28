@@ -1,0 +1,119 @@
+{
+  "id": "b1-012",
+  "niveau": "B1",
+  "module": "B1.3",
+  "titre": "Écrire un mail ou un message plus complexe",
+  "objectifs": {
+    "communicatif": "Rédiger un e-mail formel (candidature, demande d'information) ou un message privé détaillé en respectant les codes sociaux",
+    "linguistique": "Utiliser les connecteurs de structure (zuerst, außerdem, schließlich) et les formules d'appel et de salutation formelles",
+    "culturel": "La structure rigide des mails en Allemagne (Anrede, Grußformel) et la distinction entre Du et Sie à l'écrit",
+    "cognitif": "Adapter son style d'écriture selon le destinataire"
+  },
+  "metadonnees": {
+    "duree_estimee_minutes": 60,
+    "difficulte_cognitive": 3,
+    "prerequis": ["b1-011", "b1-004"],
+    "competences_visees": ["expression écrite", "correspondance"],
+    "themes_croises": ["travail", "administration", "communication digitale"]
+  },
+  "situation": {
+    "contexte": "Rédaction d'un e-mail à une agence ou une famille d'accueil pour demander des précisions sur un séjour ou un projet.",
+    "lieu": "Ordinateur / Bureau",
+    "type": "E-mail formel",
+    "registre": "formel (Sie)"
+  },
+  "dialogue_modele": [
+    {
+      "id": 1,
+      "de": "Sehr geehrte Damen und Herren, ich schreibe Ihnen, weil ich mich für Ihr Projekt interessiere.",
+      "fr": "Madame, Monsieur, je vous écris car je m'intéresse à votre projet.",
+      "phonetique": "zeːɐ̯ ɡəˈeːɐ̯tə ˈdaːmən ʊnt ˈhɛʁən | ɪç ˈʃʁaɪbə ˈiːnən | vaɪl ɪç mɪç fyːɐ̯ iːɐ̯ pʁoˈjɛkt ɪntəʁɛˈsiːʁə",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Sehr geehrte Damen und Herren",
+          "note_culturelle": "La formule standard quand on ne connaît pas le nom du destinataire. Si on le connaît : 'Sehr geehrter Herr [Nom]' ou 'Sehr geehrte Frau [Nom]'."
+        },
+        {
+          "mot": "interessiere",
+          "grammaire": "Verbe réfléchi : 'sich interessieren für + Accusatif'.",
+          "note": "À l'écrit, n'oublie pas le 'mich' et la préposition 'für'."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "de": "Außerdem hätte ich noch eine Frage bezüglich der Unterkunft. Über eine Antwort würde ich mich sehr freuen.",
+      "fr": "De plus, j'aurais encore une question concernant l'hébergement. Je serais très heureux de recevoir une réponse.",
+      "phonetique": "ˈaʊsɐˌdeːm ˈhɛtə ɪç nɔx ˈaɪnə ˈfʁaːɡə bəˈt͡syːklɪç deːɐ̯ ˈʊntɐˌkʊnft | ˈyːbɐ ˈaɪnə ˈantvɔʁt ˈvʏʁdə ɪç mɪç zeːɐ̯ ˈfʁɔɪən",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Außerdem",
+          "traduction": "De plus / En outre",
+          "syntaxe": "Adverbe de liaison (Position 1), le verbe suit immédiatement."
+        },
+        {
+          "mot": "bezüglich",
+          "grammaire": "Préposition suivie du Génitif.",
+          "sens": "Concernant / Relativement à."
+        }
+      ]
+    }
+  ],
+  "grammaire": [
+    {
+      "titre": "Les formules de salutation (Grußformeln)",
+      "tableau": [
+        { "Registre": "Très formel", "Appel": "Sehr geehrte Damen und Herren,", "Salutation": "Mit freundlichen Grüßen" },
+        { "Registre": "Semi-formel", "Appel": "Guten Tag Herr Schmidt,", "Salutation": "Mit freundlichen Grüßen" },
+        { "Registre": "Informel", "Appel": "Hallo Lukas / Liebe Sarah,", "Salutation": "Viele Grüße / Liebe Grüße" }
+      ],
+      "note_importante": "Après l'appel (Sehr geehrte...), on met une VIRGULE et on commence le texte par une MINUSCULE (sauf si c'est un nom)."
+    },
+    {
+      "titre": "Structurer son texte",
+      "liste": [
+        { "mot": "Zuerst / Einleitend", "usage": "Pour commencer le mail." },
+        { "mot": "Des Weiteren / Zudem", "usage": "Pour ajouter un argument ou une question (plus soutenu que 'auch')." },
+        { "mot": "Abschließend", "usage": "Pour conclure." }
+      ]
+    }
+  ],
+  "vocabulaire_cles": [
+    { "de": "der Betreff", "fr": "l'objet (du mail)" },
+    { "de": "die Anlage / der Anhang", "fr": "la pièce jointe" },
+    { "de": "im Anhang finden Sie...", "fr": "vous trouverez en pièce jointe..." },
+    { "de": "sich freuen auf (+ Akk)", "fr": "se réjouir de (événement futur)" },
+    { "de": "um Auskunft bitten", "fr": "demander des renseignements" }
+  ],
+  "exercices": [
+    {
+      "id": "ex-b1-012-1",
+      "type": "ponctuation",
+      "question": "Quelle est la règle après 'Sehr geehrte Frau Müller,' ?",
+      "options": [
+        "On commence la phrase suivante par une majuscule.",
+        "On commence la phrase suivante par une minuscule.",
+        "On ne met pas de virgule après le nom."
+      ],
+      "reponse_correcte": 1
+    },
+    {
+      "id": "ex-b1-012-2",
+      "type": "traduction",
+      "question": "Traduisez : 'Je vous prie de m'envoyer les documents.'",
+      "reponse_attendue": "Ich bitte Sie, mir die Unterlagen zu schicken.",
+      "explication": "Utilisation de 'bitten' + zu + infinitif."
+    }
+  ],
+  "astuces_pedagogiques": [
+    {
+      "titre": "Le 'E-mail Check'",
+      "astuce": "En Allemagne, la clarté est reine. Utilise un 'Betreff' (objet) très précis. Ex: 'Anfrage zum Praktikum - Vorname Nachname' est bien meilleur qu'un simple 'Hallo'."
+    }
+  ],
+  "progression": {
+    "xp": 150,
+    "prochain_id": "b1-013",
+    "apercu_suivant": "Leçon B1.3-3 : Discuter d'un film ou d'un livre (critique et résumé)."
+  }
+}

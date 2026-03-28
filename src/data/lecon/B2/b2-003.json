@@ -1,0 +1,119 @@
+{
+  "id": "b2-003",
+  "niveau": "B2",
+  "module": "B2.1",
+  "titre": "Écrire un e-mail formel : Négociation et Plaintes",
+  "objectifs": {
+    "communicatif": "Négocier un délai ou un tarif, formuler une plainte constructive, proposer un compromis par écrit",
+    "linguistique": "Maîtriser les connecteurs de concession (obgleich, ungeachtet), les structures nominales complexes et le ton diplomatique du Konjunktiv II",
+    "culturel": "La plainte en Allemagne : être direct (direkt) sans être impoli (unhöflich). On se concentre sur la solution (Lösungsorientiert)",
+    "cognitif": "Nuancer son propos pour maintenir une relation professionnelle malgré un désaccord"
+  },
+  "metadonnees": {
+    "duree_estimee_minutes": 65,
+    "difficulte_cognitive": 4,
+    "prerequis": ["b2-001", "b2-002"],
+    "competences_visees": ["expression écrite", "négociation"],
+    "themes_croises": ["business", "service client", "droit des affaires"]
+  },
+  "situation": {
+    "contexte": "Tu écris à un prestataire de services (par exemple, un hébergeur web ou un fournisseur d'équipement pour le Stark Café) car il y a un retard de livraison qui impacte ton planning.",
+    "lieu": "Bureau digital",
+    "type": "E-mail de réclamation / négociation",
+    "registre": "formel / diplomatique"
+  },
+  "dialogue_modele": [
+    {
+      "id": 1,
+      "de": "Bezugnehmend auf unsere Bestellung vom 10. März muss ich feststellen, dass die Lieferung noch nicht eingetroffen ist.",
+      "fr": "Me référant à notre commande du 10 mars, je dois constater que la livraison n'est pas encore arrivée.",
+      "phonetique": "bəˈt͡suːkˌneːmɛnt aʊf ˈʊnzəʁə bəˈʃtɛlʊŋ fɔm ˈt͡seːnən mɛʁt͡s mʊs ɪç ˈfɛstˌʃtɛlən | das diː ˈliːfəʁʊŋ nɔx nɪçt ˈaɪnɡəˌtʁɔfən ɪst",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Bezugnehmend auf (+ Akk)",
+          "usage": "Formule d'introduction très professionnelle pour lier le mail à un événement précédent."
+        },
+        {
+          "mot": "feststellen",
+          "traduction": "constater / remarquer",
+          "note": "Plus neutre et factuel que 'dire' ou 'voir'."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "de": "Wäre es möglich, den Liefertermin vorzuziehen? Andernfalls sähen wir uns gezwungen, vom Vertrag zurückzutreten.",
+      "fr": "Serait-il possible d'avancer la date de livraison ? Autrement, nous nous verrions contraints de résilier le contrat.",
+      "phonetique": "ˈvɛːʁə ɛs ˈmøːklɪç | deːn ˈliːfɐtɛʁˌmiːn ˈfoːɐ̯ˌt͡suːˌt͡siːən | ˈandəʁnˌfals ˈzɛːən viːɐ̯ ʊns ɡəˈt͡svʊŋən | fɔm fɛɐ̯ˈtʁaːk t͡suˈʁʏkˌtʁeːtən",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Wäre es möglich",
+          "grammaire": "Konjunktiv II (Politesse extrême).",
+          "usage": "Permet de demander quelque chose de difficile sans braquer l'interlocuteur."
+        },
+        {
+          "mot": "Andernfalls",
+          "traduction": "Autrement / Sinon",
+          "syntaxe": "Adverbe en position 1, le verbe suit."
+        },
+        {
+          "mot": "zurückzutreten",
+          "lemme": "zurücktreten von",
+          "sens": "Se retirer / résilier (un contrat)."
+        }
+      ]
+    }
+  ],
+  "grammaire": [
+    {
+      "titre": "Connecteurs de concession et alternative",
+      "explication": "Pour exprimer des conditions ou des alternatives dans une négociation.",
+      "liste": [
+        { "mot": "Obwohl / Obgleich", "sens": "Bien que", "note": "Subordonnée (verbe à la fin)." },
+        { "mot": "Trotzdem", "sens": "Pourtant / Malgré cela", "note": "Adverbe (verbe en pos. 2)." },
+        { "mot": "Anstatt ... zu", "sens": "Au lieu de", "note": "Structure infinitive." }
+      ]
+    },
+    {
+      "titre": "Le 'Konjunktiv II' des verbes forts",
+      "explication": "Au niveau B2, on utilise les formes réelles des verbes forts au subjonctif, pas seulement 'würde + infinitif'.",
+      "tableau": [
+        { "Verbe": "sehen", "Forme B1": "würde sehen", "Forme B2": "sähe" },
+        { "Verbe": "kommen", "Forme B1": "würde kommen", "Forme B2": "käme" },
+        { "Verbe": "bleiben", "Forme B1": "würde bleiben", "Forme B2": "bliebe" }
+      ]
+    }
+  ],
+  "vocabulaire_cles": [
+    { "de": "der Lieferverzug", "fr": "le retard de livraison" },
+    { "de": "die Preisminderung", "fr": "la réduction de prix" },
+    { "de": "der Kompromiss", "fr": "le compromis" },
+    { "de": "verhandeln", "fr": "négocier" },
+    { "de": "die Frist setzen", "fr": "fixer un délai / une échéance" }
+  ],
+  "exercices": [
+    {
+      "id": "ex-b2-003-1",
+      "type": "politesse",
+      "question": "Transformez en forme B2 plus élégante : 'Wir brauchen einen Rabatt.'",
+      "reponse_attendue": "Wir fänden einen Rabatt angemessen. / Ein Rabatt wäre wünschenswert.",
+      "explication": "L'utilisation de 'fänden' (Konjunktiv II de finden) ou 'wäre' adoucit la demande."
+    },
+    {
+      "id": "ex-b2-003-2",
+      "type": "syntaxe",
+      "question": "Complétez : '_____ des Regens wurde das Event nicht abgesagt.' (Malgré)",
+      "reponse_attendue": "Trotz",
+      "explication": "Trotz + Génitif (des Regens)."
+    }
+  ],
+  "culture": {
+    "titre": "Beschwerdemanagement (Gestion des plaintes)",
+    "explication": "En Allemagne, se plaindre est vu comme un moyen d'améliorer le service. Une plainte bien structurée, avec des faits précis (numéro de commande, dates) et une demande claire (remboursement, geste commercial), est prise très au sérieux."
+  },
+  "progression": {
+    "xp": 200,
+    "prochain_id": "b2-004",
+    "apercu_suivant": "Leçon B2.1-4 : Participer à un entretien d’embauche (ou d'admission)."
+  }
+}

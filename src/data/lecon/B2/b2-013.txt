@@ -1,0 +1,110 @@
+{
+  "id": "b2-013",
+  "niveau": "B2",
+  "module": "B2.3",
+  "titre": "Médias, réseaux sociaux et influence",
+  "objectifs": {
+    "communicatif": "Évaluer la crédibilité des sources d'information, discuter des avantages et inconvénients de la numérisation (Digitalisierung), exprimer des hypothèses sur l'évolution des médias",
+    "linguistique": "Utiliser le Konjunktiv II pour les conseils (an deiner Stelle würde ich...), maîtriser les verbes avec prépositions liés au monde numérique (berichten über, warnen vor) et les noms en -ung",
+    "culturel": "Le 'Datenschutz' en Allemagne (RGPD/DSGVO), le rôle des médias publics (Öffentlich-rechtlicher Rundfunk) et la méfiance envers les 'Fake News'",
+    "cognitif": "Développer un esprit critique face aux flux d'informations numériques"
+  },
+  "metadonnees": {
+    "duree_estimee_minutes": 70,
+    "difficulte_cognitive": 4,
+    "prerequis": ["b2-012"],
+    "competences_visees": ["compréhension écrite", "analyse critique"],
+    "themes_croises": ["technologie", "éthique", "communication"]
+  },
+  "situation": {
+    "contexte": "Tu participes à un forum sur l'avenir du web ou tu discutes de la protection des données pour ton outil de création de sites internet avec un client allemand.",
+    "lieu": "Conférence Tech / Bureau",
+    "type": "Discussion technique et éthique",
+    "registre": "standard / professionnel"
+  },
+  "dialogue_modele": [
+    {
+      "id": 1,
+      "de": "An deiner Stelle würde ich mehr Wert auf den Datenschutz legen, da die deutschen Nutzer sehr sensibel sind.",
+      "fr": "À ta place, j'accorderais plus d'importance à la protection des données, car les utilisateurs allemands y sont très sensibles.",
+      "phonetique": "an ˈdaɪ̯nɐ ˈʃtɛlə ˈvʏʁdə ɪç meːɐ̯ veːɐ̯t aʊ̯f deːn ˈdaːtn̩ˌʃʊt͡s ˈleːɡn̩ | daː diː ˈdɔʏ̯t͡ʃn̩ ˈnʊt͡sɐ zeːɐ̯ zɛnˈziːbl̩ zɪnt",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "An deiner Stelle würde ich...",
+          "grammaire": "Structure de conseil au Konjunktiv II.",
+          "usage": "Façon polie de suggérer une action."
+        },
+        {
+          "mot": "Wert legen auf (+ Akk)",
+          "traduction": "accorder de l'importance à / mettre l'accent sur."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "de": "Es wird davor gewarnt, ungeprüfte Informationen aus sozialen Netzwerken ungefiltert zu teilen.",
+      "fr": "On met en garde contre le fait de partager sans filtre des informations non vérifiées provenant des réseaux sociaux.",
+      "phonetique": "ɛs vɪʁt daˈfɔːɐ̯ ɡəˈvaʁnt | ˈʊnɡəˌpʁyːftə ɪnfɔʁmat͡si̯ˈoːnən aʊ̯s zoˈt͡si̯aːlən ˈnɛt͡svɛʁkən ˈʊnɡəˌfɪltɐt t͡suː ˈtaɪ̯lən",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "warnen vor (+ Dat)",
+          "grammaire": "Verbe avec préposition fixe.",
+          "traduction": "avertir / mettre en garde contre."
+        },
+        {
+          "mot": "ungeprüfte",
+          "morphologie": "un- (négation) + geprüft (vérifié).",
+          "traduction": "non vérifié."
+        }
+      ]
+    }
+  ],
+  "grammaire": [
+    {
+      "titre": "Verbes avec prépositions (Médias & Communication)",
+      "explication": "Certains verbes exigent une préposition et un cas précis.",
+      "tableau": [
+        { "Verbe": "berichten ÜBER (+ Akk)", "Sens": "faire un rapport / informer sur", "Exemple": "Die Zeitung berichtet über die Wahl." },
+        { "Verbe": "reagieren AUF (+ Akk)", "Sens": "réagir à", "Exemple": "Wie reagiert das Netz auf den Post?" },
+        { "Verbe": "sich austauschen MIT (+ Dat)", "Sens": "échanger avec", "Exemple": "Ich tausche mich mit Experten aus." }
+      ]
+    },
+    {
+      "titre": "Le passif avec 'es'",
+      "explication": "Utilisé pour des avertissements ou des faits généraux sans sujet précis.",
+      "exemple": "Es wird viel über KI diskutiert. (On discute beaucoup de l'IA.)"
+    }
+  ],
+  "vocabulaire_cles": [
+    { "de": "die Digitalisierung", "fr": "la numérisation / transition numérique" },
+    { "de": "die Privatsphäre", "fr": "la vie privée" },
+    { "de": "die Quelle", "fr": "la source" },
+    { "de": "die Reichweite", "fr": "la portée (audience)" },
+    { "de": "der Algorithmus", "fr": "l'algorithme" }
+  ],
+  "exercices": [
+    {
+      "id": "ex-b2-013-1",
+      "type": "grammaire",
+      "question": "Complétez avec la bonne préposition : 'Die Medien warnen ____ den Gefahren von Fake News.'",
+      "reponse_attendue": "vor",
+      "explication": "Warnen + vor + Dativ."
+    },
+    {
+      "id": "ex-b2-013-2",
+      "type": "transformation",
+      "question": "Donnez un conseil en utilisant 'An deiner Stelle' : 'Du musst dein Passwort ändern.'",
+      "reponse_attendue": "An deiner Stelle würde ich mein Passwort ändern.",
+      "explication": "Utilisation du Konjunktiv II pour un conseil diplomatique."
+    }
+  ],
+  "culture": {
+    "titre": "DSGVO (Datenschutz-Grundverordnung)",
+    "explication": "En Allemagne, la protection des données est presque sacrée. Le RGPD (en allemand DSGVO) y est appliqué très strictement. Pour ton projet WebBuilder, il sera crucial d'intégrer des mentions légales (Impressum) et une gestion des cookies irréprochable pour gagner la confiance des utilisateurs allemands."
+  },
+  "progression": {
+    "xp": 250,
+    "prochain_id": "b2-014",
+    "apercu_suivant": "Leçon B2.3-4 : Arts, culture et littérature allemande."
+  }
+}

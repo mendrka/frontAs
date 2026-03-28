@@ -1,0 +1,208 @@
+{
+  "id": "a2-007",
+  "niveau": "A2",
+  "module": "A2.1",
+  "titre": "Parler de la santé et des émotions (approfondissement)",
+  "objectifs": {
+    "communicatif": "Décrire des symptômes plus précis, exprimer des émotions complexes, demander et donner des conseils de santé, parler de son bien-être général",
+    "linguistique": "Maîtriser le vocabulaire étendu de la santé (Fieber, Husten, Rückenschmerzen, Allergie…), les émotions nuancées (gestresst, enttäuscht, aufgeregt, erleichtert…), les structures 'Mir tut … weh', 'Ich habe … bekommen', 'Du solltest … lassen', les connecteurs 'weil', 'deshalb'",
+    "culturel": "Connaître les pratiques de santé en pays germanophones (Apotheke, Hausarzt, mentale Gesundheit, Work-Life-Balance)",
+    "cognitif": "Combiner Perfekt, conseils avec sollen et expressions causales"
+  },
+  "metadonnees": {
+    "duree_estimee_minutes": 45,
+    "difficulte_cognitive": 2,
+    "prerequis": ["a2-006"],
+    "competences_visees": ["description détaillée", "interaction"],
+    "themes_croises": ["santé", "émotions", "bien-être"]
+  },
+
+  "situation": {
+    "contexte": "Un ami se sent mal et on discute de sa santé physique et mentale",
+    "lieu": "Appartement ou parc à Vienne (Wien), Autriche",
+    "type": "conversation informelle entre amis",
+    "registre": "informel"
+  },
+
+  "dialogue": [
+    {
+      "id": 1,
+      "de": "Du siehst blass aus. Was ist los? Mir tut der Kopf weh und ich habe Fieber.",
+      "fr": "Tu as l’air pâle. Qu’est-ce qui ne va pas ? J’ai mal à la tête et j’ai de la fièvre.",
+      "audio": "/audio/a2-007-1.mp3",
+      "phonetique": "duː ziːst blas aʊs | vas ɪst loːs | miːɐ̯ tuːt deːɐ̯ kɔpf veː ʊnt ɪç ˈhaːbə ˈfiːbɐ",
+      "intonation": "inquiète puis descriptive",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Du siehst blass aus",
+          "lemme": "aussehen",
+          "classe_grammaticale": "verbe séparable",
+          "traduction_directe": "Tu as l’air pâle",
+          "phonetique": "ˈaʊsˌzeːən"
+        },
+        {
+          "mot": "Mir tut der Kopf weh",
+          "lemme": "weh tun",
+          "classe_grammaticale": "expression de douleur",
+          "traduction_directe": "J’ai mal à la tête",
+          "phonetique": "veː tuːn"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "de": "Ich bin total gestresst wegen der Arbeit. Deshalb schlafe ich schlecht.",
+      "fr": "Je suis totalement stressé à cause du travail. C’est pourquoi je dors mal.",
+      "audio": "/audio/a2-007-2.mp3",
+      "phonetique": "ɪç bɪn toˈtaːl ɡəˈʃtʁɛst ˈveːɡən deːɐ̯ aʁˈbaɪt | ˈdɛshalp ˈʃlaːfə ɪç ˈʃlɛçt",
+      "intonation": "frustrée",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "gestresst",
+          "lemme": "gestresst",
+          "classe_grammaticale": "adjectif",
+          "traduction_directe": "stressé",
+          "phonetique": "ɡəˈʃtʁɛst"
+        },
+        {
+          "mot": "deshalb",
+          "lemme": "deshalb",
+          "classe_grammaticale": "connecteur de cause",
+          "traduction_directe": "c’est pourquoi",
+          "phonetique": "ˈdɛshalp"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "de": "Du solltest zum Arzt gehen und dich ausruhen. Trink viel Tee und schlaf genug.",
+      "fr": "Tu devrais aller chez le médecin et te reposer. Bois beaucoup de thé et dors suffisamment.",
+      "audio": "/audio/a2-007-3.mp3",
+      "phonetique": "duː ˈzɔltəst tsʊm aʁtst ˈɡeːən ʊnt dɪç ˈaʊsˌʁuːən | tʁɪŋk fiːl teː ʊnt ʃlaːf ɡəˈnuːk",
+      "intonation": "conseil bienveillant",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Du solltest",
+          "lemme": "sollen",
+          "classe_grammaticale": "conseil",
+          "traduction_directe": "Tu devrais",
+          "phonetique": "ˈzɔltəst"
+        },
+        {
+          "mot": "dich ausruhen",
+          "lemme": "sich ausruhen",
+          "classe_grammaticale": "verbe réfléchi",
+          "traduction_directe": "te reposer",
+          "phonetique": "ˈaʊsˌʁuːən"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "de": "Ich bin erleichtert, dass du mir geholfen hast. Danke für dein Verständnis.",
+      "fr": "Je suis soulagé que tu m’aies aidé. Merci pour ta compréhension.",
+      "audio": "/audio/a2-007-4.mp3",
+      "phonetique": "ɪç bɪn ɛɐ̯ˈlaɪçtɐt das duː miːɐ̯ ɡəˈhɔlfən hast | ˈdaŋkə fʏʁ daɪn fɛɐ̯ˈʃtɛntnɪs",
+      "intonation": "reconnaissante",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "erleichtert",
+          "lemme": "erleichtert",
+          "classe_grammaticale": "adjectif d’émotion",
+          "traduction_directe": "soulagé",
+          "phonetique": "ɛɐ̯ˈlaɪçtɐt"
+        }
+      ]
+    }
+  ],
+
+  "vocabulaire_complet": [
+    { "mot": "der Arzt / die Ärztin", "traduction": "le médecin", "type": "nom", "phonetique": "aʁtst" },
+    { "mot": "Fieber haben", "traduction": "avoir de la fièvre", "type": "expression", "phonetique": "ˈfiːbɐ" },
+    { "mot": "Husten haben", "traduction": "avoir une toux", "type": "expression", "phonetique": "ˈhʊstən" },
+    { "mot": "gestresst", "traduction": "stressé", "type": "adjectif", "phonetique": "ɡəˈʃtʁɛst" },
+    { "mot": "traurig", "traduction": "triste", "type": "adjectif", "phonetique": "ˈtʁaʊʁɪç" },
+    { "mot": "aufgeregt", "traduction": "excité / nerveux", "type": "adjectif", "phonetique": "ˈaʊfɡəˌʁeːkt" },
+    { "mot": "erleichtert", "traduction": "soulagé", "type": "adjectif", "phonetique": "ɛɐ̯ˈlaɪçtɐt" },
+    { "mot": "sich ausruhen", "traduction": "se reposer", "type": "verbe réfléchi", "phonetique": "ˈaʊsˌʁuːən" }
+  ],
+
+  "grammaire": [
+    {
+      "titre": "Douleurs corporelles",
+      "niveau": "A2",
+      "tableau": [
+        { "expression": "Mir tut der Kopf weh", "fr": "J’ai mal à la tête" },
+        { "expression": "Ich habe Rückenschmerzen", "fr": "J’ai mal au dos" }
+      ]
+    },
+    {
+      "titre": "Conseils avec 'sollten'",
+      "niveau": "A2",
+      "exemples": [
+        "Du solltest zum Arzt gehen.",
+        "Du solltest dich ausruhen."
+      ]
+    }
+  ],
+
+  "exercices": [
+    {
+      "id": "ex-001",
+      "type": "choix_multiple",
+      "difficulte": 1,
+      "question": "Comment dit-on 'J’ai mal à la gorge' ?",
+      "options": ["Ich habe Halsschmerzen.", "Ich bin Halsschmerzen.", "Der Hals tut mir."],
+      "reponse_correcte": 0,
+      "explication": "haben + Schmerzen"
+    },
+    {
+      "id": "ex-002",
+      "type": "traduction",
+      "difficulte": 2,
+      "question": "Traduire : 'Je suis stressé et je dors mal. Tu devrais te reposer et boire du thé.'",
+      "reponse_attendue": "Ich bin gestresst und schlafe schlecht. Du solltest dich ausruhen und Tee trinken.",
+      "explication": "gestresst + sollen"
+    },
+    {
+      "id": "ex-010",
+      "type": "situation",
+      "difficulte": 3,
+      "question": "Décris ton état de santé actuel (symptômes physiques et émotionnels), explique pourquoi, et donne deux conseils à un ami qui se sent mal.",
+      "modele_reponse": "Mir geht es nicht gut. Ich habe Kopfschmerzen und bin gestresst, weil ich viel arbeite. Du solltest zum Arzt gehen und dich ausruhen.",
+      "criteres_evaluation": ["vocabulaire santé/émotions", "Mir tut … weh / Ich fühle mich …", "conseils avec sollen"]
+    }
+  ],
+
+  "comprehension": [
+    {
+      "question": "Pourquoi dit-on 'Mir tut der Kopf weh' au lieu de 'Ich habe Kopfweh' ?",
+      "reponse": "Les deux sont possibles, mais 'Mir tut … weh' est plus précis pour localiser la douleur."
+    }
+  ],
+
+  "culture": {
+    "titre": "Santé et bien-être en Allemagne/Autriche",
+    "points": [
+      { "sujet": "Mentale Gesundheit", "explication": "On parle de plus en plus ouvertement de stress et de burnout. Beaucoup d’entreprises proposent des programmes de bien-être." }
+    ]
+  },
+
+  "astuces_pedagogiques": [
+    {
+      "titre": "Structure pour décrire son état",
+      "astuce": "Physique : Ich habe … / Mir tut … weh. Émotionnel : Ich fühle mich … / Ich bin …"
+    }
+  ],
+
+  "progression": {
+    "xp": 90,
+    "badges_deblocables": ["Gesundheits- und Gefühls-Profi"],
+    "niveau_suivant": "a2-008",
+    "apercu_suivant": "Leçon suivante : Raconter une histoire personnelle"
+  }
+}

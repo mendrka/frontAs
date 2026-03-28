@@ -1,0 +1,114 @@
+{
+  "id": "b1-007",
+  "niveau": "B1",
+  "module": "B1.2",
+  "titre": "Comprendre les panneaux et les horaires",
+  "objectifs": {
+    "communicatif": "Lire un tableau d'affichage, comprendre les annonces de retard ou de changement de quai, s'orienter dans une gare ou un aéroport",
+    "linguistique": "Maîtriser les noms composés (Komposita), les adverbes de temps (zeitweise, rechtzeitig) et les prépositions 'ab', 'an', 'bis zu'",
+    "culturel": "La ponctualité allemande (pourtant parfois mise à mal) et le vocabulaire des retards (Verspätung)",
+    "cognitif": "Extraire des informations spécifiques d'un flux de données denses"
+  },
+  "metadonnees": {
+    "duree_estimee_minutes": 45,
+    "difficulte_cognitive": 3,
+    "prerequis": ["b1-006", "a2-006"],
+    "competences_visees": ["compréhension écrite", "compréhension orale"],
+    "themes_croises": ["transport", "logistique", "vie publique"]
+  },
+  "situation": {
+    "contexte": "Tu es à la gare centrale de Munich (München Hbf) et tu dois comprendre pourquoi ton train pour Berlin a changé de quai.",
+    "lieu": "Gare ferroviaire (Bahnhof)",
+    "type": "Lecture d'informations publiques",
+    "registre": "standard / administratif"
+  },
+  "dialogue": [
+    {
+      "id": 1,
+      "de": "Achtung an Gleis 9! Der ICE nach Berlin fährt heute ab Gleis 12 ab. Grund dafür ist eine Stellwerkstörung.",
+      "fr": "Attention sur le quai 9 ! L'ICE pour Berlin partira aujourd'hui du quai 12. La raison en est un dérangement du poste d'aiguillage.",
+      "phonetique": "ˈaxtʊŋ an ɡlaɪs nɔɪn | deːɐ̯ iː-t͡seː-ˈeː naːx bɛʁˈliːn fɛːɐ̯t ˈhɔɪtə ap ɡlaɪs t͡svœlf ap | ɡʁʊnt daˈfyːɐ̯ ɪst ˈaɪnə ˈʃtɛlvɛʁksˌʃtøːʁʊŋ",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "abfahren",
+          "grammaire": "Verbe à particule séparable (ab/fahren).",
+          "sens": "Partir (pour un véhicule). Pour une personne, on utilise plutôt 'weggehen'."
+        },
+        {
+          "mot": "Stellwerkstörung",
+          "composition": "Stellwerk (poste d'aiguillage) + Störung (dérangement/panne).",
+          "note_culturelle": "C'est l'excuse classique pour les retards de train en Allemagne."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "de": "Die voraussichtliche Ankunft verzögert sich um etwa zwanzig Minuten.",
+      "fr": "L'arrivée prévue est retardée d'environ vingt minutes.",
+      "phonetique": "diː foːˈʁaʊsˌzɪçtlɪçə ˈankʊnft fɛɐ̯ˈt͡søːɡɐt zɪç ʊm ˈɛtvaː ˈt͡svant͡sɪç miˈnuːtən",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "voraussichtliche",
+          "traduction": "prévisible / prévu",
+          "usage": "Très courant dans les horaires pour indiquer que l'heure peut changer."
+        },
+        {
+          "mot": "verzögert sich",
+          "lemme": "sich verzögern",
+          "sens": "Prendre du retard / s'éterniser."
+        }
+      ]
+    }
+  ],
+  "grammaire": [
+    {
+      "titre": "Les noms composés (Nomenkomposita)",
+      "explication": "L'allemand adore coller les mots ensemble. Le dernier mot donne le genre et le sens principal.",
+      "exemples": [
+        { "mot": "Fahrplan", "composition": "Fahren (conduire) + Plan (plan)", "fr": "Horaire" },
+        { "mot": "Bahnsteigkante", "composition": "Bahn (train) + Steig (quai) + Kante (bord)", "fr": "Bord du quai" },
+        { "mot": "Reisezentrum", "composition": "Reise (voyage) + Zentrum (centre)", "fr": "Espace de vente/billetterie" }
+      ]
+    },
+    {
+      "titre": "Prépositions temporelles et de mouvement",
+      "tableau": [
+        { "mot": "ab", "usage": "Point de départ dans le temps ou l'espace", "exemple": "ab Gleis 4 / ab 10 Uhr" },
+        { "mot": "an", "usage": "Arrivée ou proximité", "exemple": "Ankunft an Gleis 2" },
+        { "mot": "gegen", "usage": "Vers (heure approximative)", "exemple": "gegen 15 Uhr (vers 15h)" }
+      ]
+    }
+  ],
+  "vocabulaire_cles": [
+    { "de": "das Gleis / der Bahnsteig", "fr": "la voie / le quai" },
+    { "de": "die Verspätung", "fr": "le retard" },
+    { "de": "der Anschluss", "fr": "la correspondance" },
+    { "de": "fällt aus", "fr": "est annulé (verbe ausfallen)" },
+    { "de": "umsteigen", "fr": "changer de train/bus" }
+  ],
+  "exercices": [
+    {
+      "id": "ex-b1-007-1",
+      "type": "compréhension",
+      "question": "Que signifie 'Der Zug hat 10 Minuten Verspätung' ?",
+      "reponse_attendue": "Le train a 10 minutes de retard.",
+      "explication": "Verspätung est le mot clé pour le retard."
+    },
+    {
+      "id": "ex-b1-007-2",
+      "type": "vocabulaire",
+      "question": "Comment dit-on 'le plan de voyage' en un seul mot composé ?",
+      "reponse_attendue": "Der Reiseplan",
+      "explication": "Reise (voyage) + Plan (plan)."
+    }
+  ],
+  "culture": {
+    "titre": "Deutsche Bahn (DB)",
+    "explication": "Bien que l'Allemagne soit connue pour sa précision, la DB est souvent critiquée pour ses retards. Si votre train a plus de 60 minutes de retard, vous avez droit à un remboursement partiel ('Fahrgastrechte')."
+  },
+  "progression": {
+    "xp": 150,
+    "prochain_id": "b1-008",
+    "apercu_suivant": "Leçon B1.2-3 : Dialogues au restaurant et au magasin (niveaux de langue)."
+  }
+}

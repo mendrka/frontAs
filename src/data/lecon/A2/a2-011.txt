@@ -1,0 +1,197 @@
+{
+  "id": "a2-011",
+  "niveau": "A2",
+  "module": "A2.2",
+  "titre": "Parler de voyages et de transport",
+  "objectifs": {
+    "communicatif": "Parler de ses voyages passés et futurs, décrire un moyen de transport, acheter un billet simple, demander des informations sur les horaires et les trajets",
+    "linguistique": "Maîtriser le vocabulaire des transports (Zug, Flugzeug, Bus, Auto, Fahrrad…), les expressions 'mit dem Zug fahren', 'einen Flug buchen', le Perfekt pour raconter un voyage, les questions 'Wann fährt… ?', 'Wie lange dauert… ?'",
+    "culturel": "Connaître le système de transport très développé en Allemagne/Autriche (Deutsche Bahn, ÖBB, ponctualité, billets en ligne)",
+    "cognitif": "Utiliser le Perfekt pour narrer un voyage et poser des questions pratiques"
+  },
+  "metadonnees": {
+    "duree_estimee_minutes": 45,
+    "difficulte_cognitive": 2,
+    "prerequis": ["a2-010"],
+    "competences_visees": ["situations de voyage", "narration"],
+    "themes_croises": ["voyages", "transport"]
+  },
+
+  "situation": {
+    "contexte": "Discussion sur les vacances passées et les prochains voyages",
+    "lieu": "Café à Vienne (Wien), Autriche",
+    "type": "conversation informelle entre amis",
+    "registre": "informel"
+  },
+
+  "dialogue": [
+    {
+      "id": 1,
+      "de": "Bist du schon mal mit dem Zug durch Europa gereist? Ja, letztes Jahr bin ich mit dem Nightjet von Wien nach Venedig gefahren.",
+      "fr": "As-tu déjà voyagé en train à travers l’Europe ? Oui, l’année dernière je suis allé de Vienne à Venise avec le Nightjet.",
+      "audio": "/audio/a2-011-1.mp3",
+      "phonetique": "bɪst duː ʃoːn mal mɪt deːm tsuːk dʊʁç ɔɪˈʁoːpa ɡəˈʁaɪst | jaː ˈlɛtstəs jaːɐ̯ bɪn ɪç mɪt deːm ˈnaɪtˌdʒɛt fɔn viːn nax veˈneːdɪç ɡəˈfaːʁən",
+      "intonation": "montante sur la question",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Bist du schon mal … gereist?",
+          "lemme": "reisen",
+          "classe_grammaticale": "question sur expérience passée",
+          "traduction_directe": "As-tu déjà voyagé… ?",
+          "phonetique": "ˈʁaɪst"
+        },
+        {
+          "mot": "mit dem Nightjet",
+          "lemme": "mit dem",
+          "classe_grammaticale": "moyen de transport",
+          "traduction_directe": "avec le Nightjet",
+          "phonetique": "naɪtˌdʒɛt"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "de": "Wie lange dauert die Fahrt? Die Fahrt dauert etwa 10 Stunden.",
+      "fr": "Combien de temps dure le trajet ? Le trajet dure environ 10 heures.",
+      "audio": "/audio/a2-011-2.mp3",
+      "phonetique": "viː ˈlaŋə ˈdaʊɐ̯t diː faːʁt | diː faːʁt ˈdaʊɐ̯t ɛtˈvaː tseːn ˈʃtʊndən",
+      "intonation": "pratique",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Wie lange dauert… ?",
+          "lemme": "dauern",
+          "classe_grammaticale": "question de durée",
+          "traduction_directe": "Combien de temps dure… ?",
+          "phonetique": "ˈdaʊɐ̯t"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "de": "Nächsten Sommer möchte ich nach Island fliegen. Der Flug ist ziemlich teuer, aber es lohnt sich.",
+      "fr": "L’été prochain je voudrais prendre l’avion pour l’Islande. Le vol est assez cher, mais ça en vaut la peine.",
+      "audio": "/audio/a2-011-3.mp3",
+      "phonetique": "ˈnɛːçstən ˈzɔmɐ ˈmœçtə ɪç nax ˈɪsland ˈfliːɡən | deːɐ̯ fluːk ɪst ˈtsɪmlɪç ˈtɔɪɐ̯ | ˈaːbɐ ɛs loːnt zɪç",
+      "intonation": "enthousiaste",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "es lohnt sich",
+          "lemme": "sich lohnen",
+          "classe_grammaticale": "expression",
+          "traduction_directe": "ça en vaut la peine",
+          "phonetique": "loːnt zɪç"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "de": "Wo kann man ein Ticket kaufen? Am besten online oder am Automaten.",
+      "fr": "Où peut-on acheter un billet ? Le mieux est en ligne ou au distributeur.",
+      "audio": "/audio/a2-011-4.mp3",
+      "phonetique": "voː kan man aɪn ˈtɪkət ˈkaʊfən | am ˈbɛstən ˈɔnlaɪn ˈoːdɐ am aʊtoˈmaːtən",
+      "intonation": "utile",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "am besten",
+          "lemme": "am besten",
+          "classe_grammaticale": "expression de conseil",
+          "traduction_directe": "le mieux",
+          "phonetique": "ˈbɛstən"
+        }
+      ]
+    }
+  ],
+
+  "vocabulaire_complet": [
+    { "mot": "die Reise", "traduction": "le voyage", "type": "nom féminin", "phonetique": "ˈʁaɪzə" },
+    { "mot": "der Zug", "traduction": "le train", "type": "nom masculin", "phonetique": "tsuːk" },
+    { "mot": "das Flugzeug", "traduction": "l’avion", "type": "nom neutre", "phonetique": "ˈfluːkˌtsɔɪk" },
+    { "mot": "der Bus", "traduction": "le bus", "type": "nom masculin", "phonetique": "bʊs" },
+    { "mot": "die Fahrt", "traduction": "le trajet", "type": "nom féminin", "phonetique": "faːʁt" },
+    { "mot": "dauern", "traduction": "durer", "type": "verbe", "phonetique": "ˈdaʊɐ̯n" },
+    { "mot": "lohnen (sich)", "traduction": "en valoir la peine", "type": "verbe", "phonetique": "ˈloːnən" },
+    { "mot": "der Automat", "traduction": "le distributeur", "type": "nom masculin", "phonetique": "aʊtoˈmaːt" }
+  ],
+
+  "grammaire": [
+    {
+      "titre": "Moyens de transport avec 'mit dem / mit der'",
+      "niveau": "A2",
+      "tableau": [
+        { "moyen": "mit dem Zug", "fr": "en train" },
+        { "moyen": "mit dem Flugzeug", "fr": "en avion" },
+        { "moyen": "mit dem Bus", "fr": "en bus" },
+        { "moyen": "mit dem Auto", "fr": "en voiture" }
+      ]
+    },
+    {
+      "titre": "Questions pratiques de voyage",
+      "niveau": "A2",
+      "exemples": [
+        "Wann fährt der Zug ab?",
+        "Wie lange dauert die Fahrt?",
+        "Wo kann man ein Ticket kaufen?"
+      ]
+    }
+  ],
+
+  "exercices": [
+    {
+      "id": "ex-001",
+      "type": "choix_multiple",
+      "difficulte": 1,
+      "question": "Comment dit-on 'Je voyage en train' ?",
+      "options": ["Ich reise mit Zug.", "Ich fahre mit dem Zug.", "Ich gehe mit dem Zug."],
+      "reponse_correcte": 1,
+      "explication": "mit dem Zug fahren"
+    },
+    {
+      "id": "ex-002",
+      "type": "traduction",
+      "difficulte": 2,
+      "question": "Traduire : 'L’année dernière j’ai pris l’avion pour Paris. Le vol a duré 2 heures. C’était super !'",
+      "reponse_attendue": "Letztes Jahr bin ich mit dem Flugzeug nach Paris geflogen. Der Flug hat 2 Stunden gedauert. Es war super!",
+      "explication": "Perfekt + durée"
+    },
+    {
+      "id": "ex-010",
+      "type": "situation",
+      "difficulte": 3,
+      "question": "Raconte ton dernier voyage (moyen de transport, durée, ce que tu as vu/fait) et parle de ton prochain voyage prévu.",
+      "modele_reponse": "Letztes Jahr bin ich mit dem Zug nach Prag gefahren. Die Fahrt hat 4 Stunden gedauert. Nächstes Jahr möchte ich nach Island fliegen.",
+      "criteres_evaluation": ["vocabulaire transport", "Perfekt correct", "questions/réponses pratiques"]
+    }
+  ],
+
+  "comprehension": [
+    {
+      "question": "Quelle est la différence entre 'Ich fahre mit dem Zug' et 'Ich bin mit dem Zug gefahren' ?",
+      "reponse": "La première est au présent (habitude ou futur proche). La seconde est au Perfekt (voyage terminé)."
+    }
+  ],
+
+  "culture": {
+    "titre": "Voyages et transport en pays germanophones",
+    "points": [
+      { "sujet": "Deutsche Bahn / ÖBB", "explication": "Les trains sont très ponctuels et confortables. Beaucoup de jeunes utilisent le 'Interrail' ou le 'Eurail Pass' pour voyager en Europe." }
+    ]
+  },
+
+  "astuces_pedagogiques": [
+    {
+      "titre": "Structure pour parler de voyage",
+      "astuce": "Ich bin … gefahren/geflogen → Die Fahrt hat … gedauert → Es war …"
+    }
+  ],
+
+  "progression": {
+    "xp": 90,
+    "badges_deblocables": ["Reise-Profi", "Transport-Meister"],
+    "niveau_suivant": "a2-012",
+    "apercu_suivant": "Leçon suivante : À l’hôtel – réserver et poser des questions"
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "id": "b2-014",
+  "niveau": "B2",
+  "module": "B2.3",
+  "titre": "Arts, culture et littérature allemande",
+  "objectifs": {
+    "communicatif": "Résumer l'intrigue d'un livre ou d'un film, exprimer une critique artistique nuancée, discuter de l'importance de la culture subventionnée en Allemagne",
+    "linguistique": "Maîtriser les adjectifs déverbaux (Partizip I et II), les verbes de modalité pour exprimer une probabilité (muss wohl ... sein) et le lexique de l'analyse esthétique",
+    "culturel": "Le classicisme de Weimar (Goethe/Schiller), le Bauhaus (design/architecture) et la scène culturelle moderne de Berlin",
+    "cognitif": "Interpréter des métaphores et des symboles culturels"
+  },
+  "metadonnees": {
+    "duree_estimee_minutes": 75,
+    "difficulte_cognitive": 4,
+    "prerequis": ["b2-012", "b2-013"],
+    "competences_visees": ["expression orale", "compréhension de texte littéraire"],
+    "themes_croises": ["littérature", "architecture", "cinéma"]
+  },
+  "situation": {
+    "contexte": "Tu sors d'une exposition au 'Humboldt Forum' à Berlin ou d'une représentation au théâtre. Tu échanges tes impressions avec des amis sur le message de l'œuvre.",
+    "lieu": "Théâtre / Musée / Vernissage",
+    "type": "Discussion esthétique",
+    "registre": "soutenu / passionné"
+  },
+  "dialogue_modele": [
+    {
+      "id": 1,
+      "de": "Dieser Film ist absolut sehenswert, da er die gesellschaftlichen Spannungen auf eine beeindruckende Weise darstellt.",
+      "fr": "Ce film vaut absolument le coup d'œil, car il représente les tensions sociales d'une manière impressionnante.",
+      "phonetique": "ˈdiːzɐ fɪlm ɪst ˌapzoˈluːt ˈzeːənsˌveːɐ̯t | daː eːɐ̯ diː ɡəˈzɛlʃaftlɪçn̩ ˈʃpanʊŋən aʊf ˈaɪnə bəˈʔaɪnˌdʁʊkəndə ˈvaɪzə ˈdaːɐ̯ˌʃtɛlt",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "sehenswert",
+          "composition": "sehen (voir) + wert (valeur).",
+          "traduction": "qui vaut la peine d'être vu."
+        },
+        {
+          "mot": "beeindruckende",
+          "grammaire": "Partizip I (beeindruckend) utilisé comme adjectif.",
+          "traduction": "impressionnante."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "de": "Das Bauhaus-Design zeichnet sich durch seine schlichte Funktionalität aus, was heute noch modern wirkt.",
+      "fr": "Le design du Bauhaus se distingue par sa fonctionnalité sobre, ce qui paraît encore moderne aujourd'hui.",
+      "phonetique": "das ˈbaʊˌhaʊs-deˈzaɪn ˈt͡saɪçnət zɪç dʊʁç ˈzaɪnə ˈʃlɪçtə ˌfʊŋkt͡si̯oːnaliˈtɛːt aʊs | vas ˈhɔʏtə nɔx moˈdɛʁn ˈvɪʁkt",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "zeichnet sich aus durch",
+          "lemme": "sich auszeichnen durch",
+          "traduction": "se distinguer / se caractériser par."
+        },
+        {
+          "mot": "schlichte",
+          "traduction": "sobre / simple / épurée.",
+          "note": "Un mot clé pour ton esthétique minimaliste dans WebBuilder !"
+        }
+      ]
+    }
+  ],
+  "grammaire": [
+    {
+      "titre": "Les adjectifs dérivés des participes (Approfondissement)",
+      "explication": "Le Partizip I exprime une action simultanée ou une caractéristique active. Le Partizip II exprime un résultat ou un état passif.",
+      "tableau": [
+        { "Partizip I": "ein fesselnder Roman", "Sens": "un roman captivant (qui te captive)" },
+        { "Partizip II": "das gelesene Buch", "Sens": "le livre lu (qui a été lu)" },
+        { "Partizip I": "die steigenden Preise", "Sens": "les prix qui montent" }
+      ]
+    },
+    {
+      "titre": "La probabilité avec les verbes de modalité",
+      "explication": "On utilise 'müssen', 'dürfen' ou 'können' pour exprimer une supposition.",
+      "exemples": [
+        { "structure": "muss ... sein", "sens": "doit sûrement être (90% certitude)", "phrase": "Er muss wohl im Museum sein." },
+        { "structure": "dürfte ... sein", "sens": "devrait être (70% probabilité)", "phrase": "Das Konzert dürfte bald beginnen." }
+      ]
+    }
+  ],
+  "vocabulaire_cles": [
+    { "de": "die Strömung", "fr": "le courant (artistique/littéraire)" },
+    { "de": "das Meisterwerk", "fr": "le chef-d'œuvre" },
+    { "de": "die Uraufführung", "fr": "la première (spectacle/film)" },
+    { "de": "zeitgenössisch", "fr": "contemporain" },
+    { "de": "die Bildhauerei", "fr": "la sculpture" }
+  ],
+  "exercices": [
+    {
+      "id": "ex-b2-014-1",
+      "type": "grammaire",
+      "question": "Transformez en adjectif (Partizip I) : 'Ein Hund, der bellt.'",
+      "reponse_attendue": "Ein bellender Hund.",
+      "explication": "On ajoute '-d' au radical de l'infinitif + la terminaison de l'adjectif."
+    },
+    {
+      "id": "ex-b2-014-2",
+      "type": "vocabulaire",
+      "question": "Quelle école d'architecture allemande a révolutionné le design moderne avec le slogan 'Form follows function' ?",
+      "reponse_attendue": "Das Bauhaus",
+      "explication": "Fondée par Walter Gropius, elle influence encore le design web minimaliste aujourd'hui."
+    }
+  ],
+  "culture": {
+    "titre": "Kulturförderung (Le soutien à la culture)",
+    "explication": "En Allemagne, la culture n'est pas seulement une affaire privée. L'État et les Länder subventionnent massivement les théâtres, les opéras et les musées pour qu'ils restent accessibles à tous. C'est ce qu'on appelle la 'Kulturstaat' (L'État culturel)."
+  },
+  "progression": {
+    "xp": 300,
+    "prochain_id": "b2-015",
+    "apercu_suivant": "Leçon B2.3-5 (FINALE) : Langue, dialectes et intégration."
+  }
+}

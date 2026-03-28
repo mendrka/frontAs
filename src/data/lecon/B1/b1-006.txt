@@ -1,0 +1,118 @@
+{
+  "id": "b1-006",
+  "niveau": "B1",
+  "module": "B1.2",
+  "titre": "Faire des réservations complexes",
+  "objectifs": {
+    "communicatif": "Réserver un hébergement ou un transport en précisant des besoins particuliers, comprendre les conditions d'annulation",
+    "linguistique": "Maîtriser les structures avec 'zu' + infinitif, le passif au présent (werden + Partizip II) et les verbes à prépositions",
+    "culturel": "Le système de réservation en Allemagne (ponctualité, confirmation écrite et mentions légales)",
+    "cognitif": "Préciser des informations logistiques détaillées"
+  },
+  "metadonnees": {
+    "duree_estimee_minutes": 55,
+    "difficulte_cognitive": 3,
+    "prerequis": ["b1-001", "a2-015"],
+    "competences_visees": ["expression écrite", "compréhension orale"],
+    "themes_croises": ["voyage", "logistique", "hôtellerie"]
+  },
+  "situation": {
+    "context": "Réservation d'une salle de conférence et de chambres pour un séminaire technologique à Stuttgart.",
+    "lieu": "Réception d'un hôtel d'affaires",
+    "type": "Appel téléphonique ou e-mail formel",
+    "registre": "formel (Sie)"
+  },
+  "dialogue": [
+    {
+      "id": 1,
+      "de": "Ich rufe an, um einen Konferenzraum für nächste Woche zu reservieren. Ist das Frühstück im Preis enthalten?",
+      "fr": "Je vous appelle pour réserver une salle de conférence pour la semaine prochaine. Est-ce que le petit-déjeuner est inclus dans le prix ?",
+      "phonetique": "ɪç ˈʁuːfə an | ʊm ˈaɪnən kɔnfəˈʁɛnt͡sˌʁaʊm fyːɐ̯ ˈnɛːçstə ˈvɔxə t͡suː ʁezɛʁˈviːʁən | ɪst das ˈfʁyːˌʃtʏk ɪm pʁaɪs ɛntˈhaltən",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "um ... zu reservieren",
+          "regle_grammaticale": {
+            "titre": "La proposition infinitive avec 'um... zu'",
+            "explication": "Utilisée pour exprimer le BUT (pour faire quelque chose). 'Um' se place au début de la subordonnée, 'zu' + infinitif à la toute fin.",
+            "exemple": "Ich lerne Deutsch, um in Deutschland zu arbeiten."
+          }
+        },
+        {
+          "mot": "enthalten",
+          "traduction": "contenu / inclus",
+          "note": "Participe II du verbe 'enthalten' utilisé ici comme adjectif."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "de": "Ja, das Frühstück wird serviert, aber die Parkplätze müssen separat bezahlt werden.",
+      "fr": "Oui, le petit-déjeuner est servi, mais les places de parking doivent être payées séparément.",
+      "phonetique": "jaː | das ˈfʁyːˌʃtʏk vɪʁt zɛʁˈviːɐ̯t | ˈaːbɐ diː ˈpaʁkˌplɛt͡sə ˈmʏsən zepaˈʁaːt bəˈt͡saːlt ˈvɛʁdən",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "wird serviert",
+          "grammaire": "Le Passif (Passiv)",
+          "explication": "Formation : auxiliaire 'werden' + Participe II à la fin. On l'utilise quand l'action est plus importante que la personne qui la fait."
+        },
+        {
+          "mot": "müssen ... bezahlt werden",
+          "grammaire": "Passif avec verbe de modalité",
+          "structure": "Modal (pos. 2) ... Partizip II + werden (fin)."
+        }
+      ]
+    }
+  ],
+  "grammaire": [
+    {
+      "titre": "Les propositions infinitives (Infinitivsätze)",
+      "explication": "Certains verbes ou expressions sont suivis de 'zu' + infinitif.",
+      "liste": [
+        { "structure": "Es ist wichtig, ... zu + Inf", "exemple": "Es ist wichtig, pünktlich zu sein." },
+        { "structure": "Ich habe vor, ... zu + Inf", "exemple": "Ich habe vor, ein Auto zu mieten. (J'ai l'intention de...)" },
+        { "structure": "Ich versuche, ... zu + Inf", "exemple": "Ich versuche, die Buchung zu ändern." }
+      ]
+    },
+    {
+      "titre": "Le Passif au présent (Präsens Passiv)",
+      "tableau": [
+        { "Sujet": "Das Zimmer", "werden": "wird", "Partizip II": "gereinigt.", "Traduction": "La chambre est nettoyée." },
+        { "Sujet": "Die Rechnungen", "werden": "werden", "Partizip II": "geschickt.", "Traduction": "Les factures sont envoyées." }
+      ]
+    }
+  ],
+  "vocabulaire_cles": [
+    { "de": "die Buchung / reservieren", "fr": "la réservation / réserver" },
+    { "de": "die Bestätigung", "fr": "la confirmation" },
+    { "de": "die Stornierung", "fr": "l'annulation" },
+    { "de": "inklusiv (inkl.) / exklusiv", "fr": "inclus / non inclus" },
+    { "de": "die Anzahlung", "fr": "l'acompte" }
+  ],
+  "exercices": [
+    {
+      "id": "ex-b1-006-1",
+      "type": "syntaxe",
+      "question": "Complétez avec 'um... zu' : 'Ich brauche eine Kreditkarte. Ich möchte das Hotel bezahlen.'",
+      "reponse_attendue": "Ich brauche eine Kreditkarte, um das Hotel zu bezahlen.",
+      "explication": "'Um' introduit le but, 'zu' se place juste avant l'infinitif final."
+    },
+    {
+      "id": "ex-b1-006-2",
+      "type": "passif",
+      "question": "Mettez au passif : 'Der Kellner bringt das Essen.'",
+      "reponse_attendue": "Das Essen wird gebracht.",
+      "explication": "Le complément (Essen) devient sujet + werden + Participe II (gebracht)."
+    }
+  ],
+  "astuces_pedagogiques": [
+    {
+      "titre": "Les abréviations allemandes",
+      "astuce": "Sur les sites de réservation, surveille 'inkl. MwSt.' (Mehrwertsteuer). Cela signifie que la TVA est incluse dans le prix affiché, ce qui est la norme pour les clients particuliers en Allemagne."
+    }
+  ],
+  "progression": {
+    "xp": 150,
+    "prochain_id": "b1-007",
+    "apercu_suivant": "Leçon B1.2-2 : Comprendre les panneaux et les horaires (transports)."
+  }
+}

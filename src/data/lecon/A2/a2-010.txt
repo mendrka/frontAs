@@ -1,0 +1,194 @@
+{
+  "id": "a2-010",
+  "niveau": "A2",
+  "module": "A2.1",
+  "titre": "Parler de films, livres et musique",
+  "objectifs": {
+    "communicatif": "Parler de ses films, livres et morceaux de musique préférés, donner une opinion simple, recommander quelque chose, raconter brièvement l’histoire d’un film ou d’un livre",
+    "linguistique": "Maîtriser le vocabulaire culturel (Film, Buch, Lied, Schauspieler, Autor, Genre…), les expressions d’opinion ('Ich finde … gut/schlecht', 'Mir gefällt …', 'Der Film handelt von…'), les temps Perfekt et présent pour résumer",
+    "culturel": "Connaître les références culturelles germanophones (films allemands/autrichiens, auteurs célèbres, festivals de musique) et les habitudes de consommation culturelle",
+    "cognitif": "Structurer une recommandation et un résumé simple"
+  },
+  "metadonnees": {
+    "duree_estimee_minutes": 45,
+    "difficulte_cognitive": 2,
+    "prerequis": ["a2-009"],
+    "competences_visees": ["expression d’opinion", "résumé"],
+    "themes_croises": ["culture", "loisirs"]
+  },
+
+  "situation": {
+    "contexte": "Discussion sur les loisirs culturels pendant la soirée internationale",
+    "lieu": "Appartement à Vienne (Wien), Autriche",
+    "type": "conversation informelle entre amis",
+    "registre": "informel"
+  },
+
+  "dialogue": [
+    {
+      "id": 1,
+      "de": "Welchen Film hast du zuletzt gesehen? Ich habe 'Parasite' gesehen. Der Film ist super spannend.",
+      "fr": "Quel film as-tu vu en dernier ? J’ai vu 'Parasite'. Le film est super prenant.",
+      "audio": "/audio/a2-010-1.mp3",
+      "phonetique": "ˈvɛlçən fɪlm hast duː tsuːˈlɛtst ɡəˈzeːən | ɪç ˈhaːbə paʁaˈziːt ɡəˈzeːən | deːɐ̯ fɪlm ɪst ˈzuːpɐ ˈʃpanənt",
+      "intonation": "enthousiaste",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Welchen Film hast du zuletzt gesehen?",
+          "lemme": "zuletzt",
+          "classe_grammaticale": "question sur une expérience récente",
+          "traduction_directe": "Quel film as-tu vu en dernier ?",
+          "phonetique": "tsuːˈlɛtst"
+        },
+        {
+          "mot": "spannend",
+          "lemme": "spannend",
+          "classe_grammaticale": "adjectif",
+          "traduction_directe": "captivant / prenant",
+          "phonetique": "ˈʃpanənt"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "de": "Der Film handelt von einer armen Familie in Südkorea. Er hat viele Preise gewonnen.",
+      "fr": "Le film raconte l’histoire d’une famille pauvre en Corée du Sud. Il a remporté beaucoup de prix.",
+      "audio": "/audio/a2-010-2.mp3",
+      "phonetique": "deːɐ̯ fɪlm ˈhandəlt fɔn ˈaɪnɐ ˈaʁmən faˈmiːljə ɪn ˈzyːtkoˈʁeːa | eːɐ̯ hat ˈfiːlə ˈpʁaɪzə ɡəˈvɔnən",
+      "intonation": "résumé",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "handelt von",
+          "lemme": "handeln von",
+          "classe_grammaticale": "expression pour résumé",
+          "traduction_directe": "raconte / traite de",
+          "phonetique": "ˈhandəlt fɔn"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "de": "Ich lese gerade ein Buch von Stefan Zweig. Es ist sehr interessant.",
+      "fr": "Je suis en train de lire un livre de Stefan Zweig. Il est très intéressant.",
+      "audio": "/audio/a2-010-3.mp3",
+      "phonetique": "ɪç ˈleːzə ɡəˈʁaːdə aɪn buːx fɔn ˈʃtɛfan tsvai̯k | ɛs ɪst zeːɐ̯ ɪntəʁɛˈsant",
+      "intonation": "positive",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "gerade",
+          "lemme": "gerade",
+          "classe_grammaticale": "adverbe",
+          "traduction_directe": "en ce moment",
+          "phonetique": "ɡəˈʁaːdə"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "de": "Welche Musik hörst du gern? Ich höre gern Hip-Hop und Klassik.",
+      "fr": "Quelle musique écoutes-tu volontiers ? J’écoute volontiers du hip-hop et de la musique classique.",
+      "audio": "/audio/a2-010-4.mp3",
+      "phonetique": "ˈvɛlçə muˈziːk høːɐ̯st duː ɡɛʁn | ɪç ˈhøːʁə ɡɛʁn hɪp hɔp ʊnt ˈklasɪk",
+      "intonation": "curieuse",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Welche Musik hörst du gern?",
+          "lemme": "hören",
+          "classe_grammaticale": "question sur les goûts",
+          "traduction_directe": "Quelle musique écoutes-tu volontiers ?",
+          "phonetique": "ˈhøːɐ̯st"
+        }
+      ]
+    }
+  ],
+
+  "vocabulaire_complet": [
+    { "mot": "der Film", "traduction": "le film", "type": "nom masculin", "phonetique": "fɪlm" },
+    { "mot": "das Buch", "traduction": "le livre", "type": "nom neutre", "phonetique": "buːx" },
+    { "mot": "die Musik", "traduction": "la musique", "type": "nom féminin", "phonetique": "muˈziːk" },
+    { "mot": "spannend", "traduction": "captivant", "type": "adjectif", "phonetique": "ˈʃpanənt" },
+    { "mot": "lustig", "traduction": "drôle", "type": "adjectif", "phonetique": "ˈlʊstɪç" },
+    { "mot": "handeln von", "traduction": "traiter de / raconter", "type": "expression", "phonetique": "ˈhandəln fɔn" },
+    { "mot": "gerade", "traduction": "en ce moment", "type": "adverbe", "phonetique": "ɡəˈʁaːdə" }
+  ],
+
+  "grammaire": [
+    {
+      "titre": "Expressions d’opinion",
+      "niveau": "A2",
+      "tableau": [
+        { "expression": "Ich finde den Film gut.", "fr": "Je trouve le film bien." },
+        { "expression": "Mir gefällt das Buch.", "fr": "Le livre me plaît." },
+        { "expression": "Der Film ist spannend.", "fr": "Le film est captivant." }
+      ]
+    },
+    {
+      "titre": "Résumé simple",
+      "niveau": "A2",
+      "exemples": [
+        "Der Film handelt von …",
+        "Das Buch erzählt die Geschichte von …"
+      ]
+    }
+  ],
+
+  "exercices": [
+    {
+      "id": "ex-001",
+      "type": "choix_multiple",
+      "difficulte": 1,
+      "question": "Comment dit-on 'Le film me plaît' ?",
+      "options": ["Der Film gefällt mir.", "Ich gefalle dem Film.", "Der Film ist mir."],
+      "reponse_correcte": 0,
+      "explication": "Mir gefällt …"
+    },
+    {
+      "id": "ex-002",
+      "type": "traduction",
+      "difficulte": 2,
+      "question": "Traduire : 'J’ai vu un film très drôle hier. Il raconte l’histoire d’un homme qui trouve un trésor. Je recommande ce film.'",
+      "reponse_attendue": "Gestern habe ich einen sehr lustigen Film gesehen. Er erzählt die Geschichte von einem Mann, der einen Schatz findet. Ich empfehle diesen Film.",
+      "explication": "Perfekt + handelt von + recommandation"
+    },
+    {
+      "id": "ex-010",
+      "type": "situation",
+      "difficulte": 3,
+      "question": "Parle de ton film, livre ou morceau de musique préféré : titre, genre, résumé court, pourquoi tu l’aimes et recommandation.",
+      "modele_reponse": "Mein Lieblingsfilm ist 'Inception'. Er handelt von Träumen und Realität. Ich finde ihn sehr spannend, weil … Ich empfehle ihn allen.",
+      "criteres_evaluation": ["vocabulaire culturel", "opinion claire", "résumé simple", "recommandation"]
+    }
+  ],
+
+  "comprehension": [
+    {
+      "question": "Quelle est la différence entre 'Ich mag den Film' et 'Der Film gefällt mir' ?",
+      "reponse": "Les deux signifient 'j’aime le film', mais 'gefallen' est plus courant pour les œuvres culturelles."
+    }
+  ],
+
+  "culture": {
+    "titre": "Culture pop en pays germanophones",
+    "points": [
+      { "sujet": "Références", "explication": "Films comme 'Das Leben der Anderen', livres de Stefan Zweig ou Bernhard Schlink, musique de Rammstein, Helene Fischer ou hip-hop allemand sont souvent cités." }
+    ]
+  },
+
+  "astuces_pedagogiques": [
+    {
+      "titre": "Structure pour recommander",
+      "astuce": "Ich habe … gesehen/gelesen. Der Film/das Buch handelt von … Ich finde ihn/es … Deshalb empfehle ich ihn/es."
+    }
+  ],
+
+  "progression": {
+    "xp": 90,
+    "badges_deblocables": ["Kultur-Fan", "Film-und-Buch-Profi"],
+    "niveau_suivant": "a2-011",
+    "apercu_suivant": "Leçon suivante : Parler de voyages et de transport"
+  }
+}

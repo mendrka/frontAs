@@ -1,0 +1,114 @@
+{
+  "id": "b1-008",
+  "niveau": "B1",
+  "module": "B1.2",
+  "titre": "Dialogues au restaurant et au magasin",
+  "objectifs": {
+    "communicatif": "Passer une commande détaillée, exprimer une insatisfaction polie, demander des conseils sur un produit ou un plat",
+    "linguistique": "Utiliser les verbes de modalité au Konjunktiv II (könnte, sollte), les adjectifs après l'article indéfini (déclinaison) et les particules de nuance (doch, mal, halt)",
+    "culturel": "Le pourboire (Trinkgeld) en Allemagne et les habitudes de consommation locale (Bio, Régional)",
+    "cognitif": "Adapter son registre de langue entre le client et le vendeur/serveur"
+  },
+  "metadonnees": {
+    "duree_estimee_minutes": 50,
+    "difficulte_cognitive": 3,
+    "prerequis": ["b1-006", "a1-013"],
+    "competences_visees": ["interaction orale", "médiation culturelle"],
+    "themes_croises": ["consommation", "gastronomie", "politesse"]
+  },
+  "situation": {
+    "contexte": "Déjeuner dans un restaurant traditionnel à Stuttgart, suivi d'un achat dans une boutique de vêtements locale.",
+    "lieu": "Restaurant (Gasthaus) et Boutique",
+    "type": "Interactions de service",
+    "registre": "standard / poli"
+  },
+  "dialogue": [
+    {
+      "id": 1,
+      "de": "Könnten Sie uns bitte die Speisekarte bringen? Wir hätten gerne auch eine Empfehlung des Hauses.",
+      "fr": "Pourriez-vous nous apporter la carte s'il vous plaît ? Nous aimerions aussi une suggestion de la maison.",
+      "phonetique": "ˈkœntən ziː ʊns ˈbɪtə diː ˈʃpaɪzəˌkaʁtə ˈbʁɪŋən | viːɐ̯ ˈhɛtən ˈɡɛʁnə aʊx ˈaɪnə ɛmˈp͡feːlʊŋ dɛs ˈhaʊzəs",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Könnten Sie",
+          "grammaire": "Konjunktiv II de 'können'.",
+          "usage": "C'est la forme de politesse standard pour demander un service. Plus poli que 'Können Sie'."
+        },
+        {
+          "mot": "hätten gerne",
+          "grammaire": "Konjunktiv II de 'haben'.",
+          "traduction": "Aimerions avoir / voudrions."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "de": "Entschuldigung, aber die Suppe ist leider schon kalt. Könnten Sie das bitte reklamieren?",
+      "fr": "Excusez-moi, mais la soupe est malheureusement déjà froide. Pourriez-vous signaler cela (faire une réclamation) ?",
+      "phonetique": "ɛntˈʃʊldɪɡʊŋ | ˈaːbɐ diː ˈzʊpə ɪst ˈlaɪdɐ ʃoːn kalt | ˈkœntən ziː das ˈbɪtə ʁeklaˈmiːʁən",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "leider",
+          "traduction": "malheureusement",
+          "usage": "Adverbe essentiel pour adoucir une plainte ou une mauvaise nouvelle."
+        },
+        {
+          "mot": "reklamieren",
+          "sens": "Réclamer / se plaindre d'un défaut.",
+          "note": "Utilisé aussi bien au restaurant que dans un magasin pour un produit défectueux."
+        }
+      ]
+    }
+  ],
+  "grammaire": [
+    {
+      "titre": "La déclinaison de l'adjectif (après ein/eine)",
+      "explication": "Au niveau B1, on stabilise la déclinaison mixte.",
+      "tableau": [
+        { "Cas": "Nominatif", "Masculin": "ein guter Wein", "Féminin": "eine kalte Suppe", "Neutre": "ein frisches Brot" },
+        { "Cas": "Accusatif", "Masculin": "einen guten Wein", "Féminin": "eine kalte Suppe", "Neutre": "ein frisches Brot" }
+      ]
+    },
+    {
+      "titre": "Les particules de nuance (Abtönungspartikeln)",
+      "explication": "Petits mots qui changent le ton de la phrase sans changer le sens.",
+      "liste": [
+        { "mot": "mal", "effet": "Rend une demande moins directe (Kommen Sie mal her!)." },
+        { "mot": "doch", "effet": "Renforce une suggestion ou exprime l'étonnement (Probieren Sie doch mal!)." },
+        { "mot": "vielleicht", "effet": "Utilisé pour une suggestion très polie (Könnten Sie vielleicht...)." }
+      ]
+    }
+  ],
+  "vocabulaire_cles": [
+    { "de": "die Rechnung", "fr": "l'addition / la facture" },
+    { "de": "das Trinkgeld", "fr": "le pourboire" },
+    { "de": "umtauschen", "fr": "échanger (un article)" },
+    { "de": "die Umkleidekabine", "fr": "la cabine d'essayage" },
+    { "de": "bio / regional / nachhaltig", "fr": "bio / régional / durable" }
+  ],
+  "exercices": [
+    {
+      "id": "ex-b1-008-1",
+      "type": "politesse",
+      "question": "Transformez 'Ich will zahlen' en forme polie (Konjunktiv II).",
+      "reponse_attendue": "Ich würde gerne zahlen. / Ich hätte gerne die Rechnung.",
+      "explication": "On évite 'ich will' avec un serveur, on utilise 'würde gerne' ou 'hätte gerne'."
+    },
+    {
+      "id": "ex-b1-008-2",
+      "type": "declinaison",
+      "question": "Complétez : 'Ich nehme einen _____ (groß) Salat.'",
+      "reponse_attendue": "großen",
+      "explication": "Accusatif masculin après 'einen' : la terminaison est -en."
+    }
+  ],
+  "culture": {
+    "titre": "Stimmt so!",
+    "explication": "En Allemagne, le pourboire n'est pas obligatoire mais très attendu (environ 5-10%). Quand vous payez, ne laissez pas l'argent sur la table. Dites le montant total incluant le pourboire au serveur. Si l'addition est de 18,50€ et que vous donnez 20€, dites '20 Euro' ou 'Stimmt so!' (Gardez la monnaie)."
+  },
+  "progression": {
+    "xp": 150,
+    "prochain_id": "b1-009",
+    "apercu_suivant": "Leçon B1.2-4 : Discuter du logement et des services publics."
+  }
+}

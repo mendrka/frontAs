@@ -1,0 +1,991 @@
+{
+  "id": "a1-003",
+  "niveau": "A1",
+  "module": "A1.1",
+  "titre": "Dire d'où l'on vient",
+  "objectifs": {
+    "communicatif": "Savoir dire sa nationalité, son pays d'origine et sa ville",
+    "linguistique": "Maîtriser 'kommen aus', les nationalités, les prépositions aus/in, et la négation simple",
+    "culturel": "Connaître les pays germanophones et leurs spécificités",
+    "cognitif": "Comprendre la formation des nationalités et des adjectifs de pays en allemand"
+  },
+  "metadonnees": {
+    "duree_estimee_minutes": 30,
+    "difficulte_cognitive": 1,
+    "prerequis": ["a1-001", "a1-002"],
+    "competences_visees": ["expression orale", "interaction sociale de base"],
+    "themes_croises": ["identité", "géographie", "culture germanophone"]
+  },
+
+  "situation": {
+    "contexte": "Conversation lors d'une soirée internationale à Vienne",
+    "lieu": "Appartement privé, Vienne (Wien), Autriche",
+    "type": "conversation informelle",
+    "registre": "informel à semi-formel"
+  },
+
+  "dialogue": [
+    {
+      "id": 1,
+      "de": "Woher kommst du? Ich komme aus Frankreich.",
+      "fr": "D'où viens-tu ? Je viens de France.",
+      "audio": "/audio/a1-003-1.mp3",
+      "phonetique": "ˈvoːhɐ ˈkɔmst duː | ɪç ˈkɔmə aʊs ˈfʁaŋkʁaɪç",
+      "intonation": "montante sur 'Woher kommst du?' — question. Descendante sur la réponse.",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Woher",
+          "lemme": "woher",
+          "classe_grammaticale": "adverbe interrogatif de lieu (origine)",
+          "traduction_directe": "D'où",
+          "phonetique": "ˈvoːhɐ",
+          "decomposition": {
+            "wo": "où",
+            "her": "de (direction vers le locuteur — origine)",
+            "sens_compose": "'de où' = d'où — exprime l'origine, la provenance"
+          },
+          "distinction_wo_woher_wohin": {
+            "wo": {
+              "sens": "Où (position statique)",
+              "exemple": "Wo bist du? (Où es-tu ?)",
+              "regle": "Wo = emplacement, on ne bouge pas"
+            },
+            "woher": {
+              "sens": "D'où (origine, point de départ)",
+              "exemple": "Woher kommst du? (D'où viens-tu ?)",
+              "regle": "Woher = origine — mouvement DEPUIS un lieu"
+            },
+            "wohin": {
+              "sens": "Où (destination, point d'arrivée)",
+              "exemple": "Wohin gehst du? (Où vas-tu ?)",
+              "regle": "Wohin = destination — mouvement VERS un lieu"
+            }
+          },
+          "mnemonique": "her = vers ici (origine). hin = vers là-bas (destination). Woher = de là. Wohin = vers là.",
+          "erreurs_frequentes": [
+            {
+              "erreur": "Wo kommst du? ❌",
+              "correction": "Woher kommst du? ✓",
+              "explication": "'Wo' seul = position statique. Pour l'origine (venir DE quelque part), il faut obligatoirement 'Woher'."
+            }
+          ]
+        },
+        {
+          "mot": "kommst",
+          "lemme": "kommen",
+          "classe_grammaticale": "verbe",
+          "forme": "2ème personne singulier, présent indicatif",
+          "traduction_directe": "tu viens",
+          "phonetique": "ˈkɔmst",
+          "conjugaison_complete": {
+            "titre": "kommen (venir) — présent indicatif",
+            "formes": [
+              { "pronom": "ich", "forme": "komme", "phonetique": "ˈkɔmə" },
+              { "pronom": "du", "forme": "kommst", "phonetique": "ˈkɔmst" },
+              { "pronom": "er/sie/es", "forme": "kommt", "phonetique": "kɔmt" },
+              { "pronom": "wir", "forme": "kommen", "phonetique": "ˈkɔmən" },
+              { "pronom": "ihr", "forme": "kommt", "phonetique": "kɔmt" },
+              { "pronom": "sie/Sie", "forme": "kommen", "phonetique": "ˈkɔmən" }
+            ]
+          },
+          "construction_avec_aus": {
+            "structure": "kommen + aus + [pays/ville]",
+            "traduction": "venir de + [pays/ville]",
+            "exemples": [
+              "Ich komme aus Deutschland. (Je viens d'Allemagne.)",
+              "Er kommt aus Berlin. (Il vient de Berlin.)",
+              "Wir kommen aus Japan. (Nous venons du Japon.)"
+            ],
+            "regle_aus": "La préposition 'aus' est TOUJOURS utilisée pour l'origine géographique — jamais 'von' pour les pays"
+          },
+          "famille_lexicale": {
+            "nom": "die Herkunft (l'origine), das Kommen (le fait de venir)",
+            "expression_courante": "Woher kommst du ursprünglich? (Tu viens d'où à l'origine ?)"
+          },
+          "mnemonique": "kommen = 'come' en anglais — même sens, presque même son !"
+        },
+        {
+          "mot": "aus",
+          "lemme": "aus",
+          "classe_grammaticale": "préposition",
+          "traduction_directe": "de (origine) / hors de",
+          "phonetique": "aʊs",
+          "regime_grammatical": "aus + Datif (toujours)",
+          "note_pedagogique_A1": "Pour l'instant, retenez simplement que 'aus' + pays/ville = 'd'où on vient'. Les cas seront vus progressivement.",
+          "usages_principaux": [
+            {
+              "usage": "Origine géographique",
+              "exemple": "Ich komme aus Frankreich. (Je viens de France.)",
+              "note": "Pays sans article → aus + pays directement"
+            },
+            {
+              "usage": "Sortir d'un lieu",
+              "exemple": "Er kommt aus dem Zimmer. (Il sort de la chambre.)",
+              "note": "aus + dem (Datif masculin/neutre)"
+            },
+            {
+              "usage": "Matière/origine",
+              "exemple": "Der Tisch ist aus Holz. (La table est en bois.)",
+              "note": "aus = 'made of / en' pour les matières"
+            }
+          ],
+          "regle_article_pays": {
+            "titre": "aus + pays — avec ou sans article ?",
+            "regle": "La plupart des pays n'ont PAS d'article en allemand → aus + pays directement",
+            "exemples_sans_article": [
+              "aus Frankreich (de France)",
+              "aus Deutschland (d'Allemagne)",
+              "aus Japan (du Japon)",
+              "aus Madagaskar (de Madagascar)"
+            ],
+            "exemples_avec_article": [
+              "aus der Schweiz (de Suisse — die Schweiz, féminin)",
+              "aus den USA (des États-Unis — pluriel)",
+              "aus dem Iran (d'Iran — der Iran, masculin)"
+            ],
+            "astuce": "Les pays avec article sont rares — mémorisez les exceptions : die Schweiz, die Türkei, die USA (pl.), der Iran, der Irak"
+          },
+          "mnemonique": "aus = 'out' en anglais (sortir de, venir de) — même idée !"
+        },
+        {
+          "mot": "Frankreich",
+          "lemme": "Frankreich",
+          "classe_grammaticale": "nom propre (pays)",
+          "traduction_directe": "France",
+          "phonetique": "ˈfʁaŋkʁaɪç",
+          "genre": "neutre (das Frankreich) — mais l'article est omis dans l'usage courant",
+          "decomposition_etymologique": {
+            "Frank": "les Francs (peuple germanique)",
+            "Reich": "le royaume, l'empire",
+            "sens": "littéralement 'le royaume des Francs'"
+          },
+          "tableau_pays_europeens": [
+            { "francais": "France", "allemand": "Frankreich", "phonetique": "ˈfʁaŋkʁaɪç" },
+            { "francais": "Allemagne", "allemand": "Deutschland", "phonetique": "ˈdɔɪtʃlant" },
+            { "francais": "Autriche", "allemand": "Österreich", "phonetique": "ˈøːstɐˌʁaɪç" },
+            { "francais": "Suisse", "allemand": "die Schweiz", "phonetique": "diː ʃvaɪts", "article": "die" },
+            { "francais": "Espagne", "allemand": "Spanien", "phonetique": "ˈʃpaːniən" },
+            { "francais": "Italie", "allemand": "Italien", "phonetique": "iˈtaːliən" },
+            { "francais": "Angleterre/R-U", "allemand": "England / Großbritannien", "phonetique": "ˈɛŋlant / ˈɡʁoːsˌbʁɪtaniən" },
+            { "francais": "Belgique", "allemand": "Belgien", "phonetique": "ˈbɛlɡiən" },
+            { "francais": "Portugal", "allemand": "Portugal", "phonetique": "pɔʁtuˈɡal" },
+            { "francais": "Pays-Bas", "allemand": "die Niederlande", "phonetique": "diː ˈniːdɐˌlandə", "article": "die (pluriel)" }
+          ],
+          "tableau_pays_monde": [
+            { "francais": "Madagascar", "allemand": "Madagaskar", "phonetique": "madaˈɡaskaʁ" },
+            { "francais": "Japon", "allemand": "Japan", "phonetique": "jaˈpan" },
+            { "francais": "Chine", "allemand": "China", "phonetique": "ˈçiːna" },
+            { "francais": "États-Unis", "allemand": "die USA", "phonetique": "diː uˈɛsˈaː", "article": "die (pluriel)" },
+            { "francais": "Brésil", "allemand": "Brasilien", "phonetique": "bʁaˈziːliən" },
+            { "francais": "Maroc", "allemand": "Marokko", "phonetique": "maˈʁɔko" },
+            { "francais": "Sénégal", "allemand": "Senegal", "phonetique": "zeneˈɡaːl" },
+            { "francais": "Russie", "allemand": "Russland", "phonetique": "ˈʁʊslant" },
+            { "francais": "Inde", "allemand": "Indien", "phonetique": "ˈɪndiən" },
+            { "francais": "Turquie", "allemand": "die Türkei", "phonetique": "diː tʏʁˈkaɪ", "article": "die" }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": 2,
+      "de": "Ich bin Deutscher. Und du, bist du auch Deutsche?",
+      "fr": "Je suis allemand. Et toi, tu es aussi allemande ?",
+      "audio": "/audio/a1-003-2.mp3",
+      "phonetique": "ɪç bɪn ˈdɔɪtʃɐ | ʊnt duː bɪst duː aʊx ˈdɔɪtʃə",
+      "intonation": "descendante sur l'affirmation, montante sur la question",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Deutscher / Deutsche",
+          "lemme": "deutsch",
+          "classe_grammaticale": "adjectif substantivé (nom de nationalité)",
+          "traduction_directe": "Allemand / Allemande",
+          "phonetique": {
+            "Deutscher": "ˈdɔɪtʃɐ",
+            "Deutsche": "ˈdɔɪtʃə"
+          },
+          "regle_formation_nationalites": {
+            "titre": "Les nationalités en allemand — deux façons de les exprimer",
+            "methode_1": {
+              "nom": "Adjectif substantivé (utilisé comme nom)",
+              "structure": "Ich bin + [nationalité comme nom]",
+              "masculin": "Ich bin Deutscher. (Je suis allemand.)",
+              "feminin": "Ich bin Deutsche. (Je suis allemande.)",
+              "remarque": "Pas d'article après 'sein' pour les nationalités — jamais 'Ich bin ein Deutscher' dans ce sens"
+            },
+            "methode_2": {
+              "nom": "Adjectif devant un nom",
+              "structure": "Ein + [adjectif] + Mann/Frau",
+              "exemple": "Er ist ein deutscher Mann. (C'est un homme allemand.)"
+            }
+          },
+          "tableau_nationalites": [
+            {
+              "pays": "Deutschland",
+              "masculin": "Deutscher",
+              "feminin": "Deutsche",
+              "adjectif": "deutsch",
+              "langue": "Deutsch"
+            },
+            {
+              "pays": "Frankreich",
+              "masculin": "Franzose",
+              "feminin": "Französin",
+              "adjectif": "französisch",
+              "langue": "Französisch"
+            },
+            {
+              "pays": "Österreich",
+              "masculin": "Österreicher",
+              "feminin": "Österreicherin",
+              "adjectif": "österreichisch",
+              "langue": "Deutsch"
+            },
+            {
+              "pays": "die Schweiz",
+              "masculin": "Schweizer",
+              "feminin": "Schweizerin",
+              "adjectif": "schweizerisch / Schweizer",
+              "langue": "Deutsch / Französisch / Italienisch"
+            },
+            {
+              "pays": "England",
+              "masculin": "Engländer",
+              "feminin": "Engländerin",
+              "adjectif": "englisch",
+              "langue": "Englisch"
+            },
+            {
+              "pays": "Japan",
+              "masculin": "Japaner",
+              "feminin": "Japanerin",
+              "adjectif": "japanisch",
+              "langue": "Japanisch"
+            },
+            {
+              "pays": "Madagaskar",
+              "masculin": "Madagasse",
+              "feminin": "Madagassin",
+              "adjectif": "madagassisch",
+              "langue": "Malagasy / Französisch"
+            },
+            {
+              "pays": "Marokko",
+              "masculin": "Marokkaner",
+              "feminin": "Marokkanerin",
+              "adjectif": "marokkanisch",
+              "langue": "Arabisch / Französisch"
+            }
+          ],
+          "suffixes_communs": {
+            "titre": "Patterns de formation des nationalités",
+            "suffixes": [
+              {
+                "suffixe": "-er (masc.) / -erin (fém.)",
+                "pays_concernes": "La majorité",
+                "exemples": ["Franzose/Französin ❌ — irrégulier", "Japaner/Japanerin ✓", "Engländer/Engländerin ✓"]
+              },
+              {
+                "suffixe": "-e (masc.) / -in (fém.)",
+                "pays_concernes": "Certains pays",
+                "exemples": ["Franzose/Französin", "Chinese/Chinesin", "Russe/Russin"]
+              }
+            ],
+            "conseil": "Mémorisez les formes masculin/féminin pour chaque pays — il n'y a pas de règle unique parfaite"
+          },
+          "piege_francophone": {
+            "erreur": "Ich bin franzosisch ❌",
+            "correction": "Ich bin Franzose / Französin ✓",
+            "explication": "En allemand, on n'utilise pas l'adjectif seul pour dire sa nationalité avec 'sein'. On utilise le nom de nationalité (substantivé). L'adjectif seul s'emploie pour les langues ou pour qualifier : 'Das ist ein französisches Restaurant.'"
+          }
+        },
+        {
+          "mot": "auch",
+          "lemme": "auch",
+          "classe_grammaticale": "adverbe",
+          "traduction_directe": "aussi / également",
+          "phonetique": "aʊx",
+          "remarque_phonetique": "Le 'ch' après 'au' (diphtongue) se prononce [x] — son guttural, pas [ch] français ni [k]",
+          "exercice_prononciation": "Comme dans 'Bach' — r raclé dans la gorge",
+          "position_dans_phrase": "Généralement placé juste avant l'élément qu'il modifie",
+          "exemples_positions": [
+            { "phrase": "Ich bin auch müde.", "traduction": "Je suis aussi fatigué.", "aussi_modifie": "müde (fatigué)" },
+            { "phrase": "Auch ich bin müde.", "traduction": "Moi aussi je suis fatigué.", "aussi_modifie": "ich (moi)" },
+            { "phrase": "Bist du auch Deutsche?", "traduction": "Tu es aussi allemande ?", "aussi_modifie": "Deutsche" }
+          ],
+          "nuances": {
+            "vs_ebenfalls": "'ebenfalls' = également (plus formel, registre écrit/soutenu)",
+            "vs_sowohl": "'sowohl...als auch' = 'et...et / aussi bien...que' (structure corrélative)"
+          }
+        }
+      ]
+    },
+
+    {
+      "id": 3,
+      "de": "Nein, ich bin nicht Deutsche. Ich komme aus Madagaskar, aber ich wohne jetzt in Wien.",
+      "fr": "Non, je ne suis pas allemande. Je viens de Madagascar, mais j'habite maintenant à Vienne.",
+      "audio": "/audio/a1-003-3.mp3",
+      "phonetique": "naɪn ɪç bɪn nɪçt ˈdɔɪtʃə | ɪç ˈkɔmə aʊs madaˈɡaskaʁ ˈaːbɐ ɪç ˈvoːnə jɛtst ɪn viːn",
+      "intonation": "ferme sur la négation, puis informative sur la suite",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Nein",
+          "lemme": "nein",
+          "classe_grammaticale": "adverbe / interjection",
+          "traduction_directe": "Non",
+          "phonetique": "naɪn",
+          "tableau_oui_non": [
+            {
+              "forme": "Ja",
+              "traduction": "Oui",
+              "phonetique": "jaː",
+              "usage": "Réponse affirmative standard"
+            },
+            {
+              "forme": "Nein",
+              "traduction": "Non",
+              "phonetique": "naɪn",
+              "usage": "Réponse négative standard"
+            },
+            {
+              "forme": "Doch",
+              "traduction": "Si (infirmer une négation)",
+              "phonetique": "dɔx",
+              "usage": "Réponse affirmative à une question négative — équivalent du 'si' français",
+              "exemple": {
+                "question": "Bist du nicht müde? (Tu n'es pas fatigué ?)",
+                "reponse_doch": "Doch! (Si, je le suis !)",
+                "reponse_nein": "Nein. (Non, je ne suis pas fatigué.)"
+              },
+              "importance": "DOCH est unique en allemand — il n'existe pas d'équivalent en anglais. C'est un des mots les plus utiles de la langue !"
+            },
+            {
+              "forme": "Ja, genau!",
+              "traduction": "Oui, exactement !",
+              "phonetique": "jaː ɡəˈnaʊ",
+              "usage": "Affirmation enthousiaste et confirmative"
+            }
+          ]
+        },
+        {
+          "mot": "nicht",
+          "lemme": "nicht",
+          "classe_grammaticale": "adverbe de négation",
+          "traduction_directe": "ne...pas",
+          "phonetique": "nɪçt",
+          "remarque_phonetique": "Le 'ch' après 'i' = [ç] — sifflement doux (comme dans 'ich')",
+          "regle_negation_nicht": {
+            "titre": "Où placer 'nicht' dans la phrase ?",
+            "regle_generale": "'nicht' se place généralement à la FIN de la phrase, ou juste avant l'élément qu'il nie",
+            "regles_specifiques": [
+              {
+                "cas": "Nier un adjectif attribut (après sein)",
+                "position": "juste avant l'adjectif",
+                "exemple": "Ich bin nicht Deutsche. (Je ne suis pas allemande.)",
+                "schema": "Ich bin [nicht] Deutsche"
+              },
+              {
+                "cas": "Nier un verbe simple",
+                "position": "en fin de phrase",
+                "exemple": "Ich komme nicht. (Je ne viens pas.)",
+                "schema": "Ich komme [nicht]"
+              },
+              {
+                "cas": "Nier un complément de lieu",
+                "position": "juste avant le complément",
+                "exemple": "Ich wohne nicht in Berlin. (Je n'habite pas à Berlin.)",
+                "schema": "Ich wohne [nicht] in Berlin"
+              }
+            ]
+          },
+          "nicht_vs_kein": {
+            "titre": "nicht vs kein — LA distinction fondamentale",
+            "nicht": {
+              "usage": "Nie un verbe, un adjectif, une phrase entière ou un nom avec article défini",
+              "exemples": [
+                "Ich komme nicht. (Je ne viens pas.) — nie le verbe",
+                "Ich bin nicht müde. (Je ne suis pas fatigué.) — nie l'adjectif",
+                "Das ist nicht der Tisch. (Ce n'est pas LA table.) — nie un nom avec article défini"
+              ]
+            },
+            "kein": {
+              "usage": "Nie un nom avec article indéfini (ein) ou sans article",
+              "exemples": [
+                "Ich habe kein Auto. (Je n'ai pas de voiture.) — pas 'nicht ein Auto'",
+                "Ich trinke keinen Kaffee. (Je ne bois pas de café.)",
+                "Er hat keine Zeit. (Il n'a pas de temps.)"
+              ]
+            },
+            "mnemonique": "KEIN remplace EIN dans la négation. Là où tu mettrais 'ein/eine', tu mets 'kein/keine' pour nier."
+          },
+          "erreurs_frequentes": [
+            {
+              "erreur": "Ich bin keine Deutsche ❌ (pour 'Je ne suis pas allemande')",
+              "correction": "Ich bin nicht Deutsche ✓",
+              "explication": "Deutsche ici est un adjectif substantivé sans article → on utilise 'nicht', pas 'keine'"
+            }
+          ]
+        },
+        {
+          "mot": "aber",
+          "lemme": "aber",
+          "classe_grammaticale": "conjonction de coordination",
+          "traduction_directe": "mais",
+          "phonetique": "ˈaːbɐ",
+          "regle_syntaxique": "Conjonction de coordination → ne change PAS l'ordre des mots dans la proposition qui suit",
+          "comparaison_conjonctions_A1": [
+            { "conjonction": "und", "traduction": "et", "effet_ordre": "aucun changement" },
+            { "conjonction": "aber", "traduction": "mais", "effet_ordre": "aucun changement" },
+            { "conjonction": "oder", "traduction": "ou", "effet_ordre": "aucun changement" },
+            { "conjonction": "denn", "traduction": "car", "effet_ordre": "aucun changement" }
+          ],
+          "remarque": "Ces 4 conjonctions de coordination (und, aber, oder, denn) ne provoquent JAMAIS d'inversion — contrairement aux conjonctions de subordination (dass, weil, wenn...) qui seront vues plus tard",
+          "nuances_aber": {
+            "vs_sondern": {
+              "aber": "mais (opposition simple)",
+              "sondern": "mais (au contraire — après une négation)",
+              "exemple_aber": "Ich bin müde, aber ich arbeite weiter. (Je suis fatigué, mais je continue à travailler.)",
+              "exemple_sondern": "Ich bin nicht Franzose, sondern Belgier. (Je ne suis pas français, mais bien belge.)",
+              "regle": "Après une négation + correction directe → 'sondern'. Opposition simple → 'aber'."
+            }
+          }
+        },
+        {
+          "mot": "wohne",
+          "lemme": "wohnen",
+          "classe_grammaticale": "verbe",
+          "forme": "1ère personne singulier, présent indicatif",
+          "traduction_directe": "j'habite",
+          "phonetique": "ˈvoːnə",
+          "conjugaison_complete": {
+            "titre": "wohnen (habiter) — présent indicatif",
+            "formes": [
+              { "pronom": "ich", "forme": "wohne", "phonetique": "ˈvoːnə" },
+              { "pronom": "du", "forme": "wohnst", "phonetique": "voːnst" },
+              { "pronom": "er/sie/es", "forme": "wohnt", "phonetique": "voːnt" },
+              { "pronom": "wir", "forme": "wohnen", "phonetique": "ˈvoːnən" },
+              { "pronom": "ihr", "forme": "wohnt", "phonetique": "voːnt" },
+              { "pronom": "sie/Sie", "forme": "wohnen", "phonetique": "ˈvoːnən" }
+            ]
+          },
+          "construction": "wohnen + in + [ville/pays au Datif] — la préposition 'in' exprime la localisation",
+          "exemples": [
+            "Ich wohne in Wien. (J'habite à Vienne.)",
+            "Er wohnt in Paris. (Il habite à Paris.)",
+            "Wir wohnen in Deutschland. (Nous habitons en Allemagne.)"
+          ],
+          "in_vs_aus": {
+            "aus": "ORIGINE — d'où on vient (passé/identité) : Ich komme aus Madagaskar.",
+            "in": "LOCALISATION — où on habite (présent) : Ich wohne in Wien.",
+            "conseil": "'aus' = racines. 'in' = ici maintenant."
+          },
+          "famille_lexicale": {
+            "nom": "die Wohnung (l'appartement), der Wohnort (le lieu de résidence)",
+            "adjectif": "wohnhaft (domicilié — registre administratif)"
+          }
+        },
+        {
+          "mot": "jetzt",
+          "lemme": "jetzt",
+          "classe_grammaticale": "adverbe de temps",
+          "traduction_directe": "maintenant",
+          "phonetique": "jɛtst",
+          "adverbes_temps_A1": [
+            { "allemand": "jetzt", "traduction": "maintenant", "phonetique": "jɛtst" },
+            { "allemand": "heute", "traduction": "aujourd'hui", "phonetique": "ˈhɔɪtə" },
+            { "allemand": "morgen", "traduction": "demain", "phonetique": "ˈmɔʁɡən" },
+            { "allemand": "gestern", "traduction": "hier", "phonetique": "ˈɡɛstɐn" },
+            { "allemand": "immer", "traduction": "toujours", "phonetique": "ˈɪmɐ" },
+            { "allemand": "nie", "traduction": "jamais", "phonetique": "niː" },
+            { "allemand": "oft", "traduction": "souvent", "phonetique": "ɔft" },
+            { "allemand": "manchmal", "traduction": "parfois", "phonetique": "ˈmançmaːl" }
+          ]
+        },
+        {
+          "mot": "in",
+          "lemme": "in",
+          "classe_grammaticale": "préposition",
+          "traduction_directe": "à / en / dans",
+          "phonetique": "ɪn",
+          "usage_localisation": "in + ville/pays = habiter/être à/en",
+          "regime": "in + Datif (localisation) / in + Accusatif (mouvement vers) — distinction vue plus tard",
+          "note_A1": "Pour l'instant : 'in + ville/pays' = 'à/en [lieu]' pour indiquer où on habite",
+          "exemples_localisation": [
+            "in Wien (à Vienne)",
+            "in Deutschland (en Allemagne)",
+            "in Frankreich (en France)",
+            "in Madagaskar (à Madagascar)"
+          ]
+        },
+        {
+          "mot": "Wien",
+          "lemme": "Wien",
+          "classe_grammaticale": "nom propre (ville)",
+          "traduction_directe": "Vienne (capitale de l'Autriche)",
+          "phonetique": "viːn",
+          "info_culturelle": "Wien est la capitale de l'Autriche et l'une des grandes villes germanophones. Attention : 'Wien' en allemand ≠ 'Vienne' en français — et 'Vienne' peut aussi désigner une ville en France (Isère) !",
+          "grandes_villes_germanophones": [
+            { "ville": "Berlin", "pays": "Allemagne", "phonetique": "bɛʁˈliːn", "info": "Capitale de l'Allemagne" },
+            { "ville": "München", "pays": "Allemagne", "phonetique": "ˈmʏnçən", "traduction_fr": "Munich" },
+            { "ville": "Hamburg", "pays": "Allemagne", "phonetique": "ˈhambʊʁk" },
+            { "ville": "Frankfurt", "pays": "Allemagne", "phonetique": "ˈfʁaŋkfʊʁt" },
+            { "ville": "Wien", "pays": "Autriche", "phonetique": "viːn", "traduction_fr": "Vienne" },
+            { "ville": "Zürich", "pays": "Suisse", "phonetique": "ˈtsyːʁɪç", "traduction_fr": "Zurich" },
+            { "ville": "Bern", "pays": "Suisse", "phonetique": "bɛʁn", "info": "Capitale de la Suisse" }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": 4,
+      "de": "Interessant! Sprichst du auch Deutsch?",
+      "fr": "Intéressant ! Tu parles aussi allemand ?",
+      "audio": "/audio/a1-003-4.mp3",
+      "phonetique": "ɪntəˈʁɛsant | ˈʃpʁɪçst duː aʊx dɔɪtʃ",
+      "intonation": "montante — question totale (oui/non) sans mot interrogatif",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Interessant",
+          "lemme": "interessant",
+          "classe_grammaticale": "adjectif (ici adverbe d'exclamation)",
+          "traduction_directe": "Intéressant",
+          "phonetique": "ɪntəˈʁɛsant",
+          "origine": "Du latin 'interesse' (importer, concerner) — même racine qu'en français",
+          "expressions_reactions_A1": [
+            { "expression": "Interessant!", "traduction": "Intéressant !", "phonetique": "ɪntəˈʁɛsant" },
+            { "expression": "Wirklich?", "traduction": "Vraiment ?", "phonetique": "ˈvɪʁklɪç" },
+            { "expression": "Toll!", "traduction": "Super ! / Génial !", "phonetique": "tɔl" },
+            { "expression": "Super!", "traduction": "Super !", "phonetique": "ˈzuːpɐ" },
+            { "expression": "Ach so!", "traduction": "Ah, je vois !", "phonetique": "ax zoː" },
+            { "expression": "Schade!", "traduction": "Dommage !", "phonetique": "ˈʃaːdə" }
+          ]
+        },
+        {
+          "mot": "Sprichst",
+          "lemme": "sprechen",
+          "classe_grammaticale": "verbe",
+          "forme": "2ème personne singulier, présent indicatif",
+          "traduction_directe": "tu parles",
+          "phonetique": "ˈʃpʁɪçst",
+          "irregularite": "sprechen est un verbe à changement de radical (Vokalwechsel) : e → i",
+          "conjugaison_complete": {
+            "titre": "sprechen (parler) — présent indicatif",
+            "formes": [
+              { "pronom": "ich", "forme": "spreche", "phonetique": "ˈʃpʁɛçə", "radical": "e" },
+              { "pronom": "du", "forme": "sprichst", "phonetique": "ˈʃpʁɪçst", "radical": "i — changement !" },
+              { "pronom": "er/sie/es", "forme": "spricht", "phonetique": "ˈʃpʁɪçt", "radical": "i — changement !" },
+              { "pronom": "wir", "forme": "sprechen", "phonetique": "ˈʃpʁɛçən", "radical": "e" },
+              { "pronom": "ihr", "forme": "sprecht", "phonetique": "ˈʃpʁɛçt", "radical": "e" },
+              { "pronom": "sie/Sie", "forme": "sprechen", "phonetique": "ˈʃpʁɛçən", "radical": "e" }
+            ],
+            "regle_vokalwechsel": "Aux personnes du/er/sie/es : e → i (radical change). Aux autres personnes : radical normal."
+          },
+          "construction_langues": {
+            "structure": "sprechen + [langue sans article]",
+            "exemples": [
+              "Ich spreche Deutsch. (Je parle allemand.)",
+              "Er spricht Französisch. (Il parle français.)",
+              "Wir sprechen kein Chinesisch. (Nous ne parlons pas chinois.)"
+            ],
+            "regle_article": "Les noms de langues n'ont PAS d'article quand ils suivent 'sprechen'"
+          },
+          "question_associee": "Welche Sprachen sprichst du? (Quelles langues parles-tu ?)",
+          "tableau_langues": [
+            { "langue": "Deutsch", "traduction": "allemand", "phonetique": "dɔɪtʃ" },
+            { "langue": "Französisch", "traduction": "français", "phonetique": "fʁanˈtsøːzɪʃ" },
+            { "langue": "Englisch", "traduction": "anglais", "phonetique": "ˈɛŋlɪʃ" },
+            { "langue": "Spanisch", "traduction": "espagnol", "phonetique": "ˈʃpaːnɪʃ" },
+            { "langue": "Arabisch", "traduction": "arabe", "phonetique": "ˈaːʁaːbɪʃ" },
+            { "langue": "Malagasy", "traduction": "malgache", "phonetique": "malaˈɡasi" },
+            { "langue": "Chinesisch", "traduction": "chinois", "phonetique": "çiˈneːzɪʃ" },
+            { "langue": "Japanisch", "traduction": "japonais", "phonetique": "jaˈpaːnɪʃ" }
+          ],
+          "pattern_langues": "La plupart des langues en allemand se forment avec le suffixe '-isch' : Franzos-isch, Engl-isch, Span-isch, Japan-isch — comme le suffixe '-ais/-ois' en français !"
+        },
+        {
+          "mot": "Deutsch",
+          "lemme": "Deutsch",
+          "classe_grammaticale": "nom neutre (langue) / adjectif",
+          "traduction_directe": "l'allemand / allemand",
+          "phonetique": "dɔɪtʃ",
+          "double_emploi": {
+            "langue": "Ich spreche Deutsch. (Je parle allemand.) — nom sans article",
+            "nationalite_adj": "ein deutscher Mann (un homme allemand) — adjectif décliné",
+            "nationalite_nom": "Er ist Deutscher. (Il est allemand.) — substantivé"
+          },
+          "das_Deutsche_vs_Deutsch": {
+            "Deutsch": "l'allemand (langue parlée, sans article) — Ich lerne Deutsch.",
+            "das_Deutsche": "l'allemand (concept abstrait, avec article) — Das Deutsche ist eine Sprache. (L'allemand est une langue.)"
+          }
+        }
+      ]
+    }
+  ],
+
+  "vocabulaire_complet": [
+    {
+      "mot": "woher",
+      "traduction": "d'où",
+      "type": "adverbe interrogatif",
+      "phonetique": "ˈvoːhɐ",
+      "frequence": "très courant"
+    },
+    {
+      "mot": "wohin",
+      "traduction": "où (vers)",
+      "type": "adverbe interrogatif",
+      "phonetique": "voˈhɪn",
+      "frequence": "courant"
+    },
+    {
+      "mot": "wo",
+      "traduction": "où (statique)",
+      "type": "adverbe interrogatif",
+      "phonetique": "voː",
+      "frequence": "très courant"
+    },
+    {
+      "mot": "kommen",
+      "traduction": "venir",
+      "type": "verbe",
+      "phonetique": "ˈkɔmən",
+      "formes_cles": "ich komme / du kommst / er kommt",
+      "frequence": "fondamental"
+    },
+    {
+      "mot": "wohnen",
+      "traduction": "habiter",
+      "type": "verbe",
+      "phonetique": "ˈvoːnən",
+      "formes_cles": "ich wohne / du wohnst / er wohnt",
+      "frequence": "très courant"
+    },
+    {
+      "mot": "sprechen",
+      "traduction": "parler",
+      "type": "verbe irrégulier",
+      "phonetique": "ˈʃpʁɛçən",
+      "formes_cles": "ich spreche / du sprichst / er spricht",
+      "frequence": "fondamental"
+    },
+    {
+      "mot": "aus",
+      "traduction": "de (origine)",
+      "type": "préposition",
+      "phonetique": "aʊs",
+      "construction": "kommen aus + pays/ville",
+      "frequence": "très courant"
+    },
+    {
+      "mot": "in",
+      "traduction": "à / en / dans",
+      "type": "préposition",
+      "phonetique": "ɪn",
+      "construction": "wohnen in + ville/pays",
+      "frequence": "fondamental"
+    },
+    {
+      "mot": "nicht",
+      "traduction": "ne...pas",
+      "type": "adverbe de négation",
+      "phonetique": "nɪçt",
+      "frequence": "fondamental"
+    },
+    {
+      "mot": "aber",
+      "traduction": "mais",
+      "type": "conjonction",
+      "phonetique": "ˈaːbɐ",
+      "frequence": "très courant"
+    },
+    {
+      "mot": "jetzt",
+      "traduction": "maintenant",
+      "type": "adverbe",
+      "phonetique": "jɛtst",
+      "frequence": "très courant"
+    },
+    {
+      "mot": "auch",
+      "traduction": "aussi",
+      "type": "adverbe",
+      "phonetique": "aʊx",
+      "frequence": "très courant"
+    },
+    {
+      "mot": "doch",
+      "traduction": "si (infirme une négation)",
+      "type": "adverbe",
+      "phonetique": "dɔx",
+      "frequence": "fondamental"
+    },
+    {
+      "mot": "die Sprache",
+      "traduction": "la langue",
+      "type": "nom féminin",
+      "phonetique": "ˈʃpʁaːxə",
+      "pluriel": "die Sprachen",
+      "frequence": "courant"
+    },
+    {
+      "mot": "das Land",
+      "traduction": "le pays",
+      "type": "nom neutre",
+      "phonetique": "lant",
+      "pluriel": "die Länder",
+      "frequence": "très courant"
+    }
+  ],
+
+  "grammaire": [
+    {
+      "titre": "La négation : nicht vs kein",
+      "niveau": "A1 — règle fondamentale",
+      "explication": "L'allemand a deux mots pour la négation selon ce qu'on nie.",
+      "tableau": [
+        {
+          "quand": "Nier un verbe",
+          "mot": "nicht",
+          "exemple_affirmatif": "Ich komme.",
+          "exemple_negatif": "Ich komme nicht."
+        },
+        {
+          "quand": "Nier un adjectif",
+          "mot": "nicht",
+          "exemple_affirmatif": "Er ist müde.",
+          "exemple_negatif": "Er ist nicht müde."
+        },
+        {
+          "quand": "Nier un nom (article indéfini ou sans article)",
+          "mot": "kein/keine",
+          "exemple_affirmatif": "Ich habe ein Auto.",
+          "exemple_negatif": "Ich habe kein Auto."
+        }
+      ],
+      "mnemonique": "KEIN = K + EIN → remplace 'ein' dans la négation. Là où tu mets 'ein', mets 'kein' pour nier."
+    },
+    {
+      "titre": "aus vs in — origine vs localisation",
+      "niveau": "A1",
+      "tableau": [
+        {
+          "preposition": "aus",
+          "sens": "origine (d'où on vient)",
+          "verbe_associe": "kommen",
+          "exemple": "Ich komme aus Frankreich. (Je viens de France.)"
+        },
+        {
+          "preposition": "in",
+          "sens": "localisation (où on est/habite)",
+          "verbe_associe": "wohnen / sein",
+          "exemple": "Ich wohne in Wien. (J'habite à Vienne.)"
+        }
+      ]
+    },
+    {
+      "titre": "Les questions totales (oui/non) — inversion verbe/sujet",
+      "niveau": "A1",
+      "explication": "Pour poser une question à laquelle on répond par oui/non, le verbe passe en 1ère position.",
+      "exemples": [
+        {
+          "affirmation": "Du sprichst Deutsch.",
+          "question": "Sprichst du Deutsch?",
+          "schema": "[VERBE] [sujet] [reste] ?"
+        },
+        {
+          "affirmation": "Sie wohnen in Berlin.",
+          "question": "Wohnen Sie in Berlin?",
+          "schema": "[VERBE] [sujet] [reste] ?"
+        }
+      ]
+    }
+  ],
+
+  "exercices": [
+    {
+      "id": "ex-001",
+      "type": "choix_multiple",
+      "difficulte": 1,
+      "question": "Comment demande-t-on 'd'où viens-tu ?' en allemand ?",
+      "options": [
+        "Wo kommst du?",
+        "Wohin kommst du?",
+        "Woher kommst du?",
+        "Wie kommst du?"
+      ],
+      "reponse_correcte": 2,
+      "explication": "'Woher' = d'où (origine). 'Wo' = où (statique). 'Wohin' = où (destination). 'Wie' = comment."
+    },
+    {
+      "id": "ex-002",
+      "type": "choix_multiple",
+      "difficulte": 1,
+      "question": "Comment dit-on 'Je viens de Madagascar' en allemand ?",
+      "options": [
+        "Ich wohne in Madagaskar.",
+        "Ich komme von Madagaskar.",
+        "Ich komme aus Madagaskar.",
+        "Ich bin aus Madagaskar kommen."
+      ],
+      "reponse_correcte": 2,
+      "explication": "L'origine se dit toujours avec 'kommen AUS' — jamais 'von' pour les pays. 'wohnen in' = habiter à (localisation, pas origine)."
+    },
+    {
+      "id": "ex-003",
+      "type": "choix_multiple",
+      "difficulte": 2,
+      "question": "Quelqu'un vous demande 'Bist du nicht deutsch?' alors que vous l'êtes. Que répondez-vous ?",
+      "options": [
+        "Ja!",
+        "Nein!",
+        "Doch!",
+        "Nicht!"
+      ],
+      "reponse_correcte": 2,
+      "explication": "'Doch!' s'utilise pour contredire une question négative. Comme en français 'Si !' — équivalent exact de 'Si, je le suis !' en réponse à 'Tu n'es pas allemand ?'"
+    },
+    {
+      "id": "ex-004",
+      "type": "traduction",
+      "difficulte": 2,
+      "question": "Traduire : 'Je ne suis pas française, mais j'habite maintenant en France.'",
+      "reponse_attendue": "Ich bin nicht Französin, aber ich wohne jetzt in Frankreich.",
+      "explication": "nicht (pas Französin) + aber (mais) + wohnen in (habiter en)"
+    },
+    {
+      "id": "ex-005",
+      "type": "choix_multiple",
+      "difficulte": 2,
+      "question": "Quelle phrase est CORRECTE pour dire 'Je parle allemand et français' ?",
+      "options": [
+        "Ich spreche Deutsch und Französisch.",
+        "Ich spreche das Deutsch und das Französisch.",
+        "Ich spricht Deutsch und Französisch.",
+        "Ich spreche auf Deutsch und auf Französisch."
+      ],
+      "reponse_correcte": 0,
+      "explication": "Les langues après 'sprechen' n'ont PAS d'article. La forme correcte de sprechen à la 1ère personne est 'spreche' (pas 'spricht' qui est pour er/sie/es)."
+    },
+    {
+      "id": "ex-006",
+      "type": "reconstruction",
+      "difficulte": 2,
+      "question": "Remettez dans l'ordre : [Wien | in | wohne | aber | Madagaskar | aus | komme | ich | ich]",
+      "mots": ["Wien", "in", "wohne", "aber", "Madagaskar", "aus", "komme", "ich", "ich"],
+      "solution": ["Ich", "komme", "aus", "Madagaskar", ",", "aber", "ich", "wohne", "in", "Wien", "."],
+      "explication": "Deux propositions reliées par 'aber'. Chacune : sujet + verbe + complément. Verbe toujours en 2ème position."
+    },
+    {
+      "id": "ex-007",
+      "type": "association",
+      "difficulte": 1,
+      "question": "Associez chaque pays à sa nationalité masculine",
+      "paires": [
+        { "gauche": "Frankreich", "droite": "Franzose" },
+        { "gauche": "Deutschland", "droite": "Deutscher" },
+        { "gauche": "Japan", "droite": "Japaner" },
+        { "gauche": "England", "droite": "Engländer" }
+      ]
+    },
+    {
+      "id": "ex-008",
+      "type": "vrai_faux",
+      "difficulte": 2,
+      "question": "'Ich habe kein Auto' utilise 'kein' correctement.",
+      "reponse": true,
+      "explication": "VRAI. 'Auto' est un nom avec article indéfini (ein Auto) → la négation remplace 'ein' par 'kein' : kein Auto."
+    },
+    {
+      "id": "ex-009",
+      "type": "choix_multiple",
+      "difficulte": 2,
+      "question": "Quelle est la forme correcte de 'sprechen' à la 3ème personne du singulier ?",
+      "options": ["spreche", "sprecht", "spricht", "sprechen"],
+      "reponse_correcte": 2,
+      "explication": "'sprechen' est irrégulier : le 'e' du radical devient 'i' aux personnes du/er/sie/es. Donc 'er spricht' — avec changement de radical e→i."
+    },
+    {
+      "id": "ex-010",
+      "type": "situation",
+      "difficulte": 3,
+      "question": "Présentez-vous complètement : nom, âge, pays d'origine, ville de résidence actuelle, et langues parlées. Utilisez les structures vues dans les leçons a1-001, a1-002 et a1-003.",
+      "modele_reponse": "Hallo! Ich heiße [prénom]. Ich bin [âge] Jahre alt. Ich komme aus [pays]. Ich wohne jetzt in [ville]. Ich spreche [langues].",
+      "criteres_evaluation": [
+        "heißen ou Mein Name ist pour le nom",
+        "sein (pas haben) pour l'âge",
+        "kommen aus pour l'origine",
+        "wohnen in pour la résidence",
+        "sprechen sans article pour les langues",
+        "Verbe toujours en 2ème position"
+      ]
+    }
+  ],
+
+  "comprehension": [
+    {
+      "question": "Quelle est la différence entre 'Ich komme aus Wien' et 'Ich wohne in Wien' ?",
+      "reponse": "'Ich komme aus Wien' = je suis né(e)/originaire de Vienne (mon identité, mes racines). 'Ich wohne in Wien' = j'habite à Vienne en ce moment (ma situation actuelle). On peut très bien dire les deux dans la même phrase si on est né ailleurs mais qu'on y habite maintenant."
+    },
+    {
+      "question": "Pourquoi dit-on 'Ich bin Franzose' et non 'Ich bin franzosisch' ?",
+      "reponse": "En allemand, pour exprimer sa nationalité avec 'sein', on utilise le nom de nationalité (Franzose/Französin), pas l'adjectif. L'adjectif seul ('französisch') s'utilise pour qualifier un nom : 'ein französisches Restaurant' (un restaurant français). C'est différent du français où l'on dit 'je suis français' avec l'adjectif."
+    },
+    {
+      "question": "Quand utilise-t-on 'Doch' à la place de 'Ja' ?",
+      "reponse": "'Doch' s'utilise uniquement pour contredire une question ou affirmation NÉGATIVE. Si quelqu'un dit 'Tu n'es pas allemand ?', répondre 'Doch!' = 'Si, je le suis !'. Si la question est positive ('Tu es allemand ?'), on répond 'Ja' ou 'Nein' normalement."
+    }
+  ],
+
+  "culture": {
+    "titre": "Les pays germanophones — DACH",
+    "points": [
+      {
+        "sujet": "Le monde germanophone — DACH",
+        "explication": "On regroupe souvent les pays germanophones sous l'acronyme DACH : D = Deutschland (Allemagne), A = Österreich (Autriche), CH = Confoederatio Helvetica / Schweiz (Suisse). Ces trois pays partagent l'allemand comme langue officielle mais avec des accents, expressions et variantes très différents.",
+        "info_suisse": "La Suisse a 4 langues officielles : Deutsch (63%), Französisch (23%), Italienisch (8%), Rätoromanisch (1%)"
+      },
+      {
+        "sujet": "L'allemand dans le monde",
+        "explication": "L'allemand est la langue maternelle de plus de 100 millions de personnes et la langue la plus parlée de l'Union Européenne. Il est également parlé en Belgique orientale (Ostbelgien), au Luxembourg, et dans plusieurs communautés d'Amérique du Sud."
+      },
+      {
+        "sujet": "Noms de villes : allemand vs français",
+        "exemples": [
+          { "allemand": "Wien", "francais": "Vienne", "pays": "Autriche" },
+          { "allemand": "München", "francais": "Munich", "pays": "Allemagne" },
+          { "allemand": "Köln", "francais": "Cologne", "pays": "Allemagne" },
+          { "allemand": "Brüssel", "francais": "Bruxelles", "pays": "Belgique" }
+        ],
+        "conseil": "Apprenez toujours le nom allemand des villes — c'est celui que vous utiliserez en pratique !"
+      }
+    ]
+  },
+
+  "astuces_pedagogiques": [
+    {
+      "titre": "wo / woher / wohin — le trio spatial",
+      "astuce": "Imagine que tu lances une balle : wo = où est la balle (statique). woher = d'où vient la balle (départ). wohin = où va la balle (arrivée). Trois questions, trois adverbes, trois situations différentes."
+    },
+    {
+      "titre": "nicht vs kein — le truc infaillible",
+      "astuce": "Pose-toi la question : est-ce qu'il y aurait 'ein/eine' dans la version positive ? Si oui → kein/keine. Sinon → nicht. Ex : 'ein Auto' → 'kein Auto'. 'ich komme' → 'ich komme nicht'."
+    },
+    {
+      "titre": "Les langues en -isch",
+      "astuce": "Presque toutes les langues en allemand se terminent par '-isch'. Si tu connais le nom du pays, ajoute souvent '-isch' pour la langue : Japan → Japanisch, Spanien → Spanisch, England → Englisch. Pas toujours parfait, mais ça marche pour la majorité !"
+    }
+  ],
+
+  "progression": {
+    "xp": 50,
+    "badges_deblocables": ["Globe-trotter", "Maître de la négation"],
+    "niveau_suivant": "a1-004",
+    "apercu_suivant": "Leçon suivante : Dire où l'on habite — adresses, quartiers et description du logement"
+  }
+}

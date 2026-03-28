@@ -1,0 +1,920 @@
+{
+  "id": "a1-001",
+  "niveau": "A1",
+  "module": "A1.1",
+  "titre": "Dire bonjour et au revoir",
+  "objectifs": {
+    "communicatif": "Savoir saluer quelqu'un et prendre congé selon le moment de la journée et le contexte",
+    "linguistique": "Comprendre les formules de salutation et de congé de base, leur registre et leur usage",
+    "culturel": "Comprendre les codes de politesse et de contact physique en Allemagne",
+    "cognitif": "Distinguer registre formel et informel dès le premier contact avec la langue"
+  },
+  "metadonnees": {
+    "duree_estimee_minutes": 30,
+    "difficulte_cognitive": 1,
+    "prerequis": [],
+    "competences_visees": ["expression orale", "compréhension orale", "interaction sociale de base"],
+    "themes_croises": ["politesse", "vie quotidienne", "codes culturels allemands"]
+  },
+
+  "situation": {
+    "contexte": "Deux personnes se croisent dans la rue à différents moments de la journée",
+    "lieu": "Rue, ville allemande",
+    "type": "conversation spontanée",
+    "registre": "informel / semi-formel"
+  },
+
+  "dialogue": [
+    {
+      "id": 1,
+      "de": "Hallo! Wie geht's?",
+      "fr": "Bonjour ! Comment ça va ?",
+      "audio": "/audio/a1-001-1.mp3",
+      "phonetique": "ˈhalo | viː ɡeːts",
+      "intonation": "montante sur 'Wie geht's' — question attendant une réponse",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Hallo",
+          "lemme": "Hallo",
+          "classe_grammaticale": "interjection / salutation",
+          "traduction_directe": "Bonjour / Salut",
+          "phonetique": "ˈhalo",
+          "syllabation": "Hal-lo",
+          "accent_tonique": "sur la 1ère syllabe : HAL-lo",
+          "registre": "informel — entre amis, famille, personnes du même âge",
+          "usage": "Utilisé à n'importe quel moment de la journée (matin, midi, soir)",
+          "origine": "De l'anglais 'Hello', lui-même issu du vieux français 'holà'",
+          "nuances": {
+            "vs_Guten_Morgen": "'Hallo' = neutre, toute heure. 'Guten Morgen' = formel, matin uniquement",
+            "vs_Moin": "'Moin' = salutation informelle typique du nord de l'Allemagne",
+            "vs_Servus": "'Servus' = salutation informelle typique du sud (Bavière, Autriche)"
+          },
+          "erreurs_frequentes": [
+            {
+              "erreur": "Prononcer 'Ha-LLO' (accent sur la 2e syllabe comme en anglais)",
+              "correction": "En allemand : 'HAL-lo' — accent sur la première syllabe",
+              "explication": "L'accentuation allemande diffère de l'anglais pour ce mot emprunté"
+            }
+          ],
+          "mnemonique": "Hallo ressemble à 'Hello' anglais — même sens, même origine, juste l'accent change !",
+          "carte_mentale": {
+            "matin": "Hallo ✓",
+            "midi": "Hallo ✓",
+            "soir": "Hallo ✓",
+            "formel": "❌ — utiliser Guten Tag",
+            "informel": "✓✓✓"
+          }
+        },
+        {
+          "mot": "Wie",
+          "lemme": "wie",
+          "classe_grammaticale": "adverbe interrogatif",
+          "traduction_directe": "Comment",
+          "phonetique": "viː",
+          "remarque_phonetique": "Le 'W' allemand se prononce [v] — jamais [w] comme en anglais !",
+          "pieges_prononciation": {
+            "faux": "Wie prononcé 'ouai' (anglais) ❌",
+            "correct": "Wie prononcé 'vie' (comme le mot français 'vie') ✓"
+          },
+          "autres_usages": [
+            {
+              "phrase": "Wie heißen Sie?",
+              "traduction": "Comment vous appelez-vous ?",
+              "niveau": "A1"
+            },
+            {
+              "phrase": "Wie alt bist du?",
+              "traduction": "Quel âge as-tu ?",
+              "niveau": "A1"
+            },
+            {
+              "phrase": "Wie bitte?",
+              "traduction": "Comment ? / Pardon ?",
+              "niveau": "A1"
+            }
+          ],
+          "mnemonique": "Wie = 'vie' en français — prononce-le exactement comme le mot 'vie' !"
+        },
+        {
+          "mot": "geht's",
+          "lemme": "gehen",
+          "forme_complete": "geht es",
+          "classe_grammaticale": "verbe + pronom (forme contractée)",
+          "decomposition": {
+            "geht": {
+              "lemme": "gehen",
+              "traduction": "aller",
+              "forme": "3ème personne singulier, présent de l'indicatif",
+              "conjugaison": {
+                "ich": "gehe",
+                "du": "gehst",
+                "er/sie/es": "geht",
+                "wir": "gehen",
+                "ihr": "geht",
+                "sie/Sie": "gehen"
+              }
+            },
+            "es": {
+              "classe": "pronom personnel neutre",
+              "traduction": "cela / il (impersonnel)",
+              "remarque": "Sujet impersonnel — ne désigne rien de précis, comme 'ça' en français"
+            },
+            "contraction": "'geht es' → 'geht's' — apostrophe marque la suppression du 'e' de 'es'"
+          },
+          "traduction_directe": "ça va (littéralement : 'comment ça va ?')",
+          "structure_complete": "Wie geht es [jemandem] ? = Comment [quelqu'un] va-t-il ?",
+          "variantes_formelles": [
+            {
+              "phrase": "Wie geht es Ihnen?",
+              "traduction": "Comment allez-vous ? (formel)",
+              "registre": "formel / poli",
+              "usage": "Avec une personne inconnue, plus âgée, en contexte professionnel"
+            },
+            {
+              "phrase": "Wie geht es dir?",
+              "traduction": "Comment vas-tu ? (informel)",
+              "registre": "informel",
+              "usage": "Avec un ami, un camarade, une personne de son âge"
+            },
+            {
+              "phrase": "Wie geht's?",
+              "traduction": "Comment ça va ? (très informel)",
+              "registre": "très informel",
+              "usage": "Entre amis proches"
+            }
+          ],
+          "reponses_typiques": [
+            {
+              "reponse": "Gut, danke!",
+              "traduction": "Bien, merci !",
+              "registre": "neutre"
+            },
+            {
+              "reponse": "Sehr gut!",
+              "traduction": "Très bien !",
+              "registre": "neutre"
+            },
+            {
+              "reponse": "Es geht.",
+              "traduction": "Ça va. (moyen)",
+              "registre": "neutre"
+            },
+            {
+              "reponse": "Nicht so gut.",
+              "traduction": "Pas très bien.",
+              "registre": "neutre"
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": 2,
+      "de": "Gut, danke! Und dir?",
+      "fr": "Bien, merci ! Et toi ?",
+      "audio": "/audio/a1-001-2.mp3",
+      "phonetique": "ɡuːt | ˈdaŋkə | ʊnt diːɐ",
+      "intonation": "descendante sur 'Gut, danke' — affirmation. Montante sur 'Und dir?' — question",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Gut",
+          "lemme": "gut",
+          "classe_grammaticale": "adverbe (ici) / adjectif",
+          "traduction_directe": "Bien / Bon",
+          "phonetique": "ɡuːt",
+          "remarque_phonetique": "Le 'u' est long et fermé — comme dans 'roue' en français",
+          "double_emploi": {
+            "adverbe": "Mir geht es gut. (Je vais bien.) — modifie le verbe",
+            "adjectif": "Das ist gut. (C'est bien.) — qualifie un nom ou une situation"
+          },
+          "gradation": {
+            "positif": "gut (bien)",
+            "comparatif": "besser (mieux)",
+            "superlatif": "am besten (le mieux)",
+            "irregularite": "Attention ! 'gut' est irrégulier — on ne dit PAS 'guter/am gutsten'"
+          },
+          "collocations_A1": [
+            "Gut, danke! (Bien, merci !)",
+            "Sehr gut! (Très bien !)",
+            "Nicht gut. (Pas bien.)",
+            "Alles gut? (Tout va bien ?)"
+          ],
+          "mnemonique": "Gut = 'good' en anglais — même sens, presque même son !"
+        },
+        {
+          "mot": "danke",
+          "lemme": "danke",
+          "classe_grammaticale": "interjection / adverbe",
+          "traduction_directe": "Merci",
+          "phonetique": "ˈdaŋkə",
+          "syllabation": "dan-ke",
+          "accent_tonique": "DAN-ke",
+          "origine": "Du verbe 'danken' (remercier) — forme figée comme formule de politesse",
+          "variantes_intensite": [
+            {
+              "forme": "Danke",
+              "traduction": "Merci",
+              "niveau": "standard"
+            },
+            {
+              "forme": "Danke schön",
+              "traduction": "Merci beaucoup",
+              "niveau": "poli"
+            },
+            {
+              "forme": "Danke sehr",
+              "traduction": "Merci beaucoup (encore plus formel)",
+              "niveau": "très poli"
+            },
+            {
+              "forme": "Vielen Dank",
+              "traduction": "Merci beaucoup (registre soutenu)",
+              "niveau": "formel"
+            },
+            {
+              "forme": "Herzlichen Dank",
+              "traduction": "Merci du fond du cœur",
+              "niveau": "très formel / chaleureux"
+            }
+          ],
+          "reponses_a_danke": [
+            {
+              "reponse": "Bitte!",
+              "traduction": "De rien ! / Je vous en prie !",
+              "remarque": "Bitte = s'il vous plaît ET de rien — mot très polyvalent !"
+            },
+            {
+              "reponse": "Gern(e)!",
+              "traduction": "Avec plaisir !",
+              "remarque": "Plus chaleureux que Bitte"
+            },
+            {
+              "reponse": "Kein Problem!",
+              "traduction": "Pas de problème !",
+              "remarque": "Registre informel, très courant chez les jeunes"
+            }
+          ],
+          "erreurs_frequentes": [
+            {
+              "erreur": "Dire 'danke' sans rien en réponse à un service important",
+              "correction": "En Allemagne, ne pas répondre à un 'Danke' est perçu comme impoli — toujours dire 'Bitte' ou 'Gerne'",
+              "explication": "Code social important en culture allemande"
+            }
+          ]
+        },
+        {
+          "mot": "Und",
+          "lemme": "und",
+          "classe_grammaticale": "conjonction de coordination",
+          "traduction_directe": "Et",
+          "phonetique": "ʊnt",
+          "remarque_phonetique": "Le 'd' final se prononce [t] en allemand — règle de l'assourdissement final (Auslautverhärtung)",
+          "regle_grammaire": {
+            "nom": "Auslautverhärtung",
+            "explication": "En fin de mot, les consonnes sonores deviennent sourdes en allemand",
+            "exemples": [
+              "und [ʊnt] — d → t",
+              "Hund (chien) [hʊnt] — d → t",
+              "Kind (enfant) [kɪnt] — d → t",
+              "Tag (jour) [taːk] — g → k"
+            ]
+          },
+          "usage": "Relie deux mots, groupes ou phrases — identique au 'et' français",
+          "piege": "Contrairement au français, 'und' ne change PAS l'ordre des mots dans la proposition qui suit"
+        },
+        {
+          "mot": "dir",
+          "lemme": "du",
+          "classe_grammaticale": "pronom personnel",
+          "cas": "Datif de 'du'",
+          "traduction_directe": "À toi / Toi (complément)",
+          "tableau_pronoms": {
+            "titre": "Pronom 'tu' selon le cas",
+            "cas": [
+              {
+                "cas": "Nominatif (sujet)",
+                "forme": "du",
+                "exemple": "Du bist nett. (Tu es gentil.)"
+              },
+              {
+                "cas": "Accusatif (COD)",
+                "forme": "dich",
+                "exemple": "Ich sehe dich. (Je te vois.)"
+              },
+              {
+                "cas": "Datif (COI)",
+                "forme": "dir",
+                "exemple": "Wie geht es dir? (Comment vas-tu ?)"
+              }
+            ]
+          },
+          "remarque_pedagogique": "Pour l'instant, retenez que 'Und dir?' = 'Et toi ?' — les cas seront appris progressivement",
+          "forme_formelle": {
+            "forme": "Und Ihnen?",
+            "traduction": "Et vous ? (formel)",
+            "quand": "Avec une personne inconnue, un supérieur, une personne âgée"
+          },
+          "mnemonique": "dir = 'dire' sans le 'e' — 'et toi ?' c'est comme 'dire à toi'"
+        }
+      ]
+    },
+
+    {
+      "id": 3,
+      "de": "Guten Morgen, Herr Müller!",
+      "fr": "Bonjour (le matin), Monsieur Müller !",
+      "audio": "/audio/a1-001-3.mp3",
+      "phonetique": "ˈɡuːtən ˈmɔʁɡən | hɛʁ ˈmʏlɐ",
+      "registre": "formel",
+      "intonation": "descendante — affirmation polie et assurée",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Guten",
+          "lemme": "gut",
+          "classe_grammaticale": "adjectif décliné (accusatif masculin)",
+          "traduction_directe": "Bon(ne)",
+          "remarque_grammaticale": "La terminaison '-en' est la marque de l'accusatif masculin sans article (Akkusativ, dekliniert)",
+          "pedagogie_A1": "À ce stade, retiens simplement que 'Guten Morgen/Tag/Abend' est une formule figée — la déclinaison sera vue plus tard",
+          "pattern_formule": "Guten + [moment de la journée] = formule de salutation formelle",
+          "tableau_salutations_formelles": [
+            {
+              "formule": "Guten Morgen",
+              "quand": "Matin (jusqu'à environ 10h)",
+              "traduction": "Bonjour (le matin)"
+            },
+            {
+              "formule": "Guten Tag",
+              "quand": "Journée (10h–18h)",
+              "traduction": "Bonjour (en journée)"
+            },
+            {
+              "formule": "Guten Abend",
+              "quand": "Soir (à partir de 18h)",
+              "traduction": "Bonsoir"
+            },
+            {
+              "formule": "Gute Nacht",
+              "quand": "Au moment de dormir",
+              "traduction": "Bonne nuit",
+              "attention": "Uniquement pour se coucher — pas pour dire au revoir le soir !"
+            }
+          ]
+        },
+        {
+          "mot": "Morgen",
+          "lemme": "der Morgen",
+          "classe_grammaticale": "nom masculin",
+          "traduction_directe": "Le matin",
+          "phonetique": "ˈmɔʁɡən",
+          "genre": "masculin — der Morgen",
+          "double_sens": {
+            "sens_1": "der Morgen = le matin (moment de la journée)",
+            "sens_2": "morgen (sans majuscule) = demain (adverbe)",
+            "regle": "En allemand, TOUS les noms prennent une majuscule. Les adverbes non.",
+            "exemples": [
+              "Guten Morgen! = Bonjour (le matin) — Morgen = nom → majuscule",
+              "Bis morgen! = À demain ! — morgen = adverbe → minuscule"
+            ],
+            "piege_courant": "Confondre 'Morgen' (matin) et 'morgen' (demain) — la majuscule fait toute la différence !"
+          }
+        },
+        {
+          "mot": "Herr",
+          "lemme": "Herr",
+          "classe_grammaticale": "titre de civilité (nom masculin)",
+          "traduction_directe": "Monsieur",
+          "phonetique": "hɛʁ",
+          "tableau_titres": [
+            {
+              "titre": "Herr",
+              "traduction": "Monsieur",
+              "genre": "masculin",
+              "exemple": "Herr Müller"
+            },
+            {
+              "titre": "Frau",
+              "traduction": "Madame (ou Mademoiselle — un seul titre pour les deux en allemand)",
+              "genre": "féminin",
+              "exemple": "Frau Schmidt",
+              "remarque": "Contrairement au français, l'allemand n'utilise PAS 'Fräulein' (Mademoiselle) dans la vie courante — c'est obsolète et parfois perçu comme condescendant"
+            }
+          ],
+          "usage_culturel": "En Allemagne, le titre 'Herr' ou 'Frau' + nom de famille est la norme dans tout contexte formel : au travail, chez le médecin, en administration",
+          "erreurs_courantes": [
+            {
+              "erreur": "Utiliser le prénom directement avec une personne inconnue en contexte formel",
+              "correction": "Toujours utiliser Herr/Frau + nom de famille jusqu'à invitation explicite à se tutoyer (duzen)",
+              "contexte_culturel": "En Allemagne, passer au prénom sans invitation est perçu comme impoli ou trop familier"
+            }
+          ]
+        },
+        {
+          "mot": "Müller",
+          "lemme": "Müller",
+          "classe_grammaticale": "nom propre (patronyme)",
+          "traduction_directe": "(nom de famille — pas de traduction)",
+          "remarque_culturelle": "Müller est l'un des noms de famille les plus courants en Allemagne (comme Dupont en France ou Rakoto à Madagascar)",
+          "umlaut": {
+            "lettre": "ü",
+            "phonetique": "ʏ",
+            "description": "Son inexistant en français — prononcé comme un 'u' français mais avec les lèvres arrondies en 'u' et la langue en position de 'i'",
+            "exercice": "Prononce 'i' puis arrondis tes lèvres comme pour dire 'u' → tu obtiens [ʏ]"
+          }
+        }
+      ]
+    },
+
+    {
+      "id": 4,
+      "de": "Auf Wiedersehen!",
+      "fr": "Au revoir !",
+      "audio": "/audio/a1-001-4.mp3",
+      "phonetique": "aʊf ˈviːdɐˌzeːən",
+      "registre": "formel à neutre",
+      "intonation": "descendante — clôture de la conversation",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Auf",
+          "lemme": "auf",
+          "classe_grammaticale": "préposition",
+          "traduction_directe": "Sur / À (selon le contexte)",
+          "phonetique": "aʊf",
+          "remarque": "Dans 'Auf Wiedersehen', 'auf' a un sens de direction/futur — 'vers un prochain revoir'",
+          "dans_autres_contextes": [
+            "Das Buch liegt auf dem Tisch. = Le livre est sur la table.",
+            "Auf Wiederhören! = Au revoir (au téléphone — littéralement 'à la prochaine écoute')"
+          ]
+        },
+        {
+          "mot": "Wiedersehen",
+          "lemme": "wiedersehen",
+          "classe_grammaticale": "nom (nominalisé) / verbe à préfixe séparable",
+          "decomposition": {
+            "wieder": {
+              "traduction": "de nouveau, à nouveau",
+              "phonetique": "ˈviːdɐ"
+            },
+            "sehen": {
+              "traduction": "voir",
+              "phonetique": "zeːən",
+              "conjugaison_present": {
+                "ich": "sehe",
+                "du": "siehst",
+                "er/sie/es": "sieht",
+                "wir": "sehen",
+                "ihr": "seht",
+                "sie/Sie": "sehen"
+              }
+            },
+            "sens_compose": "Littéralement : 'revoir' — 'Auf Wiedersehen' = 'À un prochain revoir' = 'Au revoir'"
+          },
+          "traduction_litterale": "Auf Wiedersehen = 'À un prochain revoir' → 'Au revoir'",
+          "mnemonique": "WIEDER (à nouveau) + SEHEN (voir) = revoir → 'jusqu'à ce qu'on se revoie !'"
+        }
+      ],
+      "variantes_conge": [
+        {
+          "formule": "Tschüss",
+          "phonetique": "tʃʏs",
+          "traduction": "Salut / Ciao",
+          "registre": "très informel",
+          "quand": "Entre amis, famille",
+          "origine": "Du bas-allemand 'adjüs', lui-même de l'espagnol 'adiós'"
+        },
+        {
+          "formule": "Tschüssi",
+          "phonetique": "ˈtʃʏsi",
+          "traduction": "Salut salut !",
+          "registre": "très informel / enfantin / affectueux",
+          "quand": "Entre amis très proches, enfants"
+        },
+        {
+          "formule": "Bis bald",
+          "phonetique": "bɪs balt",
+          "traduction": "À bientôt",
+          "registre": "neutre",
+          "decomposition": "bis (jusqu'à) + bald (bientôt)"
+        },
+        {
+          "formule": "Bis morgen",
+          "phonetique": "bɪs ˈmɔʁɡən",
+          "traduction": "À demain",
+          "registre": "neutre",
+          "decomposition": "bis (jusqu'à) + morgen (demain)"
+        },
+        {
+          "formule": "Bis dann",
+          "phonetique": "bɪs dan",
+          "traduction": "À tout à l'heure / À plus",
+          "registre": "informel",
+          "decomposition": "bis (jusqu'à) + dann (alors / à ce moment)"
+        },
+        {
+          "formule": "Auf Wiederhören",
+          "phonetique": "aʊf ˈviːdɐˌhøːʁən",
+          "traduction": "Au revoir (téléphone)",
+          "registre": "formel",
+          "quand": "UNIQUEMENT au téléphone",
+          "decomposition": "auf + wieder + hören (entendre) — 'à la prochaine écoute'"
+        },
+        {
+          "formule": "Mach's gut",
+          "phonetique": "maxs ɡuːt",
+          "traduction": "Prends soin de toi / Bonne continuation",
+          "registre": "informel chaleureux",
+          "decomposition": "mach (fais — impératif de machen) + es (le) + gut (bien)"
+        }
+      ]
+    }
+  ],
+
+  "vocabulaire_complet": [
+    {
+      "mot": "Hallo",
+      "traduction": "Bonjour / Salut",
+      "type": "salutation",
+      "registre": "informel",
+      "phonetique": "ˈhalo",
+      "frequence": "très courant"
+    },
+    {
+      "mot": "Guten Morgen",
+      "traduction": "Bonjour (le matin)",
+      "type": "salutation",
+      "registre": "formel à neutre",
+      "phonetique": "ˈɡuːtən ˈmɔʁɡən",
+      "frequence": "très courant"
+    },
+    {
+      "mot": "Guten Tag",
+      "traduction": "Bonjour (en journée)",
+      "type": "salutation",
+      "registre": "formel à neutre",
+      "phonetique": "ˈɡuːtən taːk",
+      "frequence": "très courant"
+    },
+    {
+      "mot": "Guten Abend",
+      "traduction": "Bonsoir",
+      "type": "salutation",
+      "registre": "formel à neutre",
+      "phonetique": "ˈɡuːtən ˈaːbənt",
+      "frequence": "courant"
+    },
+    {
+      "mot": "Gute Nacht",
+      "traduction": "Bonne nuit",
+      "type": "salutation / congé",
+      "registre": "neutre",
+      "phonetique": "ˈɡuːtə naxt",
+      "frequence": "courant",
+      "attention": "Uniquement au moment de se coucher"
+    },
+    {
+      "mot": "Wie geht's?",
+      "traduction": "Comment ça va ?",
+      "type": "question sociale",
+      "registre": "informel",
+      "phonetique": "viː ɡeːts",
+      "frequence": "très courant"
+    },
+    {
+      "mot": "Wie geht es Ihnen?",
+      "traduction": "Comment allez-vous ?",
+      "type": "question sociale",
+      "registre": "formel",
+      "phonetique": "viː ɡeːt ɛs ˈiːnən",
+      "frequence": "courant"
+    },
+    {
+      "mot": "Gut, danke",
+      "traduction": "Bien, merci",
+      "type": "réponse sociale",
+      "registre": "neutre",
+      "phonetique": "ɡuːt ˈdaŋkə",
+      "frequence": "très courant"
+    },
+    {
+      "mot": "Auf Wiedersehen",
+      "traduction": "Au revoir",
+      "type": "congé",
+      "registre": "formel à neutre",
+      "phonetique": "aʊf ˈviːdɐˌzeːən",
+      "frequence": "très courant"
+    },
+    {
+      "mot": "Tschüss",
+      "traduction": "Salut / Ciao",
+      "type": "congé",
+      "registre": "informel",
+      "phonetique": "tʃʏs",
+      "frequence": "très courant"
+    },
+    {
+      "mot": "Bis bald",
+      "traduction": "À bientôt",
+      "type": "congé",
+      "registre": "neutre",
+      "phonetique": "bɪs balt",
+      "frequence": "courant"
+    },
+    {
+      "mot": "Herr",
+      "traduction": "Monsieur",
+      "type": "titre",
+      "registre": "formel",
+      "phonetique": "hɛʁ",
+      "frequence": "très courant"
+    },
+    {
+      "mot": "Frau",
+      "traduction": "Madame",
+      "type": "titre",
+      "registre": "formel",
+      "phonetique": "fʁaʊ",
+      "frequence": "très courant"
+    },
+    {
+      "mot": "danke",
+      "traduction": "merci",
+      "type": "politesse",
+      "registre": "neutre",
+      "phonetique": "ˈdaŋkə",
+      "frequence": "très courant"
+    },
+    {
+      "mot": "bitte",
+      "traduction": "s'il vous plaît / de rien",
+      "type": "politesse",
+      "registre": "neutre",
+      "phonetique": "ˈbɪtə",
+      "frequence": "très courant",
+      "polyvalence": "Un seul mot pour 'please' et 'you're welcome' !"
+    }
+  ],
+
+  "grammaire": [
+    {
+      "titre": "Les formules de salutation selon le moment",
+      "niveau": "A1",
+      "explication": "En allemand, la salutation change selon le moment de la journée ET selon le registre (formel ou informel).",
+      "tableau": {
+        "moment": ["Matin", "Journée", "Soir", "Nuit"],
+        "formel": ["Guten Morgen", "Guten Tag", "Guten Abend", "Gute Nacht"],
+        "informel": ["Hallo / Morgen!", "Hallo!", "Hallo!", "Gute Nacht / Tschüss"]
+      },
+      "regle_cle": "Guten + nom masculin/neutre / Gute + nom féminin (Nacht = féminin → Gute Nacht)"
+    },
+    {
+      "titre": "Du (tu) vs Sie (vous) — le tutoiement en allemand",
+      "niveau": "A1",
+      "explication": "L'allemand distingue très clairement le tutoiement (du) et le vouvoiement (Sie). Cette distinction est fondamentale dans la culture allemande.",
+      "regles": [
+        {
+          "forme": "du",
+          "traduction": "tu",
+          "usage": "Amis, famille, enfants, collègues proches, personnes du même âge qui s'y autorisent",
+          "question": "Wie geht es dir?"
+        },
+        {
+          "forme": "Sie",
+          "traduction": "vous (de politesse — une ou plusieurs personnes)",
+          "usage": "Inconnus, supérieurs, personnes âgées, contexte professionnel formel",
+          "particularite": "Sie prend TOUJOURS une majuscule quand c'est le vouvoiement",
+          "question": "Wie geht es Ihnen?"
+        }
+      ],
+      "conseil_culturel": "En Allemagne, attendre toujours que l'interlocuteur propose de se tutoyer ('Wir können uns duzen'). Passer au 'du' sans invitation est mal perçu."
+    },
+    {
+      "titre": "L'assourdissement final (Auslautverhärtung)",
+      "niveau": "A1 — notions",
+      "explication": "En fin de mot, les consonnes sonores (b, d, g, v) deviennent sourdes (p, t, k, f) en allemand.",
+      "exemples": [
+        "und → [ʊnt] (d→t)",
+        "Tag → [taːk] (g→k)",
+        "Abend → [ˈaːbənt] (d→t)"
+      ],
+      "importance": "Règle de prononciation essentielle — s'applique à des centaines de mots"
+    }
+  ],
+
+  "exercices": [
+    {
+      "id": "ex-001",
+      "type": "choix_multiple",
+      "difficulte": 1,
+      "question": "Il est 8h du matin. Vous entrez dans un bureau. Que dites-vous à votre collègue que vous ne connaissez pas bien ?",
+      "options": [
+        "Hallo!",
+        "Guten Morgen!",
+        "Tschüss!",
+        "Gute Nacht!"
+      ],
+      "reponse_correcte": 1,
+      "explication": "'Guten Morgen' est la salutation formelle du matin. 'Hallo' serait trop informel avec quelqu'un qu'on ne connaît pas bien. 'Tschüss' = au revoir. 'Gute Nacht' = bonne nuit."
+    },
+    {
+      "id": "ex-002",
+      "type": "choix_multiple",
+      "difficulte": 1,
+      "question": "Votre ami vous demande : 'Wie geht's?' Quelle est la réponse la plus naturelle ?",
+      "options": [
+        "Auf Wiedersehen!",
+        "Guten Abend!",
+        "Gut, danke! Und dir?",
+        "Herr Müller!"
+      ],
+      "reponse_correcte": 2,
+      "explication": "'Gut, danke! Und dir?' = Bien, merci ! Et toi ? C'est la réponse naturelle et polie qui renvoie la question."
+    },
+    {
+      "id": "ex-003",
+      "type": "association",
+      "difficulte": 1,
+      "question": "Associez chaque formule à son moment d'utilisation",
+      "paires": [
+        {"gauche": "Guten Morgen", "droite": "8h du matin"},
+        {"gauche": "Guten Tag", "droite": "14h l'après-midi"},
+        {"gauche": "Guten Abend", "droite": "20h le soir"},
+        {"gauche": "Gute Nacht", "droite": "Avant de dormir"}
+      ]
+    },
+    {
+      "id": "ex-004",
+      "type": "choix_multiple",
+      "difficulte": 2,
+      "question": "Vous raccrochez le téléphone après un appel professionnel. Que dites-vous ?",
+      "options": [
+        "Tschüss!",
+        "Auf Wiederhören!",
+        "Bis morgen!",
+        "Mach's gut!"
+      ],
+      "reponse_correcte": 1,
+      "explication": "'Auf Wiederhören' (de 'hören' = entendre) est LA formule d'au revoir au téléphone en allemand formel. 'Wiederhören' car on 'entend' et non on 'voit' la personne."
+    },
+    {
+      "id": "ex-005",
+      "type": "traduction",
+      "difficulte": 2,
+      "question": "Traduire en allemand (registre informel) : 'Salut ! Comment ça va ? À bientôt !'",
+      "reponse_attendue": "Hallo! Wie geht's? Bis bald!",
+      "reponses_acceptees": ["Hallo! Wie geht es dir? Bis bald!", "Hallo! Wie geht's? Bis bald!"],
+      "explication": "Hallo (salut informel) + Wie geht's / Wie geht es dir (comment ça va, informel) + Bis bald (à bientôt)"
+    },
+    {
+      "id": "ex-006",
+      "type": "reconstruction",
+      "difficulte": 2,
+      "question": "Remettez dans le bon ordre : [Wiedersehen | Auf | !]",
+      "mots": ["Wiedersehen", "Auf", "!"],
+      "solution": ["Auf", "Wiedersehen", "!"],
+      "explication": "La préposition 'Auf' précède toujours 'Wiedersehen' dans cette formule figée."
+    },
+    {
+      "id": "ex-007",
+      "type": "choix_multiple",
+      "difficulte": 2,
+      "question": "Laquelle de ces phrases est INCORRECTE ?",
+      "options": [
+        "Gute Nacht, Frau Schmidt!",
+        "Auf Wiedersehen, Herr Müller!",
+        "Fräulein Klein, Guten Tag!",
+        "Guten Abend, Herr Weber!"
+      ],
+      "reponse_correcte": 2,
+      "explication": "'Fräulein' (Mademoiselle) est obsolète et considéré condescendant en allemand moderne. On utilise 'Frau' pour toutes les femmes, quel que soit leur statut marital."
+    },
+    {
+      "id": "ex-008",
+      "type": "vrai_faux",
+      "difficulte": 1,
+      "question": "'Danke' peut signifier à la fois 'merci' et 'de rien' en allemand.",
+      "reponse": false,
+      "explication": "FAUX. 'Danke' = merci uniquement. C'est 'Bitte' qui signifie à la fois 's'il vous plaît' ET 'de rien'."
+    },
+    {
+      "id": "ex-009",
+      "type": "situation",
+      "difficulte": 3,
+      "question": "Vous croisez votre voisin (50 ans, vous ne le connaissez pas bien) à 17h. Que lui dites-vous pour le saluer poliment et lui demander comment il va ?",
+      "reponse_attendue": "Guten Tag! Wie geht es Ihnen?",
+      "reponses_acceptees": ["Guten Tag! Wie geht es Ihnen?", "Guten Abend! Wie geht es Ihnen?"],
+      "explication": "17h = fin d'après-midi → 'Guten Tag' ou début 'Guten Abend'. Voisin peu connu, plus âgé → vouvoiement 'Ihnen' obligatoire. 'Wie geht's' serait trop familier."
+    },
+    {
+      "id": "ex-010",
+      "type": "oral_simulation",
+      "difficulte": 3,
+      "question": "Jouez ce mini-dialogue : Vous rencontrez Frau Bauer (votre professeure) le matin. Saluez-la, demandez-lui comment elle va, elle répond 'Sehr gut, danke', puis vous prenez congé formellement.",
+      "modele_reponse": [
+        "Guten Morgen, Frau Bauer!",
+        "Wie geht es Ihnen?",
+        "[Elle dit : Sehr gut, danke!]",
+        "Das freut mich! Auf Wiedersehen, Frau Bauer!"
+      ],
+      "expressions_bonus": ["Das freut mich! = Ça me fait plaisir !"]
+    }
+  ],
+
+  "comprehension": [
+    {
+      "question": "Quelle est la différence entre 'Hallo' et 'Guten Tag' ?",
+      "reponse": "'Hallo' est informel (entre amis, gens du même âge) et utilisé à toute heure. 'Guten Tag' est formel (inconnus, supérieurs) et utilisé en journée seulement."
+    },
+    {
+      "question": "Pourquoi dit-on 'Auf Wiederhören' au téléphone et non 'Auf Wiedersehen' ?",
+      "reponse": "'Wiedersehen' vient de 'sehen' (voir) — on se reverra. 'Wiederhören' vient de 'hören' (entendre) — au téléphone, on ne se voit pas, on s'entend seulement."
+    },
+    {
+      "question": "Que signifie 'Bitte' en allemand et pourquoi est-il inhabituel pour un francophone ?",
+      "reponse": "'Bitte' signifie à la fois 's'il vous plaît' (pour demander quelque chose) et 'de rien' (en réponse à 'danke'). Un seul mot pour deux fonctions très différentes en français."
+    }
+  ],
+
+  "phonetique_focus": {
+    "sons_nouveaux_pour_francophones": [
+      {
+        "son": "[x]",
+        "graphie": "ch (après a, o, u)",
+        "description": "Son guttural — comme un 'r' raclé dans la gorge. Absent en français standard.",
+        "exemple_mot": "ach, auch, Nacht",
+        "exercice": "Dites 'r' très en arrière de la gorge, comme si vous vouliez nettoyer un verre. Ce son, c'est [x]."
+      },
+      {
+        "son": "[ç]",
+        "graphie": "ch (après e, i, ä, ö, ü)",
+        "description": "Sifflement léger, comme un 'ch' très doux en haut du palais.",
+        "exemple_mot": "ich, mich, nicht",
+        "exercice": "Dites 'shi' en anglais et adoucissez — vous approchez [ç]"
+      },
+      {
+        "son": "[ʏ]",
+        "graphie": "ü",
+        "description": "Son inexistant en français — ni 'i', ni 'u', un mélange des deux.",
+        "exemple_mot": "Tschüss, Müller, fünf",
+        "exercice": "Positionnez votre langue pour dire 'i', mais arrondissez vos lèvres comme pour dire 'u' → [ʏ]"
+      },
+      {
+        "son": "[v]",
+        "graphie": "w",
+        "description": "Le W allemand se prononce [v] — JAMAIS [w] comme en anglais !",
+        "exemple_mot": "Wie, Wiedersehen, wir",
+        "exercice": "Wie = 'vie' en français — même son !"
+      }
+    ]
+  },
+
+  "culture": {
+    "titre": "Codes sociaux allemands lors des salutations",
+    "points": [
+      {
+        "sujet": "La poignée de main",
+        "explication": "En contexte formel ou lors d'une première rencontre, les Allemands se serrent la main — ferme et brève. Entre amis ou en contexte informel, une accolade (Umarmung) ou bise sont aussi possibles, mais moins systématiques qu'en France."
+      },
+      {
+        "sujet": "Du vs Sie — une frontière sociale nette",
+        "explication": "La distinction du/Sie est beaucoup plus rigide en Allemagne qu'en France. Dans les entreprises traditionnelles, les collègues se vouvoient parfois pendant des années. Dans les startups et entreprises tech, le 'du' est souvent la norme dès le premier jour."
+      },
+      {
+        "sujet": "Pünktlichkeit (ponctualité)",
+        "lien_avec_salutations": "Arriver à l'heure est une marque de respect fondamentale en Allemagne. Arriver en retard sans prévenir peut être perçu comme une impolitesse grave — même la salutation ne rattraperait pas ce manque."
+      },
+      {
+        "sujet": "Régionalismes",
+        "exemples": [
+          "Moin / Moin Moin — Hambourg et nord de l'Allemagne (bonjour à toute heure)",
+          "Servus — Bavière et Autriche (bonjour ET au revoir informel)",
+          "Grüß Gott — Bavière et Autriche (bonjour formel — littéralement 'Que Dieu vous salue')",
+          "Grüezi — Suisse alémanique (bonjour)"
+        ]
+      }
+    ]
+  },
+
+  "astuces_pedagogiques": [
+    {
+      "titre": "La règle du 'bis' pour les au revoirs",
+      "astuce": "Toutes les formules avec 'bis' (jusqu'à) indiquent QUAND on se reverra : 'bis bald' (à bientôt), 'bis morgen' (à demain), 'bis Montag' (à lundi), 'bis später' (à tout à l'heure). C'est un pattern ultra-productif !"
+    },
+    {
+      "titre": "Guten vs Gute",
+      "astuce": "'Guten Morgen/Tag/Abend' (masculin) mais 'Gute Nacht' (féminin — die Nacht). La terminaison change selon le genre du nom. Pour l'instant, mémorise les formules en bloc."
+    },
+    {
+      "titre": "La majuscule aux noms",
+      "astuce": "En allemand, TOUS les noms communs prennent une majuscule : der Morgen (le matin), die Nacht (la nuit), der Tag (le jour). C'est une aide visuelle précieuse pour identifier les noms dans un texte !"
+    }
+  ],
+
+  "progression": {
+    "xp": 50,
+    "badges_deblocables": ["Première salutation", "Code formel/informel"],
+    "niveau_suivant": "a1-002",
+    "apercu_suivant": "Leçon suivante : Se présenter — dire son nom, son âge et d'où on vient"
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "id": "b1-009",
+  "niveau": "B1",
+  "module": "B1.2",
+  "titre": "Discuter du logement et des services publics",
+  "objectifs": {
+    "communicatif": "Comprendre une annonce immobilière, discuter du loyer et des charges (Nebenkosten), contacter un service public ou un fournisseur d'énergie",
+    "linguistique": "Maîtriser les propositions relatives au nominatif et à l'accusatif, et les verbes à double complément (Dati/Accusatif)",
+    "culturel": "Le marché du logement en Allemagne (WG, Kaltmiete vs Warmmiete) et la gestion des déchets (Mülltrennung)",
+    "cognitif": "Analyser des documents contractuels simples"
+  },
+  "metadonnees": {
+    "duree_estimee_minutes": 60,
+    "difficulte_cognitive": 4,
+    "prerequis": ["b1-006", "a2-012"],
+    "competences_visees": ["compréhension écrite", "interaction formelle"],
+    "themes_croises": ["logement", "administration", "écologie"]
+  },
+  "situation": {
+    "contexte": "Tu visites un appartement en colocation (WG) à Munich et tu poses des questions sur le contrat et les services inclus.",
+    "lieu": "Appartement, Munich",
+    "type": "Entretien de logement / Visite",
+    "registre": "standard / semi-formel"
+  },
+  "dialogue": [
+    {
+      "id": 1,
+      "de": "Das ist das Zimmer, das ab nächsten Monat frei wird. Die Warmmiete beträgt 600 Euro.",
+      "fr": "C'est la chambre qui se libère à partir du mois prochain. Le loyer charges comprises s'élève à 600 euros.",
+      "phonetique": "das ɪst das ˈt͡sɪmɐ | das ap ˈnɛːçstən ˈmoːnat fʁaɪ vɪʁt | diː ˈvaʁmˌmiːtə bəˈtʁɛːkt zɛksˈhʊndɐt ˈɔɪʁo",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "das Zimmer, das...",
+          "grammaire": {
+            "titre": "La proposition relative (Relativsatz)",
+            "explication": "Le pronom relatif 'das' reprend le genre du nom (neutre). Le verbe conjugué 'wird' est rejeté à la fin.",
+            "exemple": "Der Mann, der dort wohnt... (L'homme qui habite là...)"
+          }
+        },
+        {
+          "mot": "Warmmiete",
+          "note_culturelle": "Concept clé : Loyer 'chaud' (avec chauffage et charges) vs 'Kaltmiete' (loyer de base sans charges)."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "de": "Sind die Internetkosten in den Nebenkosten enthalten oder muss ich einen eigenen Vertrag abschließen?",
+      "fr": "Les frais d'Internet sont-ils inclus dans les charges ou dois-je souscrire mon propre contrat ?",
+      "phonetique": "zɪnt diː ˈɪntɐnɛtˌkɔstən ɪn deːn ˈneːbənˌkɔstən ɛntˈhaltən ˈoːdɐ mʊs ɪç ˈaɪnən ˈaɪɡənən fɛɐ̯ˈtʁaːk apˈʃliːsən",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Nebenkosten",
+          "traduction": "Charges locatives",
+          "comprend": "Généralement l'eau, les ordures ménagères et le chauffage."
+        },
+        {
+          "mot": "abschließen",
+          "usage": "Utilisé spécifiquement pour 'conclure' ou 'souscrire' un contrat ou une assurance."
+        }
+      ]
+    }
+  ],
+  "grammaire": [
+    {
+      "titre": "Les pronoms relatifs (Nominatif / Accusatif)",
+      "explication": "Ils servent à relier deux phrases pour éviter les répétitions.",
+      "tableau": [
+        { "Genre": "Masculin", "Nominatif (Sujet)": "der", "Accusatif (COD)": "den" },
+        { "Genre": "Féminin", "Nominatif (Sujet)": "die", "Accusatif (COD)": "die" },
+        { "Genre": "Neutre", "Nominatif (Sujet)": "das", "Accusatif (COD)": "das" },
+        { "Genre": "Pluriel", "Nominatif (Sujet)": "die", "Accusatif (COD)": "die" }
+      ],
+      "exemple": "Der Nachbar, DEN ich gestern getroffen habe. (Le voisin que j'ai rencontré hier.)"
+    }
+  ],
+  "vocabulaire_cles": [
+    { "de": "die Wohngemeinschaft (WG)", "fr": "la colocation" },
+    { "de": "der Mietvertrag", "fr": "le contrat de location" },
+    { "de": "die Kaution", "fr": "la caution / le dépôt de garantie" },
+    { "de": "die Hausordnung", "fr": "le règlement intérieur de l'immeuble" },
+    { "de": "der Stromanbieter", "fr": "le fournisseur d'électricité" }
+  ],
+  "exercices": [
+    {
+      "id": "ex-b1-009-1",
+      "type": "syntaxe",
+      "question": "Reliez avec un pronom relatif : 'Ich suche die Wohnung. Sie hat einen Balkon.'",
+      "reponse_attendue": "Ich suche die Wohnung, die einen Balkon hat.",
+      "explication": "La proposition relative commence après la virgule, le verbe 'hat' va à la fin."
+    },
+    {
+      "id": "ex-b1-009-2",
+      "type": "vocabulaire",
+      "question": "Si votre loyer inclut le chauffage et l'eau, on parle de...",
+      "options": ["Kaltmiete", "Warmmiete", "Nebenkostenfrei"],
+      "reponse_correcte": 1
+    }
+  ],
+  "culture": {
+    "titre": "Mülltrennung (Le tri des déchets)",
+    "explication": "En Allemagne, le tri est une institution. Respecter la 'Hausordnung' signifie trier rigoureusement : Papier (bleu), Bio (marron/vert), Plastique/Métal (jaune) et Reste (noir). Ne pas le faire peut créer des tensions avec les voisins ou le propriétaire !"
+  },
+  "progression": {
+    "xp": 150,
+    "prochain_id": "b1-010",
+    "apercu_suivant": "Leçon B1.2-5 : Gérer les situations imprévues (retards, perte d'objet, problèmes techniques)."
+  }
+}

@@ -1,0 +1,161 @@
+{
+  "id": "a2-015",
+  "niveau": "A2",
+  "module": "A2.3",
+  "titre": "Comprendre et donner de courtes instructions",
+  "objectifs": {
+    "communicatif": "Savoir donner des ordres, des conseils et des instructions par étapes",
+    "linguistique": "Maîtriser l'impératif (du/ihr/Sie) et les connecteurs d'ordre (zuerst, dann, danach)",
+    "culturel": "Le bénévolat (Ehrenamt) et l'organisation associative en Allemagne",
+    "cognitif": "Différencier la demande polie de l'instruction directe"
+  },
+  "metadonnees": {
+    "duree_estimee_minutes": 45,
+    "difficulte_cognitive": 2,
+    "prerequis": ["a2-001", "a1-004"],
+    "competences_visees": ["expression orale", "compréhension écrite", "interaction"],
+    "themes_croises": ["travail", "collaboration", "vie sociale"]
+  },
+  "situation": {
+    "contexte": "Préparation d'un festival de quartier (Stadtteilfest) à Berlin. Un responsable donne des instructions aux bénévoles.",
+    "lieu": "Centre culturel, Berlin",
+    "type": "Instructions de travail",
+    "registre": "informel (entre bénévoles) à semi-formel"
+  },
+  "dialogue": [
+    {
+      "id": 1,
+      "de": "Zuerst stellt bitte die Tische nach draußen. Danach holt die Getränke aus dem Keller.",
+      "fr": "D'abord, installez les tables dehors s'il vous plaît. Ensuite, allez chercher les boissons à la cave.",
+      "phonetique": "ˈtsuːeːɐ̯st ˈʃtɛlt ˈbɪtə diː ˈtɪʃə naːx ˈdʁaʊsən | daˈnaːx ˈhoːlt diː ɡəˈtʁɛŋkə aʊs deːm ˈkɛlɐ",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "stellt",
+          "lemme": "stellen",
+          "classe_grammaticale": "verbe (impératif)",
+          "forme": "2ème personne du pluriel (ihr)",
+          "regle_imperatif": {
+            "titre": "L'impératif avec 'ihr' (vous pluriel)",
+            "regle": "On utilise la forme du présent du pluriel mais SANS le pronom 'ihr'.",
+            "construction": "ihr stellt → Stellt! (Installez !)",
+            "exemples": ["Geht! (Allez !)", "Kommt! (Venez !)", "Arbeitet! (Travaillez !)"]
+          }
+        },
+        {
+          "mot": "nach draußen",
+          "traduction": "vers l'extérieur / dehors",
+          "usage": "Indique un mouvement vers l'extérieur. 'Draußen' seul est statique."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "de": "Soll ich auch die Plakate aufhängen? - Ja, aber sei vorsichtig mit der Leiter!",
+      "fr": "Dois-je aussi accrocher les affiches ? - Oui, mais sois prudent avec l'échelle !",
+      "phonetique": "zɔl ɪç aʊx diː plaˈkaːtə ˈaʊfˌhɛŋən | jaː ˈaːbɐ zaɪ ˈfoːɐ̯ˌzɪçtɪç mɪt deːɐ̯ ˈlaɪtɐ",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "sei",
+          "lemme": "sein",
+          "classe_grammaticale": "verbe irrégulier (impératif)",
+          "forme": "2ème personne du singulier (du)",
+          "regle_sein": {
+            "du": "Sei! (Sois !)",
+            "ihr": "Seid! (Soyez !)",
+            "Sie": "Seien Sie! (Soyez ! - formel)"
+          }
+        },
+        {
+          "mot": "Soll",
+          "lemme": "sollen",
+          "classe_grammaticale": "verbe de modalité",
+          "sens": "Devoir (conseil, instruction d'un tiers, devoir moral)",
+          "conjugaison_A2": "ich soll, du sollst, er soll, wir sollen, ihr sollt, sie sollen"
+        }
+      ]
+    }
+  ],
+  "grammaire": [
+    {
+      "titre": "L'impératif (Imperativ)",
+      "explication": "Utilisé pour donner des ordres ou des instructions.",
+      "tableau": [
+        {
+          "personne": "du (tu)",
+          "formation": "Radical du verbe (souvent sans -e final)",
+          "exemple": "Komm! (Viens !)",
+          "note": "Pas de pronom 'du'"
+        },
+        {
+          "personne": "ihr (vous pluriel)",
+          "formation": "Forme du présent en -t",
+          "exemple": "Kommt! (Venez !)",
+          "note": "Pas de pronom 'ihr'"
+        },
+        {
+          "personne": "Sie (Vouvoiement)",
+          "formation": "Infinitif + Sie",
+          "exemple": "Kommen Sie! (Venez !)",
+          "note": "Le pronom est obligatoire ici"
+        }
+      ]
+    },
+    {
+      "titre": "Les connecteurs logiques d'ordre",
+      "liste": [
+        { "mot": "Zuerst", "traduction": "D'abord" },
+        { "mot": "Dann", "traduction": "Ensuite / Puis" },
+        { "mot": "Danach", "traduction": "Après cela" },
+        { "mot": "Schließlich / Zuletzt", "traduction": "Finalement / Enfin" }
+      ],
+      "syntaxe": "Attention : ces mots occupent la position 1, donc le verbe suit immédiatement (Position 2). Ex: 'Dann gehen wir' (et non 'Dann wir gehen')."
+    }
+  ],
+  "culture": {
+    "titre": "Das Ehrenamt (Le bénévolat)",
+    "points": [
+      {
+        "sujet": "Une tradition forte",
+        "explication": "En Allemagne, plus de 30 millions de personnes sont engagées bénévolement dans des 'Vereine' (associations) sportives, culturelles ou de secours (pompiers volontaires)."
+      },
+      {
+        "sujet": "Vereine",
+        "explication": "Le 'E.V.' (Eingetragener Verein) est une institution centrale de la vie sociale allemande. Tout projet commence souvent par la création d'une association."
+      }
+    ]
+  },
+  "exercices": [
+    {
+      "id": "ex-a2-15-1",
+      "type": "transformation",
+      "question": "Transformez cette phrase à l'impératif (du) : 'Du trinkst das Wasser.'",
+      "reponse_attendue": "Trink das Wasser!",
+      "explication": "À l'impératif 'du', on enlève le pronom et la terminaison -st."
+    },
+    {
+      "id": "ex-a2-15-2",
+      "type": "choix_multiple",
+      "question": "Quelle est la forme correcte pour le vouvoiement ?",
+      "options": ["Gehen!", "Gehen Sie!", "Geht Sie!", "Geh!"],
+      "reponse_correcte": 1
+    },
+    {
+      "id": "ex-a2-15-3",
+      "type": "reconstruction",
+      "question": "Remettez dans l'ordre : [die Tür | bitte | schließen | Sie]",
+      "solution": ["Schließen", "Sie", "bitte", "die", "Tür", "."],
+      "explication": "Pour l'impératif poli, le verbe est en première position, suivi du pronom 'Sie'."
+    }
+  ],
+  "astuces_pedagogiques": [
+    {
+      "titre": "La politesse avec l'impératif",
+      "astuce": "L'allemand peut paraître direct. Pour adoucir un ordre, ajoutez toujours 'bitte' (s'il vous plaît) ou utilisez 'mal' : 'Komm mal her!' (Viens un peu par ici)."
+    }
+  ],
+  "progression": {
+    "xp": 100,
+    "prochain_id": "b1-001",
+    "apercu_suivant": "Leçon B1.1 : Décrire son parcours et ses expériences passées."
+  }
+}

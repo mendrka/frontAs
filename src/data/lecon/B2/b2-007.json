@@ -1,0 +1,114 @@
+{
+  "id": "b2-007",
+  "niveau": "B2",
+  "module": "B2.2",
+  "titre": "Études, formation continue et apprentissage",
+  "objectifs": {
+    "communicatif": "Décrire son parcours d'apprentissage en autonomie, s'informer sur des cours de perfectionnement, comparer différents systèmes de formation",
+    "linguistique": "Maîtriser les structures 'haben/sein + zu + Infinitiv' (alternative à müssen/können) et le Perfect des verbes de modalité (double infinitif)",
+    "culturel": "Le système de formation duale (Duales Studium) et la valeur des certificats (IHK, TestDaF)",
+    "cognitif": "Analyser les avantages et inconvénients d'une méthode d'apprentissage"
+  },
+  "metadonnees": {
+    "duree_estimee_minutes": 65,
+    "difficulte_cognitive": 4,
+    "prerequis": ["b2-006"],
+    "competences_visees": ["expression orale", "lexique de l'éducation"],
+    "themes_croises": ["autodidaxie", "université", "carrière"]
+  },
+  "situation": {
+    "contexte": "Discussion avec un conseiller d'orientation ou un futur employeur sur la manière dont tu as appris le développement web et tes plans pour le futur en Allemagne.",
+    "lieu": "Agence pour l'emploi (Agentur für Arbeit) / École de langues",
+    "type": "Entretien d'orientation",
+    "registre": "formel / standard"
+  },
+  "dialogue_modele": [
+    {
+      "id": 1,
+      "de": "Ich habe mir das Programmieren selbst beigebracht, anstatt eine klassische Ausbildung zu absolvieren.",
+      "fr": "J'ai appris la programmation par moi-même au lieu de suivre une formation classique.",
+      "phonetique": "ɪç ˈhaːbə miːɐ̯ das pʁoɡʁaˈmiːʁən zɛlpst ˈbaɪɡəˌbʁaxt | anˈʃtat ˈaɪnə ˈklasɪʃə ˈaʊsˌbɪldʊŋ t͡suː apzɔlˈviːʁən",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "beigebracht",
+          "lemme": "beibringen (+ Dativ + Akkusatif)",
+          "traduction": "enseigner / apprendre (à quelqu'un).",
+          "note": "Sich (Dativ) etwas (Akkusatif) beibringen = apprendre seul."
+        },
+        {
+          "mot": "anstatt ... zu",
+          "grammaire": "Conjonction de substitution.",
+          "usage": "Indique une alternative choisie. Le verbe à l'infinitif est à la fin avec 'zu'."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "de": "In Deutschland hat man die Möglichkeit, Theorie und Praxis in einem dualen Studium zu verbinden.",
+      "fr": "En Allemagne, on a la possibilité de combiner théorie et pratique dans un cursus d'études en alternance (dual).",
+      "phonetique": "ɪn ˈdɔʏt͡ʃlant hat man diː ˈmøːklɪçˌkaɪt | teoˈʁiː ʊnt ˈpʁaksɪs ɪn ˈaɪnəm duˈaːlən ˈʃtuːdi̯ʊm t͡suː fɛɐ̯ˈbɪndən",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "dualen Studium",
+          "note_culturelle": "Le fleuron de l'éducation allemande : alternance entre entreprise et université."
+        },
+        {
+          "mot": "verbinden",
+          "traduction": "lier / combiner."
+        }
+      ]
+    }
+  ],
+  "grammaire": [
+    {
+      "titre": "Le Parfait avec verbes de modalité (Double Infinitif)",
+      "explication": "Quand un verbe de modalité est utilisé au passé avec un autre verbe, on ne met pas le participe II, mais deux infinitifs à la fin.",
+      "tableau": [
+        { "Temps": "Présent", "Exemple": "Ich muss arbeiten." },
+        { "Temps": "Parfait", "Exemple": "Ich habe arbeiten müssen. (et non 'gemusst')" },
+        { "Temps": "Avec un autre verbe", "Exemple": "Ich habe das Projekt abschließen können." }
+      ]
+    },
+    {
+      "titre": "Les constructions avec 'zu'",
+      "explication": "Utilisées pour exprimer des intentions ou des manières de faire.",
+      "liste": [
+        { "structure": "ohne ... zu", "sens": "sans (faire quelque chose)", "exemple": "Er lernt, ohne zu pausieren." },
+        { "structure": "um ... zu", "sens": "pour / afin de", "exemple": "Ich lerne, um mich zu verbessern." },
+        { "structure": "anstatt ... zu", "sens": "au lieu de", "exemple": "Er spielt, anstatt zu lernen." }
+      ]
+    }
+  ],
+  "vocabulaire_cles": [
+    { "de": "der Autodidakt", "fr": "l'autodidacte" },
+    { "de": "die Umschulung", "fr": "la reconversion professionnelle" },
+    { "de": "das Zeugnis / das Zertifikat", "fr": "le diplôme / le certificat" },
+    { "de": "praxisorientiert", "fr": "axé sur la pratique" },
+    { "de": "sich weiterbilden", "fr": "se former (en continu)" }
+  ],
+  "exercices": [
+    {
+      "id": "ex-b2-007-1",
+      "type": "grammaire",
+      "question": "Mettez au parfait : 'Ich kann die Prüfung bestehen.'",
+      "reponse_attendue": "Ich habe die Prüfung bestehen können.",
+      "explication": "Utilisation de l'auxiliaire 'haben' + double infinitif à la fin."
+    },
+    {
+      "id": "ex-b2-007-2",
+      "type": "vocabulaire",
+      "question": "Comment appelle-t-on le système qui mélange cours et travail en entreprise ?",
+      "reponse_attendue": "Das duale System / Die duale Ausbildung",
+      "explication": "C'est un terme clé en Allemagne pour la formation professionnelle."
+    }
+  ],
+  "culture": {
+    "titre": "Das Duale System",
+    "explication": "L'Allemagne est célèbre pour son système de formation duale. Que ce soit pour être boulanger ou ingénieur, l'idée est que la théorie à l'école est complétée par la pratique réelle en entreprise. Cela garantit un taux d'emploi très élevé pour les jeunes diplômés."
+  },
+  "progression": {
+    "xp": 250,
+    "prochain_id": "b2-008",
+    "apercu_suivant": "Leçon B2.2-3 : Environnement, écologie et durabilité (Umwelt & Nachhaltigkeit)."
+  }
+}

@@ -1,0 +1,208 @@
+{
+  "id": "a1-020",
+  "niveau": "A1",
+  "module": "A1.4",
+  "titre": "Parler du temps et de la météo",
+  "objectifs": {
+    "communicatif": "Décrire le temps qu’il fait, parler de la météo actuelle, des saisons, et dire ce qu’on fait selon le temps",
+    "linguistique": "Maîtriser le vocabulaire de la météo (sonnig, regnerisch, kalt, warm…), les expressions 'Es ist …', 'Es regnet', 'Es schneit', les saisons, les prépositions 'im Sommer', 'bei schönem Wetter'",
+    "culturel": "Connaître les particularités climatiques des pays germanophones et les expressions typiques liées à la météo",
+    "cognitif": "Utiliser les verbes impersonnels (es regnet, es ist kalt) et combiner météo + activités"
+  },
+  "metadonnees": {
+    "duree_estimee_minutes": 40,
+    "difficulte_cognitive": 2,
+    "prerequis": ["a1-019"],
+    "competences_visees": ["expression orale", "description"],
+    "themes_croises": ["vie quotidienne", "saisons"]
+  },
+
+  "situation": {
+    "contexte": "Discussion pendant la soirée ou le lendemain à Vienne sur le temps qu’il fait en Autriche et à Madagascar",
+    "lieu": "Appartement ou rue à Vienne (Wien), Autriche",
+    "type": "conversation informelle",
+    "registre": "informel"
+  },
+
+  "dialogue": [
+    {
+      "id": 1,
+      "de": "Wie ist das Wetter heute? Es ist sonnig und warm.",
+      "fr": "Quel temps fait-il aujourd’hui ? Il fait soleil et il fait chaud.",
+      "audio": "/audio/a1-020-1.mp3",
+      "phonetique": "viː ɪst das ˈvɛtɐ ˈhɔɪtə | ɛs ɪst ˈzɔnɪç ʊnt vaʁm",
+      "intonation": "montante sur la question",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Wie ist das Wetter?",
+          "lemme": "das Wetter",
+          "classe_grammaticale": "question météo",
+          "traduction_directe": "Quel temps fait-il ?",
+          "phonetique": "ˈvɛtɐ"
+        },
+        {
+          "mot": "sonnig und warm",
+          "lemme": "sonnig / warm",
+          "classe_grammaticale": "adjectifs",
+          "traduction_directe": "ensoleillé et chaud",
+          "phonetique": "ˈzɔnɪç ʊnt vaʁm"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "de": "Es regnet. Morgen soll es schneien.",
+      "fr": "Il pleut. Demain il devrait neiger.",
+      "audio": "/audio/a1-020-2.mp3",
+      "phonetique": "ɛs ˈʁeːɡnət | ˈmɔʁɡən zɔl ɛs ˈʃnaɪən",
+      "intonation": "informative",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Es regnet",
+          "lemme": "regnen",
+          "classe_grammaticale": "verbe impersonnel",
+          "traduction_directe": "Il pleut",
+          "phonetique": "ˈʁeːɡnət",
+          "note": "Verbes météo sont impersonnels → toujours 'es'"
+        },
+        {
+          "mot": "es schneien",
+          "lemme": "schneien",
+          "classe_grammaticale": "verbe impersonnel",
+          "traduction_directe": "neiger",
+          "phonetique": "ˈʃnaɪən"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "de": "Im Sommer ist es heiß in Madagaskar. Im Winter ist es kalt in Wien.",
+      "fr": "En été il fait chaud à Madagascar. En hiver il fait froid à Vienne.",
+      "audio": "/audio/a1-020-3.mp3",
+      "phonetique": "ɪm ˈzɔmɐ ɪst ɛs haɪs ɪn madaˈɡaskaʁ | ɪm ˈvɪntɐ ɪst ɛs kalt ɪn viːn",
+      "intonation": "comparative",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Im Sommer / Im Winter",
+          "lemme": "im",
+          "classe_grammaticale": "préposition pour saisons",
+          "traduction_directe": "en été / en hiver",
+          "phonetique": "ɪm ˈzɔmɐ"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "de": "Bei schönem Wetter gehe ich spazieren. Bei Regen bleibe ich zu Hause.",
+      "fr": "Quand il fait beau je vais me promener. Quand il pleut je reste à la maison.",
+      "audio": "/audio/a1-020-4.mp3",
+      "phonetique": "baɪ ˈʃøːnəm ˈvɛtɐ ˈɡeːə ɪç ʃpaˈtsiːʁən | baɪ ˈʁeːɡən ˈblaɪbə ɪç tsuː ˈhaʊzə",
+      "intonation": "explicative",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Bei schönem Wetter",
+          "lemme": "bei",
+          "classe_grammaticale": "préposition pour condition météo",
+          "traduction_directe": "quand il fait beau",
+          "phonetique": "baɪ ˈʃøːnəm ˈvɛtɐ"
+        }
+      ]
+    }
+  ],
+
+  "vocabulaire_complet": [
+    { "mot": "das Wetter", "traduction": "le temps (météo)", "type": "nom neutre", "phonetique": "ˈvɛtɐ" },
+    { "mot": "sonnig", "traduction": "ensoleillé", "type": "adjectif", "phonetique": "ˈzɔnɪç" },
+    { "mot": "regnerisch", "traduction": "pluvieux", "type": "adjectif", "phonetique": "ˈʁeːɡnəʁɪʃ" },
+    { "mot": "kalt", "traduction": "froid", "type": "adjectif", "phonetique": "kalt" },
+    { "mot": "warm", "traduction": "chaud", "type": "adjectif", "phonetique": "vaʁm" },
+    { "mot": "heiß", "traduction": "très chaud", "type": "adjectif", "phonetique": "haɪs" },
+    { "mot": "Es regnet", "traduction": "Il pleut", "type": "expression", "phonetique": "ˈʁeːɡnət" },
+    { "mot": "Es schneit", "traduction": "Il neige", "type": "expression", "phonetique": "ˈʃnaɪt" },
+    { "mot": "der Sommer", "traduction": "l’été", "type": "nom masculin", "phonetique": "ˈzɔmɐ" },
+    { "mot": "der Winter", "traduction": "l’hiver", "type": "nom masculin", "phonetique": "ˈvɪntɐ" }
+  ],
+
+  "grammaire": [
+    {
+      "titre": "Verbes météo impersonnels",
+      "niveau": "A1",
+      "explication": "Toujours avec 'es'",
+      "tableau": [
+        { "verbe": "Es regnet", "fr": "Il pleut" },
+        { "verbe": "Es schneit", "fr": "Il neige" },
+        { "verbe": "Es ist kalt", "fr": "Il fait froid" }
+      ]
+    },
+    {
+      "titre": "Saisons et prépositions",
+      "niveau": "A1",
+      "tableau": [
+        { "saison": "der Sommer", "expression": "im Sommer" },
+        { "saison": "der Winter", "expression": "im Winter" },
+        { "saison": "der Frühling", "expression": "im Frühling" },
+        { "saison": "der Herbst", "expression": "im Herbst" }
+      ]
+    }
+  ],
+
+  "exercices": [
+    {
+      "id": "ex-001",
+      "type": "choix_multiple",
+      "difficulte": 1,
+      "question": "Comment dit-on 'Il pleut' ?",
+      "options": ["Es ist Regen.", "Es regnet.", "Der Regen ist."],
+      "reponse_correcte": 1,
+      "explication": "Es regnet (verbe impersonnel)"
+    },
+    {
+      "id": "ex-002",
+      "type": "traduction",
+      "difficulte": 2,
+      "question": "Traduire : 'Aujourd’hui il fait beau et chaud. En hiver il neige souvent à Vienne. Quand il fait beau je vais me promener.'",
+      "reponse_attendue": "Heute ist es schön und warm. Im Winter schneit es oft in Wien. Bei schönem Wetter gehe ich spazieren.",
+      "explication": "Es ist + im Winter + bei schönem Wetter"
+    },
+    {
+      "id": "ex-010",
+      "type": "situation",
+      "difficulte": 3,
+      "question": "Décris le temps aujourd’hui, parle des saisons dans ton pays et en Autriche, et dis ce que tu fais selon le temps.",
+      "modele_reponse": "Heute ist es sonnig und warm. In Madagaskar ist es immer heiß. Im Winter in Wien ist es kalt und es schneit. Bei Regen bleibe ich zu Hause.",
+      "criteres_evaluation": ["vocabulaire météo", "verbes impersonnels", "im + saison", "bei + Wetter"]
+    }
+  ],
+
+  "comprehension": [
+    {
+      "question": "Pourquoi dit-on 'Es regnet' et non 'Der Regen regnet' ?",
+      "reponse": "Les verbes météo sont impersonnels en allemand → toujours avec 'es'."
+    }
+  ],
+
+  "culture": {
+    "titre": "La météo en pays germanophones",
+    "points": [
+      { "sujet": "Expressions typiques", "explication": "On parle beaucoup de la météo. 'Bei dem Wetter…' est très courant. En Autriche on dit souvent 'Es ist schön' pour 'il fait beau'." }
+    ]
+  },
+
+  "astuces_pedagogiques": [
+    {
+      "titre": "Mémo météo",
+      "astuce": "Es + verbe (regnet, schneit) ou Es ist + adjectif (kalt, warm, sonnig)."
+    }
+  ],
+
+  "progression": {
+    "xp": 80,
+    "badges_deblocables": ["Wetter-Profi", "Jahreszeiten-Meister"],
+    "niveau_suivant": "a1-021",
+    "apercu_suivant": "Leçon suivante : A1.2 – Module Famille et amis (début du module suivant)"
+  }
+}

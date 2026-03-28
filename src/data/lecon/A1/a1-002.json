@@ -1,0 +1,745 @@
+{
+  "id": "a1-002",
+  "niveau": "A1",
+  "module": "A1.1",
+  "titre": "Se présenter — nom et âge",
+  "objectifs": {
+    "communicatif": "Savoir dire son prénom, son nom de famille et son âge",
+    "linguistique": "Maîtriser les verbes heißen et sein au présent, les nombres 1–30, la structure de base d'une phrase allemande",
+    "culturel": "Comprendre les conventions de présentation en Allemagne",
+    "cognitif": "Comprendre la position fixe du verbe en 2ème position dans la phrase allemande"
+  },
+  "metadonnees": {
+    "duree_estimee_minutes": 30,
+    "difficulte_cognitive": 1,
+    "prerequis": ["a1-001"],
+    "competences_visees": ["expression orale", "interaction sociale de base"],
+    "themes_croises": ["identité", "chiffres", "vie quotidienne"]
+  },
+
+  "situation": {
+    "contexte": "Première rencontre lors d'un cours de langue à Berlin",
+    "lieu": "Salle de classe, Volkshochschule (école populaire) de Berlin",
+    "type": "présentation personnelle",
+    "registre": "informel à semi-formel"
+  },
+
+  "dialogue": [
+    {
+      "id": 1,
+      "de": "Hallo! Ich heiße Thomas. Wie heißt du?",
+      "fr": "Bonjour ! Je m'appelle Thomas. Comment tu t'appelles ?",
+      "audio": "/audio/a1-002-1.mp3",
+      "phonetique": "ˈhalo | ɪç ˈhaɪsə ˈtoːmas | viː haɪst duː",
+      "intonation": "descendante sur 'Ich heiße Thomas', montante sur 'Wie heißt du?' — question",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Ich",
+          "lemme": "ich",
+          "classe_grammaticale": "pronom personnel sujet",
+          "cas": "Nominatif",
+          "traduction_directe": "Je",
+          "phonetique": "ɪç",
+          "remarque_phonetique": "Le 'ch' après 'i' se prononce [ç] — sifflement doux, pas [k] ni [ch] français",
+          "exercice_prononciation": "Dites 'shi' en anglais et adoucissez le son — vous approchez [ɪç]",
+          "majuscule": "En allemand, 'ich' s'écrit TOUJOURS en minuscule (sauf en début de phrase). Contrairement au 'I' anglais.",
+          "tableau_pronoms_sujet": {
+            "titre": "Tous les pronoms sujets (Nominatif)",
+            "pronoms": [
+              { "allemand": "ich", "francais": "je", "phonetique": "ɪç" },
+              { "allemand": "du", "francais": "tu", "phonetique": "duː" },
+              { "allemand": "er", "francais": "il", "phonetique": "eːɐ" },
+              { "allemand": "sie", "francais": "elle", "phonetique": "ziː" },
+              { "allemand": "es", "francais": "il/elle (neutre)", "phonetique": "ɛs" },
+              { "allemand": "wir", "francais": "nous", "phonetique": "viːɐ" },
+              { "allemand": "ihr", "francais": "vous (informel pluriel)", "phonetique": "iːɐ" },
+              { "allemand": "sie", "francais": "ils/elles", "phonetique": "ziː" },
+              { "allemand": "Sie", "francais": "vous (formel)", "phonetique": "ziː" }
+            ]
+          },
+          "piege": "sie (elle) / sie (ils/elles) / Sie (vous formel) — même prononciation, différenciés par la majuscule et le contexte"
+        },
+        {
+          "mot": "heiße",
+          "lemme": "heißen",
+          "classe_grammaticale": "verbe",
+          "forme": "1ère personne singulier, présent indicatif",
+          "traduction_directe": "je m'appelle (littéralement : je suis appelé)",
+          "phonetique": "ˈhaɪsə",
+          "syllabation": "hei-ße",
+          "remarque_orthographe": {
+            "lettre": "ß",
+            "nom": "Eszett ou scharfes S",
+            "prononciation": "[s] — comme un 's' ordinaire mais long/double",
+            "quand": "Après une voyelle longue ou une diphtongue (ei, au, eu...)",
+            "vs_ss": "'ss' après voyelle courte. 'ß' après voyelle longue ou diphtongue",
+            "exemples": [
+              "heißen [haɪsən] — ei = diphtongue → ß",
+              "hassen [ˈhasən] — a = courte → ss",
+              "Straße [ˈʃtʁaːsə] — a = longue → ß"
+            ],
+            "info_regionale": "En Suisse, le ß n'existe pas — on écrit toujours 'ss'"
+          },
+          "conjugaison_complete": {
+            "titre": "heißen — présent indicatif",
+            "formes": [
+              { "pronom": "ich", "forme": "heiße", "phonetique": "ˈhaɪsə" },
+              { "pronom": "du", "forme": "heißt", "phonetique": "haɪst" },
+              { "pronom": "er/sie/es", "forme": "heißt", "phonetique": "haɪst" },
+              { "pronom": "wir", "forme": "heißen", "phonetique": "ˈhaɪsən" },
+              { "pronom": "ihr", "forme": "heißt", "phonetique": "haɪst" },
+              { "pronom": "sie/Sie", "forme": "heißen", "phonetique": "ˈhaɪsən" }
+            ]
+          },
+          "construction": "heißen + [prénom/nom] — pas de préposition, pas d'article",
+          "traduction_litterale": "heißen = être appelé / se nommer",
+          "nuances": {
+            "vs_nennen": "'sich nennen' = se faire appeler (pseudonyme, surnom). 'heißen' = s'appeler (état civil réel)",
+            "vs_vorstellen": "'sich vorstellen' = se présenter (acte actif, formel). 'heißen' = s'appeler (état)"
+          },
+          "famille_lexicale": {
+            "nom": "der Name (le nom)",
+            "expression": "Das heißt... (Cela veut dire... / C'est-à-dire... — abréviation : d.h.)"
+          },
+          "collocations": [
+            "Ich heiße... (Je m'appelle...)",
+            "Wie heißt du? (Comment tu t'appelles ?)",
+            "Wie heißen Sie? (Comment vous appelez-vous ?)",
+            "Er heißt... (Il s'appelle...)"
+          ],
+          "erreurs_frequentes": [
+            {
+              "erreur": "Ich heiße mich Thomas ❌",
+              "correction": "Ich heiße Thomas ✓",
+              "explication": "'heißen' est intransitif ici — pas de pronom réfléchi. Contrairement au français 'je m'appelle' qui utilise 'me'."
+            },
+            {
+              "erreur": "Ich bin heiße Thomas ❌",
+              "correction": "Ich heiße Thomas ✓",
+              "explication": "Ne pas mélanger 'sein' (être) et 'heißen' (s'appeler) — deux verbes distincts"
+            }
+          ],
+          "mnemonique": "heißen → 'haïssen' ? Non ! Pense à 'hot' en anglais (heiß = chaud) — ton prénom, c'est ce qui 'chauffe' ton identité !"
+        },
+        {
+          "mot": "Wie",
+          "lemme": "wie",
+          "classe_grammaticale": "adverbe interrogatif",
+          "traduction_directe": "Comment",
+          "phonetique": "viː",
+          "renvoi": "Voir a1-001 — même mot, même usage interrogatif",
+          "usage_ici": "Introduit une question sur l'identité — 'Comment t'appelles-tu ?'"
+        },
+        {
+          "mot": "heißt",
+          "lemme": "heißen",
+          "forme": "2ème personne singulier, présent indicatif",
+          "traduction_directe": "tu t'appelles / il/elle s'appelle",
+          "phonetique": "haɪst",
+          "remarque": "Même forme pour 'du', 'er', 'sie', 'es', 'ihr' — attention au contexte pour distinguer",
+          "structure_question": {
+            "normale": "Du heißt Thomas. (Tu t'appelles Thomas.)",
+            "interrogative": "Wie heißt du? (Comment tu t'appelles ?)",
+            "regle": "En question avec mot interrogatif (Wie, Was, Wer...) → le verbe vient en 2ème position, le sujet en 3ème"
+          }
+        },
+        {
+          "mot": "du",
+          "lemme": "du",
+          "classe_grammaticale": "pronom personnel sujet",
+          "traduction_directe": "tu",
+          "phonetique": "duː",
+          "renvoi": "Voir a1-001 — distinction du/Sie",
+          "remarque_position": "Dans une question avec mot interrogatif, 'du' se place APRÈS le verbe : 'Wie heißt DU?' — inversion sujet-verbe comme en français"
+        }
+      ]
+    },
+
+    {
+      "id": 2,
+      "de": "Ich heiße Sofia. Ich bin 22 Jahre alt.",
+      "fr": "Je m'appelle Sofia. J'ai 22 ans.",
+      "audio": "/audio/a1-002-2.mp3",
+      "phonetique": "ɪç ˈhaɪsə zoˈfiːa | ɪç bɪn ˌtsvaɪˈʊntsvantsɪç ˈjaːʁə alt",
+      "intonation": "deux phrases déclaratives, intonation descendante",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "bin",
+          "lemme": "sein",
+          "classe_grammaticale": "verbe auxiliaire",
+          "forme": "1ère personne singulier, présent indicatif",
+          "traduction_directe": "suis (je suis)",
+          "phonetique": "bɪn",
+          "importance": "sein est LE verbe le plus important de l'allemand — irrégulier et omniprésent",
+          "conjugaison_complete": {
+            "titre": "sein (être) — présent indicatif",
+            "formes": [
+              { "pronom": "ich", "forme": "bin", "phonetique": "bɪn", "traduction": "je suis" },
+              { "pronom": "du", "forme": "bist", "phonetique": "bɪst", "traduction": "tu es" },
+              { "pronom": "er/sie/es", "forme": "ist", "phonetique": "ɪst", "traduction": "il/elle est" },
+              { "pronom": "wir", "forme": "sind", "phonetique": "zɪnt", "traduction": "nous sommes" },
+              { "pronom": "ihr", "forme": "seid", "phonetique": "zaɪt", "traduction": "vous êtes" },
+              { "pronom": "sie/Sie", "forme": "sind", "phonetique": "zɪnt", "traduction": "ils/elles sont / vous êtes" }
+            ]
+          },
+          "irregularite": "sein est totalement irrégulier — bin/bist/ist/sind — à mémoriser absolument",
+          "usages_essentiels": [
+            {
+              "usage": "Identité / description",
+              "exemple": "Ich bin Sofia. (Je suis Sofia.)",
+              "note": "Possible mais 'heißen' est plus naturel pour le nom"
+            },
+            {
+              "usage": "Âge",
+              "exemple": "Ich bin 22 Jahre alt. (J'ai 22 ans.)",
+              "note": "En allemand on ÊTRE un âge, pas AVOIR — différence fondamentale avec le français !"
+            },
+            {
+              "usage": "Nationalité",
+              "exemple": "Ich bin Français. (Je suis français.)",
+              "note": "Leçon a1-003"
+            },
+            {
+              "usage": "Profession",
+              "exemple": "Ich bin Student. (Je suis étudiant.)",
+              "note": "Leçon a1-003"
+            }
+          ],
+          "piege_majeur": {
+            "francais": "J'AI 22 ans → verbe AVOIR",
+            "allemand": "Ich BIN 22 Jahre alt → verbe ÊTRE",
+            "explication": "L'allemand conçoit l'âge comme un état d'être, pas une possession. Cette différence est la source d'erreur numéro 1 pour les francophones sur l'âge.",
+            "mnemonique": "En allemand, tu ES ton âge. En français, tu AS ton âge. Retiens : ICH BIN alt (je SUIS vieux/âgé)"
+          }
+        },
+        {
+          "mot": "22",
+          "forme_ecrite": "zweiundzwanzig",
+          "phonetique": "ˌtsvaɪˈʊntsvantsɪç",
+          "decomposition": {
+            "zwei": "deux",
+            "und": "et",
+            "zwanzig": "vingt",
+            "construction": "deux-ET-vingt = 22",
+            "logique": "En allemand, les dizaines et unités sont INVERSÉES par rapport au français et liées par 'und' : unité + und + dizaine"
+          },
+          "regle_nombres_composes": {
+            "titre": "La règle d'or des nombres 21–99",
+            "formule": "[unité] + und + [dizaine] = tout attaché en un seul mot",
+            "exemples": [
+              { "chiffre": 21, "allemand": "einundzwanzig", "decomposition": "ein+und+zwanzig" },
+              { "chiffre": 35, "allemand": "fünfunddreißig", "decomposition": "fünf+und+dreißig" },
+              { "chiffre": 48, "allemand": "achtundvierzig", "decomposition": "acht+und+vierzig" },
+              { "chiffre": 63, "allemand": "dreiundechzig", "decomposition": "drei+und+sechzig" },
+              { "chiffre": 99, "allemand": "neunundneunzig", "decomposition": "neun+und+neunzig" }
+            ],
+            "exception": "Les nombres 11 et 12 sont irréguliers : elf (11), zwölf (12)"
+          },
+          "tableau_nombres_1_30": [
+            { "chiffre": 1, "allemand": "eins", "phonetique": "aɪns" },
+            { "chiffre": 2, "allemand": "zwei", "phonetique": "tsvaɪ" },
+            { "chiffre": 3, "allemand": "drei", "phonetique": "dʁaɪ" },
+            { "chiffre": 4, "allemand": "vier", "phonetique": "fiːɐ" },
+            { "chiffre": 5, "allemand": "fünf", "phonetique": "fʏnf" },
+            { "chiffre": 6, "allemand": "sechs", "phonetique": "zɛks" },
+            { "chiffre": 7, "allemand": "sieben", "phonetique": "ˈziːbən" },
+            { "chiffre": 8, "allemand": "acht", "phonetique": "axt" },
+            { "chiffre": 9, "allemand": "neun", "phonetique": "nɔɪn" },
+            { "chiffre": 10, "allemand": "zehn", "phonetique": "tseːn" },
+            { "chiffre": 11, "allemand": "elf", "phonetique": "ɛlf" },
+            { "chiffre": 12, "allemand": "zwölf", "phonetique": "tsvœlf" },
+            { "chiffre": 13, "allemand": "dreizehn", "phonetique": "ˈdʁaɪtseːn" },
+            { "chiffre": 14, "allemand": "vierzehn", "phonetique": "ˈfiːɐtseːn" },
+            { "chiffre": 15, "allemand": "fünfzehn", "phonetique": "ˈfʏnftseːn" },
+            { "chiffre": 16, "allemand": "sechzehn", "phonetique": "ˈzɛçtseːn" },
+            { "chiffre": 17, "allemand": "siebzehn", "phonetique": "ˈziːptseːn" },
+            { "chiffre": 18, "allemand": "achtzehn", "phonetique": "ˈaxtseːn" },
+            { "chiffre": 19, "allemand": "neunzehn", "phonetique": "ˈnɔɪntseːn" },
+            { "chiffre": 20, "allemand": "zwanzig", "phonetique": "ˈtsvantsɪç" },
+            { "chiffre": 21, "allemand": "einundzwanzig", "phonetique": "ˈaɪnʊntsvantsɪç" },
+            { "chiffre": 22, "allemand": "zweiundzwanzig", "phonetique": "ˈtsvaɪʊntsvantsɪç" },
+            { "chiffre": 23, "allemand": "dreiundzwanzig", "phonetique": "ˈdʁaɪʊntsvantsɪç" },
+            { "chiffre": 30, "allemand": "dreißig", "phonetique": "ˈdʁaɪsɪç" }
+          ],
+          "mnemonique_nombres": "13–19 = chiffre + zehn (zehn = dix). Comme en français : treize = trois+dix, vierzehn = vier+zehn"
+        },
+        {
+          "mot": "Jahre",
+          "lemme": "das Jahr",
+          "classe_grammaticale": "nom neutre, pluriel",
+          "traduction_directe": "ans / années",
+          "phonetique": "ˈjaːʁə",
+          "singulier": "das Jahr (l'an / l'année)",
+          "pluriel": "die Jahre",
+          "genre": "neutre — das Jahr",
+          "usage_age": "Jahre est OBLIGATOIRE dans la formule de l'âge — on ne peut pas dire 'Ich bin 22 alt' sans 'Jahre'",
+          "formule_age": {
+            "structure": "Ich bin + [nombre] + Jahre + alt",
+            "traduction_mot_a_mot": "Je suis + [nombre] + ans + vieux/âgé",
+            "exemples": [
+              "Ich bin 5 Jahre alt. (J'ai 5 ans.)",
+              "Ich bin 18 Jahre alt. (J'ai 18 ans.)",
+              "Ich bin 65 Jahre alt. (J'ai 65 ans.)"
+            ]
+          },
+          "question_associee": {
+            "informel": "Wie alt bist du? (Quel âge as-tu ?)",
+            "formel": "Wie alt sind Sie? (Quel âge avez-vous ?)"
+          }
+        },
+        {
+          "mot": "alt",
+          "lemme": "alt",
+          "classe_grammaticale": "adjectif (attribut)",
+          "traduction_directe": "vieux / âgé",
+          "phonetique": "alt",
+          "usage_special": "Dans la formule de l'âge, 'alt' ne signifie pas 'vieux' de façon péjorative — c'est une expression figée signifiant simplement 'âgé de'",
+          "position": "Toujours en fin de la formule d'âge : Ich bin 22 Jahre ALT",
+          "autres_sens": [
+            { "sens": "vieux (objet)", "exemple": "ein altes Haus (une vieille maison)" },
+            { "sens": "ancien (ami)", "exemple": "ein alter Freund (un vieil ami)" },
+            { "sens": "âgé (personne)", "exemple": "ein alter Mann (un vieil homme)" }
+          ],
+          "antonyme": "jung (jeune) — phonetique: jʊŋ",
+          "gradation": {
+            "positif": "alt (vieux)",
+            "comparatif": "älter (plus vieux)",
+            "superlatif": "am ältesten (le plus vieux)"
+          }
+        }
+      ]
+    },
+
+    {
+      "id": 3,
+      "de": "Wie alt bist du? Ich bin dreißig Jahre alt.",
+      "fr": "Quel âge as-tu ? J'ai trente ans.",
+      "audio": "/audio/a1-002-3.mp3",
+      "phonetique": "viː alt bɪst duː | ɪç bɪn ˈdʁaɪsɪç ˈjaːʁə alt",
+      "registre": "informel",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "alt",
+          "renvoi": "Voir dialogue 2 — même mot",
+          "usage_question": "Dans 'Wie alt bist du?', 'alt' vient directement après 'Wie' — l'adjectif précède le verbe dans cette formule interrogative figée"
+        },
+        {
+          "mot": "bist",
+          "lemme": "sein",
+          "forme": "2ème personne singulier, présent indicatif",
+          "traduction_directe": "tu es",
+          "phonetique": "bɪst",
+          "renvoi": "Voir conjugaison complète de sein dans dialogue 2",
+          "structure_question": {
+            "affirmative": "Du bist 30 Jahre alt. (Tu as 30 ans.)",
+            "interrogative_totale": "Bist du 30 Jahre alt? (As-tu 30 ans ? — réponse oui/non)",
+            "interrogative_partielle": "Wie alt bist du? (Quel âge as-tu ? — demande une information)",
+            "regle_inversion": "En question partielle (avec Wie, Was, Wer...) : mot interrogatif → VERBE → sujet"
+          }
+        },
+        {
+          "mot": "dreißig",
+          "lemme": "dreißig",
+          "traduction_directe": "trente",
+          "phonetique": "ˈdʁaɪsɪç",
+          "decomposition": {
+            "drei": "trois",
+            "ßig": "suffixe des dizaines (20, 30, 40...)",
+            "irregularite": "dreißig s'écrit avec ß (et non 'dreizehn' style) — à mémoriser"
+          },
+          "tableau_dizaines": [
+            { "chiffre": 10, "allemand": "zehn", "phonetique": "tseːn" },
+            { "chiffre": 20, "allemand": "zwanzig", "phonetique": "ˈtsvantsɪç" },
+            { "chiffre": 30, "allemand": "dreißig", "phonetique": "ˈdʁaɪsɪç" },
+            { "chiffre": 40, "allemand": "vierzig", "phonetique": "ˈfiːɐtsɪç" },
+            { "chiffre": 50, "allemand": "fünfzig", "phonetique": "ˈfʏnftsɪç" },
+            { "chiffre": 60, "allemand": "sechzig", "phonetique": "ˈzɛçtsɪç" },
+            { "chiffre": 70, "allemand": "siebzig", "phonetique": "ˈziːptsɪç" },
+            { "chiffre": 80, "allemand": "achtzig", "phonetique": "ˈaxtsɪç" },
+            { "chiffre": 90, "allemand": "neunzig", "phonetique": "ˈnɔɪntsɪç" },
+            { "chiffre": 100, "allemand": "hundert", "phonetique": "ˈhʊndɐt" }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": 4,
+      "de": "Mein Name ist Klara Fischer. Ich bin siebenundzwanzig.",
+      "fr": "Mon nom est Klara Fischer. J'ai vingt-sept ans.",
+      "audio": "/audio/a1-002-4.mp3",
+      "phonetique": "maɪn ˈnaːmə ɪst ˈklaːʁa ˈfɪʃɐ | ɪç bɪn ˌziːbənʊntˈtsvantsɪç",
+      "registre": "semi-formel",
+      "remarque": "Formule alternative plus formelle pour se présenter — 'Mein Name ist' est souvent utilisé dans les situations professionnelles ou officielles",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Mein",
+          "lemme": "mein",
+          "classe_grammaticale": "adjectif possessif",
+          "traduction_directe": "Mon / Ma",
+          "phonetique": "maɪn",
+          "genre_ici": "masculin (der Name) → mein (nominatif masculin sans flexion supplémentaire)",
+          "tableau_possessifs_1sg": {
+            "titre": "mein (mon/ma/mes) selon le genre du nom",
+            "note": "Pour l'instant, retenez 'mein Name' et 'meine Familie' — les déclinaisons seront vues progressivement",
+            "formes_simples": [
+              { "genre": "Masculin (der)", "forme": "mein", "exemple": "mein Name (mon nom)" },
+              { "genre": "Féminin (die)", "forme": "meine", "exemple": "meine Mutter (ma mère)" },
+              { "genre": "Neutre (das)", "forme": "mein", "exemple": "mein Kind (mon enfant)" },
+              { "genre": "Pluriel", "forme": "meine", "exemple": "meine Freunde (mes amis)" }
+            ]
+          },
+          "mnemonique": "mein = 'mine' en anglais (ce qui m'appartient) — même son, même sens !"
+        },
+        {
+          "mot": "Name",
+          "lemme": "der Name",
+          "classe_grammaticale": "nom masculin",
+          "traduction_directe": "le nom",
+          "phonetique": "ˈnaːmə",
+          "genre": "masculin — der Name",
+          "pluriel": "die Namen",
+          "types_de_noms": [
+            { "type": "Vorname", "traduction": "prénom", "exemple": "Klara" },
+            { "type": "Nachname / Familienname", "traduction": "nom de famille", "exemple": "Fischer" },
+            { "type": "Spitzname", "traduction": "surnom / pseudo", "exemple": "Kläre" }
+          ],
+          "formule_comparaison": {
+            "informel": "Ich heiße Klara. (Je m'appelle Klara.)",
+            "semi_formel": "Mein Name ist Klara. (Mon nom est Klara.)",
+            "formel": "Mein Name ist Klara Fischer. (Mon nom est Klara Fischer.) — prénom + nom de famille"
+          }
+        },
+        {
+          "mot": "ist",
+          "lemme": "sein",
+          "forme": "3ème personne singulier, présent indicatif",
+          "traduction_directe": "est",
+          "phonetique": "ɪst",
+          "remarque": "Ici 'ist' est utilisé pour établir une équivalence : Name = Klara Fischer. Même structure qu'en français : Mon nom EST Klara.",
+          "renvoi": "Voir conjugaison complète dans dialogue 2"
+        },
+        {
+          "mot": "siebenundzwanzig",
+          "traduction_directe": "vingt-sept",
+          "phonetique": "ˌziːbənʊntˈtsvantsɪç",
+          "decomposition": "sieben (7) + und (et) + zwanzig (20)",
+          "remarque": "Ici le nombre est utilisé SANS 'Jahre alt' — en allemand familier, on peut omettre 'Jahre alt' si le contexte est clair",
+          "usage_elliptique": {
+            "complet": "Ich bin siebenundzwanzig Jahre alt. ✓",
+            "elliptique": "Ich bin siebenundzwanzig. ✓ (informel, contexte clair)"
+          }
+        }
+      ]
+    }
+  ],
+
+  "vocabulaire_complet": [
+    {
+      "mot": "heißen",
+      "traduction": "s'appeler",
+      "type": "verbe",
+      "phonetique": "ˈhaɪsən",
+      "formes_cles": "ich heiße / du heißt / er heißt",
+      "frequence": "très courant"
+    },
+    {
+      "mot": "sein",
+      "traduction": "être",
+      "type": "verbe auxiliaire",
+      "phonetique": "zaɪn",
+      "formes_cles": "ich bin / du bist / er ist / wir sind",
+      "frequence": "fondamental"
+    },
+    {
+      "mot": "der Name",
+      "traduction": "le nom",
+      "type": "nom masculin",
+      "phonetique": "ˈnaːmə",
+      "pluriel": "die Namen",
+      "frequence": "très courant"
+    },
+    {
+      "mot": "das Alter",
+      "traduction": "l'âge",
+      "type": "nom neutre",
+      "phonetique": "ˈaltɐ",
+      "frequence": "courant"
+    },
+    {
+      "mot": "alt",
+      "traduction": "vieux / âgé",
+      "type": "adjectif",
+      "phonetique": "alt",
+      "usage_age": "Ich bin X Jahre alt",
+      "frequence": "très courant"
+    },
+    {
+      "mot": "jung",
+      "traduction": "jeune",
+      "type": "adjectif",
+      "phonetique": "jʊŋ",
+      "frequence": "courant"
+    },
+    {
+      "mot": "das Jahr",
+      "traduction": "l'an / l'année",
+      "type": "nom neutre",
+      "phonetique": "jaːɐ",
+      "pluriel": "die Jahre",
+      "frequence": "très courant"
+    },
+    {
+      "mot": "mein / meine",
+      "traduction": "mon / ma / mes",
+      "type": "adjectif possessif",
+      "phonetique": "maɪn / ˈmaɪnə",
+      "frequence": "très courant"
+    },
+    {
+      "mot": "Wie alt bist du?",
+      "traduction": "Quel âge as-tu ?",
+      "type": "expression",
+      "phonetique": "viː alt bɪst duː",
+      "frequence": "très courant"
+    },
+    {
+      "mot": "Wie alt sind Sie?",
+      "traduction": "Quel âge avez-vous ?",
+      "type": "expression formelle",
+      "phonetique": "viː alt zɪnt ziː",
+      "frequence": "courant"
+    }
+  ],
+
+  "grammaire": [
+    {
+      "titre": "La règle fondamentale : le verbe en 2ème position",
+      "niveau": "A1 — règle essentielle",
+      "explication": "En allemand, le verbe conjugué occupe TOUJOURS la 2ème position dans la phrase déclarative. C'est LA règle de base de la syntaxe allemande.",
+      "exemples": [
+        {
+          "phrase": "Ich heiße Thomas.",
+          "schema": "[1: Ich] [2: heiße] [3: Thomas]",
+          "traduction": "Je m'appelle Thomas."
+        },
+        {
+          "phrase": "Thomas heiße ich.",
+          "schema": "[1: Thomas] [2: heiße] [3: ich]",
+          "traduction": "Thomas, c'est mon prénom.",
+          "remarque": "Le sujet passe en 3ème position si autre élément est mis en avant — le verbe reste en 2ème"
+        }
+      ],
+      "schema_visuel": "[ ELEMENT 1 ] [ VERBE ] [ reste de la phrase ]",
+      "consequence": "En question avec mot interrogatif : [Wie/Was/Wer] [VERBE] [sujet] ... → Wie heißt DU ?"
+    },
+    {
+      "titre": "ÊTRE vs AVOIR pour l'âge — différence fondamentale",
+      "niveau": "A1",
+      "explication": "Le français utilise AVOIR pour l'âge ('j'ai 22 ans'). L'allemand utilise ÊTRE ('ich bin 22 Jahre alt'). C'est l'une des différences les plus importantes à intégrer.",
+      "tableau_comparatif": [
+        { "francais": "J'ai 10 ans.", "allemand": "Ich bin 10 Jahre alt.", "erreur": "Ich habe 10 Jahre ❌" },
+        { "francais": "Tu as 25 ans.", "allemand": "Du bist 25 Jahre alt.", "erreur": "Du hast 25 Jahre ❌" },
+        { "francais": "Il a 40 ans.", "allemand": "Er ist 40 Jahre alt.", "erreur": "Er hat 40 Jahre ❌" }
+      ]
+    },
+    {
+      "titre": "La structure de la question en allemand",
+      "niveau": "A1",
+      "types": [
+        {
+          "type": "Question totale (oui/non)",
+          "structure": "[VERBE] + [sujet] + ... ?",
+          "exemple": "Bist du Thomas? (Es-tu Thomas ?)",
+          "regle": "Le verbe passe en 1ère position — inversion sujet/verbe"
+        },
+        {
+          "type": "Question partielle (information)",
+          "structure": "[Mot interrogatif] + [VERBE] + [sujet] + ... ?",
+          "exemple": "Wie heißt du? / Wie alt bist du?",
+          "regle": "Mot interrogatif en 1ère position, verbe en 2ème, sujet en 3ème"
+        }
+      ]
+    }
+  ],
+
+  "exercices": [
+    {
+      "id": "ex-001",
+      "type": "choix_multiple",
+      "difficulte": 1,
+      "question": "Comment dit-on 'J'ai 18 ans' en allemand ?",
+      "options": [
+        "Ich habe 18 Jahre.",
+        "Ich bin 18 Jahre alt.",
+        "Ich heiße 18 Jahre alt.",
+        "Ich bin 18 Jahre haben."
+      ],
+      "reponse_correcte": 1,
+      "explication": "En allemand, on utilise SEIN (être) pour l'âge : 'Ich BIN X Jahre alt'. Jamais 'haben' (avoir) !"
+    },
+    {
+      "id": "ex-002",
+      "type": "choix_multiple",
+      "difficulte": 1,
+      "question": "Quelle est la forme correcte de 'heißen' à la 2ème personne du singulier ?",
+      "options": ["heißen", "heiße", "heißt", "heißst"],
+      "reponse_correcte": 2,
+      "explication": "'du heißt' — la terminaison de 'du' est '-st', mais comme le radical se termine déjà par 'ß', on ajoute juste '-t' → heißt"
+    },
+    {
+      "id": "ex-003",
+      "type": "reconstruction",
+      "difficulte": 2,
+      "question": "Remettez dans le bon ordre : [Jahre | bin | Ich | alt | dreißig]",
+      "mots": ["Jahre", "bin", "Ich", "alt", "dreißig"],
+      "solution": ["Ich", "bin", "dreißig", "Jahre", "alt"],
+      "explication": "Structure : Ich [VERBE:bin] [nombre:dreißig] [Jahre] [alt] — le verbe en 2ème position, 'alt' toujours en fin"
+    },
+    {
+      "id": "ex-004",
+      "type": "traduction",
+      "difficulte": 2,
+      "question": "Traduire en allemand : 'Mon nom est Julia. J'ai vingt-cinq ans.'",
+      "reponse_attendue": "Mein Name ist Julia. Ich bin fünfundzwanzig Jahre alt.",
+      "reponses_acceptees": [
+        "Mein Name ist Julia. Ich bin fünfundzwanzig Jahre alt.",
+        "Ich heiße Julia. Ich bin fünfundzwanzig Jahre alt."
+      ],
+      "explication": "fünf (5) + und + zwanzig (20) = fünfundzwanzig (25) — tout attaché en un mot"
+    },
+    {
+      "id": "ex-005",
+      "type": "choix_multiple",
+      "difficulte": 2,
+      "question": "Comment s'écrit 47 en allemand ?",
+      "options": [
+        "vierzigundsieben",
+        "siebenundvierzig",
+        "vierundsiebzig",
+        "siebenzigunvierzig"
+      ],
+      "reponse_correcte": 1,
+      "explication": "Règle : unité + und + dizaine. 7 = sieben, 40 = vierzig → siebenundvierzig. L'unité TOUJOURS en premier !"
+    },
+    {
+      "id": "ex-006",
+      "type": "association",
+      "difficulte": 1,
+      "question": "Associez chaque pronom à sa forme correcte de 'sein'",
+      "paires": [
+        { "gauche": "ich", "droite": "bin" },
+        { "gauche": "du", "droite": "bist" },
+        { "gauche": "er/sie/es", "droite": "ist" },
+        { "gauche": "wir", "droite": "sind" }
+      ]
+    },
+    {
+      "id": "ex-007",
+      "type": "vrai_faux",
+      "difficulte": 2,
+      "question": "'Ich heiße mich Anna' est une phrase correcte en allemand.",
+      "reponse": false,
+      "explication": "FAUX. 'heißen' ne prend pas de pronom réfléchi. La forme correcte est simplement 'Ich heiße Anna' — sans 'mich'."
+    },
+    {
+      "id": "ex-008",
+      "type": "choix_multiple",
+      "difficulte": 2,
+      "question": "Vous voulez demander l'âge de votre professeur (Herr Weber) formellement. Que dites-vous ?",
+      "options": [
+        "Wie alt bist du, Herr Weber?",
+        "Wie alt sind Sie, Herr Weber?",
+        "Wie Jahre bist du?",
+        "Was alt sind Sie?"
+      ],
+      "reponse_correcte": 1,
+      "explication": "Avec un professeur → vouvoiement 'Sie' → 'sind Sie'. Le mot interrogatif est 'Wie' (comment/quel), pas 'Was' (quoi)."
+    },
+    {
+      "id": "ex-009",
+      "type": "situation",
+      "difficulte": 3,
+      "question": "Présentez-vous complètement en allemand : donnez votre prénom, votre nom de famille, et votre âge (inventez si nécessaire).",
+      "modele_reponse": "Ich heiße [Prénom] [Nom]. / Mein Name ist [Prénom] [Nom]. Ich bin [âge] Jahre alt.",
+      "criteres_evaluation": [
+        "Utilisation correcte de 'heißen' ou 'Mein Name ist'",
+        "Utilisation de 'sein' (pas 'haben') pour l'âge",
+        "Nombre composé correct si âge > 20",
+        "Présence de 'Jahre alt' en fin"
+      ]
+    },
+    {
+      "id": "ex-010",
+      "type": "oral_simulation",
+      "difficulte": 3,
+      "question": "Jouez ce mini-dialogue avec un(e) partenaire : A se présente (nom + âge), B demande comment il/elle s'appelle et quel âge il/elle a, A répond, B se présente à son tour.",
+      "modele": [
+        "A: Hallo! Ich heiße [nom]. Ich bin [âge] Jahre alt.",
+        "B: Wie heißt du? Wie alt bist du?",
+        "A: Ich heiße [nom]. Ich bin [âge] Jahre alt.",
+        "B: Ich heiße [nom]. Ich bin [âge] Jahre alt.",
+        "A: Schön, dich kennenzulernen! (Ravi(e) de te connaître !)"
+      ],
+      "expression_bonus": "Schön, dich kennenzulernen! = Ravi(e) de te rencontrer ! (expression à retenir)"
+    }
+  ],
+
+  "comprehension": [
+    {
+      "question": "Quelle est la différence entre 'Ich heiße Anna' et 'Mein Name ist Anna' ?",
+      "reponse": "Les deux signifient 'Je m'appelle Anna' mais 'Mein Name ist Anna' est légèrement plus formel et souvent utilisé dans des contextes officiels ou professionnels. 'Ich heiße' est plus naturel dans la conversation courante."
+    },
+    {
+      "question": "Pourquoi dit-on 'siebenundzwanzig' et non 'zwanzigundssieben' pour 27 ?",
+      "reponse": "En allemand, la règle des nombres composés est : unité + und + dizaine. L'unité vient TOUJOURS en premier. C'est l'inverse du français ('vingt-sept' = dizaine d'abord)."
+    },
+    {
+      "question": "Complétez : 'Ich bin 33 Jahre alt' — que signifie chaque mot ?",
+      "reponse": "Ich = je / bin = suis (sein, 1ère pers.) / 33 = dreiunddreißig / Jahre = ans / alt = vieux/âgé → littéralement : 'Je suis trente-trois ans vieux' = J'ai 33 ans."
+    }
+  ],
+
+  "culture": {
+    "titre": "Se présenter en contexte allemand",
+    "points": [
+      {
+        "sujet": "Prénom seul ou nom complet ?",
+        "explication": "Dans un contexte informel (cours, soirée entre amis), on donne généralement son prénom uniquement. Dans un contexte formel (réunion pro, administration), on donne prénom + nom de famille."
+      },
+      {
+        "sujet": "L'âge : sujet tabou ou non ?",
+        "explication": "En Allemagne, demander l'âge de quelqu'un n'est pas tabou dans un contexte social informel. En revanche, dans un cadre professionnel, il est illégal pour un employeur de demander l'âge lors d'un entretien d'embauche (Allgemeines Gleichbehandlungsgesetz — loi anti-discrimination)."
+      },
+      {
+        "sujet": "Noms de famille courants en Allemagne",
+        "exemples": ["Müller (meunier)", "Schmidt (forgeron)", "Fischer (pêcheur)", "Weber (tisserand)", "Meyer (fermier)"],
+        "remarque": "Beaucoup de noms de famille allemands désignent des métiers anciens — comme en France (Boulanger, Charpentier)"
+      }
+    ]
+  },
+
+  "astuces_pedagogiques": [
+    {
+      "titre": "La règle d'or des nombres inversés",
+      "astuce": "En allemand, dans les nombres 21-99, l'unité PRÉCÈDE la dizaine : 25 = fünf-und-zwanzig (cinq-et-vingt). Imagine que tu comptes comme un enfant qui dit les petits chiffres avant les grands."
+    },
+    {
+      "titre": "SEIN pour l'âge — mémo express",
+      "astuce": "Colle cette phrase sur ton bureau : 'En allemand, je SUIS mon âge. En français, je l'AI.' — Ich BIN 25 Jahre alt. Jamais 'ich habe'."
+    },
+    {
+      "titre": "Verbe toujours en 2ème position",
+      "astuce": "Visualise la phrase allemande comme un train : le 1er wagon = n'importe quel élément, le 2ème wagon = TOUJOURS le verbe, les autres wagons = le reste. Le verbe ne quitte JAMAIS le 2ème wagon !"
+    }
+  ],
+
+  "progression": {
+    "xp": 50,
+    "badges_deblocables": ["Première présentation", "Maître des nombres"],
+    "niveau_suivant": "a1-003",
+    "apercu_suivant": "Leçon suivante : Dire d'où l'on vient — nationalités et pays en allemand"
+  }
+}

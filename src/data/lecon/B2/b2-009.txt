@@ -1,0 +1,118 @@
+{
+  "id": "b2-009",
+  "niveau": "B2",
+  "module": "B2.2",
+  "titre": "Mobilité, transports et voyages",
+  "objectifs": {
+    "communicatif": "Organiser un voyage d'affaires complexe, formuler une réclamation pour un retard de transport, débattre des avantages des transports écologiques",
+    "linguistique": "Maîtriser les nuances entre les verbes de position (liegen/legen, sitzen/setzen), utiliser les prépositions de lieu avec le génitif (außerhalb, innerhalb) et les structures de regret au passé (hätte ... sollen)",
+    "culturel": "Le fonctionnement de la Deutsche Bahn (DB), les 'Autobahnen' et la culture du vélo dans les villes comme Münster ou Berlin",
+    "cognitif": "Planifier et optimiser des itinéraires en tenant compte de contraintes temporelles et écologiques"
+  },
+  "metadonnees": {
+    "duree_estimee_minutes": 65,
+    "difficulte_cognitive": 4,
+    "prerequis": ["b2-008"],
+    "competences_visees": ["interaction orale", "résolution de problèmes"],
+    "themes_croises": ["logistique", "technologie", "tourisme"]
+  },
+  "situation": {
+    "contexte": "Tu es à la gare centrale de Francfort (Frankfurt Hbf). Ton train pour Stuttgart est annulé. Tu dois trouver une alternative et demander une compensation.",
+    "lieu": "Reisezentrum (Centre de voyage) / Gare",
+    "type": "Gestion d'incident de voyage",
+    "registre": "formel / standard"
+  },
+  "dialogue_modele": [
+    {
+      "id": 1,
+      "de": "Mein Anschlusszug ist ausgefallen. Hätte ich früher informiert werden sollen, um eine Alternative zu buchen?",
+      "fr": "Ma correspondance a été annulée. Aurais-je dû être informé plus tôt pour réserver une alternative ?",
+      "phonetique": "maɪn ˈanˌʃlʊsˌt͡suːk ɪst ˈaʊsɡəˌfalən | ˈhɛtə ɪç ˈfʁyːɐ̯ ɪnfɔʁˈmiːɐ̯t ˈvɛʁdən ˈzɔllən | ʊm ˈaɪnə altɛʁnaˈtiːvə t͡suː ˈbuːxən",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Hätte ... informiert werden sollen",
+          "grammaire": {
+            "titre": "Le regret au Passé (Subjonctif II)",
+            "explication": "Structure : hätte + Partizip II + werden + sollen. Utilisé pour exprimer ce qui aurait dû se passer mais ne s'est pas produit.",
+            "exemple": "Das Ticket hätte entwertet werden sollen. (Le billet aurait dû être composté.)"
+          }
+        },
+        {
+          "mot": "Anschlusszug",
+          "traduction": "train de correspondance.",
+          "note": "Crucial dans le système de la DB."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "de": "Innerhalb des Stadtgebiets ist das Fahrrad oft schneller als das Auto, besonders während der Stoßzeiten.",
+      "fr": "À l'intérieur de la zone urbaine, le vélo est souvent plus rapide que la voiture, surtout pendant les heures de pointe.",
+      "phonetique": "ˈɪnɐˌhalp dɛs ˈʃtatɡəˌbiːt͡s ɪst das ˈfaːɐ̯ˌʁaːt ɔft ˈʃnɛlɐ als das ˈaʊtoː | bəˈzɔndɐs ˈvɛːʁənt deːɐ̯ ˈʃtoːst͡saɪtən",
+      "analyse_mot_par_mot": [
+        {
+          "mot": "Innerhalb (+ Génitif)",
+          "usage": "Préposition de lieu très précise pour définir des limites.",
+          "note_grammaire": "des Stadtgebiets (Génitif masculin)."
+        },
+        {
+          "mot": "Stoßzeiten",
+          "composition": "Stoß (poussée/choc) + Zeiten (temps).",
+          "traduction": "les heures de pointe."
+        }
+      ]
+    }
+  ],
+  "grammaire": [
+    {
+      "titre": "Position (Dativ) vs Mouvement (Akkusativ)",
+      "explication": "Rappel B2 : Il faut être automatique sur ces paires de verbes.",
+      "tableau": [
+        { "Mouvement (Akk)": "legen (poser à plat)", "Position (Dat)": "liegen (être couché)" },
+        { "Mouvement (Akk)": "stellen (poser debout)", "Position (Dat)": "stehen (être debout)" },
+        { "Mouvement (Akk)": "setzen (asseoir)", "Position (Dat)": "sitzen (être assis)" },
+        { "Mouvement (Akk)": "hängen (accrocher)", "Position (Dat)": "hängen (être accroché)" }
+      ]
+    },
+    {
+      "titre": "Les prépositions de lieu avec le Génitif",
+      "liste": [
+        { "préposition": "außerhalb", "sens": "à l'extérieur de", "exemple": "außerhalb der Stadt" },
+        { "préposition": "oberhalb", "sens": "au-dessus de", "exemple": "oberhalb des Berges" },
+        { "préposition": "unterhalb", "sens": "en dessous de", "exemple": "unterhalb der Brücke" }
+      ]
+    }
+  ],
+  "vocabulaire_cles": [
+    { "de": "die Verspätung", "fr": "le retard" },
+    { "de": "die Fahrpreisentschädigung", "fr": "l'indemnisation du prix du billet" },
+    { "de": "das Carsharing", "fr": "l'autopartage" },
+    { "de": "pendeln", "fr": "faire la navette (domicile-travail)" },
+    { "de": "umsteigen", "fr": "changer de train/bus" }
+  ],
+  "exercices": [
+    {
+      "id": "ex-b2-009-1",
+      "type": "grammaire",
+      "question": "Complétez : 'Ich habe das Handy auf den Tisch ____ (mouvement).' / 'Das Handy ____ auf dem Tisch (position).'",
+      "reponse_attendue": "gelegt / liegt",
+      "explication": "Legen = mouvement (Akk), Liegen = position (Dat)."
+    },
+    {
+      "id": "ex-b2-009-2",
+      "type": "traduction",
+      "question": "Traduisez : 'Le train aurait dû partir à 10 heures.'",
+      "reponse_attendue": "Der Zug hätte um 10 Uhr abfahren sollen.",
+      "explication": "Structure du regret/obligation non remplie au passé."
+    }
+  ],
+  "culture": {
+    "titre": "Deutsche Bahn & Pünktlichkeit",
+    "explication": "Le cliché de la ponctualité allemande est mis à rude épreuve par la Deutsche Bahn. Il est courant d'avoir des retards. Conseil d'expert : installe l'application 'DB Navigator'. Elle est indispensable pour suivre les changements de quai (Gleiswechsel) en temps réel."
+  },
+  "progression": {
+    "xp": 250,
+    "prochain_id": "b2-010",
+    "apercu_suivant": "Leçon B2.2-5 : Consommation et alimentation (Bio, local et tendances)."
+  }
+}
