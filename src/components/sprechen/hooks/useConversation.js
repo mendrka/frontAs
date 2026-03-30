@@ -318,27 +318,22 @@ export function useConversation(_runtimeConfig, { onSessionEnd = () => {}, onXPE
     await finalizeTurn(text, meta)
   }, [finalizeTurn])
 
-  const handleMicRelease = useCallback(async ({ stopRecording, liveTranscriptRef } = {}) => {
+  const handleMicRelease = useCallback(async ({ stopRecording, liveTranscriptRef, submit = true } = {}) => {
     const actions = useSessionStore.getState()
     actions.setMicState('processing')
 
     const { blob, responseTimeMs } = await stopRecording()
-    if (!blob || blob.size < 1000) {
-      actions.setMicState('idle')
-      actions.setLiveTranscript('')
-      return
-    }
+    let transcript = liveTranscriptRef?.current?.trim() || null
 
-    window.setTimeout(() => useSessionStore.getState().setLiveTranscript(''), 200)
-
-    let transcript = null
-    try {
-      const result = await sendAudioForSTT(blob)
-      transcript = result?.fallback
-        ? liveTranscriptRef?.current?.trim() || null
-        : result?.transcript?.trim() || null
-    } catch {
-      transcript = liveTranscriptRef?.current?.trim() || null
+    if (blob && blob.size >= 1000) {
+      try {
+        const result = await sendAudioForSTT(blob)
+        transcript = result?.fallback
+          ? liveTranscriptRef?.current?.trim() || transcript
+          : result?.transcript?.trim() || transcript
+      } catch {
+        transcript = liveTranscriptRef?.current?.trim() || transcript
+      }
     }
 
     if (!transcript) {
@@ -346,7 +341,16 @@ export function useConversation(_runtimeConfig, { onSessionEnd = () => {}, onXPE
       return
     }
 
+    if (!submit) {
+      actions.setLiveTranscript(transcript)
+      actions.setFinalTranscript(transcript)
+      actions.setMicState('done')
+      return transcript
+    }
+
+    window.setTimeout(() => useSessionStore.getState().setLiveTranscript(''), 200)
     await finalizeTurn(transcript, { responseTimeMs })
+    return transcript
   }, [finalizeTurn])
 
   return {

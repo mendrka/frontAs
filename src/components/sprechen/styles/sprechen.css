@@ -64,6 +64,8 @@
 .sp-live-transcript { min-height: 18px; font-size: 13px; font-style: italic; color: var(--sp-text-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; transition: color .3s ease, opacity .3s ease; }
 .sp-live-transcript.active { color: var(--sp-text-live); }
 .sp-live-transcript.fading-out { opacity: 0; }
+.sp-draft-editor { width: 100%; min-height: 72px; resize: vertical; padding: 12px 14px; border-radius: 16px; border: 1px solid var(--sp-border-light); background: rgba(255,255,255,.05); color: var(--sp-text); font: inherit; line-height: 1.6; }
+.sp-draft-editor:focus { outline: 1px solid rgba(167,139,250,.65); border-color: rgba(167,139,250,.55); }
 .sp-waveform { flex: 1; display: flex; align-items: center; justify-content: space-between; gap: 2px; height: 40px; }
 .sp-waveform-bar { flex: 1; max-width: 5px; min-height: 3px; border-radius: 3px; background: rgba(255,255,255,.08); transition: height .08s ease, background .3s ease; }
 .sp-waveform-bar.active { background: linear-gradient(to top,var(--sp-accent),var(--sp-accent-light)); }
@@ -77,7 +79,11 @@
 .sp-hint-lvl-3 { background: var(--sp-hint-3-bg); border: 1px solid rgba(16,185,129,.28); color: #a7f3d0; }
 .sp-twist-alert { margin: 6px 20px; padding: 11px 15px; border-radius: var(--sp-r-md); background: linear-gradient(135deg,var(--sp-twist-bg),rgba(245,158,11,.05)); border: 1px solid var(--sp-twist-border); color: #fca5a5; }
 .sp-text-input-fallback { flex: 1; padding: 10px 16px; border-radius: var(--sp-r-full); border: 1px solid var(--sp-border-light); background: rgba(255,255,255,.04); color: var(--sp-text); }
-.sp-send-btn { width: 40px; height: 40px; border-radius: 50%; border: none; background: var(--sp-accent); color: white; cursor: pointer; }
+.sp-send-btn,.sp-reset-btn,.sp-edit-btn { width: 40px; height: 40px; border-radius: 50%; border: none; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: opacity .2s ease, transform .2s ease, background .2s ease; }
+.sp-send-btn { background: var(--sp-accent); color: white; }
+.sp-reset-btn { background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.12); color: var(--sp-text); }
+.sp-edit-btn { background: rgba(167,139,250,.12); border: 1px solid rgba(167,139,250,.28); color: var(--sp-accent-light); }
+.sp-send-btn:disabled,.sp-reset-btn:disabled,.sp-edit-btn:disabled { opacity: .45; cursor: not-allowed; transform: none; }
 .sp-end-btn { padding: 9px 16px; border-radius: var(--sp-r-full); border: 1px solid rgba(239,68,68,.22); background: rgba(239,68,68,.07); color: #f87171; cursor: pointer; }
 .sp-mic-error { font-size: 12px; color: var(--sp-error); text-align: center; padding: 8px; background: var(--sp-error-bg); border: 1px solid var(--sp-error-border); border-radius: var(--sp-r-sm); }
 .sp-avatar-copy { min-width: 0; }
