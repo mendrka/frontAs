@@ -84,6 +84,7 @@ export const useSessionStore = create((set) => ({
       selectedCharacter: config?.character ?? state.selectedCharacter,
     })),
   setSpeechSupport: (speechSupport) => set({ speechSupport }),
+  setSessionId: (sessionId) => set({ sessionId }),
   setLiveTranscript: (liveTranscript) => set({ liveTranscript }),
   setFinalTranscript: (finalTranscript) => set({ finalTranscript }),
   setMicState: (micState) => set({ micState }),
@@ -190,7 +191,7 @@ export const useSessionStore = create((set) => ({
       currentView: SESSION_VIEWS.SESSION,
       view: SESSION_VIEWS.SESSION,
       sessionStartTime: Date.now(),
-      sessionId: `${Date.now()}-${theme.id}`,
+      sessionId: null,
       speechSupport: initialState.speechSupport,
     }),
 

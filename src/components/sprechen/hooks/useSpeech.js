@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { checkSpeechSupport, loadVoices } from '../services/speechService'
 
 export function useSpeech() {
@@ -13,6 +13,7 @@ export function useSpeech() {
   const [support, setSupport] = useState(() => checkSpeechSupport())
   const [voiceReady, setVoiceReady] = useState(false)
   const [isListening, setIsListening] = useState(false)
+  const isSupported = support.stt
 
   const cleanupAudio = useCallback(async () => {
     if (animationFrameRef.current) {
@@ -115,7 +116,7 @@ export function useSpeech() {
         }
 
         recognition.onerror = (event) => {
-          if (!['no-speech', 'audio-capture'].includes(event.error)) {
+          if (!['aborted', 'no-speech', 'audio-capture'].includes(event.error)) {
             console.warn('[Speech] Non-fatal error:', event.error)
           }
         }
@@ -124,7 +125,9 @@ export function useSpeech() {
           if (mediaRecorderRef.current?.state === 'recording') {
             try {
               recognition.start()
-            } catch {}
+            } catch {
+              return undefined
+            }
           }
         }
 
@@ -189,7 +192,9 @@ export function useSpeech() {
       if (recognitionRef.current) {
         try {
           recognitionRef.current.stop()
-        } catch {}
+        } catch {
+          return undefined
+        }
         recognitionRef.current = null
       }
 
@@ -218,7 +223,9 @@ export function useSpeech() {
     if (recognitionRef.current) {
       try {
         recognitionRef.current.stop()
-      } catch {}
+      } catch {
+        return undefined
+      }
       recognitionRef.current = null
     }
     if (mediaRecorderRef.current) {
@@ -226,7 +233,9 @@ export function useSpeech() {
       mediaRecorderRef.current.onstop = null
       try {
         mediaRecorderRef.current.stop()
-      } catch {}
+      } catch {
+        return undefined
+      }
       mediaRecorderRef.current = null
     }
     chunksRef.current = []
@@ -234,12 +243,16 @@ export function useSpeech() {
     await cleanupAudio()
   }, [cleanupAudio])
 
-  return {
-    support,
-    voiceReady,
-    isListening,
-    startRecording,
-    stopRecording,
-    cancelRecording,
-  }
+  return useMemo(
+    () => ({
+      support,
+      isSupported,
+      voiceReady,
+      isListening,
+      startRecording,
+      stopRecording,
+      cancelRecording,
+    }),
+    [cancelRecording, isListening, isSupported, startRecording, stopRecording, support, voiceReady]
+  )
 }

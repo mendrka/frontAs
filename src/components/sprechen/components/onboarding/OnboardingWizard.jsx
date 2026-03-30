@@ -1,6 +1,6 @@
 import { startTransition, useEffect, useMemo, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
-import { ArrowLeft, ArrowRight, BookOpen, Mic2, Sparkles, Users } from 'lucide-react'
+import { ArrowLeft, ArrowRight, BookOpen, ChevronDown, ChevronUp, Info, Mic2, Sparkles, Users } from 'lucide-react'
 import { CHARACTER_LIST } from '../../data/characters'
 import { getThemesForLevel, LEVEL_OPTIONS } from '../../data/themes'
 import { useSessionStore } from '../../stores/sessionStore'
@@ -51,6 +51,8 @@ export default function OnboardingWizard({ presetLevel = null, presetThemeId = n
 
   const [step, setStep] = useState(0)
   const [countdown, setCountdown] = useState(null)
+  const [mobileGuideOpen, setMobileGuideOpen] = useState(false)
+  const [mobilePrepOpen, setMobilePrepOpen] = useState(false)
 
   useEffect(() => {
     if (presetLevel && !selectedLevel) {
@@ -100,6 +102,11 @@ export default function OnboardingWizard({ presetLevel = null, presetThemeId = n
     return () => window.clearTimeout(timer)
   }, [countdown, presetLevel, selectedCharacter, selectedLevel, selectedMode, selectedTheme, startSession])
 
+  useEffect(() => {
+    setMobileGuideOpen(false)
+    setMobilePrepOpen(false)
+  }, [step, selectedTheme?.id, selectedCharacter?.id])
+
   const canContinue = useMemo(() => {
     if (step === 0) return Boolean(selectedMode)
     if (step === 1) return Boolean(selectedLevel || presetLevel)
@@ -145,7 +152,9 @@ export default function OnboardingWizard({ presetLevel = null, presetThemeId = n
                     </span>
                     <div>
                       <p className="sprechen-display text-xl font-semibold text-white">{option.title}</p>
-                      <p className="text-sm text-white/65">{option.subtitle}</p>
+                      <p className={active ? 'text-sm text-white/65' : 'hidden text-sm text-white/65 sm:block'}>
+                        {option.subtitle}
+                      </p>
                     </div>
                   </div>
                   {!option.available && <Badge variant="warning">V2</Badge>}
@@ -177,7 +186,9 @@ export default function OnboardingWizard({ presetLevel = null, presetThemeId = n
                   {level.label}
                 </Badge>
                 <p className="sprechen-display text-xl font-semibold text-white">{level.title}</p>
-                <p className="mt-2 text-sm leading-6 text-white/68">{level.description}</p>
+                <p className={active ? 'mt-2 text-sm leading-6 text-white/68' : 'mt-2 hidden text-sm leading-6 text-white/68 sm:block'}>
+                  {level.description}
+                </p>
               </button>
             )
           })}
@@ -208,11 +219,13 @@ export default function OnboardingWizard({ presetLevel = null, presetThemeId = n
                   <div>
                     <p className="text-3xl">{theme.emoji}</p>
                     <p className="mt-3 sprechen-display text-2xl font-semibold text-white">{theme.label}</p>
-                    <p className="mt-2 text-sm leading-6 text-white/68">{theme.description}</p>
+                    <p className={active ? 'mt-2 text-sm leading-6 text-white/68' : 'mt-2 hidden text-sm leading-6 text-white/68 sm:block'}>
+                      {theme.description}
+                    </p>
                   </div>
                   <Badge variant="accent">{theme.duration}</Badge>
                 </div>
-                <p className="mt-4 rounded-[22px] bg-black/20 px-4 py-3 text-sm text-white/72">
+                <p className={active ? 'mt-4 rounded-[22px] bg-black/20 px-4 py-3 text-sm text-white/72' : 'mt-4 hidden rounded-[22px] bg-black/20 px-4 py-3 text-sm text-white/72 sm:block'}>
                   {theme.scenarioBriefing}
                 </p>
               </button>
@@ -243,12 +256,14 @@ export default function OnboardingWizard({ presetLevel = null, presetThemeId = n
                   <div>
                     <p className="sprechen-display text-2xl font-semibold text-white">{character.name}</p>
                     <p className="text-sm text-white/68">{character.role}</p>
-                    <p className="mt-1 text-xs uppercase tracking-[0.26em] text-white/42">
+                    <p className={active ? 'mt-1 text-xs uppercase tracking-[0.26em] text-white/42' : 'mt-1 hidden text-xs uppercase tracking-[0.26em] text-white/42 sm:block'}>
                       {character.catchphrase}
                     </p>
                   </div>
                 </div>
-                <p className="mt-4 text-sm leading-6 text-white/70">{character.personality}</p>
+                <p className={active ? 'mt-4 text-sm leading-6 text-white/70' : 'mt-4 hidden text-sm leading-6 text-white/70 sm:block'}>
+                  {character.personality}
+                </p>
               </button>
             )
           })}
@@ -284,20 +299,35 @@ export default function OnboardingWizard({ presetLevel = null, presetThemeId = n
 
         <Card tone="soft" className="relative overflow-hidden p-6">
           <div className="absolute inset-x-0 top-0 h-24 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.18),transparent_55%)]" />
-          <p className="text-xs uppercase tracking-[0.28em] text-white/45">Vocabulaire a recycler</p>
-          <div className="mt-4 flex flex-wrap gap-2">
+          <div className="flex items-center justify-between gap-3">
+            <p className="text-xs uppercase tracking-[0.28em] text-white/45">Preparation compacte</p>
+            <button
+              type="button"
+              className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/8 px-3 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-white/72 transition hover:bg-white/14 hover:text-white sm:hidden"
+              onClick={() => setMobilePrepOpen((value) => !value)}
+              aria-expanded={mobilePrepOpen}
+            >
+              <Info size={14} />
+              Focus
+              {mobilePrepOpen ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
+            </button>
+          </div>
+          <div className={mobilePrepOpen ? 'mt-4 block sm:block' : 'mt-4 hidden sm:block'}>
+            <p className="text-xs uppercase tracking-[0.28em] text-white/45">Vocabulaire a recycler</p>
+            <div className="mt-4 flex flex-wrap gap-2">
             {selectedTheme?.vocabularyHints?.map((hint) => (
               <Badge key={hint} variant="neutral">
                 {hint}
               </Badge>
             ))}
-          </div>
-          <p className="mt-6 text-xs uppercase tracking-[0.28em] text-white/45">Focus grammaire</p>
-          <ul className="mt-4 space-y-2 text-sm text-white/74">
+            </div>
+            <p className="mt-6 text-xs uppercase tracking-[0.28em] text-white/45">Focus grammaire</p>
+            <ul className="mt-4 space-y-2 text-sm text-white/74">
             {selectedTheme?.grammarFocus?.map((focus) => (
-              <li key={focus}>• {focus}</li>
+              <li key={focus}>- {focus}</li>
             ))}
           </ul>
+          </div>
 
           <Button
             size="lg"
@@ -322,12 +352,29 @@ export default function OnboardingWizard({ presetLevel = null, presetThemeId = n
             <Badge variant="neutral" className="mb-4">
               Sprechen
             </Badge>
-            <h2 className="sprechen-display text-4xl font-semibold tracking-tight text-white sm:text-[3.2rem]">
+            <h2 className="sprechen-display text-3xl font-semibold tracking-tight text-white sm:text-[3.2rem]">
               Tu n apprends pas l allemand. Tu survis a des scenes.
             </h2>
-            <p className="mt-4 max-w-3xl text-base leading-7 text-white/68">
+            <p className="mt-4 hidden max-w-3xl text-base leading-7 text-white/68 sm:block">
               Une micro-aventure orale, un personnage, un decor, une tension. L objectif est de tenir la scene assez longtemps pour que la langue cesse d etre un exercice.
             </p>
+            <div className="mt-4 sm:hidden">
+              <button
+                type="button"
+                className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/8 px-4 py-2.5 text-xs font-semibold uppercase tracking-[0.2em] text-white/78 transition hover:bg-white/14 hover:text-white"
+                onClick={() => setMobileGuideOpen((value) => !value)}
+                aria-expanded={mobileGuideOpen}
+              >
+                <Info size={14} />
+                Briefing
+                {mobileGuideOpen ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
+              </button>
+              {mobileGuideOpen && (
+                <p className="mt-3 rounded-[22px] border border-white/10 bg-white/8 px-4 py-4 text-sm leading-6 text-white/72">
+                  Une micro-aventure orale, un personnage, un decor, une tension. L objectif est de tenir la scene assez longtemps pour que la langue cesse d etre un exercice.
+                </p>
+              )}
+            </div>
           </div>
 
           <Button variant="ghost" size="sm" onClick={() => setCurrentView('journal')}>
@@ -336,11 +383,11 @@ export default function OnboardingWizard({ presetLevel = null, presetThemeId = n
           </Button>
         </div>
 
-        <div className="mt-8 flex flex-wrap gap-3">
+        <div className="mt-8 -mx-1 flex snap-x gap-3 overflow-x-auto px-1 pb-1 sm:mx-0 sm:flex-wrap sm:overflow-visible sm:px-0">
           {stepMeta.map((item, index) => (
             <div
               key={item.id}
-              className={`inline-flex items-center gap-3 rounded-full border px-4 py-2 text-sm ${
+              className={`inline-flex shrink-0 items-center gap-3 rounded-full border px-4 py-2 text-sm ${
                 index === step
                   ? 'border-white/26 bg-white/12 text-white'
                   : index < step

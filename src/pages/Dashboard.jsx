@@ -59,33 +59,44 @@ function Dashboard() {
   }, [estComplete, getProgressionNiveau, levels, progression])
 
   return (
-    <div className="space-y-8">
-      <section className={cx(cardClass.base, 'overflow-hidden p-6 sm:p-8')}>
-        <div className="grid gap-6 xl:grid-cols-[minmax(0,1fr)_300px]">
+    <div className="space-y-6 sm:space-y-8">
+      <section className={cx(cardClass.base, 'overflow-hidden p-5 sm:p-8')}>
+        <div className="grid gap-5 xl:grid-cols-[minmax(0,1fr)_300px] xl:gap-6">
           <div>
             <p className="section-kicker">{t('Dashboard', 'Tableau de bord')}</p>
-            <h1 className="mt-3 font-display text-4xl font-semibold tracking-tight text-brand-text">
+            <h1 className="mt-3 font-display text-3xl font-semibold tracking-tight text-brand-text sm:text-4xl">
               {t('Willkommen zurueck', 'Bon retour')}{user?.prenom ? `, ${user.prenom}` : ''}
             </h1>
-            <p className="mt-4 max-w-3xl text-base leading-relaxed text-brand-brown sm:text-lg">
+            <p className="mt-4 max-w-3xl text-sm leading-7 text-brand-brown sm:text-lg sm:leading-relaxed">
               {t(
-                'Dein Kursbereich laeuft jetzt direkt auf der lokalen Lektionenbibliothek. Du siehst hier den echten Fortschritt ueber die normalisierten Lektionen.',
-                'Ton espace cours lit maintenant directement la bibliotheque locale. Ici tu vois la progression reelle sur les lecons normalisees.'
+                'Das Dashboard bleibt auf die naechste Aktion und die Kennzahlen fokussiert.',
+                'Le dashboard reste concentre sur la prochaine action et les chiffres utiles.'
               )}
             </p>
+            <details className="mt-4 max-w-2xl rounded-[1.35rem] border border-white/75 bg-white/72 p-4 text-sm text-brand-brown shadow-sm">
+              <summary className="cursor-pointer list-none font-semibold text-brand-text">
+                {t('Mehr Details', 'Plus de details')}
+              </summary>
+              <p className="mt-3 leading-7">
+                {t(
+                  'Dein Kursbereich laeuft direkt auf der lokalen Lektionenbibliothek. Hier siehst du den echten Fortschritt ueber die normalisierten Lektionen.',
+                  'Ton espace cours lit directement la bibliotheque locale. Ici tu vois la progression reelle sur les lecons normalisees.'
+                )}
+              </p>
+            </details>
 
-            <div className="mt-6 grid gap-4 sm:grid-cols-3">
+            <div className="mt-6 grid grid-cols-3 gap-3">
               <div className={cx(cardClass.soft, 'p-4')}>
-                <p className="text-sm uppercase tracking-[0.2em] text-brand-brown">{t('Abgeschlossen', 'Terminees')}</p>
-                <p className="mt-2 font-display text-3xl font-semibold text-brand-text">{completedLessons}</p>
+                <p className="text-[10px] uppercase tracking-[0.16em] text-brand-brown sm:text-sm">{t('Abgeschlossen', 'Terminees')}</p>
+                <p className="mt-2 font-display text-2xl font-semibold text-brand-text sm:text-3xl">{completedLessons}</p>
               </div>
               <div className={cx(cardClass.soft, 'p-4')}>
-                <p className="text-sm uppercase tracking-[0.2em] text-brand-brown">{t('Lernzeit', 'Temps etudie')}</p>
-                <p className="mt-2 font-display text-3xl font-semibold text-brand-text">{completedMinutes} min</p>
+                <p className="text-[10px] uppercase tracking-[0.16em] text-brand-brown sm:text-sm">{t('Lernzeit', 'Temps etudie')}</p>
+                <p className="mt-2 font-display text-2xl font-semibold text-brand-text sm:text-3xl">{completedMinutes} min</p>
               </div>
               <div className={cx(cardClass.soft, 'p-4')}>
-                <p className="text-sm uppercase tracking-[0.2em] text-brand-brown">{t('Bibliothek', 'Bibliotheque')}</p>
-                <p className="mt-2 font-display text-3xl font-semibold text-brand-text">{catalogStats.lessons}</p>
+                <p className="text-[10px] uppercase tracking-[0.16em] text-brand-brown sm:text-sm">{t('Bibliothek', 'Bibliotheque')}</p>
+                <p className="mt-2 font-display text-2xl font-semibold text-brand-text sm:text-3xl">{catalogStats.lessons}</p>
               </div>
             </div>
           </div>
@@ -111,13 +122,13 @@ function Dashboard() {
 
       <XPBar />
 
-      <section className="grid gap-4 lg:grid-cols-3">
+      <section className="flex snap-x gap-4 overflow-x-auto pb-2 lg:grid lg:grid-cols-3 lg:overflow-visible lg:pb-0">
         {[
           { to: `/cours/${preferredLevel || 'A1'}`, icon: 'book', title: t('Kurse', 'Cours'), body: t('Lokale Lektionen durchsuchen und fortsetzen.', 'Parcourir et reprendre les lecons locales.') },
           { to: '/sprechen', icon: 'mic', title: t('Sprechen', 'Oral'), body: t('Aussprache und orale Praxis trainieren.', "Travailler l'oral et la prononciation.") },
           { to: '/communaute', icon: 'messageCircle', title: t('Community', 'Communaute'), body: t('Mit anderen Lernenden im Kontakt bleiben.', 'Rester en contact avec les autres apprenants.') },
         ].map((item) => (
-          <Link key={item.to} className={cx(cardClass.interactive, 'p-5')} to={item.to}>
+          <Link key={item.to} className={cx(cardClass.interactive, 'min-w-[16.5rem] snap-start p-5 lg:min-w-0')} to={item.to}>
             <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-sky text-brand-blue">
               <Icon name={item.icon} size={20} className="icon" />
             </div>
@@ -127,7 +138,7 @@ function Dashboard() {
         ))}
       </section>
 
-      <section className={cx(cardClass.base, 'p-6 sm:p-8')}>
+      <section className={cx(cardClass.base, 'p-5 sm:p-8')}>
         <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
           <div>
             <p className="section-kicker">{t('Fortschritt', 'Progression')}</p>
@@ -144,9 +155,9 @@ function Dashboard() {
           </div>
         </div>
 
-        <div className="mt-6 grid gap-4 xl:grid-cols-2">
+        <div className="mt-6 flex snap-x gap-4 overflow-x-auto pb-2 xl:grid xl:grid-cols-2 xl:overflow-visible xl:pb-0">
           {levelSummaries.map((item) => (
-            <article key={item.level} className={cx(cardClass.soft, 'p-5')}>
+            <article key={item.level} className={cx(cardClass.soft, 'min-w-[18rem] snap-start p-5 xl:min-w-0')}>
               <div className="flex items-start justify-between gap-4">
                 <div>
                   <span className={levelBadgeClass(item.level)}>{item.level}</span>

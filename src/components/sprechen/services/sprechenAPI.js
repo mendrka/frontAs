@@ -92,6 +92,8 @@ export const startSession = async (payload) => {
   return parseOrThrow(res, 'Start session failed')
 }
 
+export const isValidSessionId = (value) => /^[a-f0-9]{24}$/i.test(String(value || ''))
+
 export const addTurn = async (sessionId, turn) => {
   const res = await fetch(`${SPRECHEN_BASE}/session/${encodeURIComponent(sessionId)}/turn`, {
     method: 'PATCH',

@@ -1,4 +1,4 @@
-import { useEffect, useMemo } from 'react'
+import { useEffect } from 'react'
 import { stopListening, stopSpeaking } from './services/speechService'
 import './styles/sprechen.css'
 import OnboardingWizard from './components/onboarding/OnboardingWizard'
@@ -7,15 +7,11 @@ import SessionJournal from './components/session/SessionJournal'
 import SessionView from './components/session/SessionView'
 import { resolveTheme, normalizeLevel, pickDefaultCharacter, cn } from './utils'
 import { useSessionStore, SESSION_VIEWS } from './stores/sessionStore'
-import { API_URL } from '@config/runtime'
 
 export default function SprechenComponent({
   user = null,
-  userId = null,
   userLevel = null,
   theme = null,
-  groqApiKey,
-  apiEndpoint = null,
   onSessionEnd = () => {},
   onXPEarned = () => {},
   className = '',
@@ -33,7 +29,6 @@ export default function SprechenComponent({
     setCurrentView,
   } = useSessionStore()
 
-  const resolvedUserId = user?.id ?? userId ?? null
   const resolvedUserLevel = user?.level ?? user?.germanLevel ?? userLevel ?? null
 
   const presetLevel = normalizeLevel(resolvedUserLevel)
@@ -79,16 +74,6 @@ export default function SprechenComponent({
     []
   )
 
-  const runtimeConfig = useMemo(
-    () => ({
-      userId: resolvedUserId,
-      groqApiKey: groqApiKey || '',
-      geminiApiKey: '',
-      apiEndpoint: apiEndpoint || `${API_URL}/sprechen/ai`,
-    }),
-    [apiEndpoint, groqApiKey, resolvedUserId]
-  )
-
   return (
     <div className={cn('sprechen-root', fullscreen && 'sprechen-fullscreen', className)}>
       {currentView === SESSION_VIEWS.ONBOARDING && (
@@ -96,7 +81,6 @@ export default function SprechenComponent({
       )}
       {currentView === SESSION_VIEWS.SESSION && (
         <SessionView
-          runtimeConfig={runtimeConfig}
           onSessionEnd={onSessionEnd}
           onXPEarned={onXPEarned}
         />

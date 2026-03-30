@@ -29,20 +29,34 @@ function Sprechen() {
 
   return (
     <div className="shell space-y-6 pb-24 lg:pb-10">
-      <section className="page-card relative overflow-hidden p-6 sm:p-8">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(75,156,211,0.14),transparent_26%),radial-gradient(circle_at_bottom_right,rgba(111,166,122,0.12),transparent_28%)]" />
-        <div className="relative flex flex-col gap-6 xl:flex-row xl:items-end xl:justify-between">
+      <section className="page-card relative overflow-hidden p-5 sm:p-8">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(75,156,211,0.18),transparent_24%),radial-gradient(circle_at_bottom_right,rgba(111,166,122,0.16),transparent_28%),linear-gradient(135deg,rgba(255,255,255,0.35),transparent_58%)]" />
+        <div className="relative flex flex-col gap-5 xl:flex-row xl:items-end xl:justify-between">
           <div className="max-w-3xl">
             <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-brand-blue/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-brand-blue">
               <Volume2 size={14} />
               Sprechen
             </div>
-            <h1 className="font-display text-4xl font-semibold tracking-tight text-brand-text sm:text-[3.2rem]">
-              Scenes orales immersives, zero API payante obligatoire.
+            <h1 className="font-display text-3xl font-semibold tracking-tight text-brand-text sm:text-[3.2rem]">
+              Oral immersif, interface epuree, experience mobile d'abord.
             </h1>
-            <p className="mt-4 text-base leading-8 text-brand-brown/85">
-              Le module gere sa propre progression locale, la voix navigateur, le feedback scene par scene et peut appeler Groq si une cle est fournie. Sans cle, il degrade proprement en mode offline.
+            <p className="mt-4 max-w-2xl text-sm leading-7 text-brand-brown/85 sm:text-base sm:leading-8">
+              Le frontend passe maintenant uniquement par le backend Node.js. La scene orale reste propre sur telephone: moins de bruit visuel, plus de contexte, et les actions secondaires restent dans les menus au lieu d'envahir l'ecran.
             </p>
+            <details className="mt-4 max-w-2xl rounded-[1.35rem] border border-white/75 bg-white/72 p-4 text-sm text-brand-brown shadow-sm">
+              <summary className="cursor-pointer list-none font-semibold text-brand-text">
+                Voir le detail technique
+              </summary>
+              <p className="mt-3 leading-7">
+                Les appels passent par le backend Sprechen, avec fallback LLM sur OpenRouter si Gemini est a quota, et fallback TTS sur VoiceRSS si Azure est absent. L'interface mobile garde les commandes principales visibles et range le reste dans des panneaux ou menus.
+              </p>
+            </details>
+
+            <div className="mt-5 flex flex-wrap gap-2.5 text-xs font-semibold uppercase tracking-[0.18em] text-brand-brown/80">
+              <span className="stat-chip">OpenRouter actif</span>
+              <span className="stat-chip">VoiceRSS actif</span>
+              <span className="stat-chip">Mode mobile optimise</span>
+            </div>
           </div>
 
           <div className="rounded-[2rem] border border-brand-border/80 bg-white/72 px-5 py-4 shadow-soft backdrop-blur-sm">
@@ -51,8 +65,8 @@ function Sprechen() {
                 <Sparkles size={18} />
               </span>
               <div>
-                <p className="text-sm font-semibold uppercase tracking-[0.22em] text-brand-blue">Micro-aventure</p>
-                <p className="mt-1 text-sm text-brand-brown">Parle, improvise, tiens la scene.</p>
+                <p className="text-sm font-semibold uppercase tracking-[0.22em] text-brand-blue">Session concentree</p>
+                <p className="mt-1 text-sm text-brand-brown">Parle, improvise, puis laisse le reste se ranger tout seul.</p>
               </div>
             </div>
           </div>
@@ -60,10 +74,7 @@ function Sprechen() {
       </section>
 
       <SprechenComponent
-        userId={user?.id || null}
         userLevel={user?.niveau ? String(user.niveau).toUpperCase() : null}
-        groqApiKey={import.meta.env.VITE_GROQ_API_KEY}
-        apiEndpoint={import.meta.env.VITE_SPRECHEN_API_ENDPOINT || null}
         onSessionEnd={handleSessionEnd}
         onXPEarned={handleXPEarned}
       />

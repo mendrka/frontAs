@@ -10,7 +10,6 @@ const ITEMS = [
   { to: '/cours', icon: 'book', label: { de: 'Kurse', fr: 'Cours' } },
   { to: '/sprechen', icon: 'mic', label: { de: 'Sprechen', fr: 'Oral' } },
   { to: '/communaute', icon: 'messageCircle', label: { de: 'Chat', fr: 'Chat' } },
-  { to: '/mon-profil', icon: 'users', label: { de: 'Profil', fr: 'Profil' } },
 ]
 
 function BottomNav() {
@@ -26,7 +25,7 @@ function BottomNav() {
 
   return (
     <nav className="safe-bottom fixed inset-x-3 bottom-3 z-40 md:hidden" aria-label={t('Navigation', 'Navigation')}>
-      <div className="mx-auto flex max-w-md items-stretch gap-1 rounded-[2rem] border border-white/75 bg-white/80 p-2 shadow-[0_24px_60px_-36px_rgba(53,94,75,0.38)] backdrop-blur-2xl">
+      <div className="mx-auto flex max-w-sm items-stretch gap-1 rounded-[2rem] border border-white/75 bg-white/80 p-2 shadow-[0_24px_60px_-36px_rgba(53,94,75,0.38)] backdrop-blur-2xl">
         {ITEMS.map((item) => (
           <NavLink
             key={item.to}

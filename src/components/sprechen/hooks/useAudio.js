@@ -4,8 +4,10 @@ import { requestTTS } from '../services/sprechenAPI'
 export const useAudio = () => {
   const audioRef = useRef(null)
   const ttsWatchdog = useRef(null)
+  const playbackTokenRef = useRef(0)
 
   const stopAudio = useCallback(() => {
+    playbackTokenRef.current += 1
     clearInterval(ttsWatchdog.current)
     ttsWatchdog.current = null
     if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
@@ -13,13 +15,19 @@ export const useAudio = () => {
     }
     if (audioRef.current) {
       audioRef.current.pause()
+      audioRef.current.src = ''
       audioRef.current = null
     }
   }, [])
 
-  const speakWithWebSpeech = useCallback((text, voiceConfig) => {
+  const speakWithWebSpeech = useCallback((text, voiceConfig, playbackToken) => {
     return new Promise((resolve) => {
       if (typeof window === 'undefined' || !('speechSynthesis' in window)) {
+        resolve()
+        return
+      }
+
+      if (playbackToken !== playbackTokenRef.current) {
         resolve()
         return
       }
@@ -59,25 +67,40 @@ export const useAudio = () => {
   const speakText = useCallback(
     async (text, characterId) => {
       stopAudio()
+      const playbackToken = playbackTokenRef.current
 
       try {
         const result = await requestTTS(text, characterId)
 
+        if (playbackToken !== playbackTokenRef.current) {
+          return
+        }
+
         if (result.type === 'blob' || result.type === 'url') {
           return new Promise((resolve) => {
+            if (playbackToken !== playbackTokenRef.current) {
+              resolve()
+              return
+            }
             const audio = new Audio(result.url)
             audioRef.current = audio
-            audio.onended = () => resolve()
-            audio.onerror = () => resolve()
+            audio.onended = () => {
+              if (audioRef.current === audio) audioRef.current = null
+              resolve()
+            }
+            audio.onerror = () => {
+              if (audioRef.current === audio) audioRef.current = null
+              resolve()
+            }
             audio.play().catch(() => resolve())
           })
         }
 
         if (result.type === 'webspeech') {
-          return speakWithWebSpeech(result.text, result.voiceConfig)
+          return speakWithWebSpeech(result.text, result.voiceConfig, playbackToken)
         }
       } catch {
-        return speakWithWebSpeech(text, { lang: 'de-DE', rate: 0.9 })
+        return speakWithWebSpeech(text, { lang: 'de-DE', rate: 0.9 }, playbackToken)
       }
     },
     [speakWithWebSpeech, stopAudio]
@@ -85,4 +108,3 @@ export const useAudio = () => {
 
   return { speakText, stopAudio }
 }
-

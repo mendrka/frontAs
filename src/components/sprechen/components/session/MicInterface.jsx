@@ -13,7 +13,9 @@ export default function MicInterface({ speech, onSubmit, onMicRelease }) {
   const [textFallback, setTextFallback] = useState('')
   const [volumeLevel, setVolumeLevel] = useState(0)
   const [liveFading, setLiveFading] = useState(false)
+  const [isSubmittingMic, setIsSubmittingMic] = useState(false)
   const liveTranscriptRef = useRef('')
+  const { startRecording, stopRecording, cancelRecording, support, isSupported } = speech
   const {
     liveTranscript,
     micState,
@@ -33,9 +35,9 @@ export default function MicInterface({ speech, onSubmit, onMicRelease }) {
   useEffect(() => {
     setLiveTranscript('')
     return () => {
-      speech.cancelRecording?.()
+      cancelRecording?.()
     }
-  }, [setLiveTranscript, speech])
+  }, [cancelRecording, setLiveTranscript])
 
   const busy = isAiSpeaking || isAiThinking || micState === 'processing'
 
@@ -45,7 +47,7 @@ export default function MicInterface({ speech, onSubmit, onMicRelease }) {
     setIsUserSpeaking(true)
     setLiveFading(false)
 
-    const started = await speech.startRecording({
+    const started = await startRecording({
       onInterim: (text) => setLiveTranscript(text),
       onVolumeLevel: (level) => setVolumeLevel(level),
       onError: (code) => {
@@ -63,11 +65,17 @@ export default function MicInterface({ speech, onSubmit, onMicRelease }) {
   }
 
   const stopCapture = async () => {
+    if (isSubmittingMic) return
+    setIsSubmittingMic(true)
     setIsUserSpeaking(false)
     setLiveFading(true)
     setVolumeLevel(0)
-    await onMicRelease({ stopRecording: speech.stopRecording, liveTranscriptRef })
-    window.setTimeout(() => setLiveFading(false), 300)
+    try {
+      await onMicRelease({ stopRecording, liveTranscriptRef })
+    } finally {
+      window.setTimeout(() => setLiveFading(false), 300)
+      setIsSubmittingMic(false)
+    }
   }
 
   const handleTextSubmit = async () => {
@@ -86,16 +94,12 @@ export default function MicInterface({ speech, onSubmit, onMicRelease }) {
         {micState === 'processing' ? 'Analyse...' : liveTranscript || 'Parle en allemand quand le micro est actif.'}
       </div>
 
-      {speech.support.stt ? (
+      {(typeof isSupported === 'boolean' ? isSupported : support?.stt) ? (
         <div className="sp-mic-row">
           <button
             type="button"
             className={`sp-mic-btn ${buttonState}`}
-            disabled={busy && micState !== 'recording'}
-            onMouseDown={() => !busy && micState === 'idle' && startCapture()}
-            onMouseUp={() => micState === 'recording' && stopCapture()}
-            onTouchStart={() => !busy && micState === 'idle' && startCapture()}
-            onTouchEnd={() => micState === 'recording' && stopCapture()}
+            disabled={(busy && micState !== 'recording') || isSubmittingMic}
             onClick={() => {
               if (micState === 'idle') startCapture()
               else if (micState === 'recording') stopCapture()

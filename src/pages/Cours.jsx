@@ -70,15 +70,32 @@ function Cours() {
         <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_300px]">
           <div>
             <p className="section-kicker">{t('Kursbibliothek', 'Bibliotheque locale')}</p>
-            <h1 className="mt-3 font-display text-4xl font-semibold tracking-tight text-brand-text">
+            <h1 className="mt-3 font-display text-3xl font-semibold tracking-tight text-brand-text sm:text-4xl">
               {t('Lektionen direkt aus der lokalen Bibliothek', 'Lecons chargees directement depuis les fichiers locaux')}
             </h1>
-            <p className="mt-4 max-w-3xl text-base leading-relaxed text-brand-brown sm:text-lg">
+            <p className="mt-4 max-w-3xl text-sm leading-7 text-brand-brown sm:hidden">
+              {t(
+                'Le catalogue mobile montre surtout le niveau, la progression et la prochaine action.',
+                'Sur mobile, le catalogue montre surtout le niveau, la progression et la prochaine action.'
+              )}
+            </p>
+            <p className="mt-4 hidden max-w-3xl text-base leading-relaxed text-brand-brown sm:block sm:text-lg">
               {t(
                 'Diese Seite nutzt nicht mehr die alte API-Kette. Die Lektionen werden aus der lokalen Bibliothek normalisiert und direkt in der UI angezeigt.',
                 "Cette page n'utilise plus l'ancien flux API/cache pour les lecons. Le contenu local est normalise puis affiche directement."
               )}
             </p>
+            <details className="mt-4 rounded-[1.2rem] border border-white/75 bg-white/72 p-4 text-sm text-brand-brown shadow-sm sm:hidden">
+              <summary className="cursor-pointer list-none font-semibold text-brand-text">
+                {t('Mehr Kontext anzeigen', 'Afficher le contexte')}
+              </summary>
+              <p className="mt-3 leading-7">
+                {t(
+                  'Die Lektionen kommen direkt aus der lokalen Bibliothek. Die detailreicheren Beschreibungen bleiben auf Abruf, damit der mobile Bildschirm sauber bleibt.',
+                  'Les lecons viennent directement de la bibliotheque locale. Les details restent a la demande pour garder un ecran mobile propre.'
+                )}
+              </p>
+            </details>
 
             <div className="mt-6 flex flex-wrap gap-3">
               <span className="stat-chip">
@@ -194,9 +211,15 @@ function Cours() {
                     <h3 className="mt-4 font-display text-2xl font-semibold tracking-tight text-brand-text">
                       {lesson.titre}
                     </h3>
-                    <p className="mt-3 text-sm leading-relaxed text-brand-brown sm:text-base">
+                    <p className="mt-3 hidden text-sm leading-relaxed text-brand-brown sm:block sm:text-base">
                       {lesson.description}
                     </p>
+                    <details className="mt-4 rounded-[1.2rem] border border-brand-border/70 bg-white/72 p-3 text-sm text-brand-brown shadow-sm sm:hidden">
+                      <summary className="cursor-pointer list-none font-semibold text-brand-text">
+                        {t('Kontext anzeigen', 'Voir le contexte')}
+                      </summary>
+                      <p className="mt-3 leading-relaxed">{lesson.description}</p>
+                    </details>
                   </div>
 
                   <div className="flex shrink-0 flex-col items-end gap-2">

@@ -665,8 +665,12 @@ function Lecon() {
   const answeredCount = Object.keys(results).length
   const correctCount = Object.values(results).filter((item) => item.correct).length
   const score = exercises.length ? Math.round((correctCount / exercises.length) * 100) : 100
+  const lessonId = lesson?.id || null
   const currentLessonState = lesson ? unlockMap.get(lesson.id) : null
-  const isComplete = lesson ? estComplete(lesson.id) : false
+  const isComplete = useMemo(() => {
+    if (!lessonId) return false
+    return estComplete(lessonId)
+  }, [estComplete, lessonId])
 
   const availableTabs = INFO_TABS.filter((tab) => {
     if (!lesson) return false
@@ -676,17 +680,18 @@ function Lecon() {
     if (tab.key === 'comprehension') return lesson.comprehensionChecks?.length
     return lesson.tipCards?.length
   })
+  const defaultInfoTab = availableTabs[0]?.key || 'grammar'
 
   useEffect(() => {
-    if (!lesson) return
+    if (!lessonId) return
     setActivePhraseIndex(0)
     setExerciseIndex(0)
     setResults({})
-    setActiveTab(availableTabs[0]?.key || 'grammar')
+    setActiveTab(defaultInfoTab)
     completionTriggeredRef.current = false
     xpAwardedRef.current = false
-    alreadyCompleteRef.current = estComplete(lesson.id)
-  }, [lesson?.id])
+    alreadyCompleteRef.current = isComplete
+  }, [defaultInfoTab, isComplete, lessonId])
 
   useEffect(() => {
     if (!lesson || completionTriggeredRef.current) return

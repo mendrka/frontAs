@@ -14,8 +14,8 @@ export default function ConfidenceMeter({ confidenceScore = 52 }) {
       <div className="sp-conf-track">
         <div className="sp-conf-fill" style={{ width: `${confidenceScore}%` }} />
       </div>
-      <div>{mood.emoji}</div>
-      <div>{mood.label}</div>
+      <div className="sp-conf-emoji" aria-label={mood.label}>{mood.emoji}</div>
+      <div className="sp-char-sub">{mood.label}</div>
     </div>
   )
 }
