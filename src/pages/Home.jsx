@@ -123,7 +123,7 @@ function Home() {
             title: t('Direkte Normalisierung', 'Normalisation directe'),
             body: t(
               'Die lokale Bibliothek wird ohne alten API-Umweg fuer die UI lesbar gemacht.',
-              "Randriambololona Diari Kanto Asaramanitra "
+              "La bibliotheque locale est rendue lisible pour l'UI sans repasser par l'ancien flux API."
             ),
           },
           {
