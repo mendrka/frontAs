@@ -1,17 +1,9 @@
-import { useMemo } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useAuth } from '@context/AuthContext'
 import { useLang } from '@context/LangContext'
 import { useProgression } from '@hooks/useProgression'
 import XPBar from '@components/dashboard/XPBar'
-import {
-  buildLevelUnlockMap,
-  findNextRecommendedLesson,
-  getCatalogStats,
-  listAvailableLevels,
-  listLevelLessons,
-  normalizeLevel,
-} from '@data/lessonCatalog'
 import Icon from '@components/ui/Icon'
 import { buttonClass, cardClass, cx, levelBadgeClass } from '@utils/ui'
 
@@ -19,30 +11,59 @@ function Dashboard() {
   const { user } = useAuth()
   const { t } = useLang()
   const { progression, estComplete, getProgressionNiveau } = useProgression()
+  const [catalog, setCatalog] = useState(null)
 
-  const levels = listAvailableLevels()
-  const preferredLevel = normalizeLevel(user?.niveau) || levels[0] || null
-  const nextLesson = findNextRecommendedLesson(preferredLevel, progression)
-  const catalogStats = getCatalogStats()
+  useEffect(() => {
+    let active = true
+
+    import('@data/lessonCatalog')
+      .then((module) => {
+        if (active) setCatalog(module)
+      })
+      .catch(() => {
+        if (active) setCatalog({ failed: true })
+      })
+
+    return () => {
+      active = false
+    }
+  }, [])
+
+  const isCatalogLoading = catalog === null
+  const levels = useMemo(() => (
+    catalog?.listAvailableLevels ? catalog.listAvailableLevels() : []
+  ), [catalog])
+  const preferredLevel = useMemo(() => (
+    catalog?.normalizeLevel?.(user?.niveau) || levels[0] || null
+  ), [catalog, levels, user?.niveau])
+  const nextLesson = useMemo(() => (
+    catalog?.findNextRecommendedLesson ? catalog.findNextRecommendedLesson(preferredLevel, progression) : null
+  ), [catalog, preferredLevel, progression])
+  const catalogStats = useMemo(() => (
+    catalog?.getCatalogStats ? catalog.getCatalogStats() : { lessons: 0 }
+  ), [catalog])
 
   const completedLessons = useMemo(() => {
+    if (!catalog?.listLevelLessons) return 0
     return levels.reduce((sum, level) => {
-      return sum + listLevelLessons(level).filter((lesson) => estComplete(lesson.id)).length
+      return sum + catalog.listLevelLessons(level).filter((lesson) => estComplete(lesson.id)).length
     }, 0)
-  }, [estComplete, levels])
+  }, [catalog, estComplete, levels])
 
   const completedMinutes = useMemo(() => {
+    if (!catalog?.listLevelLessons) return 0
     return levels.reduce((sum, level) => {
-      return sum + listLevelLessons(level)
+      return sum + catalog.listLevelLessons(level)
         .filter((lesson) => estComplete(lesson.id))
         .reduce((levelSum, lesson) => levelSum + (lesson.duree || 0), 0)
     }, 0)
-  }, [estComplete, levels])
+  }, [catalog, estComplete, levels])
 
   const levelSummaries = useMemo(() => {
+    if (!catalog?.listLevelLessons || !catalog?.buildLevelUnlockMap) return []
     return levels.map((level) => {
-      const lessons = listLevelLessons(level)
-      const unlockMap = buildLevelUnlockMap(level, progression)
+      const lessons = catalog.listLevelLessons(level)
+      const unlockMap = catalog.buildLevelUnlockMap(level, progression)
       const nextInLevel = lessons.find((lesson) => {
         const state = unlockMap.get(lesson.id)
         return state?.unlocked && !state?.complete
@@ -56,7 +77,7 @@ function Dashboard() {
         nextInLevel,
       }
     })
-  }, [estComplete, getProgressionNiveau, levels, progression])
+  }, [catalog, estComplete, getProgressionNiveau, levels, progression])
 
   return (
     <div className="space-y-6 sm:space-y-8">
@@ -88,15 +109,15 @@ function Dashboard() {
             <div className="mt-6 grid grid-cols-1 gap-3 min-[420px]:grid-cols-3">
               <div className={cx(cardClass.soft, 'p-4')}>
                 <p className="text-[10px] uppercase tracking-[0.16em] text-brand-brown sm:text-sm">{t('Abgeschlossen', 'Terminees')}</p>
-                <p className="mt-2 font-display text-2xl font-semibold text-brand-text sm:text-3xl">{completedLessons}</p>
+                <p className="mt-2 font-display text-2xl font-semibold text-brand-text sm:text-3xl">{isCatalogLoading ? '...' : completedLessons}</p>
               </div>
               <div className={cx(cardClass.soft, 'p-4')}>
                 <p className="text-[10px] uppercase tracking-[0.16em] text-brand-brown sm:text-sm">{t('Lernzeit', 'Temps etudie')}</p>
-                <p className="mt-2 font-display text-2xl font-semibold text-brand-text sm:text-3xl">{completedMinutes} min</p>
+                <p className="mt-2 font-display text-2xl font-semibold text-brand-text sm:text-3xl">{isCatalogLoading ? '...' : `${completedMinutes} min`}</p>
               </div>
               <div className={cx(cardClass.soft, 'p-4')}>
                 <p className="text-[10px] uppercase tracking-[0.16em] text-brand-brown sm:text-sm">{t('Bibliothek', 'Bibliotheque')}</p>
-                <p className="mt-2 font-display text-2xl font-semibold text-brand-text sm:text-3xl">{catalogStats.lessons}</p>
+                <p className="mt-2 font-display text-2xl font-semibold text-brand-text sm:text-3xl">{isCatalogLoading ? '...' : catalogStats.lessons}</p>
               </div>
             </div>
           </div>
@@ -104,13 +125,17 @@ function Dashboard() {
           <div className={cx(cardClass.soft, 'p-5')}>
             <p className="section-kicker">{t('Weiter', 'Suite')}</p>
             <h2 className="mt-2 font-display text-2xl font-semibold tracking-tight text-brand-text">
-              {nextLesson ? nextLesson.titre : t('Alles erledigt', 'Tout est termine')}
+              {isCatalogLoading ? t('Wird geladen', 'Chargement') : nextLesson ? nextLesson.titre : t('Alles erledigt', 'Tout est termine')}
             </h2>
             <p className="mt-3 text-sm leading-relaxed text-brand-brown">
-              {nextLesson ? nextLesson.description : t('Die lokale Bibliothek ist gerade komplett durchlaufen.', 'La bibliotheque locale a ete entierement parcourue.')}
+              {isCatalogLoading
+                ? t('Die lokale Bibliothek wird geladen.', 'La bibliotheque locale se charge.')
+                : nextLesson
+                  ? nextLesson.description
+                  : t('Die lokale Bibliothek ist gerade komplett durchlaufen.', 'La bibliotheque locale a ete entierement parcourue.')}
             </p>
 
-            {nextLesson ? (
+            {!isCatalogLoading && nextLesson ? (
               <Link className={cx(buttonClass.primary, 'mt-5 w-full justify-center')} to={`/cours/${nextLesson.niveau}/lecon/${nextLesson.id}`}>
                 <Icon name="arrowRight" size={18} className="icon" />
                 {t('Weiterlernen', 'Continuer')}
@@ -152,6 +177,9 @@ function Dashboard() {
                 {item.level}
               </span>
             ))}
+            {isCatalogLoading ? (
+              <span className="inline-flex animate-pulse rounded-full bg-brand-border/70 px-6 py-2 text-transparent">A1</span>
+            ) : null}
           </div>
         </div>
 
@@ -180,6 +208,11 @@ function Dashboard() {
               </div>
             </article>
           ))}
+          {isCatalogLoading ? (
+            [1, 2].map((item) => (
+              <div key={item} className="min-h-[12rem] min-w-[16.75rem] animate-pulse rounded-[1.5rem] bg-brand-border/45 xl:min-w-0" />
+            ))
+          ) : null}
         </div>
       </section>
     </div>

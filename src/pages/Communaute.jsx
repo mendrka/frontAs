@@ -1,11 +1,12 @@
-import { useEffect, useMemo, useState } from 'react'
+import { lazy, Suspense, useEffect, useMemo, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { useAuth } from '@context/AuthContext'
 import { useLang } from '@context/LangContext'
-import ChatRoom from '@components/chat/ChatRoom'
-import DirectInbox from '@components/chat/DirectInbox'
-import UserOnline from '@components/chat/UserOnline'
 import { cardClass, cx, levelBadgeClass } from '@utils/ui'
+
+const ChatRoom = lazy(() => import('@components/chat/ChatRoom'))
+const DirectInbox = lazy(() => import('@components/chat/DirectInbox'))
+const UserOnline = lazy(() => import('@components/chat/UserOnline'))
 
 const CANAUX = [
   { id: 'general', emoji: '💬', nom: 'General', descDe: 'Allgemeine Diskussionen', descFr: 'Discussions generales' },
@@ -34,6 +35,23 @@ function getInitials(user) {
 
 function formatDirectSubtitle(user) {
   return [user?.niveau, user?.objectif].filter(Boolean).join(' · ') || 'Conversation privee entre membres EAM'
+}
+
+function ChatSidebarFallback() {
+  return <div className="h-24 animate-pulse rounded-[1.45rem] bg-brand-border/50" />
+}
+
+function ChatThreadFallback() {
+  return (
+    <div className="flex min-h-0 flex-1 items-center justify-center p-6">
+      <div className="text-center">
+        <div className="mx-auto h-10 w-10 animate-spin rounded-full border-2 border-brand-border border-t-brand-blue" />
+        <p className="mt-4 text-sm font-semibold uppercase tracking-[0.2em] text-brand-brown">
+          Chargement de la conversation
+        </p>
+      </div>
+    </div>
+  )
 }
 
 function Communaute() {
@@ -159,11 +177,13 @@ function Communaute() {
 
           <div className="min-h-0 flex-1 overflow-y-auto px-4 py-4">
             {sidebarView === 'direct' ? (
-              <DirectInbox
-                selectedUserId={selectedDirectUser?.id || null}
-                onSelectUser={handleOpenDirect}
-                refreshToken={directRefreshToken}
-              />
+              <Suspense fallback={<ChatSidebarFallback />}>
+                <DirectInbox
+                  selectedUserId={selectedDirectUser?.id || null}
+                  onSelectUser={handleOpenDirect}
+                  refreshToken={directRefreshToken}
+                />
+              </Suspense>
             ) : (
               <nav className="grid gap-2" aria-label={t('Kanale', 'Canaux')}>
                 {CANAUX.map((item) => {
@@ -294,7 +314,9 @@ function Communaute() {
                     Retour au canal
                   </button>
                 ) : (
-                  <UserOnline canal={canalActif} />
+                  <Suspense fallback={<ChatSidebarFallback />}>
+                    <UserOnline canal={canalActif} />
+                  </Suspense>
                 )}
               </div>
             </div>
@@ -311,19 +333,21 @@ function Communaute() {
           )}
 
           <div className="flex min-h-0 flex-1 bg-[linear-gradient(180deg,rgba(234,244,255,0.38),rgba(255,255,255,0.96))]">
-            {isDirectMode ? (
-              <ChatRoom
-                mode="direct"
-                recipient={selectedDirectUser}
-                onPartnerLoaded={setSelectedDirectUser}
-                onConversationActivity={bumpDirectRefresh}
-              />
-            ) : (
-              <ChatRoom
-                mode="public"
-                canal={canalActif}
-              />
-            )}
+            <Suspense fallback={<ChatThreadFallback />}>
+              {isDirectMode ? (
+                <ChatRoom
+                  mode="direct"
+                  recipient={selectedDirectUser}
+                  onPartnerLoaded={setSelectedDirectUser}
+                  onConversationActivity={bumpDirectRefresh}
+                />
+              ) : (
+                <ChatRoom
+                  mode="public"
+                  canal={canalActif}
+                />
+              )}
+            </Suspense>
           </div>
         </main>
       </div>

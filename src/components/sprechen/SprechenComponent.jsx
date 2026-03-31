@@ -1,12 +1,26 @@
-import { useEffect } from 'react'
+import { lazy, Suspense, useEffect } from 'react'
 import { stopListening, stopSpeaking } from './services/speechService'
 import './styles/sprechen.css'
-import OnboardingWizard from './components/onboarding/OnboardingWizard'
-import FeedbackScreen from './components/feedback/FeedbackScreen'
-import SessionJournal from './components/session/SessionJournal'
-import SessionView from './components/session/SessionView'
 import { resolveTheme, normalizeLevel, pickDefaultCharacter, cn } from './utils'
 import { useSessionStore, SESSION_VIEWS } from './stores/sessionStore'
+
+const OnboardingWizard = lazy(() => import('./components/onboarding/OnboardingWizard'))
+const FeedbackScreen = lazy(() => import('./components/feedback/FeedbackScreen'))
+const SessionJournal = lazy(() => import('./components/session/SessionJournal'))
+const SessionView = lazy(() => import('./components/session/SessionView'))
+
+function SprechenViewFallback() {
+  return (
+    <div className="flex min-h-[22rem] items-center justify-center rounded-[2rem] border border-white/60 bg-white/72 p-6 shadow-soft">
+      <div className="text-center">
+        <div className="mx-auto h-10 w-10 animate-spin rounded-full border-2 border-brand-border border-t-brand-blue" />
+        <p className="mt-4 text-sm font-semibold uppercase tracking-[0.2em] text-brand-brown">
+          Chargement de l interface
+        </p>
+      </div>
+    </div>
+  )
+}
 
 export default function SprechenComponent({
   user = null,
@@ -76,17 +90,19 @@ export default function SprechenComponent({
 
   return (
     <div className={cn('sprechen-root', fullscreen && 'sprechen-fullscreen', className)}>
-      {currentView === SESSION_VIEWS.ONBOARDING && (
-        <OnboardingWizard presetLevel={presetLevel} presetThemeId={presetTheme?.id || null} />
-      )}
-      {currentView === SESSION_VIEWS.SESSION && (
-        <SessionView
-          onSessionEnd={onSessionEnd}
-          onXPEarned={onXPEarned}
-        />
-      )}
-      {currentView === SESSION_VIEWS.FEEDBACK && <FeedbackScreen />}
-      {currentView === SESSION_VIEWS.JOURNAL && <SessionJournal />}
+      <Suspense fallback={<SprechenViewFallback />}>
+        {currentView === SESSION_VIEWS.ONBOARDING && (
+          <OnboardingWizard presetLevel={presetLevel} presetThemeId={presetTheme?.id || null} />
+        )}
+        {currentView === SESSION_VIEWS.SESSION && (
+          <SessionView
+            onSessionEnd={onSessionEnd}
+            onXPEarned={onXPEarned}
+          />
+        )}
+        {currentView === SESSION_VIEWS.FEEDBACK && <FeedbackScreen />}
+        {currentView === SESSION_VIEWS.JOURNAL && <SessionJournal />}
+      </Suspense>
     </div>
   )
 }

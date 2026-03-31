@@ -1,16 +1,41 @@
+import { useEffect, useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useAuth } from '@context/AuthContext'
 import { useLang } from '@context/LangContext'
-import { getCatalogStats, listAvailableLevels, listLevelLessons } from '@data/lessonCatalog'
 import Icon from '@components/ui/Icon'
 import { buttonClass, cardClass, cx, levelBadgeClass } from '@utils/ui'
 
 function Home() {
   const { user } = useAuth()
   const { t } = useLang()
-  const stats = getCatalogStats()
-  const levels = listAvailableLevels()
-  const spotlightLessons = levels.flatMap((level) => listLevelLessons(level).slice(0, 1)).slice(0, 4)
+  const [catalog, setCatalog] = useState(null)
+
+  useEffect(() => {
+    let active = true
+
+    import('@data/lessonCatalog')
+      .then((module) => {
+        if (active) setCatalog(module)
+      })
+      .catch(() => {
+        if (active) setCatalog({ failed: true })
+      })
+
+    return () => {
+      active = false
+    }
+  }, [])
+
+  const isCatalogLoading = catalog === null
+  const stats = catalog?.getCatalogStats ? catalog.getCatalogStats() : { levels: 0, lessons: 0, exercises: 0 }
+  const levels = useMemo(() => (
+    catalog?.listAvailableLevels ? catalog.listAvailableLevels() : []
+  ), [catalog])
+  const spotlightLessons = useMemo(() => (
+    catalog?.listLevelLessons
+      ? levels.flatMap((level) => catalog.listLevelLessons(level).slice(0, 1)).slice(0, 4)
+      : []
+  ), [catalog, levels])
 
   return (
     <div className="space-y-6 sm:space-y-8">
@@ -68,15 +93,15 @@ function Home() {
             <div className="mt-4 grid grid-cols-1 gap-2.5 min-[420px]:grid-cols-3 xl:grid-cols-1 lg:gap-3">
               <div className="rounded-[1.5rem] bg-white/80 p-4">
                 <p className="text-[10px] uppercase tracking-[0.18em] text-brand-brown sm:text-sm">{t('Niveaus', 'Niveaux')}</p>
-                <p className="mt-2 font-display text-2xl font-semibold text-brand-text sm:text-3xl">{stats.levels}</p>
+                <p className="mt-2 font-display text-2xl font-semibold text-brand-text sm:text-3xl">{isCatalogLoading ? '...' : stats.levels}</p>
               </div>
               <div className="rounded-[1.5rem] bg-white/80 p-4">
                 <p className="text-[10px] uppercase tracking-[0.18em] text-brand-brown sm:text-sm">{t('Lektionen', 'Lecons')}</p>
-                <p className="mt-2 font-display text-2xl font-semibold text-brand-text sm:text-3xl">{stats.lessons}</p>
+                <p className="mt-2 font-display text-2xl font-semibold text-brand-text sm:text-3xl">{isCatalogLoading ? '...' : stats.lessons}</p>
               </div>
               <div className="rounded-[1.5rem] bg-white/80 p-4">
                 <p className="text-[10px] uppercase tracking-[0.18em] text-brand-brown sm:text-sm">{t('Uebungen', 'Exercices')}</p>
-                <p className="mt-2 font-display text-2xl font-semibold text-brand-text sm:text-3xl">{stats.exercises}</p>
+                <p className="mt-2 font-display text-2xl font-semibold text-brand-text sm:text-3xl">{isCatalogLoading ? '...' : stats.exercises}</p>
               </div>
             </div>
           </div>
@@ -134,6 +159,9 @@ function Home() {
                 {level}
               </Link>
             ))}
+            {isCatalogLoading ? (
+              <span className="inline-flex animate-pulse rounded-full bg-brand-border/70 px-6 py-2 text-transparent">A1</span>
+            ) : null}
           </div>
         </div>
 
@@ -157,6 +185,11 @@ function Home() {
               </div>
             </article>
           ))}
+          {isCatalogLoading ? (
+            [1, 2].map((item) => (
+              <div key={item} className="min-h-[14rem] min-w-[16.75rem] animate-pulse rounded-[1.5rem] bg-brand-border/45 xl:min-w-0" />
+            ))
+          ) : null}
         </div>
       </section>
     </div>

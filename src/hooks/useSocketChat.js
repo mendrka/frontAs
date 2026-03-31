@@ -7,32 +7,69 @@ import { SOCKET_URL } from '@config/runtime'
 // Gère la connexion Socket.io pour le chat communauté
 // Namespace : /chat
 
+let sharedChatSocket = null
+let sharedChatToken = null
+let sharedChatConsumers = 0
+
+function createSharedChatSocket(token) {
+  const socket = io(`${SOCKET_URL}/chat`, {
+    auth: { token },
+    transports: ['websocket'],
+    reconnection: true,
+    reconnectionAttempts: 5,
+    reconnectionDelay: 2000,
+  })
+
+  socket.on('connect', () => {
+    console.log('[Chat Socket] Connecté')
+  })
+
+  socket.on('connect_error', (err) => {
+    console.error('[Chat Socket] Erreur:', err.message)
+  })
+
+  return socket
+}
+
+function acquireSharedChatSocket(token) {
+  if (!token) return null
+
+  if (!sharedChatSocket || sharedChatToken !== token) {
+    sharedChatSocket?.disconnect()
+    sharedChatSocket = createSharedChatSocket(token)
+    sharedChatToken = token
+  }
+
+  sharedChatConsumers += 1
+  return sharedChatSocket
+}
+
+function releaseSharedChatSocket() {
+  sharedChatConsumers = Math.max(0, sharedChatConsumers - 1)
+
+  if (sharedChatConsumers === 0) {
+    sharedChatSocket?.disconnect()
+    sharedChatSocket = null
+    sharedChatToken = null
+  }
+}
+
 export function useSocketChat() {
   const { token } = useAuth()
   const socketRef = useRef(null)
 
   // ── Connexion au montage ──
   useEffect(() => {
-    if (!token) return
+    if (!token) {
+      socketRef.current = null
+      return undefined
+    }
 
-    socketRef.current = io(`${SOCKET_URL}/chat`, {
-      auth:         { token },
-      transports:   ['websocket'],
-      reconnection: true,
-      reconnectionAttempts: 5,
-      reconnectionDelay:    2000,
-    })
-
-    socketRef.current.on('connect', () => {
-      console.log('[Chat Socket] Connecté')
-    })
-
-    socketRef.current.on('connect_error', (err) => {
-      console.error('[Chat Socket] Erreur:', err.message)
-    })
+    socketRef.current = acquireSharedChatSocket(token)
 
     return () => {
-      socketRef.current?.disconnect()
+      releaseSharedChatSocket()
+      socketRef.current = null
     }
   }, [token])
 

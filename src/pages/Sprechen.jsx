@@ -1,8 +1,22 @@
-import { useCallback } from 'react'
+import { lazy, Suspense, useCallback } from 'react'
 import { Sparkles, Volume2 } from 'lucide-react'
 import { useAuth } from '@context/AuthContext'
 import { useGamification } from '@context/GamificationContext'
-import SprechenComponent from '@components/sprechen/SprechenComponent'
+
+const SprechenComponent = lazy(() => import('@components/sprechen/SprechenComponent'))
+
+function SprechenModuleFallback() {
+  return (
+    <div className="page-card flex min-h-[24rem] items-center justify-center p-6 text-center">
+      <div>
+        <div className="mx-auto h-10 w-10 animate-spin rounded-full border-2 border-brand-border border-t-brand-blue" />
+        <p className="mt-4 text-sm font-semibold uppercase tracking-[0.2em] text-brand-brown">
+          Chargement de la session orale
+        </p>
+      </div>
+    </div>
+  )
+}
 
 function Sprechen() {
   const { user } = useAuth()
@@ -73,11 +87,13 @@ function Sprechen() {
         </div>
       </section>
 
-      <SprechenComponent
-        userLevel={user?.niveau ? String(user.niveau).toUpperCase() : null}
-        onSessionEnd={handleSessionEnd}
-        onXPEarned={handleXPEarned}
-      />
+      <Suspense fallback={<SprechenModuleFallback />}>
+        <SprechenComponent
+          userLevel={user?.niveau ? String(user.niveau).toUpperCase() : null}
+          onSessionEnd={handleSessionEnd}
+          onXPEarned={handleXPEarned}
+        />
+      </Suspense>
     </div>
   )
 }

@@ -15,6 +15,100 @@ const api = axios.create({
   },
 })
 
+const requestCache = new Map()
+const DEFAULT_CACHE_TTL = 60 * 1000
+
+function buildCacheKey(url, params = {}) {
+  const search = new URLSearchParams()
+
+  Object.entries(params)
+    .filter(([, value]) => value !== undefined && value !== null && value !== '')
+    .sort(([left], [right]) => left.localeCompare(right))
+    .forEach(([key, value]) => {
+      search.set(key, String(value))
+    })
+
+  const query = search.toString()
+  return query ? `${url}?${query}` : url
+}
+
+function readCachedData(cacheKey) {
+  const entry = requestCache.get(cacheKey)
+  if (!entry) return null
+
+  if (Date.now() > entry.expiresAt) {
+    requestCache.delete(cacheKey)
+    return null
+  }
+
+  return entry.data
+}
+
+function writeCachedData(cacheKey, data, ttl) {
+  requestCache.set(cacheKey, {
+    data,
+    expiresAt: Date.now() + ttl,
+  })
+}
+
+function invalidateCache(...fragments) {
+  if (!fragments.length) return
+
+  for (const key of requestCache.keys()) {
+    if (fragments.some((fragment) => key.includes(fragment))) {
+      requestCache.delete(key)
+    }
+  }
+}
+
+function cachedGet(url, options = {}, config = {}) {
+  const { ttl = DEFAULT_CACHE_TTL, enabled = true, cacheKey } = config
+
+  if (!enabled) {
+    return api.get(url, options)
+  }
+
+  const resolvedCacheKey = cacheKey || buildCacheKey(url, options.params)
+  const cachedData = readCachedData(resolvedCacheKey)
+
+  if (cachedData) {
+    return Promise.resolve({
+      data: cachedData,
+      cached: true,
+      status: 200,
+      statusText: 'OK',
+      headers: {},
+      config: options,
+    })
+  }
+
+  return api.get(url, options).then((response) => {
+    writeCachedData(resolvedCacheKey, response.data, ttl)
+    return response
+  })
+}
+
+function postWithInvalidation(url, payload, fragments = []) {
+  return api.post(url, payload).then((response) => {
+    invalidateCache(...fragments)
+    return response
+  })
+}
+
+function putWithInvalidation(url, payload, fragments = []) {
+  return api.put(url, payload).then((response) => {
+    invalidateCache(...fragments)
+    return response
+  })
+}
+
+function deleteWithInvalidation(url, options = {}, fragments = []) {
+  return api.delete(url, options).then((response) => {
+    invalidateCache(...fragments)
+    return response
+  })
+}
+
 // ══════════════════════════════════════════════════════════
 // INTERCEPTEUR REQUÊTE — Injecter le token JWT automatiquement
 // ══════════════════════════════════════════════════════════
@@ -83,7 +177,7 @@ api.interceptors.response.use(
 export const authAPI = {
   login:    (email, password)  => api.post('/auth/login',    { email, password }),
   register: (userData)         => api.post('/auth/register', userData),
-  me:       ()                 => api.get('/auth/me'),
+  me:       ()                 => cachedGet('/auth/me', {}, { ttl: 30 * 1000 }),
   logout:   ()                 => api.post('/auth/logout'),
 }
 
@@ -92,20 +186,20 @@ export const authAPI = {
 // ══════════════════════════════════════════════════════════
 export const coursAPI = {
   // Liste tous les cours (optionnel: filtrer par niveau)
-  getAll:       (niveau)        => api.get('/cours', { params: niveau ? { niveau } : {} }),
+  getAll:       (niveau)        => cachedGet('/cours', { params: niveau ? { niveau } : {} }, { ttl: 5 * 60 * 1000 }),
   // Détail d'un cours
-  getById:      (coursId)       => api.get(`/cours/${coursId}`),
+  getById:      (coursId)       => cachedGet(`/cours/${coursId}`, {}, { ttl: 5 * 60 * 1000 }),
   // Leçons d'un cours
-  getLecons:    (coursId)       => api.get(`/cours/${coursId}/lecons`),
+  getLecons:    (coursId)       => cachedGet(`/cours/${coursId}/lecons`, {}, { ttl: 5 * 60 * 1000 }),
   // Détail d'une leçon
-  getLecon:     (leconId)       => api.get(`/cours/lecon/${leconId}`),
+  getLecon:     (leconId)       => cachedGet(`/cours/lecon/${leconId}`, {}, { ttl: 5 * 60 * 1000 }),
 }
 
 export const adaptiveCoursAPI = {
   startSession: (payload) => api.post('/adaptive-cours/session/start', payload || {}),
   submitAttempt: (sessionId, payload) => api.post(`/adaptive-cours/session/${sessionId}/attempt`, payload || {}),
   finishSession: (sessionId) => api.post(`/adaptive-cours/session/${sessionId}/finish`, {}),
-  getRecommendation: () => api.get('/adaptive-cours/recommendation'),
+  getRecommendation: () => cachedGet('/adaptive-cours/recommendation', {}, { ttl: 60 * 1000 }),
 }
 
 // ══════════════════════════════════════════════════════════
@@ -113,15 +207,15 @@ export const adaptiveCoursAPI = {
 // ══════════════════════════════════════════════════════════
 export const progressionAPI = {
   // Récupérer la progression complète de l'utilisateur
-  getAll:       ()              => api.get('/cours/progression'),
+  getAll:       ()              => cachedGet('/cours/progression', {}, { ttl: 30 * 1000 }),
   // Récupérer progression d'un cours spécifique
-  getCours:     (coursId)       => api.get(`/cours`, { params: { niveau: coursId } }),
+  getCours:     (coursId)       => cachedGet('/cours', { params: { niveau: coursId } }, { ttl: 60 * 1000 }),
   // Marquer une leçon comme complétée
-  completeLecon:(leconId, data) => api.post(`/cours/progression/lecon/${leconId}/complete`, data),
+  completeLecon:(leconId, data) => postWithInvalidation(`/cours/progression/lecon/${leconId}/complete`, data, ['/cours/progression', '/cours?', `/cours/lecon/${leconId}`]),
   // Sauvegarder résultat d'un exercice
-  saveExercice: (exerciceId, data) => api.post(`/cours/progression/exercice/${exerciceId}`, data),
+  saveExercice: (exerciceId, data) => postWithInvalidation(`/cours/progression/exercice/${exerciceId}`, data, ['/cours/progression']),
   // Statistiques globales de l'utilisateur
-  getStats:     ()              => api.get('/cours/progression/stats'),
+  getStats:     ()              => cachedGet('/cours/progression/stats', {}, { ttl: 30 * 1000 }),
 }
 
 // ══════════════════════════════════════════════════════════
@@ -131,15 +225,15 @@ export const sprechenAPI = {
   // Rejoindre la file d'attente de matching
   joinQueue:    (niveau)        => api.post('/sprechen/queue', { niveau }),
   // Quitter la file
-  leaveQueue:   ()              => api.delete('/sprechen/queue'),
+  leaveQueue:   ()              => deleteWithInvalidation('/sprechen/queue', {}, ['/sprechen']),
   // Historique des sessions
-  getHistorique:()              => api.get('/sprechen/historique'),
+  getHistorique:()              => cachedGet('/sprechen/historique', {}, { ttl: 60 * 1000 }),
   // Détail d'une session
-  getSession:   (sessionId)     => api.get(`/sprechen/session/${sessionId}`),
+  getSession:   (sessionId)     => cachedGet(`/sprechen/session/${sessionId}`, {}, { ttl: 60 * 1000 }),
   // Sauvegarder une session terminée
-  saveSession:  (data)          => api.post('/sprechen/session', data),
+  saveSession:  (data)          => postWithInvalidation('/sprechen/session', data, ['/sprechen']),
   // Statistiques spreken
-  getStats:     ()              => api.get('/sprechen/stats'),
+  getStats:     ()              => cachedGet('/sprechen/stats', {}, { ttl: 30 * 1000 }),
 }
 
 // ══════════════════════════════════════════════════════════
@@ -147,16 +241,16 @@ export const sprechenAPI = {
 // ══════════════════════════════════════════════════════════
 export const chatAPI = {
   // Liste des canaux disponibles
-  getCanaux:    ()              => api.get('/chat/canaux'),
+  getCanaux:    ()              => cachedGet('/chat/canaux', {}, { ttl: 5 * 60 * 1000 }),
   // Messages d'un canal (avec pagination)
-  getMessages:  (canal, page)   => api.get(`/chat/canaux/${canal}/messages`, { params: { page: page || 1 } }),
+  getMessages:  (canal, page)   => cachedGet(`/chat/canaux/${canal}/messages`, { params: { page: page || 1 } }, { ttl: 15 * 1000 }),
   // Envoyer un message (REST fallback si socket ko)
-  sendMessage:  (canal, texte)  => api.post(`/chat/canaux/${canal}/messages`, { texte }),
+  sendMessage:  (canal, texte)  => postWithInvalidation(`/chat/canaux/${canal}/messages`, { texte }, ['/chat/canaux/', '/chat/direct/']),
   // Annuaire et conversations privees
-  getDirectUsers: (q = '')      => api.get('/chat/direct/users', { params: q ? { q } : {} }),
-  getDirectConversations: ()    => api.get('/chat/direct/conversations'),
-  getDirectMessages: (userId, page) => api.get(`/chat/direct/${userId}/messages`, { params: { page: page || 1 } }),
-  sendDirectMessage: (userId, texte) => api.post(`/chat/direct/${userId}/messages`, { texte }),
+  getDirectUsers: (q = '')      => cachedGet('/chat/direct/users', { params: q ? { q } : {} }, { ttl: 30 * 1000 }),
+  getDirectConversations: ()    => cachedGet('/chat/direct/conversations', {}, { ttl: 30 * 1000 }),
+  getDirectMessages: (userId, page) => cachedGet(`/chat/direct/${userId}/messages`, { params: { page: page || 1 } }, { ttl: 15 * 1000 }),
+  sendDirectMessage: (userId, texte) => postWithInvalidation(`/chat/direct/${userId}/messages`, { texte }, ['/chat/direct/', '/chat/canaux/']),
 }
 
 // ══════════════════════════════════════════════════════════
@@ -164,22 +258,22 @@ export const chatAPI = {
 // ══════════════════════════════════════════════════════════
 export const userAPI = {
   // Récupérer le profil
-  getProfil:    ()              => api.get('/user/profil'),
+  getProfil:    ()              => cachedGet('/user/profil', {}, { ttl: 30 * 1000 }),
   // Mettre à jour le profil
-  updateProfil: (data)          => api.put('/user/profil', data),
+  updateProfil: (data)          => putWithInvalidation('/user/profil', data, ['/user/profil', '/user/dashboard', '/gamification']),
   // Changer le mot de passe
   changePassword:(data)         => api.put('/user/password', data),
   // Tableau de bord — toutes les données résumées
-  getDashboard: ()              => api.get('/user/dashboard'),
+  getDashboard: ()              => cachedGet('/user/dashboard', {}, { ttl: 30 * 1000 }),
 }
 
 export const gamificationAPI = {
-  getStats:      ()              => api.get('/gamification/stats'),
-  addXp:         (amount, action) => api.post('/gamification/xp', { amount, action }),
+  getStats:      ()              => cachedGet('/gamification/stats', {}, { ttl: 30 * 1000 }),
+  addXp:         (amount, action) => postWithInvalidation('/gamification/xp', { amount, action }, ['/gamification', '/user/dashboard']),
   checkStreak:   ()              => api.post('/gamification/streak/check'),
-  getBadges:     ()              => api.get('/gamification/badges'),
-  markBadgeSeen: (badgeId)       => api.post(`/gamification/badge/${badgeId}/vu`),
-  getLeaderboard:(limit = 10)    => api.get('/gamification/leaderboard', { params: { limit } }),
+  getBadges:     ()              => cachedGet('/gamification/badges', {}, { ttl: 60 * 1000 }),
+  markBadgeSeen: (badgeId)       => postWithInvalidation(`/gamification/badge/${badgeId}/vu`, {}, ['/gamification/badges']),
+  getLeaderboard:(limit = 10)    => cachedGet('/gamification/leaderboard', { params: { limit } }, { ttl: 60 * 1000 }),
 }
 
 // ══════════════════════════════════════════════════════════
@@ -209,8 +303,8 @@ export const withOfflineFallback = async (apiCall, localKey, fallbackData = null
 // ══════════════════════════════════════════════════════════
 // ENDPOINTS STATS (public)
 export const statsAPI = {
-  getOverview: () => api.get('/stats/overview'),
-  getTemoignages: (limit = 3) => api.get('/stats/temoignages', { params: { limit } }),
+  getOverview: () => cachedGet('/stats/overview', {}, { ttl: 5 * 60 * 1000 }),
+  getTemoignages: (limit = 3) => cachedGet('/stats/temoignages', { params: { limit } }, { ttl: 5 * 60 * 1000 }),
 }
 
 export default api

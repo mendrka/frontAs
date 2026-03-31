@@ -1,3 +1,4 @@
+import { memo } from 'react'
 import { cx } from '@utils/ui'
 
 function formatHeure(iso) {
@@ -203,4 +204,4 @@ function MessageList({
   )
 }
 
-export default MessageList
+export default memo(MessageList)
