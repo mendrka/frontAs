@@ -279,6 +279,18 @@ const SOURCES = [
   ['Bundesfreiwilligendienst', 'https://www.bundesfreiwilligendienst.de/'],
 ]
 
+const GUIDE_PANELS = [
+  { id: 'overview', label: 'Apercu' },
+  { id: 'planning', label: 'Planning' },
+  { id: 'checklist', label: 'Actions' },
+  { id: 'compare', label: 'Comparer' },
+]
+
+function resolveGuidePanel(value) {
+  const normalized = String(value || '').replace(/^#/, '')
+  return GUIDE_PANELS.some((item) => item.id === normalized) ? normalized : 'overview'
+}
+
 function task(id, text, important = false, link = '') {
   return { id, text, important, link }
 }
@@ -472,6 +484,8 @@ function TimelineChart({ program, compareMode }) {
     if (!visible || !canvasRef.current) return undefined
     if (chartRef.current) chartRef.current.destroy()
 
+    const isCompact = typeof window !== 'undefined' && window.innerWidth < 640
+
     if (compareMode) {
       const ids = Object.keys(PROGRAMS)
       chartRef.current = new Chart(canvasRef.current, {
@@ -501,8 +515,14 @@ function TimelineChart({ program, compareMode }) {
             },
           },
           scales: {
-            x: { grid: { color: 'rgba(200,216,206,0.3)' }, ticks: { color: C.gray600, callback: (v) => `M+${v}` } },
-            y: { grid: { display: false }, ticks: { color: C.nearBlack } },
+            x: {
+              grid: { display: false },
+              ticks: { color: C.nearBlack, maxRotation: isCompact ? 0 : 0, minRotation: 0, font: { size: isCompact ? 11 : 12 } },
+            },
+            y: {
+              grid: { color: 'rgba(200,216,206,0.3)' },
+              ticks: { color: C.gray600, callback: (value) => `M+${value}` },
+            },
           },
         },
       })
@@ -547,11 +567,11 @@ function TimelineChart({ program, compareMode }) {
             x: {
               min: 0,
               max: 13,
-              title: { display: true, text: 'Mois depuis le debut', color: C.gray600 },
+              title: { display: !isCompact, text: 'Mois depuis le debut', color: C.gray600 },
               grid: { color: 'rgba(200,216,206,0.3)' },
-              ticks: { color: C.gray600, callback: (v) => `M+${v}` },
+              ticks: { color: C.gray600, callback: (v) => `M+${v}`, font: { size: isCompact ? 10 : 12 } },
             },
-            y: { grid: { display: false }, ticks: { color: C.nearBlack } },
+            y: { grid: { display: false }, ticks: { color: C.nearBlack, font: { size: isCompact ? 10 : 12 } } },
           },
         },
       })
@@ -577,13 +597,13 @@ function TimelineChart({ program, compareMode }) {
           Chart.js
         </span>
       </div>
-      <div className="h-[280px] sm:h-[340px] md:h-[420px]">
+      <div className="h-[300px] sm:h-[360px] lg:h-[420px]">
         <canvas ref={canvasRef} />
       </div>
       {!compareMode ? (
-        <div className="mt-5 flex flex-wrap gap-2 text-xs font-semibold">
+        <div className="mt-5 flex gap-2 overflow-x-auto pb-1 text-xs font-semibold">
           {['langue', 'examen', 'contrat', 'admin', 'visa', 'attente', 'depart'].map((category) => (
-            <span key={category} className="rounded-full border px-3 py-1" style={{ borderColor: CATEGORY_META[category].color, backgroundColor: C.offWhite, color: C.gDark }}>
+            <span key={category} className="shrink-0 rounded-full border px-3 py-1" style={{ borderColor: CATEGORY_META[category].color, backgroundColor: C.offWhite, color: C.gDark }}>
               {CATEGORY_META[category].icon} {CATEGORY_META[category].label}
             </span>
           ))}
@@ -602,6 +622,7 @@ function Doughnut({ values, globalPercent }) {
   useEffect(() => {
     if (!visible || !canvasRef.current) return undefined
     if (chartRef.current) chartRef.current.destroy()
+    const isCompact = typeof window !== 'undefined' && window.innerWidth < 640
     const plugin = {
       id: 'centerText',
       afterDraw(chart) {
@@ -612,9 +633,9 @@ function Doughnut({ values, globalPercent }) {
         ctx.textAlign = 'center'
         ctx.textBaseline = 'middle'
         ctx.fillStyle = C.gDark
-        ctx.font = '700 26px Outfit, sans-serif'
+        ctx.font = `${isCompact ? 700 : 700} ${isCompact ? 22 : 26}px Outfit, sans-serif`
         ctx.fillText(`${globalPercent}%`, point.x, point.y - 4)
-        ctx.font = '500 12px "Source Sans 3", sans-serif'
+        ctx.font = `500 ${isCompact ? 11 : 12}px "Source Sans 3", sans-serif`
         ctx.fillStyle = C.gray600
         ctx.fillText('global', point.x, point.y + 18)
         ctx.restore()
@@ -638,7 +659,7 @@ function Doughnut({ values, globalPercent }) {
         responsive: true,
         cutout: '70%',
         plugins: {
-          legend: { position: 'right', labels: { color: C.nearBlack, font: { size: 12 }, padding: 12 } },
+          legend: { position: isCompact ? 'bottom' : 'right', labels: { color: C.nearBlack, font: { size: isCompact ? 10 : 12 }, padding: isCompact ? 8 : 12, boxWidth: isCompact ? 12 : 18 } },
           tooltip: { callbacks: { label: (ctx) => ` ${ctx.label}: ${ctx.raw}% accompli` } },
         },
       },
@@ -651,7 +672,7 @@ function Doughnut({ values, globalPercent }) {
   }, [globalPercent, values, visible])
 
   return (
-    <div ref={wrapRef} className="h-[320px]">
+    <div ref={wrapRef} className="h-[280px] sm:h-[320px]">
       <canvas ref={canvasRef} />
     </div>
   )
@@ -668,7 +689,7 @@ export default function Guide() {
   const [startYear, setStartYear] = useState(today.getFullYear())
   const [doneMap, setDoneMap] = useState(() => readState(initialProgram))
   const [openSteps, setOpenSteps] = useState({ step1: true })
-  const [compareMode, setCompareMode] = useState(false)
+  const [activePanel, setActivePanel] = useState(() => resolveGuidePanel(typeof window !== 'undefined' ? window.location.hash : 'overview'))
   const [flash, setFlash] = useState('')
 
   useEffect(() => {
@@ -686,14 +707,23 @@ export default function Guide() {
       setStartYear(year)
       setStartMonth(month)
     }
-    if (!share) return
-    try {
-      const payload = JSON.parse(window.atob(share))
-      if (payload.programId && PROGRAMS[payload.programId]) setProgramId(payload.programId)
-      if (Array.isArray(payload.done)) payload.done.forEach((id) => localStorage.setItem(storageKey(payload.programId, id), '1'))
-    } catch {
-      // payload partage invalide: ignore.
+    if (share) {
+      try {
+        const payload = JSON.parse(window.atob(share))
+        if (payload.programId && PROGRAMS[payload.programId]) setProgramId(payload.programId)
+        if (Array.isArray(payload.done)) payload.done.forEach((id) => localStorage.setItem(storageKey(payload.programId, id), '1'))
+      } catch {
+        // payload partage invalide: ignore.
+      }
     }
+
+    setActivePanel(resolveGuidePanel(window.location.hash))
+  }, [])
+
+  useEffect(() => {
+    const syncPanelFromHash = () => setActivePanel(resolveGuidePanel(window.location.hash))
+    window.addEventListener('hashchange', syncPanelFromHash)
+    return () => window.removeEventListener('hashchange', syncPanelFromHash)
   }, [])
 
   useEffect(() => {
@@ -705,8 +735,13 @@ export default function Guide() {
   const detail = PROGRAM_DETAILS[programId]
   const docs = Object.values(detail.docs).flatMap((group) => group.items)
   const totalItems = [...detail.steps.flatMap((item) => item.tasks), ...docs]
+  const monthList = monthCards(programId, startMonth, startYear)
   const globalPercent = percent(totalItems, doneMap)
   const monthsLeft = Math.max(0, Math.ceil(Math.max(...program.timeline.map((item) => item.start + item.duration))) - currentOffset(startMonth, startYear))
+  const completedTasks = countDone(totalItems, doneMap)
+  const completedDocs = countDone(docs, doneMap)
+  const completedSteps = detail.steps.filter((item) => item.tasks.every((taskItem) => doneMap[taskItem.id])).length
+  const nextStep = detail.steps.find((item) => item.tasks.some((taskItem) => !doneMap[taskItem.id])) || null
   const progressValues = [
     percent(detail.steps.flatMap((item) => item.tasks).filter((item) => item.category === 'langue' || item.category === 'examen'), doneMap),
     percent(detail.steps.flatMap((item) => item.tasks).filter((item) => item.category === 'contrat'), doneMap),
@@ -757,6 +792,23 @@ export default function Guide() {
     }
   }
 
+  function openPanel(panelId) {
+    const nextPanel = resolveGuidePanel(panelId)
+    setActivePanel(nextPanel)
+    if (typeof window !== 'undefined') {
+      const url = new URL(window.location.href)
+      url.hash = nextPanel
+      window.history.replaceState(null, '', url)
+    }
+  }
+
+  const quickStats = [
+    ['Progression', `${globalPercent}%`],
+    ['Taches faites', `${completedTasks}/${totalItems.length}`],
+    ['Documents', `${completedDocs}/${docs.length}`],
+    ['Etapes bouclees', `${completedSteps}/${detail.steps.length}`],
+  ]
+
   return (
     <div className="min-h-screen px-3 py-5 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl rounded-[1.8rem] border p-3 sm:rounded-[2.5rem] sm:p-6 lg:p-8" style={{ borderColor: C.gLight, background: `linear-gradient(180deg, ${C.offWhite} 0%, ${C.white} 42%, ${C.gPale} 100%)`, boxShadow: '0 24px 80px -48px rgba(10,80,50,0.35)' }}>
@@ -765,19 +817,19 @@ export default function Guide() {
             <div className="max-w-3xl">
               <p className="text-xs font-semibold uppercase tracking-[0.32em]" style={{ color: C.gLight }}>Partir en Allemagne</p>
               <h1 className="mt-3 font-display text-[clamp(2rem,1.5rem+1.8vw,2.75rem)] font-semibold" style={{ color: C.white }}>Guide interactif EAM</h1>
-              <p className="mt-3 text-base leading-7" style={{ color: C.gLight }}>Choisis ton programme, suis chaque etape et imprime ou partage ton planning.</p>
+              <p className="mt-3 max-w-2xl text-sm leading-7 sm:text-base" style={{ color: C.gLight }}>Choisis ton programme puis avance section par section. La page est maintenant pensee pour telephone: moins de densite, plus de focus.</p>
             </div>
             <div className="flex w-full flex-col gap-3 print:hidden sm:w-auto sm:flex-row sm:flex-wrap">
               <button type="button" onClick={() => window.print()} className="w-full rounded-full px-5 py-3 text-sm font-semibold sm:w-auto" style={{ backgroundColor: C.gPale, color: C.gDark }}>Imprimer mon guide</button>
               <button type="button" onClick={sharePlan} className="w-full rounded-full px-5 py-3 text-sm font-semibold sm:w-auto" style={{ backgroundColor: C.gBright, color: C.white }}>Partager mon planning</button>
-              <button type="button" onClick={() => setCompareMode((value) => !value)} className="w-full rounded-full border px-5 py-3 text-sm font-semibold sm:w-auto" style={{ borderColor: C.gLight, color: C.white }}>{compareMode ? 'Masquer comparaison' : 'Comparer les 4 programmes'}</button>
+              <button type="button" onClick={() => openPanel('compare')} className="w-full rounded-full border px-5 py-3 text-sm font-semibold sm:w-auto" style={{ borderColor: C.gLight, color: C.white }}>Voir la comparaison</button>
             </div>
           </div>
           {flash ? <div className="mt-5 inline-flex rounded-full px-4 py-2 text-sm font-semibold" style={{ backgroundColor: C.gAccent, color: C.gDark }}>✨ {flash}</div> : null}
         </section>
 
         <section className="mt-6 rounded-[2rem] border p-3" style={{ borderColor: C.gLight, backgroundColor: C.offWhite }}>
-          <div className="grid gap-3 min-[520px]:grid-cols-2 md:grid-cols-4">
+          <div className="flex snap-x gap-3 overflow-x-auto pb-1 md:grid md:grid-cols-2 md:overflow-visible xl:grid-cols-4">
             {Object.values(PROGRAMS).map((item) => {
               const active = item.id === programId
               return (
@@ -788,7 +840,7 @@ export default function Guide() {
                     setProgramId(item.id)
                     navigate(`/guide/${item.id}`)
                   }}
-                  className="rounded-[1.4rem] border-b-[3px] px-4 py-4 text-left transition duration-200"
+                  className="min-w-[15rem] snap-start rounded-[1.4rem] border-b-[3px] px-4 py-4 text-left transition duration-200 md:min-w-0"
                   style={{ backgroundColor: active ? C.gMid : C.gPale, color: active ? C.white : C.gray600, borderColor: active ? C.gBright : C.gLight }}
                 >
                   <div className="text-2xl">{item.emoji}</div>
@@ -800,7 +852,40 @@ export default function Guide() {
           </div>
         </section>
 
-        <section className="mt-6 grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
+        <section className="sticky top-3 z-20 mt-6 rounded-[1.5rem] border px-2 py-2 backdrop-blur" style={{ borderColor: C.gLight, backgroundColor: 'rgba(255,255,255,0.88)' }}>
+          <nav className="flex gap-2 overflow-x-auto pb-1" aria-label="Navigation interne du guide">
+            {GUIDE_PANELS.map((item) => {
+              const active = activePanel === item.id
+              return (
+                <a
+                  key={item.id}
+                  href={`#${item.id}`}
+                  onClick={(event) => {
+                    event.preventDefault()
+                    openPanel(item.id)
+                  }}
+                  className="shrink-0 rounded-full px-4 py-2 text-sm font-semibold transition"
+                  style={{ backgroundColor: active ? C.gMid : C.offWhite, color: active ? C.white : C.gDark, border: `1px solid ${active ? C.gMid : C.gLight}` }}
+                >
+                  {item.label}
+                </a>
+              )
+            })}
+          </nav>
+        </section>
+
+        <section className="mt-4 grid grid-cols-2 gap-3 xl:grid-cols-4">
+          {quickStats.map(([label, value], index) => (
+            <article key={label} className="rounded-[1.35rem] border p-4" style={{ borderColor: index === 0 ? C.gBright : C.gray100, backgroundColor: index === 0 ? C.gPale : C.white }}>
+              <div className="text-xl font-semibold sm:text-2xl" style={{ color: C.gDark }}>{value}</div>
+              <div className="mt-1 text-xs leading-5 sm:text-sm" style={{ color: C.gray600 }}>{label}</div>
+            </article>
+          ))}
+        </section>
+
+        {activePanel === 'overview' ? (
+          <>
+        <section className="mt-6 grid gap-6 lg:grid-cols-[1.2fr_0.8fr]" id="overview">
           <article className="rounded-[2rem] border p-5 sm:p-6" style={{ borderColor: C.gLight, backgroundColor: C.white }}>
             <div className="flex flex-wrap items-start justify-between gap-4">
               <div>
@@ -836,9 +921,13 @@ export default function Guide() {
             </div>
           </article>
         </section>
+          </>
+        ) : null}
 
-        <section className="mt-6">
-          <TimelineChart program={program} compareMode={compareMode} />
+        {activePanel === 'planning' ? (
+          <>
+        <section className="mt-6" id="planning">
+          <TimelineChart program={program} compareMode={false} />
         </section>
 
         <section className="mt-6 grid gap-6 xl:grid-cols-[1.1fr_0.9fr]">
@@ -920,8 +1009,11 @@ export default function Guide() {
             {user ? <div className="mt-5 rounded-[1.4rem] border p-4 text-sm" style={{ borderColor: C.gLight, backgroundColor: C.gPale, color: C.gDark }}>XP guide actif: chaque tache cochee tente une synchronisation gamification.</div> : null}
           </article>
         </section>
+          </>
+        ) : null}
 
-        <section className="mt-6 grid gap-6 xl:grid-cols-[1.15fr_0.85fr]">
+        {activePanel === 'checklist' ? (
+          <section className="mt-6 grid gap-6 xl:grid-cols-[1.15fr_0.85fr]" id="checklist">
           <article className="rounded-[2rem] border p-5 sm:p-6" style={{ borderColor: C.gLight, backgroundColor: C.white }}>
             <p className="text-xs font-semibold uppercase tracking-[0.26em]" style={{ color: C.gMid }}>Checklist etape par etape</p>
             <div className="mt-5 space-y-4">
@@ -990,8 +1082,11 @@ export default function Guide() {
             </div>
           </article>
         </section>
+        ) : null}
 
-        <section className="mt-6 grid gap-6 lg:grid-cols-2">
+        {activePanel === 'compare' ? (
+          <>
+        <section className="mt-6 grid gap-6 lg:grid-cols-2" id="compare">
           <article className="rounded-[2rem] border p-5 sm:p-6" style={{ borderColor: C.gLight, backgroundColor: C.white }}>
             <p className="text-xs font-semibold uppercase tracking-[0.26em]" style={{ color: C.gMid }}>Conseils et alertes</p>
             <div className="mt-5 grid gap-5 md:grid-cols-2">
@@ -1008,7 +1103,25 @@ export default function Guide() {
 
           <article className="rounded-[2rem] border p-5 sm:p-6" style={{ borderColor: C.gLight, backgroundColor: C.white }}>
             <p className="text-xs font-semibold uppercase tracking-[0.26em]" style={{ color: C.gMid }}>Vue comparative</p>
-            <div className="mt-4 overflow-x-auto">
+            <div className="mt-4 grid gap-4 md:hidden">
+              {Object.values(PROGRAMS).map((item, programIndex) => (
+                <div key={item.id} className="rounded-[1.5rem] border p-4" style={{ borderColor: C.gray100, backgroundColor: C.offWhite }}>
+                  <div className="flex items-center gap-3">
+                    <span className="text-2xl">{item.emoji}</span>
+                    <div className="text-base font-semibold" style={{ color: C.gDark }}>{item.label}</div>
+                  </div>
+                  <div className="mt-4 space-y-2 text-sm" style={{ color: C.gray600 }}>
+                    {COMPARISON.map((row) => (
+                      <div key={`${item.id}-${row[0]}`} className="flex items-start justify-between gap-3 rounded-[1rem] bg-white px-3 py-2">
+                        <span className="font-semibold" style={{ color: C.gDark }}>{row[0]}</span>
+                        <span className="text-right">{row[programIndex + 1]}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="mt-4 hidden overflow-x-auto md:block">
               <table className="min-w-full text-left text-[13px] sm:text-sm">
                 <thead>
                   <tr style={{ color: C.gDark }}>
@@ -1041,6 +1154,8 @@ export default function Guide() {
             ))}
           </div>
         </section>
+          </>
+        ) : null}
       </div>
     </div>
   )
