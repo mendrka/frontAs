@@ -9,18 +9,18 @@ function NotFound() {
 
   return (
     <div className="shell">
-      <div className={cx(cardClass.base, 'overflow-hidden p-8 text-center sm:p-12')}>
-        <div className="mx-auto flex h-28 w-28 items-center justify-center rounded-[2rem] bg-brand-sky text-brand-blue shadow-soft" aria-hidden="true">
+      <div className={cx(cardClass.base, 'overflow-hidden p-5 text-center sm:p-12')}>
+        <div className="mx-auto flex h-24 w-24 items-center justify-center rounded-[1.6rem] bg-brand-sky text-brand-blue shadow-soft sm:h-28 sm:w-28 sm:rounded-[2rem]" aria-hidden="true">
           <div className="relative">
-            <span className="font-display text-4xl font-semibold">404</span>
+            <span className="font-display text-3xl font-semibold sm:text-4xl">404</span>
             <span className="absolute -right-4 -top-4 rounded-full bg-white p-2 shadow-soft">
               <Icon name="warning" size={20} className="icon" />
             </span>
           </div>
         </div>
 
-        <h1 className="mt-8 font-display text-4xl font-semibold tracking-tight text-brand-text">Seite nicht gefunden !</h1>
-        <p className="mt-3 text-lg text-brand-brown">Cette page est introuvable</p>
+        <h1 className="mt-8 font-display text-[clamp(2rem,1.5rem+1.6vw,3rem)] font-semibold tracking-tight text-brand-text">Seite nicht gefunden !</h1>
+        <p className="mt-3 text-base text-brand-brown sm:text-lg">Cette page est introuvable</p>
         <p className="mx-auto mt-4 max-w-2xl text-brand-brown">
           Der Link est peut-être incorrect ou cette page a été supprimée.
           <br />

@@ -48,16 +48,16 @@ export default function SpokenDNA({ scores }) {
   )
 
   return (
-    <Card tone="elevated" className="p-5">
+    <Card tone="elevated" className="p-4 sm:p-5">
       <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
         <div>
           <p className="text-xs uppercase tracking-[0.24em] text-white/45">Speaking DNA</p>
-          <h3 className="mt-3 sprechen-display text-3xl font-semibold text-white">Ton profil oral en radar</h3>
+          <h3 className="mt-3 sprechen-display text-2xl font-semibold text-white sm:text-3xl">Ton profil oral en radar</h3>
         </div>
-        <p className="text-sm text-white/56">La ligne fantome montre la session precedente.</p>
+        <p className="text-xs text-white/56 sm:text-sm">La ligne fantome montre la session precedente.</p>
       </div>
 
-      <div className="mt-6 h-[300px]">
+      <div className="mt-6 h-[240px] sm:h-[300px]">
         <ResponsiveContainer width="100%" height="100%">
           <RadarChart data={data}>
             <PolarGrid stroke="rgba(255,255,255,0.12)" />

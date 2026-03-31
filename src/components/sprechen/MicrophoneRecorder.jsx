@@ -65,7 +65,7 @@ function MicrophoneRecorder({
 
   if (!isSupported) {
     return (
-      <div className="rounded-[1.4rem] border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-700">
+      <div className="w-full rounded-[1.4rem] border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-700">
         {t(
           'Ihr Browser unterstützt keine Spracherkennung.',
           "Votre navigateur ne supporte pas la reconnaissance vocale."
@@ -89,11 +89,11 @@ function MicrophoneRecorder({
   const aria = isListening ? t('Stopp', 'Arrêter') : defaultLabel
 
   return (
-    <div className="flex flex-col items-center gap-4">
+    <div className="flex w-full flex-col items-center gap-4">
       <div className="relative">
         <button
           className={cx(
-            'relative z-10 inline-flex h-20 w-20 items-center justify-center rounded-[2rem] border text-white shadow-panel transition',
+            'relative z-10 inline-flex h-16 w-16 items-center justify-center rounded-[1.5rem] border text-white shadow-panel transition sm:h-20 sm:w-20 sm:rounded-[2rem]',
             isListening && 'border-brand-blue bg-brand-blue',
             !isListening && !correction && 'border-brand-green bg-brand-green',
             correction === 'correct' && 'border-emerald-500 bg-emerald-500',
@@ -121,19 +121,19 @@ function MicrophoneRecorder({
 
         {isListening && (
           <div className="pointer-events-none absolute inset-0 flex items-center justify-center" aria-hidden="true">
-            <span className="absolute h-20 w-20 rounded-[2rem] border border-brand-blue/30 animate-ripple" />
-            <span className="absolute h-20 w-20 rounded-[2rem] border border-brand-blue/20 animate-ripple [animation-delay:0.35s]" />
-            <span className="absolute h-20 w-20 rounded-[2rem] border border-brand-blue/10 animate-ripple [animation-delay:0.7s]" />
+            <span className="absolute h-16 w-16 rounded-[1.5rem] border border-brand-blue/30 animate-ripple sm:h-20 sm:w-20 sm:rounded-[2rem]" />
+            <span className="absolute h-16 w-16 rounded-[1.5rem] border border-brand-blue/20 animate-ripple [animation-delay:0.35s] sm:h-20 sm:w-20 sm:rounded-[2rem]" />
+            <span className="absolute h-16 w-16 rounded-[1.5rem] border border-brand-blue/10 animate-ripple [animation-delay:0.7s] sm:h-20 sm:w-20 sm:rounded-[2rem]" />
           </div>
         )}
       </div>
 
-      <p className="text-sm font-semibold uppercase tracking-[0.24em] text-brand-brown">{micLabel}</p>
+      <p className="px-4 text-center text-[11px] font-semibold uppercase tracking-[0.18em] text-brand-brown sm:text-sm sm:tracking-[0.24em]">{micLabel}</p>
 
       {resultat && (
         <div
           className={cx(
-            'w-full rounded-[1.4rem] border px-4 py-3 text-sm shadow-sm',
+            'w-full max-w-xl rounded-[1.4rem] border px-4 py-3 text-sm shadow-sm',
             correction === 'correct' && 'border-emerald-200 bg-emerald-50 text-emerald-700',
             correction === 'incorrect' && 'border-rose-200 bg-rose-50 text-rose-700',
             correction === 'partiel' && 'border-amber-200 bg-amber-50 text-amber-700',
@@ -145,13 +145,13 @@ function MicrophoneRecorder({
       )}
 
       {texteAttendu && correction === 'incorrect' && (
-        <p className="text-sm text-brand-brown">
+        <p className="text-center text-sm text-brand-brown">
           {t('Erwartet', 'Attendu')}: <strong>{texteAttendu}</strong>
         </p>
       )}
 
       {error && (
-        <p className="rounded-[1.2rem] border border-rose-200 bg-rose-50 px-3 py-2 text-sm text-rose-700"><Icon name="warning" size={16} className="icon" /> {error}</p>
+        <p className="flex w-full items-center gap-2 rounded-[1.2rem] border border-rose-200 bg-rose-50 px-3 py-2 text-sm text-rose-700"><Icon name="warning" size={16} className="icon" /> {error}</p>
       )}
     </div>
   )

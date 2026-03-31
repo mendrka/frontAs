@@ -91,7 +91,7 @@ function ExerciceMatchPairs({ data, onValide }) {
         <p className={questionText}>{promptTxt}</p>
       </div>
 
-      <div className="grid gap-4 md:grid-cols-2">
+      <div className="grid gap-4 lg:grid-cols-2">
         <div>
           {left.map((de) => (
             <button
@@ -124,7 +124,7 @@ function ExerciceMatchPairs({ data, onValide }) {
 
       {!valide && (
         <button
-          className={cx(primaryButton, 'self-end')}
+          className={cx(primaryButton, 'w-full self-stretch justify-center sm:w-auto sm:self-end')}
           onClick={handleValider}
           disabled={Object.keys(matches).length !== pairs.length}
           type="button"

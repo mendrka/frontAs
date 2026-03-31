@@ -20,7 +20,7 @@ function MainLayout() {
   }, [location.pathname])
 
   const bannerClasses =
-    'fixed inset-x-4 top-4 z-[70] flex items-center justify-center gap-2 rounded-full border border-brand-border/80 bg-white/90 px-4 py-3 text-sm font-semibold text-brand-text shadow-soft backdrop-blur sm:inset-x-auto sm:left-1/2 sm:-translate-x-1/2'
+    'fixed inset-x-3 top-3 z-[70] flex max-w-[calc(100vw-1.5rem)] items-center justify-center gap-2 rounded-[1.2rem] border border-brand-border/80 bg-white/90 px-3.5 py-2.5 text-xs font-semibold text-brand-text shadow-soft backdrop-blur sm:inset-x-auto sm:left-1/2 sm:max-w-none sm:-translate-x-1/2 sm:rounded-full sm:px-4 sm:py-3 sm:text-sm'
 
   return (
     <div className="relative min-h-screen">
@@ -49,8 +49,8 @@ function MainLayout() {
 
       <main
         className={cx(
-          'relative min-h-[calc(100vh-8rem)] pt-20 md:pt-24',
-          isFullWidth ? 'pb-24 md:pb-12' : 'pb-28 md:pb-14'
+          'relative min-h-[calc(100vh-8rem)] pt-[4.65rem] sm:pt-20 md:pt-24',
+          isFullWidth ? 'pb-24 md:pb-12' : 'pb-32 md:pb-14'
         )}
         id="main-content"
       >
@@ -75,7 +75,7 @@ function MainLayout() {
           <p className="font-medium text-brand-text">
             &copy; {new Date().getFullYear()} EAM - Ecole d&apos;Allemand pour Malgaches
           </p>
-          <p className="hidden text-brand-brown/85 sm:block">
+          <p className="text-xs leading-relaxed text-brand-brown/85 sm:text-sm">
             Concu pour apprendre l&apos;allemand avec une interface mobile claire, utile et rapide.
           </p>
         </div>

@@ -8,6 +8,9 @@
 @layer base {
   :root {
     color-scheme: light;
+    --eam-fluid-base: clamp(15px, 0.92rem + 0.18vw, 17px);
+    --eam-fluid-title: clamp(1.75rem, 1.35rem + 1.4vw, 3.25rem);
+    --eam-fluid-section: clamp(1.45rem, 1.18rem + 0.9vw, 2.15rem);
   }
 
   * {
@@ -20,6 +23,8 @@
 
   body {
     @apply min-h-screen overflow-x-hidden bg-brand-canvas bg-[radial-gradient(circle_at_top_left,rgba(75,156,211,0.18),transparent_24%),radial-gradient(circle_at_top_right,rgba(111,166,122,0.15),transparent_22%),linear-gradient(180deg,#f7fbff_0%,#ffffff_42%,#eaf4ff_100%)] font-body text-brand-text antialiased;
+    font-size: var(--eam-fluid-base);
+    text-rendering: optimizeLegibility;
   }
 
   #root {
@@ -45,19 +50,19 @@
 
 @layer components {
   .shell {
-    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 xl:px-10;
+    @apply mx-auto w-full max-w-7xl px-3.5 sm:px-5 lg:px-8 xl:px-10;
   }
 
   .page-section {
-    @apply relative shell py-6 sm:py-8 lg:py-12;
+    @apply relative shell py-5 sm:py-8 lg:py-12;
   }
 
   .page-card {
-    @apply rounded-[1.75rem] border border-white/70 bg-white/80 shadow-[0_24px_80px_-42px_rgba(33,65,92,0.35)] backdrop-blur-xl;
+    @apply rounded-[1.4rem] border border-white/70 bg-white/80 shadow-[0_24px_80px_-42px_rgba(33,65,92,0.35)] backdrop-blur-xl sm:rounded-[1.75rem];
   }
 
   .page-card-soft {
-    @apply rounded-[1.5rem] border border-white/65 bg-white/62 shadow-[0_18px_48px_-36px_rgba(33,65,92,0.24)] backdrop-blur-xl;
+    @apply rounded-[1.25rem] border border-white/65 bg-white/62 shadow-[0_18px_48px_-36px_rgba(33,65,92,0.24)] backdrop-blur-xl sm:rounded-[1.5rem];
   }
 
   .page-card-interactive {
@@ -65,23 +70,24 @@
   }
 
   .section-kicker {
-    @apply text-[11px] font-semibold uppercase tracking-[0.32em] text-brand-blue;
+    @apply text-[10px] font-semibold uppercase tracking-[0.26em] text-brand-blue sm:text-[11px] sm:tracking-[0.32em];
   }
 
   .section-title {
-    @apply font-display text-2xl font-semibold tracking-tight text-brand-text sm:text-3xl lg:text-[2.15rem];
+    @apply font-display font-semibold tracking-tight text-brand-text;
+    font-size: var(--eam-fluid-section);
   }
 
   .section-copy {
-    @apply text-base leading-relaxed text-brand-brown/85 sm:text-lg;
+    @apply text-[15px] leading-relaxed text-brand-brown/85 sm:text-base lg:text-lg;
   }
 
   .input-label {
-    @apply text-sm font-semibold uppercase tracking-[0.18em] text-brand-brown;
+    @apply text-[11px] font-semibold uppercase tracking-[0.16em] text-brand-brown sm:text-sm sm:tracking-[0.18em];
   }
 
   .input-field {
-    @apply w-full rounded-[1.35rem] border border-brand-border bg-white/90 px-4 py-3 text-base text-brand-text shadow-inner outline-none transition placeholder:text-brand-brown/45 focus:border-brand-blue focus:ring-4 focus:ring-brand-blue/15;
+    @apply w-full rounded-[1.1rem] border border-brand-border bg-white/90 px-3.5 py-3 text-[15px] text-brand-text shadow-inner outline-none transition placeholder:text-brand-brown/45 focus:border-brand-blue focus:ring-4 focus:ring-brand-blue/15 sm:rounded-[1.35rem] sm:px-4 sm:text-base;
   }
 
   .textarea-field {
@@ -89,7 +95,7 @@
   }
 
   .inline-alert {
-    @apply rounded-[1.4rem] border px-4 py-3 text-sm;
+    @apply rounded-[1.1rem] border px-3.5 py-3 text-sm sm:rounded-[1.4rem] sm:px-4;
   }
 
   .inline-alert-error {
@@ -109,7 +115,7 @@
   }
 
   .stat-chip {
-    @apply inline-flex items-center gap-2 rounded-full border border-white/80 bg-white/80 px-3 py-2 text-sm text-brand-text shadow-sm backdrop-blur-sm;
+    @apply inline-flex max-w-full items-center gap-1.5 rounded-full border border-white/80 bg-white/80 px-2.5 py-1.5 text-[13px] text-brand-text shadow-sm backdrop-blur-sm sm:gap-2 sm:px-3 sm:py-2 sm:text-sm;
   }
 
   .icon {
@@ -124,6 +130,10 @@
 @layer utilities {
   .safe-bottom {
     padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 1rem);
+  }
+
+  .safe-top {
+    padding-top: calc(env(safe-area-inset-top, 0px) + 0.5rem);
   }
 }
 
@@ -183,6 +193,11 @@ body::after {
 }
 
 @media (max-width: 767px) {
+  ::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+  }
+
   body::before {
     width: 18rem;
     height: 18rem;
@@ -195,6 +210,12 @@ body::after {
     height: 16rem;
     right: -5rem;
     bottom: 5rem;
+  }
+
+  .page-card,
+  .page-card-soft,
+  .page-card-interactive {
+    box-shadow: 0 18px 48px -38px rgba(33, 65, 92, 0.24);
   }
 }
 

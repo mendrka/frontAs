@@ -63,16 +63,16 @@ function PartnerMatcher({ niveau = 'A1', onMatch, onCancel }) {
   }
 
   return (
-    <div className={cx(cardClass.base, 'mx-auto max-w-2xl p-6 text-center sm:p-8')}>
-      <div className="relative mx-auto mb-8 flex h-32 w-32 items-center justify-center">
-        <span className="absolute h-24 w-24 rounded-full border border-brand-blue/25 animate-ripple" />
-        <span className="absolute h-24 w-24 rounded-full border border-brand-blue/15 animate-ripple [animation-delay:0.4s]" />
-        <span className="absolute h-24 w-24 rounded-full border border-brand-blue/10 animate-ripple [animation-delay:0.8s]" />
-        <span className="relative z-10 flex h-20 w-20 items-center justify-center rounded-full bg-brand-blue text-3xl text-white shadow-panel">👥</span>
+    <div className={cx(cardClass.base, 'mx-auto max-w-2xl p-5 text-center sm:p-8')}>
+      <div className="relative mx-auto mb-8 flex h-28 w-28 items-center justify-center sm:h-32 sm:w-32">
+        <span className="absolute h-20 w-20 rounded-full border border-brand-blue/25 animate-ripple sm:h-24 sm:w-24" />
+        <span className="absolute h-20 w-20 rounded-full border border-brand-blue/15 animate-ripple [animation-delay:0.4s] sm:h-24 sm:w-24" />
+        <span className="absolute h-20 w-20 rounded-full border border-brand-blue/10 animate-ripple [animation-delay:0.8s] sm:h-24 sm:w-24" />
+        <span className="relative z-10 flex h-16 w-16 items-center justify-center rounded-full bg-brand-blue text-2xl text-white shadow-panel sm:h-20 sm:w-20 sm:text-3xl">👥</span>
       </div>
 
       <div className="space-y-3">
-        <h2 className="font-display text-3xl font-semibold tracking-tight text-brand-text">Partner wird gesucht...</h2>
+        <h2 className="font-display text-[clamp(1.9rem,1.45rem+2vw,3rem)] font-semibold tracking-tight text-brand-text">Partner wird gesucht...</h2>
         <p className="text-brand-brown">Recherche d&apos;un partenaire...</p>
       </div>
 
@@ -85,7 +85,7 @@ function PartnerMatcher({ niveau = 'A1', onMatch, onCancel }) {
         <p className="mt-4 text-sm font-semibold text-brand-brown">👥 {attente} Nutzer warten auf Niveau {niveau}</p>
       )}
 
-      <div className="mt-8 rounded-[1.6rem] bg-brand-sky/55 p-5 text-left">
+      <div className="mt-8 rounded-[1.4rem] bg-brand-sky/55 p-4 text-left sm:rounded-[1.6rem] sm:p-5">
         <p className="section-kicker">Tipps während der Wartezeit</p>
         <p className="mt-3 text-brand-brown">
           {[
@@ -96,7 +96,7 @@ function PartnerMatcher({ niveau = 'A1', onMatch, onCancel }) {
         </p>
       </div>
 
-      <button className={cx(buttonClass.ghost, 'mt-8')} onClick={handleAnnuler}>
+      <button className={cx(buttonClass.ghost, 'mt-8 w-full sm:w-auto')} onClick={handleAnnuler}>
         ✕ Abbrechen · Annuler
       </button>
     </div>

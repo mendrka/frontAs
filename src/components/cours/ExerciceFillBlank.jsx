@@ -91,7 +91,7 @@ function ExerciceFillBlank({ data, onValide }) {
 
       {!valide && data?.indice && (
         <button
-          className="w-fit rounded-full border border-brand-border bg-brand-sky/60 px-4 py-2 text-sm font-semibold text-brand-brown transition hover:bg-brand-sky"
+          className="w-full rounded-full border border-brand-border bg-brand-sky/60 px-4 py-2 text-sm font-semibold text-brand-brown transition hover:bg-brand-sky sm:w-fit"
           onClick={() => setShowIndice((p) => !p)}
           type="button"
         >

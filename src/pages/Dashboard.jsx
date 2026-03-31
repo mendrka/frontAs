@@ -60,11 +60,11 @@ function Dashboard() {
 
   return (
     <div className="space-y-6 sm:space-y-8">
-      <section className={cx(cardClass.base, 'overflow-hidden p-5 sm:p-8')}>
-        <div className="grid gap-5 xl:grid-cols-[minmax(0,1fr)_300px] xl:gap-6">
+      <section className={cx(cardClass.base, 'overflow-hidden p-4 sm:p-8')}>
+        <div className="grid gap-5 2xl:grid-cols-[minmax(0,1fr)_300px] xl:gap-6">
           <div>
             <p className="section-kicker">{t('Dashboard', 'Tableau de bord')}</p>
-            <h1 className="mt-3 font-display text-3xl font-semibold tracking-tight text-brand-text sm:text-4xl">
+            <h1 className="mt-3 font-display text-[clamp(2rem,1.6rem+1.4vw,2.75rem)] font-semibold tracking-tight text-brand-text">
               {t('Willkommen zurueck', 'Bon retour')}{user?.prenom ? `, ${user.prenom}` : ''}
             </h1>
             <p className="mt-4 max-w-3xl text-sm leading-7 text-brand-brown sm:text-lg sm:leading-relaxed">
@@ -85,7 +85,7 @@ function Dashboard() {
               </p>
             </details>
 
-            <div className="mt-6 grid grid-cols-3 gap-3">
+            <div className="mt-6 grid grid-cols-1 gap-3 min-[420px]:grid-cols-3">
               <div className={cx(cardClass.soft, 'p-4')}>
                 <p className="text-[10px] uppercase tracking-[0.16em] text-brand-brown sm:text-sm">{t('Abgeschlossen', 'Terminees')}</p>
                 <p className="mt-2 font-display text-2xl font-semibold text-brand-text sm:text-3xl">{completedLessons}</p>
@@ -128,7 +128,7 @@ function Dashboard() {
           { to: '/sprechen', icon: 'mic', title: t('Sprechen', 'Oral'), body: t('Aussprache und orale Praxis trainieren.', "Travailler l'oral et la prononciation.") },
           { to: '/communaute', icon: 'messageCircle', title: t('Community', 'Communaute'), body: t('Mit anderen Lernenden im Kontakt bleiben.', 'Rester en contact avec les autres apprenants.') },
         ].map((item) => (
-          <Link key={item.to} className={cx(cardClass.interactive, 'min-w-[16.5rem] snap-start p-5 lg:min-w-0')} to={item.to}>
+          <Link key={item.to} className={cx(cardClass.interactive, 'min-w-[15.5rem] snap-start p-4 sm:min-w-[16.5rem] sm:p-5 lg:min-w-0')} to={item.to}>
             <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-sky text-brand-blue">
               <Icon name={item.icon} size={20} className="icon" />
             </div>
@@ -157,7 +157,7 @@ function Dashboard() {
 
         <div className="mt-6 flex snap-x gap-4 overflow-x-auto pb-2 xl:grid xl:grid-cols-2 xl:overflow-visible xl:pb-0">
           {levelSummaries.map((item) => (
-            <article key={item.level} className={cx(cardClass.soft, 'min-w-[18rem] snap-start p-5 xl:min-w-0')}>
+            <article key={item.level} className={cx(cardClass.soft, 'min-w-[16.75rem] snap-start p-4 sm:min-w-[18rem] sm:p-5 xl:min-w-0')}>
               <div className="flex items-start justify-between gap-4">
                 <div>
                   <span className={levelBadgeClass(item.level)}>{item.level}</span>
@@ -174,9 +174,9 @@ function Dashboard() {
                 <div className="progress-fill" style={{ width: `${item.progress}%` }} />
               </div>
 
-              <div className="mt-3 flex items-center justify-between text-sm text-brand-brown">
+              <div className="mt-3 flex items-center justify-between gap-3 text-sm text-brand-brown">
                 <span>{item.progress}%</span>
-                <span>{item.nextInLevel ? item.nextInLevel.titre : t('Komplett', 'Complet')}</span>
+                <span className="truncate text-right">{item.nextInLevel ? item.nextInLevel.titre : t('Komplett', 'Complet')}</span>
               </div>
             </article>
           ))}

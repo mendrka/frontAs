@@ -128,7 +128,7 @@ export default function OnboardingWizard({ presetLevel = null, presetThemeId = n
   const renderStep = () => {
     if (step === 0) {
       return (
-        <div className="grid gap-4 lg:grid-cols-2">
+        <div className="grid gap-4 md:grid-cols-2">
           {modeOptions.map((option) => {
             const Icon = option.icon
             const active = selectedMode === option.id
@@ -139,7 +139,7 @@ export default function OnboardingWizard({ presetLevel = null, presetThemeId = n
                 type="button"
                 disabled={!option.available}
                 onClick={() => option.available && setSelectedMode(option.id)}
-                className={`rounded-[28px] border p-5 text-left transition ${
+                className={`rounded-[24px] border p-4 text-left transition sm:rounded-[28px] sm:p-5 ${
                   active
                     ? 'border-orange-300/60 bg-orange-300/18 shadow-[0_24px_55px_-35px_rgba(248,99,63,0.9)]'
                     : 'border-white/10 bg-white/6 hover:border-white/18 hover:bg-white/10'
@@ -147,11 +147,11 @@ export default function OnboardingWizard({ presetLevel = null, presetThemeId = n
               >
                 <div className="flex items-center justify-between gap-3">
                   <div className="flex items-center gap-3">
-                    <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10 text-white">
+                    <span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-white/10 text-white sm:h-12 sm:w-12">
                       <Icon size={20} />
                     </span>
                     <div>
-                      <p className="sprechen-display text-xl font-semibold text-white">{option.title}</p>
+                      <p className="sprechen-display text-lg font-semibold text-white sm:text-xl">{option.title}</p>
                       <p className={active ? 'text-sm text-white/65' : 'hidden text-sm text-white/65 sm:block'}>
                         {option.subtitle}
                       </p>
@@ -168,7 +168,7 @@ export default function OnboardingWizard({ presetLevel = null, presetThemeId = n
 
     if (step === 1) {
       return (
-        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+        <div className="grid gap-4 sm:grid-cols-2 2xl:grid-cols-4">
           {LEVEL_OPTIONS.map((level) => {
             const active = (selectedLevel || presetLevel) === level.id
             return (
@@ -176,7 +176,7 @@ export default function OnboardingWizard({ presetLevel = null, presetThemeId = n
                 key={level.id}
                 type="button"
                 onClick={() => setSelectedLevel(level.id)}
-                className={`rounded-[28px] border p-5 text-left transition ${
+                className={`rounded-[24px] border p-4 text-left transition sm:rounded-[28px] sm:p-5 ${
                   active
                     ? 'border-cyan-300/55 bg-cyan-300/18'
                     : 'border-white/10 bg-white/6 hover:border-white/18 hover:bg-white/10'
@@ -185,7 +185,7 @@ export default function OnboardingWizard({ presetLevel = null, presetThemeId = n
                 <Badge variant="level" className="mb-4">
                   {level.label}
                 </Badge>
-                <p className="sprechen-display text-xl font-semibold text-white">{level.title}</p>
+                <p className="sprechen-display text-lg font-semibold text-white sm:text-xl">{level.title}</p>
                 <p className={active ? 'mt-2 text-sm leading-6 text-white/68' : 'mt-2 hidden text-sm leading-6 text-white/68 sm:block'}>
                   {level.description}
                 </p>
@@ -198,7 +198,7 @@ export default function OnboardingWizard({ presetLevel = null, presetThemeId = n
 
     if (step === 2) {
       return (
-        <div className="grid gap-4 xl:grid-cols-2">
+        <div className="grid gap-4 lg:grid-cols-2">
           {themesForLevel.map((theme) => {
             const active = selectedTheme?.id === theme.id
             return (
@@ -209,7 +209,7 @@ export default function OnboardingWizard({ presetLevel = null, presetThemeId = n
                   setSelectedTheme(theme)
                   setSelectedCharacter(pickDefaultCharacter(theme.id))
                 }}
-                className={`rounded-[32px] border p-5 text-left transition ${
+                className={`rounded-[26px] border p-4 text-left transition sm:rounded-[32px] sm:p-5 ${
                   active
                     ? 'border-emerald-300/55 bg-emerald-300/18'
                     : 'border-white/10 bg-white/6 hover:border-white/18 hover:bg-white/10'
@@ -217,15 +217,15 @@ export default function OnboardingWizard({ presetLevel = null, presetThemeId = n
               >
                 <div className="flex items-start justify-between gap-4">
                   <div>
-                    <p className="text-3xl">{theme.emoji}</p>
-                    <p className="mt-3 sprechen-display text-2xl font-semibold text-white">{theme.label}</p>
+                    <p className="text-2xl sm:text-3xl">{theme.emoji}</p>
+                    <p className="mt-3 sprechen-display text-xl font-semibold text-white sm:text-2xl">{theme.label}</p>
                     <p className={active ? 'mt-2 text-sm leading-6 text-white/68' : 'mt-2 hidden text-sm leading-6 text-white/68 sm:block'}>
                       {theme.description}
                     </p>
                   </div>
                   <Badge variant="accent">{theme.duration}</Badge>
                 </div>
-                <p className={active ? 'mt-4 rounded-[22px] bg-black/20 px-4 py-3 text-sm text-white/72' : 'mt-4 hidden rounded-[22px] bg-black/20 px-4 py-3 text-sm text-white/72 sm:block'}>
+                <p className={active ? 'mt-4 rounded-[18px] bg-black/20 px-4 py-3 text-sm text-white/72 sm:rounded-[22px]' : 'mt-4 hidden rounded-[18px] bg-black/20 px-4 py-3 text-sm text-white/72 sm:block sm:rounded-[22px]'}>
                   {theme.scenarioBriefing}
                 </p>
               </button>
@@ -237,7 +237,7 @@ export default function OnboardingWizard({ presetLevel = null, presetThemeId = n
 
     if (step === 3) {
       return (
-        <div className="grid gap-4 xl:grid-cols-2">
+        <div className="grid gap-4 lg:grid-cols-2">
           {compatibleCharacters.map((character) => {
             const active = selectedCharacter?.id === character.id
             return (
@@ -245,7 +245,7 @@ export default function OnboardingWizard({ presetLevel = null, presetThemeId = n
                 key={character.id}
                 type="button"
                 onClick={() => setSelectedCharacter(character)}
-                className={`rounded-[30px] border p-5 text-left transition ${
+                className={`rounded-[26px] border p-4 text-left transition sm:rounded-[30px] sm:p-5 ${
                   active
                     ? 'border-fuchsia-300/50 bg-fuchsia-300/16'
                     : 'border-white/10 bg-white/6 hover:border-white/18 hover:bg-white/10'
@@ -254,7 +254,7 @@ export default function OnboardingWizard({ presetLevel = null, presetThemeId = n
                 <div className="flex items-center gap-4">
                   <Avatar character={character} />
                   <div>
-                    <p className="sprechen-display text-2xl font-semibold text-white">{character.name}</p>
+                    <p className="sprechen-display text-xl font-semibold text-white sm:text-2xl">{character.name}</p>
                     <p className="text-sm text-white/68">{character.role}</p>
                     <p className={active ? 'mt-1 text-xs uppercase tracking-[0.26em] text-white/42' : 'mt-1 hidden text-xs uppercase tracking-[0.26em] text-white/42 sm:block'}>
                       {character.catchphrase}
@@ -272,32 +272,32 @@ export default function OnboardingWizard({ presetLevel = null, presetThemeId = n
     }
 
     return (
-      <div className="grid gap-5 xl:grid-cols-[1.1fr_0.9fr]">
-        <Card tone="elevated" className="p-6">
+      <div className="grid gap-5 2xl:grid-cols-[1.1fr_0.9fr]">
+        <Card tone="elevated" className="p-5 sm:p-6">
           <div className="flex items-center gap-3">
             <Avatar character={selectedCharacter} />
             <div>
               <Badge variant="accent" className="mb-3">
                 {selectedLevel || presetLevel}
               </Badge>
-              <p className="sprechen-display text-3xl font-semibold text-white">{selectedTheme?.label}</p>
+              <p className="sprechen-display text-2xl font-semibold text-white sm:text-3xl">{selectedTheme?.label}</p>
               <p className="mt-2 text-sm text-white/68">{selectedCharacter?.role}</p>
             </div>
           </div>
           <p className="mt-6 text-base leading-7 text-white/78">{selectedTheme?.scenarioBriefing}</p>
           <div className="mt-6 grid gap-3 md:grid-cols-2">
-            <Card tone="soft" className="p-4">
+            <Card tone="soft" className="p-3.5 sm:p-4">
               <p className="text-xs uppercase tracking-[0.24em] text-white/45">Objectif</p>
               <p className="mt-3 text-sm leading-6 text-white/76">{selectedTheme?.userObjective}</p>
             </Card>
-            <Card tone="soft" className="p-4">
+            <Card tone="soft" className="p-3.5 sm:p-4">
               <p className="text-xs uppercase tracking-[0.24em] text-white/45">Twist</p>
               <p className="mt-3 text-sm leading-6 text-white/76">{selectedTheme?.possibleTwist}</p>
             </Card>
           </div>
         </Card>
 
-        <Card tone="soft" className="relative overflow-hidden p-6">
+        <Card tone="soft" className="relative overflow-hidden p-5 sm:p-6">
           <div className="absolute inset-x-0 top-0 h-24 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.18),transparent_55%)]" />
           <div className="flex items-center justify-between gap-3">
             <p className="text-xs uppercase tracking-[0.28em] text-white/45">Preparation compacte</p>
@@ -331,7 +331,7 @@ export default function OnboardingWizard({ presetLevel = null, presetThemeId = n
 
           <Button
             size="lg"
-            className="mt-8 w-full"
+            className="mt-6 w-full sm:mt-8"
             onClick={() => setCountdown(3)}
             disabled={!selectedTheme}
           >
@@ -344,7 +344,7 @@ export default function OnboardingWizard({ presetLevel = null, presetThemeId = n
   }
 
   return (
-    <div className="relative min-h-[760px] overflow-hidden rounded-[36px] border border-white/10 bg-[#070814] p-5 text-white sm:p-7">
+    <div className="relative min-h-[680px] overflow-hidden rounded-[24px] border border-white/10 bg-[#070814] p-4 text-white sm:min-h-[760px] sm:rounded-[36px] sm:p-7">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(245,124,65,0.18),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(75,208,255,0.12),transparent_30%),linear-gradient(140deg,#090b16_10%,#0f1328_55%,#090b16_100%)]" />
       <div className="relative z-10">
         <div className="flex flex-col gap-5 lg:flex-row lg:items-start lg:justify-between">
@@ -352,7 +352,7 @@ export default function OnboardingWizard({ presetLevel = null, presetThemeId = n
             <Badge variant="neutral" className="mb-4">
               Sprechen
             </Badge>
-            <h2 className="sprechen-display text-3xl font-semibold tracking-tight text-white sm:text-[3.2rem]">
+            <h2 className="sprechen-display text-[clamp(2rem,1.35rem+3.6vw,3.2rem)] font-semibold tracking-tight leading-[0.95] text-white">
               Tu n apprends pas l allemand. Tu survis a des scenes.
             </h2>
             <p className="mt-4 hidden max-w-3xl text-base leading-7 text-white/68 sm:block">
@@ -387,7 +387,7 @@ export default function OnboardingWizard({ presetLevel = null, presetThemeId = n
           {stepMeta.map((item, index) => (
             <div
               key={item.id}
-              className={`inline-flex shrink-0 items-center gap-3 rounded-full border px-4 py-2 text-sm ${
+              className={`inline-flex shrink-0 items-center gap-2 rounded-full border px-3.5 py-2 text-xs sm:gap-3 sm:px-4 sm:text-sm ${
                 index === step
                   ? 'border-white/26 bg-white/12 text-white'
                   : index < step
@@ -395,7 +395,7 @@ export default function OnboardingWizard({ presetLevel = null, presetThemeId = n
                     : 'border-white/10 bg-white/6 text-white/52'
               }`}
             >
-              <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-white/10 text-xs">
+              <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-white/10 text-[10px] sm:h-6 sm:w-6 sm:text-xs">
                 {index + 1}
               </span>
               {item.label}
@@ -418,13 +418,13 @@ export default function OnboardingWizard({ presetLevel = null, presetThemeId = n
         </div>
 
         <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-          <Button variant="ghost" onClick={handleBack} disabled={step === 0 || countdown !== null}>
+          <Button variant="ghost" className="w-full sm:w-auto" onClick={handleBack} disabled={step === 0 || countdown !== null}>
             <ArrowLeft size={16} />
             Retour
           </Button>
 
           {step < stepMeta.length - 1 ? (
-            <Button onClick={handleNext} disabled={!canContinue || countdown !== null}>
+            <Button className="w-full sm:w-auto" onClick={handleNext} disabled={!canContinue || countdown !== null}>
               Continuer
               <ArrowRight size={16} />
             </Button>
@@ -452,7 +452,7 @@ export default function OnboardingWizard({ presetLevel = null, presetThemeId = n
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 1.4, opacity: 0 }}
               transition={{ duration: 0.45 }}
-              className="sprechen-display text-[7rem] font-semibold leading-none text-white"
+              className="sprechen-display text-[clamp(4rem,18vw,7rem)] font-semibold leading-none text-white"
             >
               {countdown}
             </motion.div>

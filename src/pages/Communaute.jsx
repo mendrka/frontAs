@@ -97,7 +97,7 @@ function Communaute() {
 
   return (
     <div className="shell pb-24 lg:pb-10">
-      <div className="grid min-h-[calc(100vh-8rem)] gap-4 lg:grid-cols-[24rem_minmax(0,1fr)]">
+      <div className="grid min-h-[calc(100vh-8rem)] gap-4 lg:grid-cols-[minmax(18rem,22rem)_minmax(0,1fr)] xl:grid-cols-[24rem_minmax(0,1fr)]">
         <aside
           className={cx(
             cardClass.base,
@@ -129,7 +129,7 @@ function Communaute() {
               </button>
             </div>
 
-            <div className="mt-4 grid grid-cols-2 gap-2 rounded-[1.4rem] bg-white/70 p-1">
+            <div className="mt-4 grid grid-cols-2 gap-2 rounded-[1.2rem] bg-white/70 p-1 sm:rounded-[1.4rem]">
               <button
                 type="button"
                 className={cx(
@@ -251,25 +251,25 @@ function Communaute() {
             'min-h-0 flex-col overflow-hidden lg:flex'
           )}
         >
-          <div className="border-b border-brand-border/70 bg-white/82 px-4 py-4 sm:px-5">
+          <div className="border-b border-brand-border/70 bg-white/82 px-3 py-3 sm:px-5 sm:py-4">
             <div className="flex flex-col gap-4 xl:flex-row xl:items-center xl:justify-between">
               <div className="flex items-start gap-3">
                 <button
                   type="button"
-                  className="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-brand-border bg-white/90 text-lg text-brand-text shadow-sm lg:hidden"
+                  className="inline-flex h-10 w-10 items-center justify-center rounded-[1rem] border border-brand-border bg-white/90 text-lg text-brand-text shadow-sm sm:h-11 sm:w-11 sm:rounded-2xl lg:hidden"
                   onClick={() => setMobilePanel('sidebar')}
                   aria-label="Ouvrir la boite de reception"
                 >
                   ☰
                 </button>
 
-                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-brand-sky text-2xl shadow-sm" aria-hidden="true">
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-[1rem] bg-brand-sky text-xl shadow-sm sm:h-12 sm:w-12 sm:rounded-2xl sm:text-2xl" aria-hidden="true">
                   {headerVisual.emoji}
                 </span>
 
                 <div className="min-w-0">
                   <div className="flex flex-wrap items-center gap-2">
-                    <h3 className="truncate font-display text-2xl font-semibold text-brand-text">{headerVisual.title}</h3>
+                    <h3 className="truncate font-display text-xl font-semibold text-brand-text sm:text-2xl">{headerVisual.title}</h3>
                     <span className="rounded-full bg-brand-sky px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-brown">
                       {headerVisual.typeLabel}
                     </span>
@@ -288,7 +288,7 @@ function Communaute() {
                 {isDirectMode ? (
                   <button
                     type="button"
-                    className="rounded-full border border-brand-border bg-white/90 px-4 py-2 text-sm font-semibold text-brand-text shadow-sm transition hover:bg-brand-sky/60"
+                    className="rounded-full border border-brand-border bg-white/90 px-4 py-2 text-xs font-semibold text-brand-text shadow-sm transition hover:bg-brand-sky/60 sm:text-sm"
                     onClick={handleReturnToCanal}
                   >
                     Retour au canal

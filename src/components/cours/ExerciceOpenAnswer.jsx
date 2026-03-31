@@ -104,7 +104,7 @@ function ExerciceOpenAnswer({ data, onValide }) {
         <div className="flex flex-col gap-3">
           {data?.textarea ? (
             <textarea
-              className={cx(inputBase, 'min-h-[160px] resize-y')}
+              className={cx(inputBase, 'min-h-[140px] resize-y sm:min-h-[160px]')}
               placeholder={t('Schreibe deine Antwort...', 'Ecris ta reponse...')}
               value={valeur}
               onChange={(event) => setValeur(event.target.value)}
@@ -127,7 +127,7 @@ function ExerciceOpenAnswer({ data, onValide }) {
           )}
 
           <button
-            className={cx(primaryButton, 'self-end')}
+            className={cx(primaryButton, 'w-full self-stretch justify-center sm:w-auto sm:self-end')}
             onClick={handleValider}
             disabled={!valeur.trim()}
             type="button"

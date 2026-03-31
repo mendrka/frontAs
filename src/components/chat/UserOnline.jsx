@@ -44,7 +44,7 @@ function UserOnline({ canal }) {
   return (
     <div className="relative">
       <button
-        className="inline-flex items-center gap-2 rounded-full border border-brand-border bg-white/90 px-3 py-2 text-sm font-semibold text-brand-text shadow-sm transition hover:bg-brand-sky/70"
+        className="inline-flex items-center gap-2 rounded-full border border-brand-border bg-white/90 px-3 py-2 text-xs font-semibold text-brand-text shadow-sm transition hover:bg-brand-sky/70 sm:text-sm"
         onClick={() => setShow(!show)}
         aria-label={`${count} utilisateurs en ligne`}
       >
@@ -54,7 +54,7 @@ function UserOnline({ canal }) {
       </button>
 
       {show && users.length > 0 && (
-        <div className="absolute right-0 top-[calc(100%+0.75rem)] z-30 w-72 rounded-[1.6rem] border border-brand-border/80 bg-white/95 p-4 shadow-panel backdrop-blur">
+        <div className="absolute left-0 top-[calc(100%+0.75rem)] z-30 w-[min(20rem,calc(100vw-2rem))] rounded-[1.35rem] border border-brand-border/80 bg-white/95 p-3 shadow-panel backdrop-blur sm:left-auto sm:right-0 sm:w-72 sm:rounded-[1.6rem] sm:p-4">
           <p className="mb-3 text-xs font-semibold uppercase tracking-[0.24em] text-brand-blue">
             👥 Eo amin\'ny canal · En ligne
           </p>

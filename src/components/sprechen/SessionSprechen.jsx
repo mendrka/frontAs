@@ -80,10 +80,10 @@ function SessionSprechen({ partner, niveau = 'A1', onTerminee }) {
   const formatDuree = (s) => `${Math.floor(s/60)}:${(s%60).toString().padStart(2,'0')}`
 
   return (
-    <div className={cx(cardClass.base, 'space-y-6 p-6')}>
+    <div className={cx(cardClass.base, 'space-y-6 p-4 sm:p-6')}>
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div className="flex items-center gap-4">
-          <div className="flex h-14 w-14 items-center justify-center rounded-full bg-brand-green/15 font-display text-xl font-semibold text-brand-greenDeep">
+          <div className="flex h-12 w-12 items-center justify-center rounded-full bg-brand-green/15 font-display text-lg font-semibold text-brand-greenDeep sm:h-14 sm:w-14 sm:text-xl">
             {partner?.prenom?.[0]?.toUpperCase() || '?'}
           </div>
           <div>
@@ -100,13 +100,13 @@ function SessionSprechen({ partner, niveau = 'A1', onTerminee }) {
       </div>
 
       {exerciceActuel && (
-        <div className="rounded-[1.8rem] bg-brand-sky/55 p-5">
+        <div className="rounded-[1.4rem] bg-brand-sky/55 p-4 sm:rounded-[1.8rem] sm:p-5">
           <p className="text-xs font-semibold uppercase tracking-[0.24em] text-brand-blue">
             {exerciceActuel.type === 'repeter'  ? '🔁 Wiederholen · Répétez' :
              exerciceActuel.type === 'repondre' ? '💬 Antworten · Répondez' :
              '🌐 Übersetzen · Traduisez'}
           </p>
-          <div className="mt-3 font-display text-3xl font-semibold tracking-tight text-brand-text">{exerciceActuel.texte}</div>
+          <div className="mt-3 font-display text-2xl font-semibold tracking-tight text-brand-text sm:text-3xl">{exerciceActuel.texte}</div>
           <p className="mt-2 text-brand-brown">{exerciceActuel.aide}</p>
 
           <div className="mt-6">
@@ -131,7 +131,7 @@ function SessionSprechen({ partner, niveau = 'A1', onTerminee }) {
       )}
 
       {partnerTyping && (
-        <div className="flex items-center gap-2 rounded-full bg-white px-4 py-3 text-sm font-semibold text-brand-brown shadow-sm">
+        <div className="flex flex-wrap items-center gap-2 rounded-[1.2rem] bg-white px-4 py-3 text-sm font-semibold text-brand-brown shadow-sm sm:rounded-full">
           <span className="h-2 w-2 rounded-full bg-brand-blue animate-pulse" />
           <span className="h-2 w-2 rounded-full bg-brand-blue animate-pulse [animation-delay:0.2s]" />
           <span className="h-2 w-2 rounded-full bg-brand-blue animate-pulse [animation-delay:0.4s]" />

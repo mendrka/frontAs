@@ -82,16 +82,16 @@ function Login() {
   return (
     <div className="shell">
       <div className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
-        <section className="relative overflow-hidden rounded-[2.4rem] border border-white/70 bg-gradient-to-br from-brand-text via-brand-blue to-sky-500 p-8 text-white shadow-panel">
+        <section className="order-2 relative overflow-hidden rounded-[1.75rem] border border-white/70 bg-gradient-to-br from-brand-text via-brand-blue to-sky-500 p-5 text-white shadow-panel sm:p-8 lg:order-1 lg:rounded-[2.4rem]">
           <div className="absolute -left-10 top-8 h-40 w-40 rounded-full bg-white/10 blur-3xl" />
           <div className="absolute bottom-0 right-0 h-48 w-48 rounded-full bg-brand-green/20 blur-3xl" />
           <div className="relative space-y-6">
             <span className="stat-chip bg-white/12 text-white">🇩🇪 Retour sur votre parcours</span>
             <div className="space-y-4">
-              <h2 className="font-display text-4xl font-semibold leading-tight tracking-tight">Willkommen zurück.</h2>
-              <p className="max-w-md text-lg text-white/80">Retrouvez vos cours, votre progression et vos objectifs Allemagne dans une interface plus claire.</p>
+              <h2 className="font-display text-[clamp(2rem,1.5rem+2vw,3rem)] font-semibold leading-tight tracking-tight">Willkommen zurück.</h2>
+              <p className="max-w-md text-base text-white/80 sm:text-lg">Retrouvez vos cours, votre progression et vos objectifs Allemagne dans une interface plus claire.</p>
             </div>
-            <div className="grid gap-3 sm:grid-cols-2">
+            <div className="grid gap-3 min-[420px]:grid-cols-2">
               <div className="rounded-[1.6rem] border border-white/10 bg-white/10 p-4 backdrop-blur">
                 <p className="text-3xl font-display font-semibold">2 400+</p>
                 <p className="text-sm uppercase tracking-[0.24em] text-white/70">Apprenants actifs</p>
@@ -104,13 +104,13 @@ function Login() {
           </div>
         </section>
 
-        <section className={cx(cardClass.base, 'p-6 sm:p-8')}>
+        <section className={cx(cardClass.base, 'order-1 p-5 sm:p-8 lg:order-2')}>
           <div className="mb-8 space-y-3">
             <Link to="/" className="inline-flex items-center gap-3 rounded-full border border-brand-border/70 bg-brand-sky/60 px-4 py-2 text-sm font-semibold text-brand-text">
               🏫 <span className="font-display text-base">EAM</span>
             </Link>
             <div>
-              <h1 className="font-display text-3xl font-semibold tracking-tight text-brand-text">Im Konto anmelden</h1>
+              <h1 className="font-display text-[clamp(1.85rem,1.5rem+1vw,2.5rem)] font-semibold tracking-tight text-brand-text">Im Konto anmelden</h1>
               <p className="mt-2 text-brand-brown">Se connecter a votre compte</p>
             </div>
           </div>
@@ -169,7 +169,7 @@ function Login() {
               {errors.password && <span id="password-error" className="text-sm text-rose-600" role="alert">{errors.password}</span>}
             </div>
 
-            <div className="flex items-center justify-between gap-3 text-sm text-brand-brown">
+            <div className="flex flex-col gap-2 text-sm text-brand-brown min-[420px]:flex-row min-[420px]:items-center min-[420px]:justify-between">
               <span>Connexion securisee</span>
               <Link to="/forgot-password" className="font-semibold text-brand-blue hover:text-brand-blueDeep">
                 Passwort vergessen ?

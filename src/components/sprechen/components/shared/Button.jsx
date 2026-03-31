@@ -9,9 +9,9 @@ const variants = {
 }
 
 const sizes = {
-  sm: 'h-10 px-4 text-sm',
-  md: 'h-12 px-5 text-sm',
-  lg: 'h-14 px-6 text-base',
+  sm: 'min-h-10 px-4 text-sm',
+  md: 'min-h-11 px-4 text-sm sm:min-h-12 sm:px-5',
+  lg: 'min-h-12 px-5 text-sm sm:min-h-14 sm:px-6 sm:text-base',
 }
 
 export default function Button({
@@ -28,7 +28,7 @@ export default function Button({
       whileTap={disabled ? undefined : { scale: 0.985 }}
       disabled={disabled}
       className={cn(
-        'inline-flex items-center justify-center gap-2 rounded-full font-medium transition duration-200 disabled:cursor-not-allowed disabled:opacity-55',
+        'inline-flex min-w-0 items-center justify-center gap-2 rounded-full text-center font-medium leading-tight transition duration-200 disabled:cursor-not-allowed disabled:opacity-55',
         variants[variant],
         sizes[size],
         className

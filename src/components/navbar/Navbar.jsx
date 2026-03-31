@@ -154,9 +154,9 @@ function Navbar() {
   const userInitial = user?.prenom?.[0]?.toUpperCase() || '?'
   const userLevel = user?.niveau ? String(user.niveau).toUpperCase() : null
   const navLinkBase =
-    'group inline-flex items-center gap-3 rounded-[1.35rem] px-3.5 py-2.5 text-sm font-semibold transition duration-300 focus:outline-none focus:ring-4 focus:ring-brand-blue/15'
+    'group inline-flex items-center gap-2.5 rounded-[1.2rem] px-3 py-2.5 text-sm font-semibold transition duration-300 focus:outline-none focus:ring-4 focus:ring-brand-blue/15'
   const navIconBase =
-    'flex h-9 w-9 shrink-0 items-center justify-center rounded-[1rem] border transition duration-300'
+    'flex h-8.5 w-8.5 shrink-0 items-center justify-center rounded-[0.95rem] border transition duration-300'
   const langButton = (active) =>
     cx(
       'rounded-[1rem] px-3 py-2 text-xs font-semibold uppercase tracking-[0.24em] transition duration-300',
@@ -166,19 +166,19 @@ function Navbar() {
   return (
     <header
       className={cx(
-        'fixed inset-x-0 top-0 z-50 will-change-transform transition-[padding,transform] duration-300',
-        scrolled ? 'pt-2' : 'pt-2.5 sm:pt-3',
-        desktopHidden ? 'xl:-translate-y-[calc(100%+1rem)]' : 'translate-y-0'
+        'fixed inset-x-0 top-0 z-50 transition-[padding,transform] duration-300 xl:will-change-transform',
+        scrolled ? 'safe-top pt-2' : 'safe-top pt-2.5 sm:pt-3',
+        desktopHidden ? 'xl:-translate-y-[calc(100%+1rem)]' : 'xl:translate-y-0'
       )}
       ref={menuRef}
     >
       <div className="shell">
         <div
-          className={cx(
-            'relative overflow-hidden rounded-[1.7rem] border px-3.5 py-2.5 sm:rounded-[2.2rem] sm:px-4 sm:py-3 md:px-6',
-            scrolled
-              ? 'border-white/80 bg-white/78 shadow-[0_28px_60px_-40px_rgba(53,94,75,0.38)] backdrop-blur-2xl'
-              : 'border-white/65 bg-white/62 shadow-[0_18px_50px_-36px_rgba(75,156,211,0.32)] backdrop-blur-xl'
+            className={cx(
+              'relative overflow-hidden rounded-[1.35rem] border px-3 py-2.5 sm:rounded-[2.2rem] sm:px-4 sm:py-3 md:px-6',
+              scrolled
+                ? 'border-white/80 bg-white/78 shadow-[0_28px_60px_-40px_rgba(53,94,75,0.38)] backdrop-blur-2xl'
+                : 'border-white/65 bg-white/62 shadow-[0_18px_50px_-36px_rgba(75,156,211,0.32)] backdrop-blur-xl'
           )}
         >
           <div
@@ -186,7 +186,7 @@ function Navbar() {
             aria-hidden="true"
           />
 
-          <div className="relative flex items-center justify-between gap-4">
+            <div className="relative flex items-center justify-between gap-3 sm:gap-4">
             <Link to="/" className="flex min-w-0 items-center gap-3" aria-label={t('EAM Startseite', 'EAM Accueil')}>
               <span
                 className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[1rem] border border-white/80 bg-gradient-to-br from-brand-sky via-white to-brand-sand text-brand-blue shadow-sm sm:h-12 sm:w-12 sm:rounded-[1.2rem]"
@@ -196,8 +196,8 @@ function Navbar() {
               </span>
 
               <span className="hidden min-w-0 sm:block">
-                <span className="block font-display text-lg font-semibold tracking-tight text-brand-text">EAM</span>
-                <span className="mt-1 inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-brown/80">
+                <span className="block font-display text-base font-semibold tracking-tight text-brand-text sm:text-lg">EAM</span>
+                <span className="mt-1 inline-flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-brand-brown/80 sm:text-[11px] sm:tracking-[0.24em]">
                   <span className="h-1.5 w-1.5 rounded-full bg-brand-green" aria-hidden="true" />
                   {t('Deutsch fur Malagasy', 'Allemand pour Malgaches', { mixSep: ' / ' })}
                 </span>
@@ -311,7 +311,7 @@ function Navbar() {
 
             <button
               className={cx(
-                'inline-flex h-12 w-12 items-center justify-center rounded-[1.4rem] border border-white/80 bg-white/78 text-brand-text shadow-soft backdrop-blur-sm transition duration-300 hover:bg-white xl:hidden',
+                'inline-flex h-11 w-11 items-center justify-center rounded-[1.15rem] border border-white/80 bg-white/78 text-brand-text shadow-soft backdrop-blur-sm transition duration-300 hover:bg-white sm:h-12 sm:w-12 sm:rounded-[1.4rem] xl:hidden',
                 menuOpen && 'border-brand-blue/15 bg-brand-blue text-white'
               )}
               onClick={() => setMenuOpen((open) => !open)}
@@ -342,7 +342,7 @@ function Navbar() {
       <div
         id="mobile-menu"
         className={cx(
-          'fixed inset-x-3 bottom-3 top-[5.35rem] z-50 origin-top overflow-y-auto rounded-[2rem] border border-white/80 bg-white/88 p-5 shadow-[0_30px_70px_-40px_rgba(53,94,75,0.42)] backdrop-blur-3xl transition duration-300 xl:hidden',
+          'fixed inset-x-2.5 bottom-2 top-[4.9rem] z-50 origin-top overflow-y-auto rounded-[1.6rem] border border-white/80 bg-white/88 p-4 shadow-[0_30px_70px_-40px_rgba(53,94,75,0.42)] backdrop-blur-3xl transition duration-300 sm:inset-x-3 sm:bottom-3 sm:top-[5.35rem] sm:rounded-[2rem] sm:p-5 xl:hidden',
           menuOpen ? 'pointer-events-auto scale-100 opacity-100' : 'pointer-events-none scale-95 opacity-0'
         )}
         aria-hidden={!menuOpen}
@@ -358,7 +358,7 @@ function Navbar() {
               <p className="text-[11px] font-semibold uppercase tracking-[0.32em] text-brand-blue">
                 {t('Navigation', 'Navigation')}
               </p>
-              <h2 className="mt-1 font-display text-2xl font-semibold tracking-tight text-brand-text">
+              <h2 className="mt-1 font-display text-xl font-semibold tracking-tight text-brand-text sm:text-2xl">
                 {t('Schneller Zugriff', 'Acces rapide')}
               </h2>
             </div>
@@ -418,7 +418,7 @@ function Navbar() {
 
                           <span className="min-w-0">
                             <span className="block truncate text-sm font-semibold">{t(item.label)}</span>
-                            <span className="block truncate text-xs text-brand-brown/75">{t(item.hint)}</span>
+                            <span className="block truncate text-[11px] text-brand-brown/75">{t(item.hint)}</span>
                           </span>
                         </span>
 

@@ -115,13 +115,13 @@ function InfoPanel({ tabKey, lesson }) {
 function LessonHeroSection({ lesson, currentLessonState, nextLesson, nextLessonState, isComplete, t }) {
   return (
     <>
-      <section className={cx(cardClass.base, 'overflow-hidden p-6 sm:p-8')}>
-        <div className="grid gap-8 xl:grid-cols-[minmax(0,1fr)_320px]">
+      <section className={cx(cardClass.base, 'overflow-hidden p-4 sm:p-8')}>
+        <div className="grid gap-6 2xl:grid-cols-[minmax(0,1fr)_320px] xl:gap-8">
           <div>
             <span className={levelBadgeClass(lesson.niveau)}>
               {lesson.niveau} · {lesson.id.toUpperCase()}
             </span>
-            <h1 className="mt-4 font-display text-4xl font-semibold tracking-tight text-brand-text sm:text-5xl">
+            <h1 className="mt-4 font-display text-[clamp(2rem,1.5rem+2vw,3rem)] font-semibold tracking-tight text-brand-text">
               {lesson.titre}
             </h1>
             <p className="mt-4 max-w-3xl text-base leading-relaxed text-brand-brown sm:text-lg">
@@ -229,20 +229,20 @@ function LessonPhrasesSection({
   t,
 }) {
   return (
-    <section className="grid gap-4 xl:grid-cols-[minmax(0,1fr)_320px]">
-      <div className={cx(cardClass.base, 'p-6 sm:p-8')}>
+      <section className="grid gap-4 2xl:grid-cols-[minmax(0,1fr)_320px]">
+        <div className={cx(cardClass.base, 'p-4 sm:p-8')}>
         <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div>
             <p className="section-kicker">{t('Dialog', 'Phrases')}</p>
-            <h2 className="mt-2 font-display text-3xl font-semibold tracking-tight text-brand-text">
+            <h2 className="mt-2 font-display text-[clamp(1.8rem,1.45rem+1.2vw,2.3rem)] font-semibold tracking-tight text-brand-text">
               {t('Phrase fuer Phrase', 'Phrase par phrase')}
             </h2>
           </div>
 
           {phrases.length > 1 ? (
-            <div className="flex items-center gap-3">
+            <div className="flex flex-wrap items-center gap-3">
               <button
-                className={buttonClass.ghost}
+                className={cx(buttonClass.ghost, 'w-full justify-center sm:w-auto')}
                 disabled={activePhraseIndex === 0}
                 onClick={() => setActivePhraseIndex((value) => Math.max(0, value - 1))}
                 type="button"
@@ -254,7 +254,7 @@ function LessonPhrasesSection({
                 {activePhraseIndex + 1}/{phrases.length}
               </span>
               <button
-                className={buttonClass.ghost}
+                className={cx(buttonClass.ghost, 'w-full justify-center sm:w-auto')}
                 disabled={activePhraseIndex === phrases.length - 1}
                 onClick={() => setActivePhraseIndex((value) => Math.min(phrases.length - 1, value + 1))}
                 type="button"
@@ -271,7 +271,7 @@ function LessonPhrasesSection({
             <div className="flex flex-col gap-5 lg:flex-row lg:items-start lg:justify-between">
               <div className="min-w-0">
                 <p className="text-xs font-semibold uppercase tracking-[0.24em] text-brand-blue">Deutsch</p>
-                <p className="mt-3 font-display text-3xl font-semibold tracking-tight text-brand-text">
+                <p className="mt-3 font-display text-2xl font-semibold tracking-tight text-brand-text sm:text-3xl">
                   {currentPhrase.alemana}
                 </p>
                 <p className="mt-5 text-xs font-semibold uppercase tracking-[0.24em] text-brand-blue">Francais</p>
@@ -396,21 +396,21 @@ function LessonTabsSection({ availableTabs, activeTab, setActiveTab, lesson, t }
   if (!availableTabs.length) return null
 
   return (
-    <section className={cx(cardClass.base, 'p-6 sm:p-8')}>
+      <section className={cx(cardClass.base, 'p-4 sm:p-8')}>
       <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
         <div>
           <p className="section-kicker">{t('Erklaerungen', 'Explications')}</p>
-          <h2 className="mt-2 font-display text-3xl font-semibold tracking-tight text-brand-text">
+            <h2 className="mt-2 font-display text-[clamp(1.8rem,1.45rem+1.2vw,2.3rem)] font-semibold tracking-tight text-brand-text">
             {t('Inhalte der Lektion', 'Contenu pedagogique')}
           </h2>
         </div>
 
-        <div className="flex flex-wrap gap-3">
+          <div className="flex gap-3 overflow-x-auto pb-1 lg:flex-wrap lg:overflow-visible lg:pb-0">
           {availableTabs.map((tab) => (
             <button
               key={tab.key}
               className={cx(
-                'rounded-full border px-4 py-2 text-sm font-semibold transition',
+                 'shrink-0 rounded-full border px-4 py-2 text-sm font-semibold transition',
                 activeTab === tab.key
                   ? 'border-brand-blue bg-brand-blue text-white shadow-soft'
                   : 'border-brand-border bg-white/80 text-brand-text hover:border-brand-blue/40 hover:bg-brand-sky/60'
@@ -448,16 +448,16 @@ function LessonExercisesSection({
   t,
 }) {
   return (
-    <section className={cx(cardClass.base, 'p-6 sm:p-8')}>
+      <section className={cx(cardClass.base, 'p-4 sm:p-8')}>
       <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
         <div>
           <p className="section-kicker">{t('Uebungen', 'Exercices')}</p>
-          <h2 className="mt-2 font-display text-3xl font-semibold tracking-tight text-brand-text">
+            <h2 className="mt-2 font-display text-[clamp(1.8rem,1.45rem+1.2vw,2.3rem)] font-semibold tracking-tight text-brand-text">
             {t('Normalisierte Aktivitaeten', 'Activites normalisees')}
           </h2>
         </div>
 
-        <div className="w-full max-w-xs">
+        <div className="w-full max-w-full sm:max-w-xs">
           <div className="progress-track">
             <div
               className="progress-fill"
@@ -501,7 +501,7 @@ function LessonExercisesSection({
                 ) : null}
               </div>
 
-              <div className="mt-6 flex flex-wrap gap-3">
+              <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                 {exerciseIndex < exercises.length - 1 ? (
                   <button className={buttonClass.primary} onClick={handleExerciseContinue} type="button">
                     <Icon name="arrowRight" size={18} className="icon" />
@@ -577,7 +577,7 @@ function LessonJourneySection({ lesson, levelLessons, unlockMap, t }) {
       <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
         <div>
           <p className="section-kicker">{lesson.niveau}</p>
-          <h2 className="mt-2 font-display text-3xl font-semibold tracking-tight text-brand-text">
+            <h2 className="mt-2 font-display text-[clamp(1.8rem,1.45rem+1.2vw,2.3rem)] font-semibold tracking-tight text-brand-text">
             {t('Parcours du niveau', 'Parcours du niveau')}
           </h2>
         </div>
@@ -587,7 +587,7 @@ function LessonJourneySection({ lesson, levelLessons, unlockMap, t }) {
         </Link>
       </div>
 
-      <div className="mt-6 grid gap-3 lg:grid-cols-2">
+        <div className="mt-6 grid gap-3 lg:grid-cols-2">
         {levelLessons.map((item) => {
           const state = unlockMap.get(item.id)
           const active = item.id === lesson.id

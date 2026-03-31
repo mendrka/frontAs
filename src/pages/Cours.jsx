@@ -65,12 +65,12 @@ function Cours() {
   }
 
   return (
-    <div className="space-y-8">
-      <section className={cx(cardClass.base, 'overflow-hidden p-6 sm:p-8')}>
-        <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_300px]">
+    <div className="space-y-6 sm:space-y-8">
+      <section className={cx(cardClass.base, 'overflow-hidden p-4 sm:p-8')}>
+        <div className="grid gap-6 2xl:grid-cols-[minmax(0,1fr)_300px]">
           <div>
             <p className="section-kicker">{t('Kursbibliothek', 'Bibliotheque locale')}</p>
-            <h1 className="mt-3 font-display text-3xl font-semibold tracking-tight text-brand-text sm:text-4xl">
+            <h1 className="mt-3 font-display text-[clamp(2rem,1.55rem+1.5vw,2.75rem)] font-semibold tracking-tight text-brand-text">
               {t('Lektionen direkt aus der lokalen Bibliothek', 'Lecons chargees directement depuis les fichiers locaux')}
             </h1>
             <p className="mt-4 max-w-3xl text-sm leading-7 text-brand-brown sm:hidden">
@@ -144,7 +144,7 @@ function Cours() {
         </div>
       </section>
 
-      <section className={cx(cardClass.base, 'p-5 sm:p-6')}>
+      <section className={cx(cardClass.base, 'p-4 sm:p-6')}>
         <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
           <div>
             <p className="section-kicker">{t('Filter', 'Filtre')}</p>
@@ -153,14 +153,14 @@ function Cours() {
             </h2>
           </div>
 
-          <div className="flex flex-wrap gap-3">
+          <div className="flex gap-3 overflow-x-auto pb-1 lg:flex-wrap lg:overflow-visible lg:pb-0">
             {levelSummaries.map((item) => {
               const active = item.level === selectedLevel
               return (
                 <Link
                   key={item.level}
                   className={cx(
-                    'rounded-full border px-4 py-2 text-sm font-semibold transition',
+                    'shrink-0 rounded-full border px-4 py-2 text-sm font-semibold transition',
                     active
                       ? 'border-brand-blue bg-brand-blue text-white shadow-soft'
                       : 'border-brand-border bg-white/80 text-brand-text hover:border-brand-blue/40 hover:bg-brand-sky/60'
@@ -176,7 +176,7 @@ function Cours() {
       </section>
 
       <section className="space-y-4">
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
           <div>
             <p className="section-kicker">{selectedLevel}</p>
             <h2 className="mt-2 font-display text-3xl font-semibold tracking-tight text-brand-text">
@@ -203,7 +203,7 @@ function Cours() {
                   !lessonState.unlocked && !complete && 'opacity-85'
                 )}
               >
-                <div className="flex items-start justify-between gap-4">
+                  <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
                   <div className="min-w-0">
                     <span className={levelBadgeClass(lesson.niveau)}>
                       {lesson.niveau} · {lesson.id.toUpperCase()}
@@ -222,7 +222,7 @@ function Cours() {
                     </details>
                   </div>
 
-                  <div className="flex shrink-0 flex-col items-end gap-2">
+                  <div className="flex shrink-0 flex-col items-start gap-2 sm:items-end">
                     {complete ? (
                       <span className="rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-emerald-700">
                         {t('Fertig', 'Terminee')}
@@ -273,7 +273,7 @@ function Cours() {
                   </div>
                 ) : null}
 
-                <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                  <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                   <div className="text-sm text-brand-brown">
                     {score != null ? (
                       <span>{t('Letzter Score', 'Dernier score')}: <strong className="text-brand-text">{score}%</strong></span>
@@ -284,16 +284,16 @@ function Cours() {
                     )}
                   </div>
 
-                  {complete || lessonState.unlocked ? (
-                    <Link className={buttonClass.outline} to={`/cours/${lesson.niveau}/lecon/${lesson.id}`}>
-                      <Icon name="book" size={18} className="icon" />
-                      {complete ? t('Wiederholen', 'Revoir') : t('Oeffnen', 'Ouvrir')}
-                    </Link>
-                  ) : (
-                    <div className={cx(buttonClass.ghost, 'cursor-not-allowed justify-center')}>
-                      <Icon name="lock" size={18} className="icon" />
-                      {t('Warte noch', 'Pas encore')}
-                    </div>
+                    {complete || lessonState.unlocked ? (
+                      <Link className={cx(buttonClass.outline, 'w-full justify-center sm:w-auto')} to={`/cours/${lesson.niveau}/lecon/${lesson.id}`}>
+                        <Icon name="book" size={18} className="icon" />
+                        {complete ? t('Wiederholen', 'Revoir') : t('Oeffnen', 'Ouvrir')}
+                      </Link>
+                    ) : (
+                      <div className={cx(buttonClass.ghost, 'w-full cursor-not-allowed justify-center sm:w-auto')}>
+                        <Icon name="lock" size={18} className="icon" />
+                        {t('Warte noch', 'Pas encore')}
+                      </div>
                   )}
                 </div>
               </article>

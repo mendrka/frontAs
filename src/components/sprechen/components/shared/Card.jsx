@@ -9,7 +9,7 @@ const tones = {
 export default function Card({ tone = 'default', className = '', children, ...props }) {
   return (
     <div
-      className={cn('rounded-[28px] border backdrop-blur-xl', tones[tone], className)}
+      className={cn('rounded-[24px] border backdrop-blur-xl sm:rounded-[28px]', tones[tone], className)}
       {...props}
     >
       {children}

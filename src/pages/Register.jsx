@@ -157,12 +157,12 @@ function Register() {
   return (
     <div className="shell">
       <div className="grid gap-6 lg:grid-cols-[0.92fr_1.08fr]">
-        <section className="relative overflow-hidden rounded-[2.4rem] border border-white/70 bg-gradient-to-br from-brand-blue via-sky-500 to-brand-green p-8 text-white shadow-panel">
+        <section className="order-2 relative overflow-hidden rounded-[1.75rem] border border-white/70 bg-gradient-to-br from-brand-blue via-sky-500 to-brand-green p-5 text-white shadow-panel sm:p-8 lg:order-1 lg:rounded-[2.4rem]">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.18),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(255,255,255,0.12),transparent_24%)]" />
           <div className="relative space-y-6">
             <span className="stat-chip bg-white/12 text-white">🚀 Nouveau depart</span>
-            <h2 className="font-display text-4xl font-semibold leading-tight tracking-tight">Starte deinen Weg.</h2>
-            <p className="max-w-md text-lg text-white/80">Creez votre compte, choisissez votre niveau et reliez l&apos;apprentissage a un vrai projet Allemagne.</p>
+            <h2 className="font-display text-[clamp(2rem,1.5rem+2vw,3rem)] font-semibold leading-tight tracking-tight">Starte deinen Weg.</h2>
+            <p className="max-w-md text-base text-white/80 sm:text-lg">Creez votre compte, choisissez votre niveau et reliez l&apos;apprentissage a un vrai projet Allemagne.</p>
             <div className="space-y-3">
               {[
                 { num: '01', label: 'Konto erstellen', fr: 'Creer un compte' },
@@ -181,13 +181,13 @@ function Register() {
           </div>
         </section>
 
-        <section className={cx(cardClass.base, 'p-6 sm:p-8')}>
+        <section className={cx(cardClass.base, 'order-1 p-5 sm:p-8 lg:order-2')}>
           <div className="mb-8 space-y-4">
             <Link to="/" className="inline-flex items-center gap-3 rounded-full border border-brand-border/70 bg-brand-sky/60 px-4 py-2 text-sm font-semibold text-brand-text">
               🏫 <span className="font-display text-base">EAM</span>
             </Link>
             <div>
-              <h1 className="font-display text-3xl font-semibold tracking-tight text-brand-text">Konto erstellen</h1>
+              <h1 className="font-display text-[clamp(1.85rem,1.5rem+1vw,2.5rem)] font-semibold tracking-tight text-brand-text">Konto erstellen</h1>
               <p className="mt-2 text-brand-brown">Creer un compte gratuit</p>
             </div>
             <div className="flex items-center gap-3">
@@ -285,7 +285,7 @@ function Register() {
                 {errors.password && <span className="text-sm text-rose-600" role="alert">{errors.password}</span>}
                 {form.password && (
                   <div className="space-y-2">
-                    <div className="grid grid-cols-5 gap-2">
+                    <div className="grid grid-cols-5 gap-1.5 sm:gap-2">
                       {[1, 2, 3, 4, 5].map((index) => (
                         <div key={index} className="h-2 rounded-full bg-brand-border" style={{ backgroundColor: index <= strength.score ? strength.color : undefined }} />
                       ))}
@@ -338,7 +338,7 @@ function Register() {
             <form className="space-y-6" onSubmit={handleSubmit} noValidate>
               <div className="space-y-3">
                 <label className="input-label">Aktuelles Niveau · Votre niveau actuel</label>
-                <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
+                <div className="grid grid-cols-2 gap-3 min-[460px]:grid-cols-3">
                   {NIVEAUX.map((n) => (
                     <button
                       key={n.code}

@@ -39,28 +39,28 @@ export function levelTheme(level = 'A1') {
 
 export function levelBadgeClass(level = 'A1') {
   return cx(
-    'inline-flex items-center gap-2 rounded-full px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.24em] ring-1',
+    'inline-flex max-w-full items-center gap-1.5 rounded-full px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] ring-1 sm:gap-2 sm:px-3 sm:py-1.5 sm:text-[11px] sm:tracking-[0.24em]',
     levelTheme(level).badge
   )
 }
 
 export const buttonClass = {
   primary:
-    'btn-primary inline-flex items-center justify-center gap-2 rounded-full bg-brand-blue px-5 py-3 font-semibold text-white shadow-soft transition hover:-translate-y-0.5 hover:bg-brand-blueDeep focus:outline-none focus:ring-4 focus:ring-brand-blue/20 disabled:cursor-not-allowed disabled:opacity-60',
+    'btn-primary inline-flex min-h-[2.85rem] max-w-full items-center justify-center gap-2 rounded-full bg-brand-blue px-4 py-2.5 text-sm font-semibold text-white shadow-soft transition hover:-translate-y-0.5 hover:bg-brand-blueDeep focus:outline-none focus:ring-4 focus:ring-brand-blue/20 disabled:cursor-not-allowed disabled:opacity-60 sm:min-h-[3rem] sm:px-5 sm:py-3 sm:text-base',
   secondary:
-    'btn-secondary inline-flex items-center justify-center gap-2 rounded-full bg-brand-green px-5 py-3 font-semibold text-white shadow-soft transition hover:-translate-y-0.5 hover:bg-brand-greenDeep focus:outline-none focus:ring-4 focus:ring-brand-green/20 disabled:cursor-not-allowed disabled:opacity-60',
+    'btn-secondary inline-flex min-h-[2.85rem] max-w-full items-center justify-center gap-2 rounded-full bg-brand-green px-4 py-2.5 text-sm font-semibold text-white shadow-soft transition hover:-translate-y-0.5 hover:bg-brand-greenDeep focus:outline-none focus:ring-4 focus:ring-brand-green/20 disabled:cursor-not-allowed disabled:opacity-60 sm:min-h-[3rem] sm:px-5 sm:py-3 sm:text-base',
   outline:
-    'btn-outline inline-flex items-center justify-center gap-2 rounded-full border border-brand-blue/30 bg-white/80 px-5 py-3 font-semibold text-brand-text transition hover:border-brand-blue hover:bg-brand-sky/80 hover:text-brand-blueDeep focus:outline-none focus:ring-4 focus:ring-brand-blue/15 disabled:cursor-not-allowed disabled:opacity-60',
+    'btn-outline inline-flex min-h-[2.85rem] max-w-full items-center justify-center gap-2 rounded-full border border-brand-blue/30 bg-white/80 px-4 py-2.5 text-sm font-semibold text-brand-text transition hover:border-brand-blue hover:bg-brand-sky/80 hover:text-brand-blueDeep focus:outline-none focus:ring-4 focus:ring-brand-blue/15 disabled:cursor-not-allowed disabled:opacity-60 sm:min-h-[3rem] sm:px-5 sm:py-3 sm:text-base',
   ghost:
-    'btn-ghost inline-flex items-center justify-center gap-2 rounded-full bg-brand-sky/60 px-5 py-3 font-semibold text-brand-brown transition hover:bg-brand-sky focus:outline-none focus:ring-4 focus:ring-brand-blue/10 disabled:cursor-not-allowed disabled:opacity-60',
+    'btn-ghost inline-flex min-h-[2.85rem] max-w-full items-center justify-center gap-2 rounded-full bg-brand-sky/60 px-4 py-2.5 text-sm font-semibold text-brand-brown transition hover:bg-brand-sky focus:outline-none focus:ring-4 focus:ring-brand-blue/10 disabled:cursor-not-allowed disabled:opacity-60 sm:min-h-[3rem] sm:px-5 sm:py-3 sm:text-base',
 }
 
 export const cardClass = {
-  base: 'rounded-[1.9rem] border border-brand-border/80 bg-white/88 shadow-panel backdrop-blur-sm',
-  soft: 'rounded-[1.65rem] border border-brand-border/70 bg-white/72 shadow-soft backdrop-blur-sm',
+  base: 'rounded-[1.45rem] border border-brand-border/80 bg-white/88 shadow-panel backdrop-blur-sm sm:rounded-[1.9rem]',
+  soft: 'rounded-[1.3rem] border border-brand-border/70 bg-white/72 shadow-soft backdrop-blur-sm sm:rounded-[1.65rem]',
   interactive:
-    'rounded-[1.9rem] border border-brand-border/80 bg-white/92 shadow-panel backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:border-brand-blue/40 hover:shadow-card',
+    'rounded-[1.45rem] border border-brand-border/80 bg-white/92 shadow-panel backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:border-brand-blue/40 hover:shadow-card sm:rounded-[1.9rem]',
 }
 
 export const inputClass =
-  'w-full rounded-[1.35rem] border border-brand-border bg-white/90 px-4 py-3 text-base text-brand-text shadow-inner outline-none transition placeholder:text-brand-brown/45 focus:border-brand-blue focus:ring-4 focus:ring-brand-blue/15'
+  'w-full rounded-[1.1rem] border border-brand-border bg-white/90 px-3.5 py-3 text-[15px] text-brand-text shadow-inner outline-none transition placeholder:text-brand-brown/45 focus:border-brand-blue focus:ring-4 focus:ring-brand-blue/15 sm:rounded-[1.35rem] sm:px-4 sm:text-base'

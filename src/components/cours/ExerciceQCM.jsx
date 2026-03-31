@@ -131,7 +131,7 @@ function ExerciceQCM({ data, onValide }) {
 
       {!valide && (
         <button
-          className={cx(primaryButton, 'self-end')}
+          className={cx(primaryButton, 'w-full self-stretch justify-center sm:w-auto sm:self-end')}
           onClick={handleValider}
           disabled={choix === null}
           type="button"

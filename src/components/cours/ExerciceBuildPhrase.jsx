@@ -80,7 +80,7 @@ function ExerciceBuildPhrase({ data, onValide }) {
       </div>
 
       <div className="rounded-[1.5rem] border border-brand-border/70 bg-white/75 p-4">
-        <p className="min-h-[3rem] font-display text-xl text-brand-text">
+        <p className="min-h-[3rem] font-display text-lg text-brand-text sm:text-xl">
           <span>{preview || '...'}</span>
         </p>
       </div>
@@ -90,7 +90,7 @@ function ExerciceBuildPhrase({ data, onValide }) {
           <button
             key={`${w}-${i}`}
             type="button"
-            className={cx(optionBase, 'w-auto')}
+            className={cx(optionBase, 'w-auto max-w-full')}
             onClick={() => pick(w, i)}
             disabled={valide}
           >
@@ -101,13 +101,13 @@ function ExerciceBuildPhrase({ data, onValide }) {
 
       {!valide && (
         <div className="flex flex-col gap-3 sm:flex-row sm:justify-end">
-          <button className={ghostButton} onClick={undo} disabled={chosen.length === 0} type="button">
+          <button className={cx(ghostButton, 'w-full sm:w-auto')} onClick={undo} disabled={chosen.length === 0} type="button">
             {t('Zurück', 'Annuler')}
           </button>
-          <button className={outlineButton} onClick={reset} disabled={chosen.length === 0} type="button">
+          <button className={cx(outlineButton, 'w-full sm:w-auto')} onClick={reset} disabled={chosen.length === 0} type="button">
             Reset
           </button>
-          <button className={primaryButton} onClick={validate} disabled={chosen.length === 0} type="button">
+          <button className={cx(primaryButton, 'w-full sm:w-auto')} onClick={validate} disabled={chosen.length === 0} type="button">
             {t('Prüfen', 'Valider')}
           </button>
         </div>

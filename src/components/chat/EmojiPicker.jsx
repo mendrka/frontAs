@@ -41,11 +41,11 @@ function EmojiPicker({ onSelect, onClose }) {
     : cat.emojis
 
   return (
-    <div className="w-[19rem] rounded-[1.7rem] border border-brand-border/80 bg-white/95 p-4 shadow-panel backdrop-blur">
+    <div className="w-[min(100%,19rem)] rounded-[1.35rem] border border-brand-border/80 bg-white/95 p-3 shadow-panel backdrop-blur sm:rounded-[1.7rem] sm:p-4">
       <div className="mb-4 flex items-center gap-2">
         <input
           type="text"
-          className="input-field h-11 flex-1 rounded-[1.1rem] py-2"
+          className="input-field h-10 flex-1 rounded-[1rem] py-2 sm:h-11 sm:rounded-[1.1rem]"
           placeholder="🔍 Suchen · Rechercher..."
           value={search}
           onChange={e => setSearch(e.target.value)}
@@ -72,11 +72,11 @@ function EmojiPicker({ onSelect, onClose }) {
         </div>
       )}
 
-      <div className="grid max-h-72 grid-cols-6 gap-2 overflow-y-auto pr-1">
+      <div className="grid max-h-72 grid-cols-5 gap-2 overflow-y-auto pr-1 sm:grid-cols-6">
         {emojis.map((emoji, i) => (
           <button
             key={i}
-            className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-brand-sky/55 text-xl transition hover:bg-brand-sky"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-brand-sky/55 text-xl transition hover:bg-brand-sky sm:h-11 sm:w-11"
             onClick={() => onSelect(emoji)}
             title={emoji}
           >

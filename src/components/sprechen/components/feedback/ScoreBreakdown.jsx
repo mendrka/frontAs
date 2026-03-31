@@ -10,11 +10,11 @@ const metricMeta = [
 
 export default function ScoreBreakdown({ scores }) {
   return (
-    <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-5">
+    <div className="grid gap-4 sm:grid-cols-2 2xl:grid-cols-5">
       {metricMeta.map((metric) => (
-        <Card key={metric.key} tone="soft" className="p-4">
+        <Card key={metric.key} tone="soft" className="p-3.5 sm:p-4">
           <p className="text-xs uppercase tracking-[0.24em] text-white/45">{metric.label}</p>
-          <p className="mt-4 sprechen-display text-3xl font-semibold text-white">
+          <p className="mt-4 sprechen-display text-2xl font-semibold text-white sm:text-3xl">
             {Math.round(scores?.[metric.key] || 0)}
             <span className="ml-1 text-base text-white/42">{metric.suffix}</span>
           </p>

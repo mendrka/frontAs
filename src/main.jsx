@@ -10,7 +10,12 @@ import './index.css'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     {/* BrowserRouter au plus haut niveau pour React Router v6 */}
-    <BrowserRouter>
+    <BrowserRouter
+      future={{
+        v7_startTransition: true,
+        v7_relativeSplatPath: true,
+      }}
+    >
       {/* AuthProvider wrappe toute l'app pour accès global au user connecté */}
       <LangProvider>
         <AuthProvider>

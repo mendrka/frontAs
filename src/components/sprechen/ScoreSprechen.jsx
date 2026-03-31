@@ -54,18 +54,18 @@ function ScoreSprechen({ sessionData, onRejouer, niveau = 'A1' }) {
   }, [sessionData, saved, partner, niveau, scoreTotal, duree, scores, correctCount])
 
   return (
-    <div className={cx(cardClass.base, 'mx-auto max-w-3xl p-6 text-center sm:p-8')}>
+    <div className={cx(cardClass.base, 'mx-auto max-w-3xl p-5 text-center sm:p-8')}>
       <div className="space-y-3">
-        <span className="inline-flex h-16 w-16 items-center justify-center rounded-full bg-brand-sky text-brand-blue shadow-soft" aria-hidden="true">
+        <span className="inline-flex h-14 w-14 items-center justify-center rounded-full bg-brand-sky text-brand-blue shadow-soft sm:h-16 sm:w-16" aria-hidden="true">
           <Icon name={iconName} size={28} className="icon" />
         </span>
-        <h2 className="font-display text-3xl font-semibold tracking-tight text-brand-text">
+        <h2 className="font-display text-[clamp(2rem,1.45rem+2vw,3rem)] font-semibold tracking-tight text-brand-text">
           {lang === 'fr' ? msg.fr : lang === 'de' ? msg.de : `${msg.de} · ${msg.fr}`}
         </h2>
         <p className="text-brand-brown">{t(msg.de, msg.fr)}</p>
       </div>
 
-      <div className="relative mx-auto mt-8 flex h-44 w-44 items-center justify-center">
+      <div className="relative mx-auto mt-8 flex h-36 w-36 items-center justify-center sm:h-44 sm:w-44">
         <svg viewBox="0 0 100 100" className="h-full w-full -rotate-90" aria-hidden="true">
           <circle cx="50" cy="50" r="42" className="fill-none stroke-brand-border/70 stroke-[6]" />
           <circle
@@ -77,20 +77,20 @@ function ScoreSprechen({ sessionData, onRejouer, niveau = 'A1' }) {
           />
         </svg>
         <div className="absolute text-center">
-          <span className="block font-display text-4xl font-semibold text-brand-text">{scoreTotal}</span>
+          <span className="block font-display text-3xl font-semibold text-brand-text sm:text-4xl">{scoreTotal}</span>
           <span className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-brown">/100</span>
         </div>
       </div>
 
-      <div className="mt-8 grid gap-4 md:grid-cols-3">
-        <div className="rounded-[1.5rem] bg-brand-sky/55 p-5">
+      <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="rounded-[1.5rem] bg-brand-sky/55 p-4 sm:p-5">
           <span className="mx-auto mb-3 inline-flex h-11 w-11 items-center justify-center rounded-full bg-emerald-50 text-emerald-700" aria-hidden="true">
             <Icon name="checkCircle" size={18} className="icon" />
           </span>
           <span className="block font-display text-2xl font-semibold text-brand-text">{correctCount}/{scores.length}</span>
           <span className="text-sm text-brand-brown">{t('Korrekte Übungen', 'Exercices corrects')}</span>
         </div>
-        <div className="rounded-[1.5rem] bg-brand-sky/55 p-5">
+        <div className="rounded-[1.5rem] bg-brand-sky/55 p-4 sm:p-5">
           <span className="mx-auto mb-3 inline-flex h-11 w-11 items-center justify-center rounded-full bg-white text-brand-blue" aria-hidden="true">
             <Icon name="clock" size={18} className="icon" />
           </span>
@@ -98,7 +98,7 @@ function ScoreSprechen({ sessionData, onRejouer, niveau = 'A1' }) {
           <span className="text-sm text-brand-brown">{t('Sitzungsdauer', 'Durée session')}</span>
         </div>
         {partner && (
-          <div className="rounded-[1.5rem] bg-brand-sky/55 p-5">
+          <div className="rounded-[1.5rem] bg-brand-sky/55 p-4 sm:p-5">
             <span className="mx-auto mb-3 inline-flex h-11 w-11 items-center justify-center rounded-full bg-white text-brand-blue" aria-hidden="true">
               <Icon name="users" size={18} className="icon" />
             </span>
@@ -114,7 +114,7 @@ function ScoreSprechen({ sessionData, onRejouer, niveau = 'A1' }) {
       </div>
 
       <div className="mt-8 space-y-3">
-        <button className={buttonClass.primary} onClick={onRejouer} type="button">
+        <button className={cx(buttonClass.primary, 'w-full sm:w-auto')} onClick={onRejouer} type="button">
           <Icon name="refresh" size={18} className="icon" /> {t('Neuen Partner suchen', 'Chercher un nouveau partenaire')}
         </button>
         <p className="text-sm text-brand-brown">{t('Partner finden', 'Trouver un partenaire')}</p>

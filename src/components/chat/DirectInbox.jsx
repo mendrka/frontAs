@@ -162,7 +162,7 @@ function DirectInbox({ selectedUserId = null, onSelectUser, refreshToken = 0 }) 
 
   return (
     <section className="flex min-h-0 flex-1 flex-col">
-      <div className="rounded-[1.55rem] border border-brand-border/70 bg-brand-sky/35 p-3">
+      <div className="rounded-[1.35rem] border border-brand-border/70 bg-brand-sky/35 p-3 sm:rounded-[1.55rem]">
         <div className="flex items-start justify-between gap-3">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.24em] text-brand-blue">Boite de reception</p>
@@ -192,7 +192,7 @@ function DirectInbox({ selectedUserId = null, onSelectUser, refreshToken = 0 }) 
         <p className="mt-3 rounded-[1.1rem] bg-rose-50 px-3 py-2 text-sm text-rose-700">{error}</p>
       ) : null}
 
-      <div className="mt-4 min-h-0 flex-1 overflow-y-auto pr-1">
+      <div className="mt-4 min-h-0 flex-1 overflow-y-auto">
         {loading ? (
           <div className="grid gap-2">
             {[1, 2, 3, 4].map((item) => (

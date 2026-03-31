@@ -29,7 +29,7 @@ function Sprechen() {
 
   return (
     <div className="shell space-y-6 pb-24 lg:pb-10">
-      <section className="page-card relative overflow-hidden p-5 sm:p-8">
+      <section className="page-card relative overflow-hidden p-4 sm:p-8">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(75,156,211,0.18),transparent_24%),radial-gradient(circle_at_bottom_right,rgba(111,166,122,0.16),transparent_28%),linear-gradient(135deg,rgba(255,255,255,0.35),transparent_58%)]" />
         <div className="relative flex flex-col gap-5 xl:flex-row xl:items-end xl:justify-between">
           <div className="max-w-3xl">
@@ -37,7 +37,7 @@ function Sprechen() {
               <Volume2 size={14} />
               Sprechen
             </div>
-            <h1 className="font-display text-3xl font-semibold tracking-tight text-brand-text sm:text-[3.2rem]">
+            <h1 className="font-display text-[clamp(2rem,1.55rem+2vw,3.2rem)] font-semibold tracking-tight text-brand-text">
               Oral immersif, interface epuree, experience mobile d'abord.
             </h1>
             <p className="mt-4 max-w-2xl text-sm leading-7 text-brand-brown/85 sm:text-base sm:leading-8">
@@ -59,7 +59,7 @@ function Sprechen() {
             </div>
           </div>
 
-          <div className="rounded-[2rem] border border-brand-border/80 bg-white/72 px-5 py-4 shadow-soft backdrop-blur-sm">
+          <div className="rounded-[1.5rem] border border-brand-border/80 bg-white/72 px-4 py-4 shadow-soft backdrop-blur-sm sm:rounded-[2rem] sm:px-5">
             <div className="flex items-center gap-3">
               <span className="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-brand-blue text-white">
                 <Sparkles size={18} />

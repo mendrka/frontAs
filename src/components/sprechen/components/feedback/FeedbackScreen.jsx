@@ -28,11 +28,11 @@ export default function FeedbackScreen() {
   }
 
   return (
-    <div className="relative min-h-[780px] overflow-hidden rounded-[36px] border border-white/10 bg-[#05070f] p-5 text-white sm:p-7">
+    <div className="relative min-h-[680px] overflow-hidden rounded-[24px] border border-white/10 bg-[#05070f] p-4 text-white sm:min-h-[780px] sm:rounded-[36px] sm:p-7">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.09),transparent_26%),radial-gradient(circle_at_bottom_right,rgba(248,115,75,0.17),transparent_30%),linear-gradient(145deg,#060913_0%,#0b1021_50%,#060913_100%)]" />
 
       <div className="relative z-10">
-        <div className="flex flex-col gap-6 xl:flex-row xl:items-start xl:justify-between">
+        <div className="flex flex-col gap-5 xl:flex-row xl:items-start xl:justify-between">
           <div className="flex items-center gap-4">
             <Avatar character={selectedCharacter} size="lg" />
             <div>
@@ -40,17 +40,17 @@ export default function FeedbackScreen() {
                 <Badge variant="accent">{selectedLevel}</Badge>
                 <Badge variant="neutral">{selectedTheme.label}</Badge>
               </div>
-              <h2 className="mt-4 sprechen-display text-4xl font-semibold text-white">Debrief avec {selectedCharacter.name}</h2>
-              <p className="mt-3 max-w-2xl text-sm leading-7 text-white/68">{sessionFeedback.characterMessage}</p>
+              <h2 className="mt-4 sprechen-display text-[clamp(2rem,1.35rem+2.6vw,3rem)] font-semibold text-white">Debrief avec {selectedCharacter.name}</h2>
+              <p className="mt-3 max-w-2xl text-sm leading-6 text-white/68 sm:leading-7">{sessionFeedback.characterMessage}</p>
             </div>
           </div>
 
-          <div className="flex flex-wrap gap-3">
-            <Button variant="secondary" onClick={() => goToJournal()}>
+          <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            <Button variant="secondary" className="w-full sm:w-auto" onClick={() => goToJournal()}>
               <BookOpen size={16} />
               Ouvrir le journal
             </Button>
-            <Button onClick={() => backToOnboarding()}>
+            <Button className="w-full sm:w-auto" onClick={() => backToOnboarding()}>
               <RotateCcw size={16} />
               Rejouer une scene
             </Button>
@@ -61,11 +61,11 @@ export default function FeedbackScreen() {
           <XPAnimation feedback={sessionFeedback} globalXP={globalXP} level={level} />
           <ScoreBreakdown scores={sessionFeedback.scores} />
 
-          <div className="grid gap-5 xl:grid-cols-[minmax(0,1fr)_0.92fr]">
+          <div className="grid gap-5 2xl:grid-cols-[minmax(0,1fr)_0.92fr]">
             <SpokenDNA scores={sessionFeedback.scores} />
 
             <div className="space-y-5">
-              <Card tone="soft" className="p-5">
+              <Card tone="soft" className="p-4 sm:p-5">
                 <p className="text-xs uppercase tracking-[0.24em] text-white/45">Forces</p>
                 <div className="mt-4 space-y-3">
                   {sessionFeedback.strengths?.map((strength) => (
@@ -76,7 +76,7 @@ export default function FeedbackScreen() {
                 </div>
               </Card>
 
-              <Card tone="soft" className="p-5">
+              <Card tone="soft" className="p-4 sm:p-5">
                 <p className="text-xs uppercase tracking-[0.24em] text-white/45">A retravailler</p>
                 <div className="mt-4 space-y-3">
                   {sessionFeedback.toImprove?.map((item) => (
@@ -90,7 +90,7 @@ export default function FeedbackScreen() {
                 </div>
               </Card>
 
-              <Card tone="soft" className="p-5">
+              <Card tone="soft" className="p-4 sm:p-5">
                 <p className="text-xs uppercase tracking-[0.24em] text-white/45">Mots captures</p>
                 <div className="mt-4 flex flex-wrap gap-2">
                   {collectedWords.length === 0 && <p className="text-sm text-white/54">Aucun mot capture cette fois.</p>}

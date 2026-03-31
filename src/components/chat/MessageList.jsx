@@ -40,9 +40,9 @@ function isGroupedWithPrevious(previous, current, currentUserId) {
 function EmptyState({ title, copy }) {
   return (
     <div className="flex h-full min-h-[16rem] items-center justify-center">
-      <div className="max-w-sm rounded-[1.8rem] border border-dashed border-brand-border bg-white/78 px-6 py-8 text-center shadow-sm">
+      <div className="max-w-sm rounded-[1.45rem] border border-dashed border-brand-border bg-white/78 px-5 py-7 text-center shadow-sm sm:rounded-[1.8rem] sm:px-6 sm:py-8">
         <p className="text-xs font-semibold uppercase tracking-[0.26em] text-brand-blue">Messagerie</p>
-        <h4 className="mt-3 font-display text-2xl font-semibold text-brand-text">{title}</h4>
+        <h4 className="mt-3 font-display text-xl font-semibold text-brand-text sm:text-2xl">{title}</h4>
         <p className="mt-3 text-sm leading-relaxed text-brand-brown">{copy}</p>
       </div>
     </div>
@@ -80,14 +80,14 @@ function MessageBubble({ message, moi, compact }) {
   }
 
   return (
-    <div className={cx('flex gap-3', compact ? 'mt-1.5' : 'mt-4', moi ? 'justify-end' : 'justify-start', !moi && compact && 'pl-[3.25rem]')}>
+    <div className={cx('flex gap-2.5 sm:gap-3', compact ? 'mt-1.5' : 'mt-4', moi ? 'justify-end' : 'justify-start', !moi && compact && 'pl-9 sm:pl-[3.25rem]')}>
       {!moi && !compact ? (
         <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-green/15 font-display text-sm font-semibold text-brand-greenDeep">
           {getInitials(message)}
         </div>
       ) : null}
 
-      <div className={cx('flex max-w-[84%] flex-col', moi ? 'items-end' : 'items-start')}>
+      <div className={cx('flex max-w-[90%] flex-col sm:max-w-[84%]', moi ? 'items-end' : 'items-start')}>
         {!moi && !compact ? (
           <p className="mb-1 px-1 text-xs font-semibold uppercase tracking-[0.2em] text-brand-brown/80">
             {message.prenom}
@@ -96,7 +96,7 @@ function MessageBubble({ message, moi, compact }) {
 
         <div
           className={cx(
-            'rounded-[1.45rem] px-4 py-3 text-sm leading-relaxed shadow-sm',
+            'rounded-[1.25rem] px-3.5 py-3 text-sm leading-relaxed shadow-sm sm:rounded-[1.45rem] sm:px-4',
             moi
               ? 'rounded-br-md bg-brand-blue text-white'
               : 'rounded-bl-md border border-brand-border/70 bg-white text-brand-text'
@@ -119,7 +119,7 @@ function SkeletonMessage({ align = 'left' }) {
   return (
     <div className={cx('mb-4 flex items-end gap-3', align === 'right' ? 'justify-end' : 'justify-start')}>
       {align === 'left' ? <div className="h-10 w-10 animate-pulse rounded-full bg-brand-border/70" /> : null}
-      <div className="flex max-w-[70%] flex-1 flex-col gap-2">
+      <div className="flex max-w-[82%] flex-1 flex-col gap-2 sm:max-w-[70%]">
         <div className="h-3 w-16 animate-pulse rounded-full bg-brand-border/60" />
         <div className="h-14 animate-pulse rounded-[1.2rem] bg-brand-border/60" />
       </div>
@@ -148,7 +148,7 @@ function MessageList({
 
   if (loading) {
     return (
-      <div ref={scrollRef} className="flex-1 overflow-y-auto px-4 py-5 sm:px-5">
+      <div ref={scrollRef} className="flex-1 overflow-y-auto px-3 py-4 sm:px-5 sm:py-5">
         {[1, 2, 3, 4, 5].map((item) => (
           <SkeletonMessage key={item} align={item % 2 === 0 ? 'right' : 'left'} />
         ))}
@@ -158,7 +158,7 @@ function MessageList({
 
   if (!messages.length) {
     return (
-      <div ref={scrollRef} className="flex-1 overflow-y-auto px-4 py-5 sm:px-5">
+      <div ref={scrollRef} className="flex-1 overflow-y-auto px-3 py-4 sm:px-5 sm:py-5">
         <EmptyState title={emptyTitle} copy={emptyCopy} />
         {typingLabel ? <TypingIndicator label={typingLabel} /> : null}
         <div ref={bottomRef} />
@@ -167,11 +167,11 @@ function MessageList({
   }
 
   return (
-    <div ref={scrollRef} className="flex-1 overflow-y-auto px-4 py-5 sm:px-5">
+    <div ref={scrollRef} className="flex-1 overflow-y-auto px-3 py-4 sm:px-5 sm:py-5">
       {hasMore ? (
         <button
           type="button"
-          className="mx-auto mb-5 flex rounded-full border border-brand-border bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-brand-brown shadow-sm transition hover:bg-brand-sky/60"
+          className="mx-auto mb-5 flex w-full max-w-xs items-center justify-center rounded-full border border-brand-border bg-white px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-brand-brown shadow-sm transition hover:bg-brand-sky/60 sm:w-auto sm:max-w-none sm:text-xs sm:tracking-[0.2em]"
           onClick={onLoadMore}
         >
           ↑ Messages precedents
