@@ -1,810 +1,533 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
-import { Link, useNavigate, useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { useGamification } from '@context/GamificationContext'
-import { useLang } from '@context/LangContext'
 import { useProgression } from '@hooks/useProgression'
 import {
   buildLevelUnlockMap,
   findLessonById,
   findNextLesson,
-  listLevelLessons,
   normalizeLevel,
 } from '@data/lessonCatalog'
-import AudioPlayer from '@components/cours/AudioPlayer'
-import ExerciceBuildPhrase from '@components/cours/ExerciceBuildPhrase'
-import ExerciceFillBlank from '@components/cours/ExerciceFillBlank'
-import ExerciceHoren from '@components/cours/ExerciceHoren'
-import ExerciceMatchPairs from '@components/cours/ExerciceMatchPairs'
-import ExerciceOpenAnswer from '@components/cours/ExerciceOpenAnswer'
-import ExerciceQCM from '@components/cours/ExerciceQCM'
-import ExerciceSprechen from '@components/cours/ExerciceSprechen'
-import ExerciceTraduction from '@components/cours/ExerciceTraduction'
-import Icon from '@components/ui/Icon'
-import { buttonClass, cardClass, cx, levelBadgeClass } from '@utils/ui'
 
-const OBJECTIVE_LABELS = {
-  communicatif: 'Objectif communicatif',
-  linguistique: 'Point linguistique',
-  culturel: 'Repere culturel',
-  cognitif: 'Competence cognitive',
+const LETTERS = ['A', 'B', 'C', 'D']
+
+function normalizeText(value) {
+  return String(value || '')
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/[^\p{L}\p{N}\s]/gu, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
 }
 
-const INFO_TABS = [
-  { key: 'grammar', label: 'Grammaire' },
-  { key: 'vocabulary', label: 'Vocabulaire' },
-  { key: 'culture', label: 'Culture' },
-  { key: 'comprehension', label: 'Comprehension' },
-  { key: 'tips', label: 'Astuces' },
-]
+function buildLessonSteps(phrases = [], exercises = []) {
+  const steps = []
+  const count = Math.max(phrases.length, exercises.length)
 
-const EXERCISE_COMPONENTS = {
-  qcm: ExerciceQCM,
-  fill: ExerciceFillBlank,
-  traduction: ExerciceTraduction,
-  match: ExerciceMatchPairs,
-  build: ExerciceBuildPhrase,
-  horen: ExerciceHoren,
-  sprechen: ExerciceSprechen,
-  open: ExerciceOpenAnswer,
-}
-
-function ExerciseRenderer({ exercise, onValide }) {
-  const Component = EXERCISE_COMPONENTS[exercise?.type] || ExerciceOpenAnswer
-  return <Component data={exercise} onValide={onValide} />
-}
-
-function InfoPanel({ tabKey, lesson }) {
-  if (tabKey === 'grammar') {
-    return (
-      <div className="grid gap-4 lg:grid-cols-2">
-        {lesson.grammarSections.map((item) => (
-          <article key={item.id} className={cx(cardClass.soft, 'p-5')}>
-            <h3 className="font-display text-2xl font-semibold tracking-tight text-brand-text">{item.title}</h3>
-            {item.body ? <p className="mt-3 text-sm leading-relaxed text-brand-brown sm:text-base">{item.body}</p> : null}
-            {item.bullets?.length ? (
-              <div className="mt-4 space-y-2 text-sm text-brand-brown">
-                {item.bullets.map((bullet) => (
-                  <div key={bullet} className="rounded-2xl bg-white/80 px-4 py-3">
-                    {bullet}
-                  </div>
-                ))}
-              </div>
-            ) : null}
-          </article>
-        ))}
-      </div>
-    )
+  for (let index = 0; index < count; index += 1) {
+    if (phrases[index]) {
+      steps.push({ type: 'phrase', id: `phrase-${phrases[index].id || index}`, data: phrases[index] })
+    }
+    if (exercises[index]) {
+      steps.push({ type: 'exercice', id: `exercise-${exercises[index].id || index}`, data: exercises[index] })
+    }
   }
 
-  if (tabKey === 'vocabulary') {
-    return (
-      <div className="grid gap-4 lg:grid-cols-2">
-        {lesson.vocabulary.map((item) => (
-          <article key={item.id} className={cx(cardClass.soft, 'p-5')}>
-            <p className="section-kicker">{item.type || 'Lexique'}</p>
-            <h3 className="mt-3 font-display text-2xl font-semibold tracking-tight text-brand-text">{item.de}</h3>
-            <p className="mt-2 text-base text-brand-brown">{item.fr}</p>
-            {item.phonetique ? <p className="mt-3 text-sm text-brand-brown/80">/{item.phonetique}/</p> : null}
-            {item.note ? <p className="mt-3 text-sm leading-relaxed text-brand-brown">{item.note}</p> : null}
-          </article>
-        ))}
-      </div>
-    )
+  steps.push({ type: 'complete', id: 'complete', data: null })
+  return steps
+}
+
+function isChoiceExercise(exercise) {
+  return exercise?.type === 'qcm'
+}
+
+function evaluateExercise(exercise, value) {
+  if (!exercise) return false
+
+  if (isChoiceExercise(exercise)) {
+    return value === exercise.reponse
   }
 
-  const items =
-    tabKey === 'culture'
-      ? lesson.cultureNotes
-      : tabKey === 'comprehension'
-        ? lesson.comprehensionChecks
-        : lesson.tipCards
+  const userAnswer = normalizeText(value)
+  if (!userAnswer) return false
 
+  const accepted = [
+    exercise.reponse,
+    ...(Array.isArray(exercise.accepte) ? exercise.accepte : []),
+    exercise.answer,
+  ]
+    .map(normalizeText)
+    .filter(Boolean)
+
+  if (accepted.includes(userAnswer)) return true
+
+  if (exercise.evaluationMode === 'keywords' && Array.isArray(exercise.keywords) && exercise.keywords.length) {
+    const matched = exercise.keywords.filter((keyword) => userAnswer.includes(normalizeText(keyword))).length
+    return matched / exercise.keywords.length >= Number(exercise.keywordThreshold || 0.6)
+  }
+
+  return false
+}
+
+function exercisePrompt(exercise) {
+  if (!exercise) return ''
+  return exercise.questionFr || exercise.questionDe || exercise.promptFr || exercise.promptDe || exercise.sourceFr || exercise.sourceDe || 'Choisis la bonne réponse.'
+}
+
+function exerciseChoices(exercise) {
+  if (!isChoiceExercise(exercise)) return []
+  return (exercise.options || []).slice(0, 4).map((option, index) => ({
+    id: `${exercise.id}-choice-${index}`,
+    label: option.fr || option.de || String(option),
+    value: index,
+  }))
+}
+
+function detailChips(phrase) {
+  const chips = Array.isArray(phrase?.notes) ? phrase.notes : []
+  return chips.slice(0, 6)
+}
+
+function usePhraseAudio() {
+  const audioRef = useRef(null)
+  const utteranceRef = useRef(null)
+  const [playing, setPlaying] = useState(false)
+
+  useEffect(() => () => {
+    if (audioRef.current) {
+      audioRef.current.pause()
+      audioRef.current = null
+    }
+    if (window.speechSynthesis && utteranceRef.current) {
+      window.speechSynthesis.cancel()
+    }
+  }, [])
+
+  const play = async (phrase) => {
+    if (!phrase) return
+
+    if (audioRef.current) {
+      audioRef.current.pause()
+      audioRef.current = null
+    }
+
+    if (window.speechSynthesis) {
+      window.speechSynthesis.cancel()
+    }
+
+    setPlaying(true)
+
+    if (phrase.audioUrl) {
+      const audio = new Audio(phrase.audioUrl)
+      audioRef.current = audio
+      audio.onended = () => setPlaying(false)
+      audio.onerror = () => setPlaying(false)
+      try {
+        await audio.play()
+        return
+      } catch {
+        audioRef.current = null
+      }
+    }
+
+    if (window.speechSynthesis) {
+      const utterance = new SpeechSynthesisUtterance(phrase.alemana || phrase.traductionDe || '')
+      utterance.lang = 'de-DE'
+      utterance.rate = 0.92
+      utterance.onend = () => setPlaying(false)
+      utterance.onerror = () => setPlaying(false)
+      utteranceRef.current = utterance
+      window.speechSynthesis.speak(utterance)
+      return
+    }
+
+    setPlaying(false)
+  }
+
+  return { play, playing }
+}
+
+function LessonTopBar({ lesson, streak, onQuit }) {
   return (
-    <div className="grid gap-4 lg:grid-cols-2">
-      {items.map((item) => (
-        <article key={item.id} className={cx(cardClass.soft, 'p-5')}>
-          <p className="section-kicker">{INFO_TABS.find((tab) => tab.key === tabKey)?.label}</p>
-          <h3 className="mt-3 font-display text-2xl font-semibold tracking-tight text-brand-text">{item.title}</h3>
-          <p className="mt-3 text-sm leading-relaxed text-brand-brown sm:text-base">{item.body}</p>
-        </article>
-      ))}
+    <div className="sticky top-0 z-50 flex h-[52px] items-center justify-between border-b border-[var(--g-light)] bg-white px-4">
+      <button type="button" className="border-none bg-transparent text-sm font-semibold text-[var(--gray-400)]" onClick={onQuit}>
+        ← Quitter
+      </button>
+      <span className="truncate px-4 text-center text-[13px] font-semibold text-[var(--g-dark)]">
+        {lesson.niveau}-{String(lesson.numero || '').padStart(3, '0')} · {lesson.titre}
+      </span>
+      <span className="text-[13px] text-[var(--g-mid)]">🔥 {streak}j</span>
     </div>
   )
 }
 
-function LessonHeroSection({ lesson, currentLessonState, nextLesson, nextLessonState, isComplete, t }) {
+function LessonProgressBar({ current, total }) {
+  const safeCurrent = Math.max(0, Math.min(current, total))
+  const pct = total <= 0 ? 0 : Math.round((safeCurrent / total) * 100)
+
   return (
-    <>
-      <section className={cx(cardClass.base, 'overflow-hidden p-4 sm:p-8')}>
-        <div className="grid gap-6 2xl:grid-cols-[minmax(0,1fr)_320px] xl:gap-8">
-          <div>
-            <span className={levelBadgeClass(lesson.niveau)}>
-              {lesson.niveau} · {lesson.id.toUpperCase()}
-            </span>
-            <h1 className="mt-4 font-display text-[clamp(2rem,1.5rem+2vw,3rem)] font-semibold tracking-tight text-brand-text">
-              {lesson.titre}
-            </h1>
-            <p className="mt-4 max-w-3xl text-base leading-relaxed text-brand-brown sm:text-lg">
-              {lesson.description}
-            </p>
-
-            <div className="mt-6 flex flex-wrap gap-3">
-              {lesson.module ? (
-                <span className="stat-chip">
-                  <Icon name="book" size={15} className="icon" />
-                  {lesson.module}
-                </span>
-              ) : null}
-              <span className="stat-chip">
-                <Icon name="clock" size={15} className="icon" />
-                {lesson.duree || 0} min
-              </span>
-              <span className="stat-chip">
-                <Icon name="translate" size={15} className="icon" />
-                {lesson.phrasesCount || 0} {t('Phrasen', 'phrases')}
-              </span>
-              <span className="stat-chip">
-                <Icon name="checkCircle" size={15} className="icon" />
-                {lesson.exercicesCount || 0} {t('Uebungen', 'exercices')}
-              </span>
-            </div>
-
-            {currentLessonState?.unlocked === false ? (
-              <div className="mt-6 rounded-[1.5rem] border border-amber-200 bg-amber-50 px-4 py-4 text-sm text-amber-700">
-                <strong>{t('Gesperrte Lektion', 'Lecon verrouillee')}:</strong> {currentLessonState.lockedReason}
-              </div>
-            ) : null}
-          </div>
-
-          <aside className={cx(cardClass.soft, 'p-5')}>
-            <p className="section-kicker">{t('Fortschritt', 'Progression')}</p>
-            <div className="mt-4 space-y-4">
-              <div className="rounded-[1.5rem] bg-white/80 p-4">
-                <p className="text-sm uppercase tracking-[0.2em] text-brand-brown">XP</p>
-                <p className="mt-2 font-display text-3xl font-semibold text-brand-text">{lesson.progression?.xp || 0}</p>
-              </div>
-              <div className="rounded-[1.5rem] bg-white/80 p-4">
-                <p className="text-sm uppercase tracking-[0.2em] text-brand-brown">{t('Status', 'Statut')}</p>
-                <p className="mt-2 font-display text-2xl font-semibold text-brand-text">
-                  {isComplete ? t('Bereits abgeschlossen', 'Deja terminee') : t('In Arbeit', 'En cours')}
-                </p>
-              </div>
-            </div>
-
-            {lesson.progression?.badges?.length ? (
-              <div className="mt-5">
-                <p className="text-sm uppercase tracking-[0.2em] text-brand-brown">{t('Badges', 'Badges')}</p>
-                <div className="mt-3 flex flex-wrap gap-2">
-                  {lesson.progression.badges.map((badge) => (
-                    <span key={badge} className="rounded-full border border-brand-border/80 bg-white/80 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-brand-brown">
-                      {badge}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            ) : null}
-
-            {nextLesson ? (
-              <div className="mt-6 rounded-[1.5rem] border border-brand-border/80 bg-white/80 p-4">
-                <p className="text-sm uppercase tracking-[0.2em] text-brand-brown">{t('Naechste Lektion', 'Prochaine lecon')}</p>
-                <h2 className="mt-2 font-display text-xl font-semibold tracking-tight text-brand-text">{nextLesson.titre}</h2>
-                <p className="mt-2 text-sm leading-relaxed text-brand-brown">
-                  {lesson.progression?.nextPreview || nextLesson.description}
-                </p>
-                {nextLessonState?.unlocked ? (
-                  <Link className={cx(buttonClass.outline, 'mt-4 w-full justify-center')} to={`/cours/${nextLesson.niveau}/lecon/${nextLesson.id}`}>
-                    <Icon name="arrowRight" size={18} className="icon" />
-                    {t('Weiter', 'Suivante')}
-                  </Link>
-                ) : (
-                  <div className={cx(buttonClass.ghost, 'mt-4 w-full cursor-not-allowed justify-center')}>
-                    <Icon name="lock" size={18} className="icon" />
-                    {nextLessonState?.lockedReason || t('Noch blockiert', 'Encore verrouillee')}
-                  </div>
-                )}
-              </div>
-            ) : null}
-          </aside>
-        </div>
-      </section>
-
-      <section className="grid gap-4 lg:grid-cols-2">
-        {Object.entries(lesson.objectives || {}).map(([key, value]) => (
-          <article key={key} className={cx(cardClass.soft, 'p-5')}>
-            <p className="section-kicker">{OBJECTIVE_LABELS[key] || key}</p>
-            <p className="mt-3 text-sm leading-relaxed text-brand-brown sm:text-base">{value}</p>
-          </article>
-        ))}
-      </section>
-    </>
+    <div className="flex items-center gap-2 px-4 py-3">
+      <div className="h-2 flex-1 overflow-hidden rounded bg-[var(--g-light)]">
+        <div className="h-full rounded bg-[var(--g-bright)] transition-[width] duration-300 ease-out" style={{ width: `${pct}%` }} />
+      </div>
+      <span className="min-w-8 text-right text-xs text-[var(--gray-400)]">{safeCurrent}/{total}</span>
+    </div>
   )
 }
 
-function LessonPhrasesSection({
-  lesson,
-  phrases,
-  activePhraseIndex,
-  setActivePhraseIndex,
-  currentPhrase,
-  t,
-}) {
-  return (
-      <section className="grid gap-4 2xl:grid-cols-[minmax(0,1fr)_320px]">
-        <div className={cx(cardClass.base, 'p-4 sm:p-8')}>
-        <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-          <div>
-            <p className="section-kicker">{t('Dialog', 'Phrases')}</p>
-            <h2 className="mt-2 font-display text-[clamp(1.8rem,1.45rem+1.2vw,2.3rem)] font-semibold tracking-tight text-brand-text">
-              {t('Phrase fuer Phrase', 'Phrase par phrase')}
-            </h2>
-          </div>
+function PhraseCard({ phrase, onNext, onPlayAudio, audioPlaying }) {
+  const [showDetails, setShowDetails] = useState(false)
+  const chips = detailChips(phrase)
 
-          {phrases.length > 1 ? (
-            <div className="flex flex-wrap items-center gap-3">
-              <button
-                className={cx(buttonClass.ghost, 'w-full justify-center sm:w-auto')}
-                disabled={activePhraseIndex === 0}
-                onClick={() => setActivePhraseIndex((value) => Math.max(0, value - 1))}
-                type="button"
-              >
-                <Icon name="arrowLeft" size={18} className="icon" />
-                {t('Zurueck', 'Avant')}
-              </button>
-              <span className="text-sm font-semibold text-brand-brown">
-                {activePhraseIndex + 1}/{phrases.length}
-              </span>
-              <button
-                className={cx(buttonClass.ghost, 'w-full justify-center sm:w-auto')}
-                disabled={activePhraseIndex === phrases.length - 1}
-                onClick={() => setActivePhraseIndex((value) => Math.min(phrases.length - 1, value + 1))}
-                type="button"
-              >
-                {t('Weiter', 'Apres')}
-                <Icon name="arrowRight" size={18} className="icon" />
-              </button>
+  useEffect(() => {
+    setShowDetails(false)
+  }, [phrase?.id])
+
+  return (
+    <div className="rounded-2xl border border-[var(--g-light)] bg-white p-6 shadow-[0_2px_12px_rgba(0,80,50,0.06)]">
+      <div className="space-y-5">
+        <div>
+          <p className="text-center text-[clamp(1.6rem,5vw,2.2rem)] font-bold leading-tight text-[var(--g-dark)]">
+            {phrase.alemana || phrase.traductionDe}
+          </p>
+          <p className="mt-3 text-center text-[1.1rem] text-[var(--gray-400)]">{phrase.frantsay}</p>
+        </div>
+
+        <button
+          type="button"
+          className="mx-auto block min-h-12 rounded-full border border-[var(--g-light)] bg-[var(--g-pale)] px-6 py-3 text-[15px] font-semibold text-[var(--g-mid)] transition hover:border-[var(--g-bright)] hover:bg-[var(--g-light)]"
+          onClick={() => onPlayAudio(phrase)}
+        >
+          {audioPlaying ? '🔊 Lecture…' : '🔊 Écouter'}
+        </button>
+      </div>
+
+      <button
+        type="button"
+        className="mt-4 w-full bg-transparent px-2 py-2 text-center text-xs text-[var(--gray-400)] underline decoration-dotted underline-offset-4"
+        onClick={() => setShowDetails((value) => !value)}
+      >
+        {showDetails ? '▲ Masquer les détails' : '▼ Voir la phonétique et le contexte'}
+      </button>
+
+      {showDetails ? (
+        <div className="mt-3 space-y-3 rounded-xl bg-[var(--g-pale)] p-4 text-sm text-[var(--gray-600)]">
+          {phrase.phonetique ? <p className="font-medium text-[var(--g-dark)]">/{phrase.phonetique}/</p> : null}
+          {phrase.registre ? <span className="inline-flex rounded-full bg-[var(--g-light)] px-3 py-1 text-xs font-semibold text-[var(--g-dark)]">Registre : {phrase.registre}</span> : null}
+          {phrase.intonation ? <p>🎵 {phrase.intonation}</p> : null}
+          {chips.length ? (
+            <div className="flex flex-wrap gap-2">
+              {chips.map((chip) => (
+                <span key={chip} className="rounded-full bg-white px-3 py-1 text-xs text-[var(--gray-600)]">
+                  {chip}
+                </span>
+              ))}
             </div>
           ) : null}
         </div>
+      ) : null}
 
-        {currentPhrase ? (
-          <div className="mt-6 rounded-[1.8rem] border border-brand-border/80 bg-brand-sky/45 p-5 sm:p-6">
-            <div className="flex flex-col gap-5 lg:flex-row lg:items-start lg:justify-between">
-              <div className="min-w-0">
-                <p className="text-xs font-semibold uppercase tracking-[0.24em] text-brand-blue">Deutsch</p>
-                <p className="mt-3 font-display text-2xl font-semibold tracking-tight text-brand-text sm:text-3xl">
-                  {currentPhrase.alemana}
-                </p>
-                <p className="mt-5 text-xs font-semibold uppercase tracking-[0.24em] text-brand-blue">Francais</p>
-                <p className="mt-3 text-base leading-relaxed text-brand-brown sm:text-lg">{currentPhrase.frantsay}</p>
-                {currentPhrase.phonetique ? (
-                  <p className="mt-4 text-sm text-brand-brown/80">/{currentPhrase.phonetique}/</p>
-                ) : null}
-              </div>
-
-              <div className="flex shrink-0 flex-col gap-3">
-                <AudioPlayer texte={currentPhrase.audio || currentPhrase.alemana} langue="de-DE" />
-                {currentPhrase.audioUrl ? (
-                  <span className="rounded-full border border-brand-border/80 bg-white/80 px-3 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-brand-brown">
-                    {currentPhrase.audioUrl}
-                  </span>
-                ) : null}
-              </div>
-            </div>
-
-            {(currentPhrase.registre || currentPhrase.intonation) ? (
-              <div className="mt-6 grid gap-4 lg:grid-cols-2">
-                {currentPhrase.registre ? (
-                  <div className="rounded-[1.4rem] bg-white/80 p-4 text-sm text-brand-brown">
-                    <strong className="text-brand-text">Registre:</strong> {currentPhrase.registre}
-                  </div>
-                ) : null}
-                {currentPhrase.intonation ? (
-                  <div className="rounded-[1.4rem] bg-white/80 p-4 text-sm text-brand-brown">
-                    <strong className="text-brand-text">Intonation:</strong> {currentPhrase.intonation}
-                  </div>
-                ) : null}
-              </div>
-            ) : null}
-
-            {currentPhrase.notes?.length ? (
-              <div className="mt-5 space-y-2 text-sm text-brand-brown">
-                {currentPhrase.notes.map((note) => (
-                  <div key={note} className="rounded-[1.4rem] bg-white/80 px-4 py-3">
-                    {note}
-                  </div>
-                ))}
-              </div>
-            ) : null}
-          </div>
-        ) : (
-          <div className="mt-6 rounded-[1.6rem] border border-dashed border-brand-border/80 px-5 py-10 text-center text-brand-brown">
-            {t('Keine Dialogkarte fuer diese Lektion.', 'Aucune phrase dialogue pour cette lecon.')}
-          </div>
-        )}
-      </div>
-
-      <aside className="space-y-4">
-        <article className={cx(cardClass.soft, 'p-5')}>
-          <p className="section-kicker">{t('Situation', 'Situation')}</p>
-          <div className="mt-4 space-y-3 text-sm text-brand-brown">
-            {lesson.intro?.contexte ? <p><strong className="text-brand-text">Contexte:</strong> {lesson.intro.contexte}</p> : null}
-            {lesson.intro?.lieu ? <p><strong className="text-brand-text">Lieu:</strong> {lesson.intro.lieu}</p> : null}
-            {lesson.intro?.type ? <p><strong className="text-brand-text">Type:</strong> {lesson.intro.type}</p> : null}
-            {lesson.intro?.registre ? <p><strong className="text-brand-text">Registre:</strong> {lesson.intro.registre}</p> : null}
-          </div>
-        </article>
-
-        {lesson.prerequisites?.length ? (
-          <article className={cx(cardClass.soft, 'p-5')}>
-            <p className="section-kicker">{t('Prerequis', 'Prerequis')}</p>
-            <div className="mt-4 flex flex-wrap gap-2">
-              {lesson.prerequisites.map((item) => {
-                const prerequisiteLesson = findLessonById(item)
-                if (!prerequisiteLesson) {
-                  return (
-                    <span key={item} className="rounded-full border border-brand-border/80 bg-white/80 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-brand-brown">
-                      {item.toUpperCase()}
-                    </span>
-                  )
-                }
-
-                return (
-                  <Link
-                    key={item}
-                    className="rounded-full border border-brand-border/80 bg-white/80 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-brand-brown transition hover:border-brand-blue/40 hover:bg-brand-sky/60"
-                    to={`/cours/${prerequisiteLesson.niveau}/lecon/${prerequisiteLesson.id}`}
-                  >
-                    {item.toUpperCase()}
-                  </Link>
-                )
-              })}
-            </div>
-          </article>
-        ) : null}
-
-        {lesson.skills?.length ? (
-          <article className={cx(cardClass.soft, 'p-5')}>
-            <p className="section-kicker">{t('Competences', 'Competences')}</p>
-            <div className="mt-4 flex flex-wrap gap-2">
-              {lesson.skills.map((item) => (
-                <span key={item} className="rounded-full border border-brand-border/80 bg-white/80 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-brand-brown">
-                  {item}
-                </span>
-              ))}
-            </div>
-          </article>
-        ) : null}
-
-        {lesson.crossThemes?.length ? (
-          <article className={cx(cardClass.soft, 'p-5')}>
-            <p className="section-kicker">{t('Themes', 'Themes')}</p>
-            <div className="mt-4 flex flex-wrap gap-2">
-              {lesson.crossThemes.map((item) => (
-                <span key={item} className="rounded-full border border-brand-border/80 bg-white/80 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-brand-brown">
-                  {item}
-                </span>
-              ))}
-            </div>
-          </article>
-        ) : null}
-      </aside>
-    </section>
+      <button
+        type="button"
+        className="mt-6 min-h-12 w-full rounded-xl border-none bg-[var(--g-mid)] px-4 py-3 text-base font-semibold text-white transition hover:bg-[var(--g-dark)] active:scale-[0.98]"
+        onClick={onNext}
+      >
+        Continuer →
+      </button>
+    </div>
   )
 }
 
-function LessonTabsSection({ availableTabs, activeTab, setActiveTab, lesson, t }) {
-  if (!availableTabs.length) return null
+function ExerciceCard({ exercice, onCorrect, onNext }) {
+  const [selected, setSelected] = useState(null)
+  const [inputValue, setInputValue] = useState('')
+  const [answered, setAnswered] = useState(false)
+  const [correct, setCorrect] = useState(false)
+
+  useEffect(() => {
+    setSelected(null)
+    setInputValue('')
+    setAnswered(false)
+    setCorrect(false)
+  }, [exercice?.id])
+
+  const isChoice = isChoiceExercise(exercice)
+  const choices = exerciseChoices(exercice)
+  const question = exercisePrompt(exercice)
+
+  const submitAnswer = (value) => {
+    if (answered) return
+    const ok = evaluateExercise(exercice, value)
+    setAnswered(true)
+    setCorrect(ok)
+    if (isChoice) {
+      setSelected(value)
+    } else {
+      setInputValue(String(value || ''))
+    }
+    if (ok) onCorrect()
+  }
 
   return (
-      <section className={cx(cardClass.base, 'p-4 sm:p-8')}>
-      <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
-        <div>
-          <p className="section-kicker">{t('Erklaerungen', 'Explications')}</p>
-            <h2 className="mt-2 font-display text-[clamp(1.8rem,1.45rem+1.2vw,2.3rem)] font-semibold tracking-tight text-brand-text">
-            {t('Inhalte der Lektion', 'Contenu pedagogique')}
-          </h2>
-        </div>
+    <div className="rounded-2xl border border-[var(--g-light)] bg-white p-6 shadow-[0_2px_12px_rgba(0,80,50,0.06)]">
+      <p className="text-[clamp(1rem,3.5vw,1.2rem)] font-semibold leading-relaxed text-[var(--g-dark)]">{question}</p>
 
-          <div className="flex gap-3 overflow-x-auto pb-1 lg:flex-wrap lg:overflow-visible lg:pb-0">
-          {availableTabs.map((tab) => (
-            <button
-              key={tab.key}
-              className={cx(
-                 'shrink-0 rounded-full border px-4 py-2 text-sm font-semibold transition',
-                activeTab === tab.key
-                  ? 'border-brand-blue bg-brand-blue text-white shadow-soft'
-                  : 'border-brand-border bg-white/80 text-brand-text hover:border-brand-blue/40 hover:bg-brand-sky/60'
-              )}
-              onClick={() => setActiveTab(tab.key)}
-              type="button"
-            >
-              {tab.label}
-            </button>
-          ))}
-        </div>
-      </div>
-
-      <div className="mt-6">
-        <InfoPanel tabKey={activeTab} lesson={lesson} />
-      </div>
-    </section>
-  )
-}
-
-function LessonExercisesSection({
-  lesson,
-  exercises,
-  exerciseIndex,
-  currentExercise,
-  currentResult,
-  answeredCount,
-  correctCount,
-  score,
-  handleExerciseValidated,
-  handleExerciseContinue,
-  handleExerciseRestart,
-  nextLesson,
-  nextLessonState,
-  t,
-}) {
-  return (
-      <section className={cx(cardClass.base, 'p-4 sm:p-8')}>
-      <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
-        <div>
-          <p className="section-kicker">{t('Uebungen', 'Exercices')}</p>
-            <h2 className="mt-2 font-display text-[clamp(1.8rem,1.45rem+1.2vw,2.3rem)] font-semibold tracking-tight text-brand-text">
-            {t('Normalisierte Aktivitaeten', 'Activites normalisees')}
-          </h2>
-        </div>
-
-        <div className="w-full max-w-full sm:max-w-xs">
-          <div className="progress-track">
-            <div
-              className="progress-fill"
-              style={{ width: `${exercises.length ? Math.round((answeredCount / exercises.length) * 100) : 0}%` }}
-            />
-          </div>
-          <div className="mt-2 flex items-center justify-between text-sm text-brand-brown">
-            <span>{answeredCount}/{exercises.length}</span>
-            <span>{score}%</span>
-          </div>
-        </div>
-      </div>
-
-      {currentExercise ? (
-        <div className="mt-6 space-y-5">
-          <div className={cx(cardClass.soft, 'p-4')}>
-            <div className="flex flex-wrap items-center gap-3 text-sm text-brand-brown">
-              <span className="rounded-full border border-brand-border/80 bg-white/80 px-3 py-1 font-semibold uppercase tracking-[0.18em]">
-                {t('Schritt', 'Etape')} {exerciseIndex + 1}
-              </span>
-              <span className="rounded-full border border-brand-border/80 bg-white/80 px-3 py-1 font-semibold uppercase tracking-[0.18em]">
-                {currentExercise.type}
-              </span>
-            </div>
-          </div>
-
-          {!currentResult ? (
-            <ExerciseRenderer exercise={currentExercise} onValide={handleExerciseValidated} />
-          ) : (
-            <div className={cx(cardClass.soft, 'p-6')}>
-              <p className="section-kicker">{t('Antwort gespeichert', 'Reponse enregistree')}</p>
-              <h3 className="mt-3 font-display text-2xl font-semibold tracking-tight text-brand-text">
-                {currentResult.correct ? t('Correct', 'Correct') : t('A revoir', 'A revoir')}
-              </h3>
-              <div className="mt-4 space-y-3 text-sm text-brand-brown">
-                {currentResult.payload?.userAnswer ? (
-                  <p><strong className="text-brand-text">{t('Deine Antwort', 'Ta reponse')}:</strong> {currentResult.payload.userAnswer}</p>
-                ) : null}
-                {currentResult.payload?.expectedAnswer ? (
-                  <p><strong className="text-brand-text">{t('Erwartet', 'Attendu')}:</strong> {currentResult.payload.expectedAnswer}</p>
-                ) : null}
-              </div>
-
-              <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-                {exerciseIndex < exercises.length - 1 ? (
-                  <button className={buttonClass.primary} onClick={handleExerciseContinue} type="button">
-                    <Icon name="arrowRight" size={18} className="icon" />
-                    {t('Weiter zur naechsten Frage', 'Question suivante')}
-                  </button>
-                ) : (
-                  <button className={buttonClass.primary} onClick={handleExerciseContinue} type="button">
-                    <Icon name="checkCircle" size={18} className="icon" />
-                    {t('Zusammenfassung sehen', 'Voir le bilan')}
-                  </button>
-                )}
-              </div>
-            </div>
-          )}
+      {isChoice ? (
+        <div className="mt-5 grid gap-3">
+          {choices.map((choice, index) => {
+            const isCorrectChoice = answered && choice.value === exercice.reponse
+            const isWrongChoice = answered && choice.value === selected && !correct
+            return (
+              <button
+                key={choice.id}
+                type="button"
+                disabled={answered}
+                onClick={() => submitAnswer(choice.value)}
+                className={`flex min-h-12 w-full items-center gap-3 rounded-xl border px-4 py-3 text-left text-sm transition ${
+                  isCorrectChoice
+                    ? 'animate-[pulse-green_0.4s_ease] border-[var(--g-bright)] bg-[var(--g-pale)] text-[var(--g-dark)]'
+                    : isWrongChoice
+                      ? 'animate-[shake_0.3s_ease] border-red-300 bg-red-50 text-red-700'
+                      : 'border-[var(--gray-200)] bg-white text-[var(--near-black)] hover:border-[var(--g-bright)] hover:bg-[var(--g-pale)]'
+                }`}
+              >
+                <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-[var(--g-light)] text-xs font-bold text-[var(--g-dark)]">
+                  {LETTERS[index]}
+                </span>
+                <span>{choice.label}</span>
+              </button>
+            )
+          })}
         </div>
       ) : (
-        <div className="mt-6 rounded-[1.8rem] border border-brand-border/80 bg-brand-sky/45 p-6 sm:p-8">
-          <p className="section-kicker">{t('Bilan', 'Bilan')}</p>
-          <h3 className="mt-3 font-display text-3xl font-semibold tracking-tight text-brand-text">
-            {t('Lektion abgeschlossen', 'Lecon terminee')}
-          </h3>
-          <p className="mt-4 max-w-2xl text-base leading-relaxed text-brand-brown">
-            {t(
-              'Die Uebungen wurden ueber die lokale Normalisierung geladen und dein Ergebnis wurde in der lokalen Progression gespeichert.',
-              'Les exercices ont ete charges via la normalisation locale et ton resultat a ete enregistre dans la progression locale.'
-            )}
-          </p>
-
-          <div className="mt-6 grid gap-4 sm:grid-cols-3">
-            <div className={cx(cardClass.soft, 'p-4')}>
-              <p className="text-sm uppercase tracking-[0.2em] text-brand-brown">Score</p>
-              <p className="mt-2 font-display text-3xl font-semibold text-brand-text">{score}%</p>
-            </div>
-            <div className={cx(cardClass.soft, 'p-4')}>
-              <p className="text-sm uppercase tracking-[0.2em] text-brand-brown">{t('Richtig', 'Correctes')}</p>
-              <p className="mt-2 font-display text-3xl font-semibold text-brand-text">{correctCount}</p>
-            </div>
-            <div className={cx(cardClass.soft, 'p-4')}>
-              <p className="text-sm uppercase tracking-[0.2em] text-brand-brown">XP</p>
-              <p className="mt-2 font-display text-3xl font-semibold text-brand-text">{lesson.progression?.xp || 0}</p>
-            </div>
-          </div>
-
-          <div className="mt-6 flex flex-wrap gap-3">
-            <button className={buttonClass.outline} onClick={handleExerciseRestart} type="button">
-              <Icon name="refresh" size={18} className="icon" />
-              {t('Uebungen neu starten', 'Recommencer les exercices')}
-            </button>
-
-            {nextLesson && nextLessonState?.unlocked ? (
-              <Link className={buttonClass.primary} to={`/cours/${nextLesson.niveau}/lecon/${nextLesson.id}`}>
-                <Icon name="arrowRight" size={18} className="icon" />
-                {t('Zur naechsten Lektion', 'Vers la lecon suivante')}
-              </Link>
-            ) : (
-              <Link className={buttonClass.primary} to={`/cours/${lesson.niveau}`}>
-                <Icon name="book" size={18} className="icon" />
-                {t('Zurueck zur Liste', 'Retour a la liste')}
-              </Link>
-            )}
-          </div>
+        <div className="mt-5 space-y-3">
+          <input
+            value={inputValue}
+            onChange={(event) => setInputValue(event.target.value)}
+            disabled={answered}
+            placeholder="Écris ta réponse"
+            className="min-h-12 w-full rounded-xl border border-[var(--gray-200)] bg-white px-4 py-3 text-sm text-[var(--near-black)] outline-none focus:border-[var(--g-bright)]"
+          />
+          <button
+            type="button"
+            className="min-h-12 w-full rounded-xl border border-[var(--g-light)] bg-[var(--g-pale)] px-4 py-3 text-sm font-semibold text-[var(--g-dark)] transition hover:bg-[var(--g-light)]"
+            onClick={() => submitAnswer(inputValue)}
+            disabled={answered || !inputValue.trim()}
+          >
+            Valider
+          </button>
         </div>
       )}
-    </section>
+
+      {answered ? (
+        <div className={`mt-4 rounded-lg border-l-4 px-4 py-3 text-sm ${correct ? 'border-[var(--g-bright)] bg-[var(--g-pale)] text-[var(--g-dark)]' : 'border-red-300 bg-red-50 text-red-700'}`}>
+          {correct ? (
+            <>✅ <strong>Correct !</strong> +10 XP</>
+          ) : (
+            <>
+              ❌ <strong>Pas tout à fait.</strong>{' '}
+              {isChoice ? <>La bonne réponse est : <em>{choices[exercice.reponse]?.label}</em></> : <>Réponse attendue : <em>{exercice.reponse || exercice.answer}</em></>}
+            </>
+          )}
+        </div>
+      ) : null}
+
+      {answered && !correct && exercice.explication ? (
+        <div className="mt-3 rounded-lg bg-[var(--gray-100)] p-3 text-sm text-[var(--gray-600)]">
+          <p>{exercice.explication}</p>
+        </div>
+      ) : null}
+
+      {answered ? (
+        <button
+          type="button"
+          className="mt-5 min-h-12 w-full rounded-xl border-none bg-[var(--g-mid)] px-4 py-3 text-base font-semibold text-white transition hover:bg-[var(--g-dark)]"
+          onClick={onNext}
+        >
+          {correct ? 'Super, continuer →' : 'Compris, continuer →'}
+        </button>
+      ) : null}
+    </div>
   )
 }
 
-function LessonJourneySection({ lesson, levelLessons, unlockMap, t }) {
-  if (levelLessons.length <= 1) return null
-
+function LessonCompleteScreen({ lesson, xpGained, newBadge, onNextLesson, onBackDashboard }) {
   return (
-    <section className={cx(cardClass.base, 'p-6 sm:p-8')}>
-      <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
-        <div>
-          <p className="section-kicker">{lesson.niveau}</p>
-            <h2 className="mt-2 font-display text-[clamp(1.8rem,1.45rem+1.2vw,2.3rem)] font-semibold tracking-tight text-brand-text">
-            {t('Parcours du niveau', 'Parcours du niveau')}
-          </h2>
-        </div>
-        <Link className={buttonClass.outline} to={`/cours/${lesson.niveau}`}>
-          <Icon name="arrowLeft" size={18} className="icon" />
-          {t('Voir toutes les lecons', 'Voir toutes les lecons')}
-        </Link>
+    <div className="rounded-2xl border border-[var(--g-light)] bg-white p-6 text-center shadow-[0_2px_12px_rgba(0,80,50,0.06)]">
+      <div className="animate-[bounceIn_0.5s_ease] text-6xl">🎉</div>
+      <h2 className="mt-4 text-[1.8rem] font-bold text-[var(--g-dark)]">Leçon terminée !</h2>
+      <p className="mt-2 text-base text-[var(--gray-600)]">{lesson.titre}</p>
+
+      <div className="mt-5 inline-block rounded-xl bg-[var(--g-pale)] px-8 py-4 text-[2rem] font-extrabold text-[var(--g-bright)]">
+        +{xpGained} XP
       </div>
 
-        <div className="mt-6 grid gap-3 lg:grid-cols-2">
-        {levelLessons.map((item) => {
-          const state = unlockMap.get(item.id)
-          const active = item.id === lesson.id
-          return (
-            <article
-              key={item.id}
-              className={cx(
-                cardClass.soft,
-                'p-4',
-                active && 'border-brand-blue/40 bg-brand-sky/60'
-              )}
-            >
-              <div className="flex items-start justify-between gap-3">
-                <div className="min-w-0">
-                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-blue">{item.id.toUpperCase()}</p>
-                  <h3 className="mt-2 font-display text-xl font-semibold tracking-tight text-brand-text">{item.titre}</h3>
-                </div>
-                {active ? (
-                  <span className="rounded-full border border-brand-blue/30 bg-white/80 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-brand-blue">
-                    {t('Aktuell', 'Actuelle')}
-                  </span>
-                ) : state?.unlocked ? (
-                  <Link className={buttonClass.outline} to={`/cours/${item.niveau}/lecon/${item.id}`}>
-                    {t('Oeffnen', 'Ouvrir')}
-                  </Link>
-                ) : (
-                  <span className="rounded-full border border-amber-200 bg-amber-50 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-amber-700">
-                    {t('Gesperrt', 'Bloquee')}
-                  </span>
-                )}
-              </div>
-            </article>
-          )
-        })}
-      </div>
-    </section>
+      {newBadge ? (
+        <div className="mt-4 rounded-xl border border-[var(--g-light)] bg-[var(--g-off-white)] px-4 py-3 text-sm text-[var(--g-dark)]">
+          🏆 Nouveau badge : <strong>{newBadge}</strong>
+        </div>
+      ) : null}
+
+      <button
+        type="button"
+        className="mt-6 min-h-12 w-full rounded-[14px] border-none bg-[var(--g-mid)] px-4 py-4 text-base font-semibold text-white transition hover:bg-[var(--g-dark)]"
+        onClick={onNextLesson}
+      >
+        {lesson.nextTitle ? `Leçon suivante : ${lesson.nextTitle} →` : 'Retour aux leçons →'}
+      </button>
+
+      <button
+        type="button"
+        className="mt-3 border-none bg-transparent text-sm text-[var(--gray-400)]"
+        onClick={onBackDashboard}
+      >
+        ← Retour au tableau de bord
+      </button>
+    </div>
   )
 }
 
 function Lecon() {
-  const { niveau: routeLevel, leconId } = useParams()
   const navigate = useNavigate()
-  const { t } = useLang()
-  const { progression, marquerComplete, estComplete } = useProgression()
-  const { addXp } = useGamification()
-
+  const { niveau: routeLevel, leconId } = useParams()
   const normalizedLevel = normalizeLevel(routeLevel)
+  const { progression, marquerComplete, estComplete } = useProgression()
+  const { data: gamification, addXp } = useGamification()
+
   const lesson = findLessonById(leconId, normalizedLevel)
-  const levelLessons = listLevelLessons(lesson?.niveau || normalizedLevel)
   const unlockMap = useMemo(
     () => buildLevelUnlockMap(lesson?.niveau || normalizedLevel, progression),
     [lesson?.niveau, normalizedLevel, progression]
   )
-  const nextLesson = lesson ? findNextLesson(lesson) : null
-  const nextLessonState = useMemo(() => {
-    if (!nextLesson) return null
-    if (nextLesson.niveau === lesson?.niveau) return unlockMap.get(nextLesson.id)
-    return buildLevelUnlockMap(nextLesson.niveau, progression).get(nextLesson.id)
-  }, [lesson?.niveau, nextLesson, progression, unlockMap])
-
-  const [activePhraseIndex, setActivePhraseIndex] = useState(0)
-  const [activeTab, setActiveTab] = useState('grammar')
-  const [exerciseIndex, setExerciseIndex] = useState(0)
-  const [results, setResults] = useState({})
-
-  const completionTriggeredRef = useRef(false)
-  const xpAwardedRef = useRef(false)
-  const alreadyCompleteRef = useRef(false)
-
-  const phrases = lesson?.phrases || []
-  const exercises = lesson?.exercices || []
-  const currentPhrase = phrases[activePhraseIndex] || null
-  const currentExercise = exercises[exerciseIndex] || null
-  const currentResult = currentExercise ? results[currentExercise.id] : null
-  const answeredCount = Object.keys(results).length
-  const correctCount = Object.values(results).filter((item) => item.correct).length
-  const score = exercises.length ? Math.round((correctCount / exercises.length) * 100) : 100
-  const lessonId = lesson?.id || null
-  const currentLessonState = lesson ? unlockMap.get(lesson.id) : null
-  const isComplete = useMemo(() => {
-    if (!lessonId) return false
-    return estComplete(lessonId)
-  }, [estComplete, lessonId])
-
-  const availableTabs = INFO_TABS.filter((tab) => {
-    if (!lesson) return false
-    if (tab.key === 'grammar') return lesson.grammarSections?.length
-    if (tab.key === 'vocabulary') return lesson.vocabulary?.length
-    if (tab.key === 'culture') return lesson.cultureNotes?.length
-    if (tab.key === 'comprehension') return lesson.comprehensionChecks?.length
-    return lesson.tipCards?.length
-  })
-  const defaultInfoTab = availableTabs[0]?.key || 'grammar'
+  const nextLesson = useMemo(() => (lesson ? findNextLesson(lesson) : null), [lesson])
+  const currentState = lesson ? unlockMap.get(lesson.id) : null
+  const steps = useMemo(() => buildLessonSteps(lesson?.phrases || [], lesson?.exercices || []), [lesson])
+  const displayTotal = Math.max(steps.length - 1, 1)
+  const [currentStep, setCurrentStep] = useState(0)
+  const [xpEarned, setXpEarned] = useState(0)
+  const completionRef = useRef(false)
+  const awardedRef = useRef(false)
+  const { play, playing } = usePhraseAudio()
 
   useEffect(() => {
-    if (!lessonId) return
-    setActivePhraseIndex(0)
-    setExerciseIndex(0)
-    setResults({})
-    setActiveTab(defaultInfoTab)
-    completionTriggeredRef.current = false
-    xpAwardedRef.current = false
-    alreadyCompleteRef.current = isComplete
-  }, [defaultInfoTab, isComplete, lessonId])
+    setCurrentStep(0)
+    setXpEarned(0)
+    completionRef.current = false
+    awardedRef.current = false
+  }, [lesson?.id])
 
   useEffect(() => {
-    if (!lesson || completionTriggeredRef.current) return
-    if (!exercises.length || answeredCount !== exercises.length) return
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }, [currentStep])
 
-    completionTriggeredRef.current = true
+  useEffect(() => {
+    const step = steps[currentStep]
+    if (!lesson || step?.type !== 'complete' || completionRef.current) return
+
+    completionRef.current = true
 
     ;(async () => {
-      await marquerComplete(lesson.id, score)
-      if (!alreadyCompleteRef.current && lesson.progression?.xp && !xpAwardedRef.current) {
-        xpAwardedRef.current = true
+      const completedBefore = estComplete(lesson.id)
+      await marquerComplete(lesson.id, 100)
+      if (!completedBefore && lesson.progression?.xp && !awardedRef.current) {
+        awardedRef.current = true
         try {
           await addXp(lesson.progression.xp, 'lesson_complete')
         } catch {
-          // Keep local completion even if remote XP sync fails.
+          // local completion remains the source of truth
         }
       }
     })()
-  }, [addXp, answeredCount, exercises.length, lesson, marquerComplete, score])
-
-  const handleExerciseValidated = (correct, payload) => {
-    if (!currentExercise) return
-    setResults((prev) => {
-      if (prev[currentExercise.id]) return prev
-      return {
-        ...prev,
-        [currentExercise.id]: {
-          correct,
-          payload,
-        },
-      }
-    })
-  }
-
-  const handleExerciseContinue = () => {
-    if (!currentExercise) return
-    setExerciseIndex((value) => Math.min(value + 1, exercises.length))
-  }
-
-  const handleExerciseRestart = () => {
-    setExerciseIndex(0)
-    setResults({})
-    completionTriggeredRef.current = false
-    xpAwardedRef.current = false
-    alreadyCompleteRef.current = lesson ? estComplete(lesson.id) : false
-  }
+  }, [addXp, currentStep, estComplete, lesson, marquerComplete, steps])
 
   if (!lesson) {
     return (
-      <div className={cx(cardClass.base, 'p-8 text-center')}>
-        <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-brand-sky text-brand-blue">
-          <Icon name="warning" size={28} className="icon" />
+      <div className="mx-auto flex min-h-screen w-full max-w-[520px] flex-col justify-center px-4 py-8">
+        <div className="rounded-2xl border border-[var(--g-light)] bg-white p-6 text-center shadow-[0_2px_12px_rgba(0,80,50,0.06)]">
+          <p className="text-lg font-semibold text-[var(--g-dark)]">Leçon introuvable.</p>
+          <button
+            type="button"
+            onClick={() => navigate('/cours')}
+            className="mt-5 min-h-12 w-full rounded-xl bg-[var(--g-mid)] px-4 py-3 font-semibold text-white"
+          >
+            Retour aux cours
+          </button>
         </div>
-        <h1 className="mt-5 font-display text-3xl font-semibold tracking-tight text-brand-text">
-          {t('Lektion nicht gefunden', 'Lecon introuvable')}
-        </h1>
-        <p className="mt-3 text-brand-brown">
-          {t('Diese Lektion existiert nicht in der lokalen Bibliothek.', "Cette lecon n'existe pas dans la bibliotheque locale.")}
-        </p>
-        <button className={cx(buttonClass.outline, 'mt-6')} onClick={() => navigate('/cours')} type="button">
-          <Icon name="arrowLeft" size={18} className="icon" />
-          {t('Zurueck zu den Kursen', 'Retour aux cours')}
-        </button>
       </div>
     )
   }
 
+  if (currentState?.unlocked === false && !estComplete(lesson.id)) {
+    return (
+      <div className="mx-auto flex min-h-screen w-full max-w-[520px] flex-col justify-center px-4 py-8">
+        <div className="rounded-2xl border border-[var(--g-light)] bg-white p-6 text-center shadow-[0_2px_12px_rgba(0,80,50,0.06)]">
+          <p className="text-lg font-semibold text-[var(--g-dark)]">Cette leçon est encore verrouillée.</p>
+          <p className="mt-2 text-sm text-[var(--gray-600)]">{currentState.lockedReason}</p>
+          <button
+            type="button"
+            onClick={() => navigate(`/cours/${lesson.niveau}`)}
+            className="mt-5 min-h-12 w-full rounded-xl bg-[var(--g-mid)] px-4 py-3 font-semibold text-white"
+          >
+            Retour au niveau
+          </button>
+        </div>
+      </div>
+    )
+  }
+
+  const step = steps[currentStep] || steps[steps.length - 1]
+  const streak = gamification?.stats?.streakCurrent || 0
+  const nextTitle = nextLesson?.titre || ''
+
   return (
-    <div className="space-y-8">
-      <LessonHeroSection
-        currentLessonState={currentLessonState}
-        isComplete={isComplete}
-        lesson={lesson}
-        nextLesson={nextLesson}
-        nextLessonState={nextLessonState}
-        t={t}
-      />
+    <div
+      className="lesson-focus-layout mx-auto min-h-screen w-full max-w-[520px] px-4 pb-8"
+      style={{
+        '--g-dark': '#0a5032',
+        '--g-mid': '#128c50',
+        '--g-bright': '#22c570',
+        '--g-light': '#c8f5de',
+        '--g-pale': '#e8faf1',
+        '--g-off-white': '#f5fdf9',
+        '--gray-100': '#e8f0eb',
+        '--gray-200': '#c8d8ce',
+        '--gray-400': '#7a9888',
+        '--gray-600': '#3a5044',
+        '--near-black': '#0c1e16',
+      }}
+    >
+      <LessonTopBar lesson={lesson} streak={streak} onQuit={() => navigate(`/cours/${lesson.niveau}`)} />
+      <LessonProgressBar current={Math.min(currentStep + 1, displayTotal)} total={displayTotal} />
 
-      <LessonPhrasesSection
-        activePhraseIndex={activePhraseIndex}
-        currentPhrase={currentPhrase}
-        lesson={lesson}
-        phrases={phrases}
-        setActivePhraseIndex={setActivePhraseIndex}
-        t={t}
-      />
+      <div className="mt-4">
+        {step.type === 'phrase' ? (
+          <PhraseCard
+            phrase={step.data}
+            onNext={() => setCurrentStep((value) => Math.min(value + 1, steps.length - 1))}
+            onPlayAudio={play}
+            audioPlaying={playing}
+          />
+        ) : null}
 
-      <LessonTabsSection
-        activeTab={activeTab}
-        availableTabs={availableTabs}
-        lesson={lesson}
-        setActiveTab={setActiveTab}
-        t={t}
-      />
+        {step.type === 'exercice' ? (
+          <ExerciceCard
+            exercice={step.data}
+            onCorrect={() => setXpEarned((value) => value + 10)}
+            onNext={() => setCurrentStep((value) => Math.min(value + 1, steps.length - 1))}
+          />
+        ) : null}
 
-      <LessonExercisesSection
-        answeredCount={answeredCount}
-        correctCount={correctCount}
-        currentExercise={currentExercise}
-        currentResult={currentResult}
-        exerciseIndex={exerciseIndex}
-        exercises={exercises}
-        handleExerciseContinue={handleExerciseContinue}
-        handleExerciseRestart={handleExerciseRestart}
-        handleExerciseValidated={handleExerciseValidated}
-        lesson={lesson}
-        nextLesson={nextLesson}
-        nextLessonState={nextLessonState}
-        score={score}
-        t={t}
-      />
-
-      <LessonJourneySection lesson={lesson} levelLessons={levelLessons} t={t} unlockMap={unlockMap} />
+        {step.type === 'complete' ? (
+          <LessonCompleteScreen
+            lesson={{ ...lesson, nextTitle }}
+            xpGained={xpEarned + (lesson.progression?.xp || 0)}
+            newBadge={lesson.progression?.badges?.[0] || null}
+            onNextLesson={() => navigate(nextLesson ? `/cours/${nextLesson.niveau}/lecon/${nextLesson.id}` : `/cours/${lesson.niveau}`)}
+            onBackDashboard={() => navigate('/dashboard')}
+          />
+        ) : null}
+      </div>
     </div>
   )
 }

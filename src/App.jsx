@@ -2,66 +2,59 @@ import { lazy, Suspense } from 'react'
 import { Routes, Route, Navigate } from 'react-router-dom'
 import { useAuth } from '@context/AuthContext'
 import MainLayout from '@layouts/MainLayout'
+import LessonLayout from '@layouts/LessonLayout'
 import AdminRoute from '@components/admin/AdminRoute'
-
-// ── Spinner de chargement pendant le lazy load ──
 import PageLoader from '@components/PageLoader'
 
-// ── Pages chargées en lazy (code splitting automatique par Vite) ──
-const Home        = lazy(() => import('@pages/Home'))
-const Login       = lazy(() => import('@pages/Login'))
-const Register    = lazy(() => import('@pages/Register'))
-const Dashboard   = lazy(() => import('@pages/Dashboard'))
-const Cours       = lazy(() => import('@pages/Cours'))
-const Lecon       = lazy(() => import('@pages/Lecon'))
-const Sprechen    = lazy(() => import('@pages/Sprechen'))
-const Communaute  = lazy(() => import('@pages/Communaute'))
-const Guide       = lazy(() => import('@pages/Guide'))
-const MonProfil   = lazy(() => import('@pages/MonProfil'))
-const Admin       = lazy(() => import('@pages/Admin'))
-const NotFound    = lazy(() => import('@pages/NotFound'))
+const Home = lazy(() => import('@pages/Home'))
+const Login = lazy(() => import('@pages/Login'))
+const Register = lazy(() => import('@pages/Register'))
+const Dashboard = lazy(() => import('@pages/Dashboard'))
+const Cours = lazy(() => import('@pages/Cours'))
+const Lecon = lazy(() => import('@pages/Lecon'))
+const Sprechen = lazy(() => import('@pages/Sprechen'))
+const Communaute = lazy(() => import('@pages/Communaute'))
+const Guide = lazy(() => import('@pages/Guide'))
+const MonProfil = lazy(() => import('@pages/MonProfil'))
+const Admin = lazy(() => import('@pages/Admin'))
+const NotFound = lazy(() => import('@pages/NotFound'))
 
-// ── Composant de protection des routes privées ──
 function PrivateRoute({ children }) {
   const { user, loading } = useAuth()
 
-  // Pendant la vérification du token JWT stocké
   if (loading) return <PageLoader />
-
-  // Redirection vers login si non connecté
   if (!user) return <Navigate to="/login" replace />
 
   return children
 }
 
-// ── Composant de redirection si déjà connecté ──
 function PublicOnlyRoute({ children }) {
   const { user, loading } = useAuth()
 
   if (loading) return <PageLoader />
-
-  // Si déjà connecté, rediriger vers le dashboard
   if (user) return <Navigate to="/dashboard" replace />
 
   return children
 }
 
-// ── App principale ──
 function App() {
   return (
     <Suspense fallback={<PageLoader />}>
       <Routes>
-
-        {/* ── Routes publiques avec layout principal (Navbar) ── */}
-        <Route element={<MainLayout />}>
-
-          {/* Page d'accueil */}
+        <Route element={<LessonLayout />}>
           <Route
-            path="/"
-            element={<Home />}
+            path="/cours/:niveau/lecon/:leconId"
+            element={
+              <PrivateRoute>
+                <Lecon />
+              </PrivateRoute>
+            }
           />
+        </Route>
 
-          {/* Connexion - redirige si déjà connecté */}
+        <Route element={<MainLayout />}>
+          <Route path="/" element={<Home />} />
+
           <Route
             path="/login"
             element={
@@ -71,7 +64,6 @@ function App() {
             }
           />
 
-          {/* Inscription - redirige si déjà connecté */}
           <Route
             path="/register"
             element={
@@ -81,19 +73,9 @@ function App() {
             }
           />
 
-          {/* Guide Ausbildung/Au Pair/FSJ - accessible sans compte */}
-          <Route
-            path="/guide"
-            element={<Guide />}
-          />
-          <Route
-            path="/guide/:section"
-            element={<Guide />}
-          />
+          <Route path="/guide" element={<Guide />} />
+          <Route path="/guide/:section" element={<Guide />} />
 
-          {/* ── Routes privées (nécessitent connexion) ── */}
-
-          {/* Tableau de bord */}
           <Route
             path="/dashboard"
             element={
@@ -103,7 +85,6 @@ function App() {
             }
           />
 
-          {/* Liste des cours par niveau */}
           <Route
             path="/cours"
             element={
@@ -113,7 +94,6 @@ function App() {
             }
           />
 
-          {/* Cours filtré par niveau ex: /cours/A1 */}
           <Route
             path="/cours/:niveau"
             element={
@@ -123,17 +103,6 @@ function App() {
             }
           />
 
-          {/* Page d'une leçon ex: /cours/A1/lecon/1 */}
-          <Route
-            path="/cours/:niveau/lecon/:leconId"
-            element={
-              <PrivateRoute>
-                <Lecon />
-              </PrivateRoute>
-            }
-          />
-
-          {/* Sprechen - pratique orale */}
           <Route
             path="/sprechen"
             element={
@@ -143,7 +112,6 @@ function App() {
             }
           />
 
-          {/* Communauté - chat */}
           <Route
             path="/communaute"
             element={
@@ -153,7 +121,6 @@ function App() {
             }
           />
 
-          {/* Canal de chat spécifique ex: /communaute/general */}
           <Route
             path="/communaute/:canal"
             element={
@@ -180,12 +147,9 @@ function App() {
               </AdminRoute>
             }
           />
-
         </Route>
 
-        {/* ── Page 404 ── */}
         <Route path="*" element={<NotFound />} />
-
       </Routes>
     </Suspense>
   )
