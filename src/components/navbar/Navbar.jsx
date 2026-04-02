@@ -47,6 +47,13 @@ const NAV_PRIVATE = [
   },
 ]
 
+const NAV_ADMIN = {
+  to: '/admin',
+  label: { de: 'Admin', fr: 'Admin' },
+  hint: { de: 'Analytics und Kontrolle', fr: 'Analytics et pilotage' },
+  icon: 'users',
+}
+
 const LANG_OPTIONS = [
   { code: 'de', label: 'DE' },
   { code: 'mix', label: 'MIX' },
@@ -150,7 +157,9 @@ function Navbar() {
     setMenuOpen(false)
   }
 
-  const navLinks = user ? NAV_PRIVATE : NAV_PUBLIC
+  const navLinks = user
+    ? (user.role === 'ADMIN' ? [...NAV_PRIVATE, NAV_ADMIN] : NAV_PRIVATE)
+    : NAV_PUBLIC
   const userInitial = user?.prenom?.[0]?.toUpperCase() || '?'
   const userLevel = user?.niveau ? String(user.niveau).toUpperCase() : null
   const navLinkBase =

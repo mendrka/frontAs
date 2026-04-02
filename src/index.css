@@ -564,3 +564,47 @@ body::after {
   background: rgba(255, 255, 255, 0.14);
   border-radius: 999px;
 }
+
+.admin-skeleton {
+  background: linear-gradient(90deg, #e8faf1 25%, #c8f5de 50%, #e8faf1 75%);
+  background-size: 200% 100%;
+  animation: skeletonPulse 1.5s ease-in-out infinite;
+}
+
+.chart-container {
+  height: 250px;
+}
+
+.kpi-strip {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+@media (min-width: 768px) {
+  .chart-container {
+    height: 300px;
+  }
+
+  .kpi-strip {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .chart-container {
+    height: 340px;
+  }
+
+  .kpi-strip {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+}
+
+@keyframes skeletonPulse {
+  from {
+    background-position: 200% 0;
+  }
+
+  to {
+    background-position: -200% 0;
+  }
+}

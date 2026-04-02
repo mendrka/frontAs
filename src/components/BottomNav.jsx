@@ -12,6 +12,8 @@ const ITEMS = [
   { to: '/communaute', icon: 'messageCircle', label: { de: 'Chat', fr: 'Chat' } },
 ]
 
+const ADMIN_ITEM = { to: '/admin', icon: 'users', label: { de: 'Admin', fr: 'Admin' } }
+
 function BottomNav() {
   const { user } = useAuth()
   const { t } = useLang()
@@ -23,10 +25,12 @@ function BottomNav() {
 
   if (!user || hide) return null
 
+  const items = user.role === 'ADMIN' ? [...ITEMS, ADMIN_ITEM] : ITEMS
+
   return (
     <nav className="safe-bottom fixed inset-x-2.5 bottom-2 z-40 md:hidden" aria-label={t('Navigation', 'Navigation')}>
       <div className="mx-auto flex max-w-md items-stretch gap-1 rounded-[1.75rem] border border-white/75 bg-white/85 p-1.5 shadow-[0_24px_60px_-36px_rgba(53,94,75,0.38)] backdrop-blur-2xl sm:rounded-[2rem] sm:p-2">
-        {ITEMS.map((item) => (
+        {items.map((item) => (
           <NavLink
             key={item.to}
             to={item.to}

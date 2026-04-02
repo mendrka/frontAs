@@ -267,6 +267,19 @@ export const userAPI = {
   getDashboard: ()              => cachedGet('/user/dashboard', {}, { ttl: 30 * 1000 }),
 }
 
+export const adminAPI = {
+  getUsersOverview: () => api.get('/admin/stats/users/overview'),
+  getUserRegistrations: (days = 30) => api.get('/admin/stats/users/registrations', { params: { days } }),
+  getActiveUsers: (days = 30) => api.get('/admin/stats/users/active', { params: { days } }),
+  getUserRetention: () => api.get('/admin/stats/users/retention'),
+  getRecentUsers: (limit = 10) => api.get('/admin/stats/users/recent', { params: { limit } }),
+  getSprechenOverview: () => api.get('/admin/stats/sprechen/overview'),
+  getSprechenSessions: (days = 30) => api.get('/admin/stats/sprechen/sessions', { params: { days } }),
+  getSprechenScores: () => api.get('/admin/stats/sprechen/scores'),
+  getSprechenDurationByLevel: () => api.get('/admin/stats/sprechen/duration-by-level'),
+  getSprechenTopUsers: (limit = 5) => api.get('/admin/stats/sprechen/top-users', { params: { limit } }),
+}
+
 export const gamificationAPI = {
   getStats:      ()              => cachedGet('/gamification/stats', {}, { ttl: 30 * 1000 }),
   addXp:         (amount, action) => postWithInvalidation('/gamification/xp', { amount, action }, ['/gamification', '/user/dashboard']),

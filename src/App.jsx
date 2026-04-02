@@ -2,6 +2,7 @@ import { lazy, Suspense } from 'react'
 import { Routes, Route, Navigate } from 'react-router-dom'
 import { useAuth } from '@context/AuthContext'
 import MainLayout from '@layouts/MainLayout'
+import AdminRoute from '@components/admin/AdminRoute'
 
 // ── Spinner de chargement pendant le lazy load ──
 import PageLoader from '@components/PageLoader'
@@ -17,6 +18,7 @@ const Sprechen    = lazy(() => import('@pages/Sprechen'))
 const Communaute  = lazy(() => import('@pages/Communaute'))
 const Guide       = lazy(() => import('@pages/Guide'))
 const MonProfil   = lazy(() => import('@pages/MonProfil'))
+const Admin       = lazy(() => import('@pages/Admin'))
 const NotFound    = lazy(() => import('@pages/NotFound'))
 
 // ── Composant de protection des routes privées ──
@@ -167,6 +169,15 @@ function App() {
               <PrivateRoute>
                 <MonProfil />
               </PrivateRoute>
+            }
+          />
+
+          <Route
+            path="/admin"
+            element={
+              <AdminRoute>
+                <Admin />
+              </AdminRoute>
             }
           />
 
